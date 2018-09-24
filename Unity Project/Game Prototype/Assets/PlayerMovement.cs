@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour {
     bool jump = false;
 
     [SerializeField]
-    private bool plane1Invisible;
+    private bool plane1Invisible = false;
     [SerializeField]
-    private bool plane2Invisible;
+    private bool plane2Invisible = true;
     [SerializeField]
-    private bool plane3Invisible;
+    private bool plane3Invisible = true;
 
     // Update is called once per frame
     void Update () {
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
-        //Ignore the collisions between layer 0 (default) and layer 8 (custom layer you set in Inspector window)
+        //Ignore the collisions between layer 8 (player) and platform layers
         Physics2D.IgnoreLayerCollision(8, 10, plane1Invisible);
         Physics2D.IgnoreLayerCollision(8, 11, plane2Invisible);
         Physics2D.IgnoreLayerCollision(8, 12, plane3Invisible);
@@ -41,10 +41,31 @@ public class PlayerMovement : MonoBehaviour {
         jump = false;
     }
 
-    //Detect when there is a collision
-    void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        //Output the name of the GameObject you collide with
-        Debug.Log("I hit the GameObject : " + other.gameObject.tag);
+        Debug.Log("Collided with: " + other.name);
+
+        if (other.tag == "Portal")
+        {
+
+            if (plane1Invisible == false)
+            {
+
+                plane1Invisible = true;
+                plane2Invisible = false;
+                plane3Invisible = true;
+
+                //hide plane1 platforms
+                //GameObject.Find("Plane1 Platforms").transform.localScale = new Vector3(0, 0, 0);
+                //GameObject.Find("Plane2 Platforms").transform.localScale = new Vector3(1, 1, 1);
+                //GameObject.Find("Plane3 Platforms").transform.localScale = new Vector3(1, 1, 1);
+
+            }
+            
+
+        }
+
     }
+
 }
