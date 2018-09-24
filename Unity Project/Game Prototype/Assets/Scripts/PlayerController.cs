@@ -8,16 +8,22 @@ public class PlayerController : MonoBehaviour {
     public float jumpforce;
     private float moveInput;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D m_Rigidbody;
 
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
 
+
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+
+        //Fetch the Rigidbody component from the GameObject
+        m_Rigidbody = GetComponent<Rigidbody2D>();
+
+        //Ignore the collisions between layer 8 (player) and layer 8 (custom layer you set in Inspector window)
+        Physics2D.IgnoreLayerCollision(8, 10);
     }
 
     private void FixedUpdate()
@@ -25,7 +31,8 @@ public class PlayerController : MonoBehaviour {
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        m_Rigidbody.velocity = new Vector2(moveInput * speed, m_Rigidbody.velocity.y);
+
     }
 
 }
