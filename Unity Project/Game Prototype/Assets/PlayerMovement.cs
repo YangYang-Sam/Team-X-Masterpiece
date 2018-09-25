@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour {
             sprite.sortingLayerName = Plane1Layer;
         }
 
+        Debug.Log(LayerMask.NameToLayer("Plane 1"));
+        Debug.Log(LayerMask.NameToLayer("Plane 2"));
+        Debug.Log(LayerMask.NameToLayer("Plane 3"));
+
     }
 
 
@@ -55,7 +59,6 @@ public class PlayerMovement : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(8, 10, plane1Invisible);
         Physics2D.IgnoreLayerCollision(8, 11, plane2Invisible);
         Physics2D.IgnoreLayerCollision(8, 12, plane3Invisible);
-
 
     }
 
