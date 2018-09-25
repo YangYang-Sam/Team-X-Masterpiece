@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -15,11 +16,11 @@ TagManager:
   - 
   - Player
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Plane 1
+  - Plane 2
+  - Plane 3
+  - Background
+  - Middleground
   - 
   - 
   - 
