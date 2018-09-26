@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlaneNavigation : MonoBehaviour {
 
+    //Access playerController class
+    private PlayerController2D playerController2D;
+
     // sets player collisions based on layer/plane
     //[SerializeField]
     private bool plane1Invisible = false;
@@ -12,11 +15,6 @@ public class PlaneNavigation : MonoBehaviour {
     //[SerializeField]
     private bool plane3Invisible = true;
 
-
-    //sets each portal as accessible GameObject
-    private GameObject portal1;
-    private GameObject portal2;
-    private GameObject portal3;
 
     public const string Plane1SortingLayer = "Foreground";
     public const string Plane2SortingLayer = "Middleground";
@@ -36,16 +34,13 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        playerController2D = GetComponent<PlayerController2D>();
+        playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
         PlayerCollisionLayer = LayerMask.NameToLayer("Player");
         Plane1CollisionLayer = LayerMask.NameToLayer("Plane 1");
         Plane2CollisionLayer = LayerMask.NameToLayer("Plane 2");
         Plane3CollisionLayer = LayerMask.NameToLayer("Plane 3");
-
-        //save portal name as variable
-        portal1 = GameObject.Find("Portal 1");
-        portal2 = GameObject.Find("Portal 2");
-        portal3 = GameObject.Find("Portal 3");
 
         //prints layer numbers
         Debug.Log(PlayerCollisionLayer);
@@ -74,54 +69,64 @@ public class PlaneNavigation : MonoBehaviour {
 
     //detect player colliding with portal
     private void OnTriggerEnter2D(Collider2D other)
+
     {
         Debug.Log("Collided with: " + other.name);
 
         //switch to correct layer based on portal name
-        if (other.name == "Portal 1")
+        if (other.tag == "Plane 1 Portal")
         {
-
-            //turn on/off collisions for appropriate layer
-            plane1Invisible = true;
-            plane2Invisible = false;
-            plane3Invisible = true;
-
-            //GameObject.Find("Plane 1 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            //Destroy(portal1.gameObject);
-
-            //Make player sprite render on correct layer
-            sprite.sortingLayerName = Plane2SortingLayer;
-
+            Plane1Selector();
         }
 
-        else if (other.name == "Portal 2")
+        else if (other.tag == "Plane 2 Portal")
         {
-
-            plane1Invisible = true;
-            plane2Invisible = true;
-            plane3Invisible = false;
-
-            //GameObject.Find("Plane 2 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            //Destroy(portal2.gameObject);
-
-            //Make player sprite render on correct layer
-            sprite.sortingLayerName = Plane3SortingLayer;
+            Plane2Selector();
         }
 
-        else if (other.name == "Portal 3")
+        else if (other.tag == "Plane 3 Portal")
         {
-
-            plane1Invisible = false;
-            plane2Invisible = true;
-            plane3Invisible = true;
-
-            //GameObject.Find("Plane 3 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            //Destroy(portal3.gameObject);
-
-            //Make player sprite render on correct layer
-            sprite.sortingLayerName = Plane1SortingLayer;
-
+            Plane3Selector();
         }
 
     }
+
+    private void Plane1Selector()
+    {
+        //turn on/off collisions for appropriate layer
+        plane1Invisible = false;
+        plane2Invisible = true;
+        plane3Invisible = true;
+
+        playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
+
+        //Make player sprite render on correct layer
+        sprite.sortingLayerName = Plane1SortingLayer;
+    }
+
+    private void Plane2Selector()
+    {
+        plane1Invisible = true;
+        plane2Invisible = false;
+        plane3Invisible = true;
+
+        playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+
+        //Make player sprite render on correct layer
+        sprite.sortingLayerName = Plane2SortingLayer;
+    }
+
+    private void Plane3Selector()
+    {
+        plane1Invisible = true;
+        plane2Invisible = true;
+        plane3Invisible = false;
+
+        playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
+
+        //Make player sprite render on correct layer
+        sprite.sortingLayerName = Plane3SortingLayer;
+    }
+
 }
+

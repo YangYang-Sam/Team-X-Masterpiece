@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour {
     private void UpdateColliderSize()
     {
 
-        _BoxCollider2D.size = _spriteRenderer.sprite.bounds.size;
+        _BoxCollider2D.size = _spriteRenderer.size;
         _BoxCollider2D.offset = new Vector2(0, 0);
         _CircleCollider2D.radius = _spriteRenderer.sprite.bounds.size.x / 3;
         //_CircleCollider2D.offset = new Vector2(_CircleCollider2D.offset.x, _CircleCollider2D.offset.y + 0.5f * _CircleCollider2D.radius);
