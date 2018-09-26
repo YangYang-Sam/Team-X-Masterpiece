@@ -4,44 +4,59 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    //access character controller class
     public CharacterController2D controller;
 
+    //set run speed
     public float runspeed = 40f;
-
+    //sets initial movement
     float horizontalMovement = 0f;
+    //sets initial jump state to off
     bool jump = false;
+    //sets initial crouch state to off
+    bool crouch = false;
+    //sets initial veil jump state to off
+    bool veilJump = false;
 
-    //[SerializeField]
-    private bool plane1Invisible = false;
-    //[SerializeField]
-    private bool plane2Invisible = true;
-    //[SerializeField]
-    private bool plane3Invisible = true;
+    private SpriteRenderer _spriteRenderer;
+    private BoxCollider2D _BoxCollider2D;
+    private CircleCollider2D _CircleCollider2D;
 
-    private GameObject portal1;
-    private GameObject portal2;
-    private GameObject portal3;
+    //Vector2 and float to store Box Collider size and Circle collider radius respectively.
+    private Vector2 _BoxColliderSize;
+    private float _CircleColliderSize;
 
-    public const string Plane1Layer = "Foreground";
-    public const string Plane2Layer = "Middleground";
-    public const string Plane3Layer = "Background";
-    public int sortingOrder = 0;
-    private SpriteRenderer sprite;
+    private Vector2 _spriteRendererSize;
+    private float _scaleFactor;
+
+    private Vector2 _BoxColliderOffset;
+    private Vector2 _CircleColliderOffset;
+
 
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        //gets box collider
+        _BoxCollider2D = GetComponent<BoxCollider2D>();
+        //stores boxcollider size
+        _BoxColliderSize = _BoxCollider2D.size;
+        _BoxColliderOffset = _BoxCollider2D.offset;
+        Debug.Log(_BoxCollider2D.size);
 
-        if (sprite)
-        {
-            sprite.sortingOrder = sortingOrder;
-            sprite.sortingLayerName = Plane1Layer;
-        }
+        _CircleCollider2D = GetComponent<CircleCollider2D>();
+        _CircleColliderSize = _CircleCollider2D.radius;
+        _CircleColliderOffset = _CircleCollider2D.offset;
 
-        Debug.Log(LayerMask.NameToLayer("Plane 1"));
-        Debug.Log(LayerMask.NameToLayer("Plane 2"));
-        Debug.Log(LayerMask.NameToLayer("Plane 3"));
+        Debug.Log(_CircleCollider2D.radius);
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRendererSize = _BoxCollider2D.size;
+        _BoxColliderOffset = _BoxCollider2D.offset;
 
+        //_BoxCollider2D.size = new Vector2(0.05f, 0.3f);
+        Debug.Log(_BoxColliderSize);
+        //_CircleCollider2D.radius = 0.1f;
+        Debug.Log(_CircleColliderSize);
+
+        UpdateColliderSize();
     }
 
 
@@ -55,66 +70,56 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
-        //Ignore the collisions between layer 8 (player) and platform layers
-        Physics2D.IgnoreLayerCollision(8, 10, plane1Invisible);
-        Physics2D.IgnoreLayerCollision(8, 11, plane2Invisible);
-        Physics2D.IgnoreLayerCollision(8, 12, plane3Invisible);
+        if (Input.GetButtonDown("Veil Jump"))
+        {
+            jump = true;
+            transform.localScale = new Vector2(transform.localScale.x / 2, transform.localScale.y);
+        }
+
+        if (Input.GetButtonUp("Veil Jump"))
+        {
+            veilJump = false;
+        }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        }
+
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
+        }
 
     }
 
     private void FixedUpdate()
     {
         //Move character
-        controller.Move(horizontalMovement * Time.fixedDeltaTime, false, jump);
+        controller.Move(horizontalMovement * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void UpdateColliderSize()
     {
-        Debug.Log("Collided with: " + other.name);
-        portal1 = GameObject.Find("Portal 1");
-        portal2 = GameObject.Find("Portal 2");
-        portal3 = GameObject.Find("Portal 3");
 
-        if (other.name == "Portal 1")
-        {
+        _BoxCollider2D.size = _spriteRenderer.sprite.bounds.size;
+        _BoxCollider2D.offset = new Vector2(0, 0);
+        _CircleCollider2D.radius = _spriteRenderer.sprite.bounds.size.x / 3;
+        //_CircleCollider2D.offset = new Vector2(_CircleCollider2D.offset.x, _CircleCollider2D.offset.y + 0.5f * _CircleCollider2D.radius);
 
-                plane1Invisible = true;
-                plane2Invisible = false;
-                plane3Invisible = true;
+        //Vector3 spriteHalfSize = spriteRenderer.sprite.bounds.extents;
+        //_CircleCollider2D.radius = spriteHalfSize.x > spriteHalfSize.y ? spriteHalfSize.x : spriteHalfSize.y;
+        //lastSprite = spriteRenderer.sprite;
 
-            //GameObject.Find("Plane 1 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            Destroy(portal1.gameObject);
-            sprite.sortingLayerName = Plane2Layer;
+        //var _sprite = FindObjectOfType<SpriteRenderer>();
+        //var _collider = FindObjectOfType<BoxCollider2D>();
 
-        }
+        Debug.Log(_BoxCollider2D.size + "box collider size");
 
-        else if (other.name == "Portal 2")
-            {
-
-                plane1Invisible = true;
-                plane2Invisible = true;
-                plane3Invisible = false;
-
-            //GameObject.Find("Plane 2 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            Destroy(portal2.gameObject);
-            sprite.sortingLayerName = Plane3Layer;
-        }
-
-        else if (other.name == "Portal 3")
-        {
-
-                plane1Invisible = false;
-                plane2Invisible = true;
-                plane3Invisible = true;
-
-            //GameObject.Find("Plane 3 Platforms").transform.localScale = new Vector3(0, 0, 0);
-            Destroy(portal3.gameObject);
-            sprite.sortingLayerName = Plane1Layer;
-
-        }
-
+        //_BoxCollider2D.size = new Vector2(_spriteRenderer.sprite.bounds.size.x / transform.lossyScale.x,
+        //                             _spriteRenderer.sprite.bounds.size.y / transform.lossyScale.y);
     }
+
 
 }
