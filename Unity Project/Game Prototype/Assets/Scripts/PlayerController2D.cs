@@ -109,7 +109,7 @@ public class PlayerController2D : MonoBehaviour
         {
             _extraJumps = _extraJumpsValue;
             _veilJumps = _veilJumpsValue;
-            transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
+            //transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
             _playerRigidbody.velocity = new Vector2(moveInput * speed, _playerRigidbody.velocity.y);
 
         }
@@ -144,22 +144,21 @@ public class PlayerController2D : MonoBehaviour
             if (_veilJumps > 0)
             {
                 _playerRigidbody.gravityScale = 25;
-                //_playerRigidbody.velocity = Vector2.up * _veilJumpForce;
-                transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+                //set x velocity to 0 and jump with veiljump property.
                 _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
-                moveInput = 0;
+                transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
                 _veilJumps--;
 
             }
             else if (_veilJumps == 0 && isGrounded == true)
             {
                 _playerRigidbody.gravityScale = 25;
-                _playerRigidbody.velocity = Vector2.up * _veilJumpForce;
+                //set x velocity to 0 and jump with veiljump property.
                 _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
-                moveInput = 0;
                 Debug.Log(transform.localScale + "original scale");
                 transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
                 Debug.Log(transform.localScale + "new scale");
+                _veilJumps--;
             }
         }
 
