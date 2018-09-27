@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController2D : MonoBehaviour {
+public class PlayerController2D : MonoBehaviour
+{
 
-    public float speed;
-    public float jumpforce;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private float jumpforce;
+    [SerializeField]
+    private float _veilJumpForce;
     private float moveInput;
 
     private Rigidbody2D _playerRigidbody;
@@ -17,8 +22,15 @@ public class PlayerController2D : MonoBehaviour {
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    private int extraJumps;
-    public int extraJumpsValue;
+    private int _extraJumps;
+    private int _veilJumps;
+    [SerializeField]
+    private int _extraJumpsValue;
+    [SerializeField]
+    private int _veilJumpsValue;
+    [SerializeField]
+    private float _veilJumpWidthScale;
+    private float _originalWidthScale;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _BoxCollider2D;
@@ -38,7 +50,10 @@ public class PlayerController2D : MonoBehaviour {
 
     private void Start()
     {
-        extraJumps = extraJumpsValue;
+        _extraJumps = _extraJumpsValue;
+        _veilJumps = _veilJumpsValue;
+        _originalWidthScale = transform.localScale.x;
+        Debug.Log(_originalWidthScale);
 
         //Fetch the Rigidbody component from the GameObject
         _playerRigidbody = GetComponent<Rigidbody2D>();
@@ -73,13 +88,12 @@ public class PlayerController2D : MonoBehaviour {
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        moveInput = Input.GetAxis("Horizontal");
-        _playerRigidbody.velocity = new Vector2(moveInput * speed, _playerRigidbody.velocity.y);
 
-        if(facingRight == false && moveInput > 0)
+        if (facingRight == false && moveInput > 0)
         {
             Flip();
-        } else if(facingRight == true && moveInput < 0)
+        }
+        else if (facingRight == true && moveInput < 0)
         {
             Flip();
         }
@@ -88,18 +102,67 @@ public class PlayerController2D : MonoBehaviour {
 
     private void Update()
     {
-        if(isGrounded == true)
+
+        moveInput = Input.GetAxis("Horizontal");
+
+        if (isGrounded == true)
         {
-            extraJumps = extraJumpsValue;
+            _extraJumps = _extraJumpsValue;
+            _veilJumps = _veilJumpsValue;
+            transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
+            _playerRigidbody.velocity = new Vector2(moveInput * speed, _playerRigidbody.velocity.y);
+
         }
-        if(Input.GetButtonDown("Jump") && extraJumps > 0)
+
+        if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
         {
-            _playerRigidbody.velocity = Vector2.up * jumpforce;
-            extraJumps--;
-        } else if(Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true)
-        {
-            _playerRigidbody.velocity = Vector2.up * jumpforce;
+            _playerRigidbody.gravityScale = 3;
+            transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
+            _playerRigidbody.velocity = new Vector2(moveInput * speed, _playerRigidbody.velocity.y);
+
         }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (_extraJumps > 0)
+            {
+                _playerRigidbody.gravityScale = 3;
+                _playerRigidbody.velocity = Vector2.up * jumpforce;
+                _extraJumps--;
+            }
+            else if (_extraJumps == 0 && isGrounded == true)
+            {
+                _playerRigidbody.gravityScale = 3;
+                _playerRigidbody.velocity = Vector2.up * jumpforce;
+            }
+
+        }
+
+        else if (Input.GetButtonDown("Veil Jump"))
+        {
+            Debug.Log("Veil Jump");
+            if (_veilJumps > 0)
+            {
+                _playerRigidbody.gravityScale = 25;
+                _playerRigidbody.velocity = Vector2.up * _veilJumpForce;
+                transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+                _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
+                moveInput = 0;
+                _veilJumps--;
+
+            }
+            else if (_veilJumps == 0 && isGrounded == true)
+            {
+                _playerRigidbody.gravityScale = 25;
+                _playerRigidbody.velocity = Vector2.up * _veilJumpForce;
+                _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
+                moveInput = 0;
+                Debug.Log(transform.localScale + "original scale");
+                transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+                Debug.Log(transform.localScale + "new scale");
+            }
+        }
+
     }
 
     private void Flip()
