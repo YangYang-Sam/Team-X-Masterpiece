@@ -144,9 +144,9 @@ public class PlayerController2D : MonoBehaviour
             if (_veilJumps > 0)
             {
                 _playerRigidbody.gravityScale = 25;
-                _playerRigidbody.velocity = Vector2.up * _veilJumpForce;
+                //_playerRigidbody.velocity = Vector2.up * _veilJumpForce;
                 transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
-                _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
+                _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
                 moveInput = 0;
                 _veilJumps--;
 
@@ -155,7 +155,7 @@ public class PlayerController2D : MonoBehaviour
             {
                 _playerRigidbody.gravityScale = 25;
                 _playerRigidbody.velocity = Vector2.up * _veilJumpForce;
-                _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
+                _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
                 moveInput = 0;
                 Debug.Log(transform.localScale + "original scale");
                 transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
