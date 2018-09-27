@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Portal
+  - Plane 1 Portal
+  - Plane 2 Portal
+  - Plane 3 Portal
   layers:
   - Default
   - TransparentFX
