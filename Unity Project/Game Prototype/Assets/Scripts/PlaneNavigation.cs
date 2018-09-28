@@ -7,6 +7,10 @@ public class PlaneNavigation : MonoBehaviour {
     //Access playerController class
     private PlayerController2D playerController2D;
 
+    GameObject Plane1;
+    GameObject Plane2;
+    GameObject Plane3;
+
     // sets player collisions based on layer/plane
     //[SerializeField]
     private bool plane1Invisible = false;
@@ -34,6 +38,15 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        //set gameobjects for plane scaling
+        Plane1 = GameObject.Find("Plane 1");
+        Plane2 = GameObject.Find("Plane 2");
+        Plane3 = GameObject.Find("Plane 3");
+
+        Plane1.transform.localScale = new Vector2(1, 1);
+        Plane2.transform.localScale = new Vector2(0, 0);
+        Plane3.transform.localScale = new Vector2(0, 0);
+
         playerController2D = GetComponent<PlayerController2D>();
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
@@ -74,19 +87,19 @@ public class PlaneNavigation : MonoBehaviour {
         Debug.Log("Collided with: " + other.name);
 
         //switch to correct layer based on portal name
-        if (other.tag == "Plane 1 Portal")
-        {
-            Plane1Selector();
-        }
-
-        else if (other.tag == "Plane 2 Portal")
+        if (other.name == "Portal 1")
         {
             Plane2Selector();
         }
 
-        else if (other.tag == "Plane 3 Portal")
+        else if (other.name == "Portal 2")
         {
             Plane3Selector();
+        }
+
+        else if (other.name == "Portal 3")
+        {
+            Plane1Selector();
         }
 
     }
@@ -97,6 +110,10 @@ public class PlaneNavigation : MonoBehaviour {
         plane1Invisible = false;
         plane2Invisible = true;
         plane3Invisible = true;
+
+        Plane1.transform.localScale = new Vector2(1, 1);
+        Plane2.transform.localScale = new Vector2(0, 0);
+        Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
@@ -110,6 +127,10 @@ public class PlaneNavigation : MonoBehaviour {
         plane2Invisible = false;
         plane3Invisible = true;
 
+        Plane1.transform.localScale = new Vector2(0, 0);
+        Plane2.transform.localScale = new Vector2(1, 1);
+        Plane3.transform.localScale = new Vector2(0, 0);
+
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
         //Make player sprite render on correct layer
@@ -121,6 +142,10 @@ public class PlaneNavigation : MonoBehaviour {
         plane1Invisible = true;
         plane2Invisible = true;
         plane3Invisible = false;
+
+        Plane1.transform.localScale = new Vector2(0, 0);
+        Plane2.transform.localScale = new Vector2(0, 0);
+        Plane3.transform.localScale = new Vector2(1, 1);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
 

@@ -80,7 +80,7 @@ public class PlayerController2D : MonoBehaviour
         //_CircleCollider2D.radius = 0.1f;
         Debug.Log(_CircleColliderRadius);
 
-        UpdateColliderSize();
+        //UpdateColliderSize();
 
 
     }
