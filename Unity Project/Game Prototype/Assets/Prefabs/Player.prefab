@@ -20,11 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4125178342941262}
   - component: {fileID: 212758758727964066}
-  - component: {fileID: 114170919583156406}
   - component: {fileID: 50239133875774054}
   - component: {fileID: 61021162189331194}
   - component: {fileID: 58215821784555672}
-  - component: {fileID: 114177938374706974}
   - component: {fileID: 114601106297696968}
   - component: {fileID: 114760931674426376}
   m_Layer: 8
@@ -165,50 +163,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4246683, y: 0.5871146}
   m_EdgeRadius: 0
---- !u!114 &114170919583156406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1328049143909982}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73da96c77f4bd6346b2e007a9f32a841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 750
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 7168
-  m_GroundCheck: {fileID: 4824647236453528}
-  m_CeilingCheck: {fileID: 4761912178225036}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114177938374706974
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1328049143909982}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6549e1da9ba73e4e9034e68c9be0ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 114170919583156406}
-  runspeed: 40
 --- !u!114 &114601106297696968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,14 +190,13 @@ MonoBehaviour:
   jumpforce: 13
   _veilJumpForce: 40
   groundCheck: {fileID: 4824647236453528}
-  checkRadius: 0.5
+  checkRadius: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
-  _extraJumpsValue: 1
-  _veilJumpsValue: 1
+  _canJumpValue: 1
+  _canVeilJumpValue: 1
   _veilJumpWidthScale: 0.35
-  _scaleFactor: 0
 --- !u!212 &212758758727964066
 SpriteRenderer:
   m_ObjectHideFlags: 1
