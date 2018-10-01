@@ -7,6 +7,8 @@ public class PlaneNavigation : MonoBehaviour {
     //Access playerController class
     private PlayerController2D playerController2D;
 
+    //public Animator animator;
+
     GameObject Plane1;
     GameObject Plane2;
     GameObject Plane3;
@@ -43,9 +45,9 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2 = GameObject.Find("Plane 2");
         Plane3 = GameObject.Find("Plane 3");
 
-        Plane1.transform.localScale = new Vector2(1, 1);
-        Plane2.transform.localScale = new Vector2(0, 0);
-        Plane3.transform.localScale = new Vector2(0, 0);
+        //Plane1.transform.localScale = new Vector2(1, 1);
+        //Plane2.transform.localScale = new Vector2(0, 0);
+        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D = GetComponent<PlayerController2D>();
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
@@ -106,14 +108,18 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane1Selector()
     {
+        Plane3.GetComponent<Animator>().Play("Plane3_Out");
+        Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
+        Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
+
         //turn on/off collisions for appropriate layer
         plane1Invisible = false;
         plane2Invisible = true;
         plane3Invisible = true;
 
-        Plane1.transform.localScale = new Vector2(1, 1);
-        Plane2.transform.localScale = new Vector2(0, 0);
-        Plane3.transform.localScale = new Vector2(0, 0);
+        //Plane1.transform.localScale = new Vector2(1, 1);
+        //Plane2.transform.localScale = new Vector2(0, 0);
+        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
@@ -123,13 +129,16 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane2Selector()
     {
+        Plane2.GetComponent<Animator>().Play("Plane2_In");
+        Plane1.GetComponent<Animator>().Play("Plane1_Out");
+        Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
         plane1Invisible = true;
         plane2Invisible = false;
         plane3Invisible = true;
 
-        Plane1.transform.localScale = new Vector2(0, 0);
-        Plane2.transform.localScale = new Vector2(1, 1);
-        Plane3.transform.localScale = new Vector2(0, 0);
+        //Plane1.transform.localScale = new Vector2(0, 0);
+        //Plane2.transform.localScale = new Vector2(1, 1);
+        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
@@ -139,6 +148,8 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane3Selector()
     {
+        Plane2.GetComponent<Animator>().Play("Plane2_Out");
+        Plane3.GetComponent<Animator>().Play("Plane3_In");
         plane1Invisible = true;
         plane2Invisible = true;
         plane3Invisible = false;

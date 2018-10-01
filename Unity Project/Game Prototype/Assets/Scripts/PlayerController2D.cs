@@ -22,12 +22,12 @@ public class PlayerController2D : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    private bool _canJump;
-    private bool _canVeilJump;
+    private int _canJump;
+    private int _canVeilJump;
     [SerializeField]
-    private bool _canJumpValue;
+    private int _canJumpValue;
     [SerializeField]
-    private bool _canVeilJumpValue;
+    private int _canVeilJumpValue;
     [SerializeField]
     private float _veilJumpWidthScale;
     private float _originalWidthScale;
@@ -87,7 +87,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         _playerRigidbody.velocity = new Vector2(horizontalMove * speed, _playerRigidbody.velocity.y);
 
@@ -106,15 +106,13 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         horizontalMove = Input.GetAxis("Horizontal");
 
         if (isGrounded == true)
         {
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
-            //transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
-            //_playerRigidbody.velocity = new Vector2(horizontalMove * speed, _playerRigidbody.velocity.y);
-
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -122,16 +120,14 @@ public class PlayerController2D : MonoBehaviour
             _playerRigidbody.gravityScale = 3;
             transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
             _playerRigidbody.velocity = new Vector2(horizontalMove * speed, _playerRigidbody.velocity.y);
-            _canJump = false;
-            _canVeilJump = false;
         }
 
-        if (Input.GetButtonDown("Jump") && _canJump == true/* && isGrounded == true*/)
+        if (Input.GetButtonDown("Jump") && _canJump > 0)
         {
             Jump();
         }
 
-        else if (Input.GetButtonDown("Veil Jump") && _canVeilJump == true/* && isGrounded == true*/)
+        else if (Input.GetButtonDown("Veil Jump") && _canVeilJump > 0)
         {
             VeilJump();
         }
@@ -142,8 +138,8 @@ public class PlayerController2D : MonoBehaviour
     {
         _playerRigidbody.gravityScale = 3;
         _playerRigidbody.velocity = Vector2.up * jumpforce;
-        _canJump = false;
-        _canVeilJump = true;
+        _canJump--;
+        _canVeilJump--;
     }
 
     private void VeilJump()
@@ -152,8 +148,8 @@ public class PlayerController2D : MonoBehaviour
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
         transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
-        _canVeilJump = false;
-        _canJump = true;
+        _canVeilJump--;
+        _canJump --;
     }
 
     private void UpdateColliderSize()
