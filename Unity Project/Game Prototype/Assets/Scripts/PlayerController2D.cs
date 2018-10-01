@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-
+    private float _speed;
     [SerializeField]
-    private float speed;
+    private float _speedValue;
     [SerializeField]
     private float jumpforce;
     [SerializeField]
@@ -48,6 +48,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void Start()
     {
+        _speed = _speedValue;
         _canJump = _canJumpValue;
         _canVeilJump = _canVeilJumpValue;
         _originalWidthScale = transform.localScale.x;
@@ -89,7 +90,7 @@ public class PlayerController2D : MonoBehaviour
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        _playerRigidbody.velocity = new Vector2(horizontalMove * speed, _playerRigidbody.velocity.y);
+        _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
 
         if (facingRight == false && horizontalMove > 0)
         {
@@ -113,13 +114,12 @@ public class PlayerController2D : MonoBehaviour
         {
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
+            _speed = _speedValue;
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
         {
-            _playerRigidbody.gravityScale = 3;
-            transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
-            _playerRigidbody.velocity = new Vector2(horizontalMove * speed, _playerRigidbody.velocity.y);
+            ResetVeilJump();
         }
 
         if (Input.GetButtonDown("Jump") && _canJump > 0)
@@ -138,6 +138,7 @@ public class PlayerController2D : MonoBehaviour
     {
         _playerRigidbody.gravityScale = 3;
         _playerRigidbody.velocity = Vector2.up * jumpforce;
+        ResetVeilJump();
         _canJump--;
         _canVeilJump--;
     }
@@ -147,10 +148,20 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
+        _speed = 0;
         transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
         _canVeilJump--;
         _canJump --;
     }
+
+    private void ResetVeilJump()
+    {
+        _playerRigidbody.gravityScale = 3;
+        transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
+        _speed = _speedValue;
+        _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
+    }
+
 
     private void UpdateColliderSize()
     {
