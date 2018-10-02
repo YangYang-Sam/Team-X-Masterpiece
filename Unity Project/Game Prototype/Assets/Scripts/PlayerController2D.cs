@@ -61,6 +61,7 @@ public class PlayerController2D : MonoBehaviour
 
         Debug.Log(whatIsGround);
 
+        FindObjectOfType<AudioManager>().Play("MenuLoop");
 
         ////gets box collider
         //_BoxCollider2D = GetComponent<BoxCollider2D>();
@@ -138,6 +139,7 @@ public class PlayerController2D : MonoBehaviour
     {
         _playerRigidbody.gravityScale = 3;
         _playerRigidbody.velocity = Vector2.up * jumpforce;
+        FindObjectOfType<AudioManager>().Play("PlayerJump");
         ResetVeilJump();
         _canJump--;
         _canVeilJump--;
@@ -148,6 +150,7 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
+        FindObjectOfType<AudioManager>().Play("VeilJump");
         _speed = 0;
         transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
         _canVeilJump--;

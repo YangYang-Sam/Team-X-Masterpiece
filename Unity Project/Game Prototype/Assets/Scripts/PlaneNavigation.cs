@@ -70,7 +70,9 @@ public class PlaneNavigation : MonoBehaviour {
         {
             sprite.sortingOrder = sortingOrder;
             sprite.sortingLayerName = Plane1SortingLayer;
+            sprite.sortingOrder = 1;
         }
+
     }
 	
 	// Update is called once per frame
@@ -83,23 +85,23 @@ public class PlaneNavigation : MonoBehaviour {
     }
 
     //detect player colliding with portal
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
 
     {
         Debug.Log("Collided with: " + other.name);
 
         //switch to correct layer based on portal name
-        if (other.name == "Portal 1")
+        if (other.name == "Portal 1" && Input.GetButtonDown("Enter Portal"))
         {
             Plane2Selector();
         }
 
-        else if (other.name == "Portal 2")
+        else if (other.name == "Portal 2" && Input.GetButtonDown("Enter Portal"))
         {
             Plane3Selector();
         }
 
-        else if (other.name == "Portal 3")
+        else if (other.name == "Portal 3" && Input.GetButtonDown("Enter Portal"))
         {
             Plane1Selector();
         }
@@ -116,6 +118,7 @@ public class PlaneNavigation : MonoBehaviour {
         plane1Invisible = false;
         plane2Invisible = true;
         plane3Invisible = true;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         //Plane1.transform.localScale = new Vector2(1, 1);
         //Plane2.transform.localScale = new Vector2(0, 0);
@@ -135,6 +138,7 @@ public class PlaneNavigation : MonoBehaviour {
         plane1Invisible = true;
         plane2Invisible = false;
         plane3Invisible = true;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         //Plane1.transform.localScale = new Vector2(0, 0);
         //Plane2.transform.localScale = new Vector2(1, 1);
@@ -153,6 +157,7 @@ public class PlaneNavigation : MonoBehaviour {
         plane1Invisible = true;
         plane2Invisible = true;
         plane3Invisible = false;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         Plane1.transform.localScale = new Vector2(0, 0);
         Plane2.transform.localScale = new Vector2(0, 0);
