@@ -7,6 +7,12 @@ public class PlaneNavigation : MonoBehaviour {
     //Access playerController class
     private PlayerController2D playerController2D;
 
+    //public Animator animator;
+
+    GameObject Plane1;
+    GameObject Plane2;
+    GameObject Plane3;
+
     // sets player collisions based on layer/plane
     //[SerializeField]
     private bool plane1Invisible = false;
@@ -34,6 +40,15 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        //set gameobjects for plane scaling
+        Plane1 = GameObject.Find("Plane 1");
+        Plane2 = GameObject.Find("Plane 2");
+        Plane3 = GameObject.Find("Plane 3");
+
+        //Plane1.transform.localScale = new Vector2(1, 1);
+        //Plane2.transform.localScale = new Vector2(0, 0);
+        //Plane3.transform.localScale = new Vector2(0, 0);
+
         playerController2D = GetComponent<PlayerController2D>();
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
@@ -55,7 +70,9 @@ public class PlaneNavigation : MonoBehaviour {
         {
             sprite.sortingOrder = sortingOrder;
             sprite.sortingLayerName = Plane1SortingLayer;
+            sprite.sortingOrder = 1;
         }
+
     }
 	
 	// Update is called once per frame
@@ -68,35 +85,44 @@ public class PlaneNavigation : MonoBehaviour {
     }
 
     //detect player colliding with portal
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
 
     {
         Debug.Log("Collided with: " + other.name);
 
         //switch to correct layer based on portal name
-        if (other.tag == "Plane 1 Portal")
-        {
-            Plane1Selector();
-        }
-
-        else if (other.tag == "Plane 2 Portal")
+        if (other.name == "Portal 1" && Input.GetButtonDown("Enter Portal"))
         {
             Plane2Selector();
         }
 
-        else if (other.tag == "Plane 3 Portal")
+        else if (other.name == "Portal 2" && Input.GetButtonDown("Enter Portal"))
         {
             Plane3Selector();
+        }
+
+        else if (other.name == "Portal 3" && Input.GetButtonDown("Enter Portal"))
+        {
+            Plane1Selector();
         }
 
     }
 
     private void Plane1Selector()
     {
+        Plane3.GetComponent<Animator>().Play("Plane3_Out");
+        Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
+        Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
+
         //turn on/off collisions for appropriate layer
         plane1Invisible = false;
         plane2Invisible = true;
         plane3Invisible = true;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
+
+        //Plane1.transform.localScale = new Vector2(1, 1);
+        //Plane2.transform.localScale = new Vector2(0, 0);
+        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
@@ -106,9 +132,17 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane2Selector()
     {
+        Plane2.GetComponent<Animator>().Play("Plane2_In");
+        Plane1.GetComponent<Animator>().Play("Plane1_Out");
+        Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
         plane1Invisible = true;
         plane2Invisible = false;
         plane3Invisible = true;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
+
+        //Plane1.transform.localScale = new Vector2(0, 0);
+        //Plane2.transform.localScale = new Vector2(1, 1);
+        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
@@ -118,9 +152,16 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane3Selector()
     {
+        Plane2.GetComponent<Animator>().Play("Plane2_Out");
+        Plane3.GetComponent<Animator>().Play("Plane3_In");
         plane1Invisible = true;
         plane2Invisible = true;
         plane3Invisible = false;
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
+
+        Plane1.transform.localScale = new Vector2(0, 0);
+        Plane2.transform.localScale = new Vector2(0, 0);
+        Plane3.transform.localScale = new Vector2(1, 1);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
 

@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Plane 1 Portal
-  - Plane 2 Portal
-  - Plane 3 Portal
+  - Plane 1 Objects
+  - Plane 2 Objects
+  - Plane 3 Objects
   layers:
   - Default
   - TransparentFX
