@@ -116,7 +116,15 @@ public class PlayerController2D : MonoBehaviour
         {
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
-            _speed = _speedValue;
+
+            if (Input.GetButtonDown("Temp Invincibility"))
+            {
+                TempInvincibility();
+            }
+            if (Input.GetButtonUp("Temp Invincibility"))
+            {
+                ResetVeilJump();
+            }
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -138,7 +146,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void Jump()
     {
-        //set coreect gravity and move player
+        //set correct gravity and move player
         ResetVeilJump();
         _playerRigidbody.velocity = Vector2.up * jumpforce;
         //play cirrect sound depending on single or double jump
@@ -165,6 +173,25 @@ public class PlayerController2D : MonoBehaviour
         _canVeilJump--;
         _canJump --;
     }
+
+    private void TempInvincibility()
+    {
+        //_playerRigidbody.gravityScale = 25;
+        //set x velocity to 0 and jump with veiljump property.
+        _playerRigidbody.velocity = new Vector2(0, 0);
+        FindObjectOfType<AudioManager>().Play("PortalEntry");
+        _speed = 0;
+        transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+    }
+
+    //private void ResetInvincibility()
+    //{
+
+    //    _playerRigidbody.velocity = new Vector2(0, 0);
+    //    //FindObjectOfType<AudioManager>().Play("VeilJump");
+    //    _speed = 0;
+    //    transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+    //}
 
     private void ResetVeilJump()
     {

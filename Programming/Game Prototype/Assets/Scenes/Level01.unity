@@ -1489,6 +1489,11 @@ Prefab:
       propertyPath: sounds.Array.data[53].loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114467052420637456, guid: 923d91f31fd7c7e4f8d3e8c34eb2d5f6,
+        type: 2}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 923d91f31fd7c7e4f8d3e8c34eb2d5f6, type: 2}
   m_IsPrefabParent: 0
@@ -3682,6 +3687,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fad414dc0055c9429b52284a51925aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane1Invisible: 0
+  plane2Invisible: 1
+  plane3Invisible: 1
   sortingOrder: 0
 --- !u!58 &1949177071
 CircleCollider2D:
