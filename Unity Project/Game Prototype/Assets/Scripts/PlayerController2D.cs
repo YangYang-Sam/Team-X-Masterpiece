@@ -52,14 +52,14 @@ public class PlayerController2D : MonoBehaviour
         _canJump = _canJumpValue;
         _canVeilJump = _canVeilJumpValue;
         _originalWidthScale = transform.localScale.x;
-        Debug.Log(_originalWidthScale);
+        //Debug.Log(_originalWidthScale);
 
         //Fetch the Rigidbody component from the GameObject
         _playerRigidbody = GetComponent<Rigidbody2D>();
         //Fetch the SpriteRenderer component from the GameObject
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
-        Debug.Log(whatIsGround);
+        //Debug.Log(whatIsGround);
 
         FindObjectOfType<AudioManager>().Play("MenuLoop");
 

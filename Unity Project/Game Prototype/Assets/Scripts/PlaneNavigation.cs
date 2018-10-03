@@ -58,10 +58,10 @@ public class PlaneNavigation : MonoBehaviour {
         Plane3CollisionLayer = LayerMask.NameToLayer("Plane 3");
 
         //prints layer numbers
-        Debug.Log(PlayerCollisionLayer);
-        Debug.Log(Plane1CollisionLayer);
-        Debug.Log(Plane2CollisionLayer);
-        Debug.Log(Plane3CollisionLayer);
+        //Debug.Log(PlayerCollisionLayer);
+        //Debug.Log(Plane1CollisionLayer);
+        //Debug.Log(Plane2CollisionLayer);
+        //Debug.Log(Plane3CollisionLayer);
 
         //sets sprite variable to SpriteRenderer component
         sprite = GetComponent<SpriteRenderer>();
@@ -88,7 +88,7 @@ public class PlaneNavigation : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        Debug.Log("Collided with: " + other.name);
+        //Debug.Log("Collided with: " + other.name);
 
         //switch to correct layer based on portal name
         if (other.name == "Portal 1" && Input.GetButtonDown("Enter Portal"))
