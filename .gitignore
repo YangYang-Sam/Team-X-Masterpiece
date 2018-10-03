@@ -31,7 +31,7 @@ ExportedObj/
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
-//# Builds
-//*.apk
-//*.unitypackage
-//Design/Thumbs.db
+# Builds
+*.apk
+*.unitypackage
+Design/Thumbs.db
