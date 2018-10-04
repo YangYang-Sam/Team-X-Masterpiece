@@ -15,11 +15,11 @@ public class PlaneNavigation : MonoBehaviour {
 
     // sets player collisions based on layer/plane
     [SerializeField]
-    private bool plane1Invisible = false;
+    private bool plane1Ignore = false;
     [SerializeField]
-    private bool plane2Invisible = true;
+    private bool plane2Ignore = true;
     [SerializeField]
-    private bool plane3Invisible = true;
+    private bool plane3Ignore = true;
 
 
     public const string Plane1SortingLayer = "Foreground";
@@ -36,6 +36,12 @@ public class PlaneNavigation : MonoBehaviour {
     private int Plane1CollisionLayer;
     private int Plane2CollisionLayer;
     private int Plane3CollisionLayer;
+
+    [SerializeField]
+    public bool _playerFrozen;
+    [SerializeField]
+    public float freezeTime;
+    //how long should we freeze for.
 
     // Use this for initialization
     void Start ()
@@ -57,12 +63,6 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2CollisionLayer = LayerMask.NameToLayer("Plane 2");
         Plane3CollisionLayer = LayerMask.NameToLayer("Plane 3");
 
-        //prints layer numbers
-        //Debug.Log(PlayerCollisionLayer);
-        //Debug.Log(Plane1CollisionLayer);
-        //Debug.Log(Plane2CollisionLayer);
-        //Debug.Log(Plane3CollisionLayer);
-
         //sets sprite variable to SpriteRenderer component
         sprite = GetComponent<SpriteRenderer>();
 
@@ -79,9 +79,9 @@ public class PlaneNavigation : MonoBehaviour {
 	void Update ()
     {
         //Sets the collisions between layer 8 (player) and platform layers
-        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane1CollisionLayer, plane1Invisible);
-        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane2CollisionLayer, plane2Invisible);
-        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Invisible);
+        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane1CollisionLayer, plane1Ignore);
+        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane2CollisionLayer, plane2Ignore);
+        Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Ignore);
     }
 
     //detect player colliding with portal
@@ -89,17 +89,17 @@ public class PlaneNavigation : MonoBehaviour {
 
     {
         //switch to correct layer based on portal name
-        if (other.name == "Portal 1" && Input.GetButtonDown("Enter Portal"))
+        if (other.name == "Portal 1" && Input.GetButtonDown("Interact"))
         {
             Plane2Selector();
         }
 
-        else if (other.name == "Portal 2" && Input.GetButtonDown("Enter Portal"))
+        else if (other.name == "Portal 2" && Input.GetButtonDown("Interact"))
         {
             Plane3Selector();
         }
 
-        else if (other.name == "Portal 3" && Input.GetButtonDown("Enter Portal"))
+        else if (other.name == "Portal 3" && Input.GetButtonDown("Interact"))
         {
             Plane1Selector();
         }
@@ -108,19 +108,16 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane1Selector()
     {
+        StartCoroutine(FreezePlayer());
         Plane3.GetComponent<Animator>().Play("Plane3_Out");
         Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
         Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
 
         //turn on/off collisions for appropriate layer
-        plane1Invisible = false;
-        plane2Invisible = true;
-        plane3Invisible = true;
+        plane1Ignore = false;
+        plane2Ignore = true;
+        plane3Ignore = true;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
-
-        //Plane1.transform.localScale = new Vector2(1, 1);
-        //Plane2.transform.localScale = new Vector2(0, 0);
-        //Plane3.transform.localScale = new Vector2(0, 0);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
@@ -130,41 +127,64 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane2Selector()
     {
+        StartCoroutine(FreezePlayer());
         Plane2.GetComponent<Animator>().Play("Plane2_In");
         Plane1.GetComponent<Animator>().Play("Plane1_Out");
         Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
-        plane1Invisible = true;
-        plane2Invisible = false;
-        plane3Invisible = true;
+        //plane1Ignore = true;
+        //plane2Ignore = false;
+        //plane3Ignore = true;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
 
-        //Plane1.transform.localScale = new Vector2(0, 0);
-        //Plane2.transform.localScale = new Vector2(1, 1);
-        //Plane3.transform.localScale = new Vector2(0, 0);
-
-        playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+        //playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
         //Make player sprite render on correct layer
-        sprite.sortingLayerName = Plane2SortingLayer;
+        //sprite.sortingLayerName = Plane2SortingLayer;
     }
 
     private void Plane3Selector()
     {
+        StartCoroutine(FreezePlayer());
         Plane2.GetComponent<Animator>().Play("Plane2_Out");
         Plane3.GetComponent<Animator>().Play("Plane3_In");
-        plane1Invisible = true;
-        plane2Invisible = true;
-        plane3Invisible = false;
+        //plane1Ignore = true;
+        //plane2Ignore = true;
+        //plane3Ignore = false;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
-
-        //Plane1.transform.localScale = new Vector2(0, 0);
-        //Plane2.transform.localScale = new Vector2(0, 0);
-        //Plane3.transform.localScale = new Vector2(1, 1);
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
 
         //Make player sprite render on correct layer
         sprite.sortingLayerName = Plane3SortingLayer;
+    }
+
+    public IEnumerator FreezePlayer()
+    {
+        float time = 0;
+
+        while (time < freezeTime)
+        {
+            time += Time.deltaTime;
+            _playerFrozen = true;
+            plane1Ignore = true;
+            plane2Ignore = true;
+            plane3Ignore = true;
+            yield return null;
+        }
+        //Turn back to the starting position.
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            plane1Ignore = true;
+            plane2Ignore = false;
+            plane3Ignore = true;
+            playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+            sprite.sortingLayerName = Plane2SortingLayer;
+            _playerFrozen = false;
+            Debug.Log("Number of calls");
+            yield return null;
+        }
+        //_playerFrozen = false;
     }
 
 }

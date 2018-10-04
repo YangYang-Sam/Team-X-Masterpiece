@@ -2351,7 +2351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825074215039470, guid: 4e5725e2fa8cbcb4b96e08c705960a02, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 212559567034189378, guid: 4e5725e2fa8cbcb4b96e08c705960a02,
         type: 2}
@@ -3523,7 +3523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825074215039470, guid: 4e5725e2fa8cbcb4b96e08c705960a02, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1381347031989986, guid: 4e5725e2fa8cbcb4b96e08c705960a02, type: 2}
       propertyPath: m_Name
@@ -3691,6 +3691,8 @@ MonoBehaviour:
   plane2Invisible: 1
   plane3Invisible: 1
   sortingOrder: 0
+  _playerFrozen: 0
+  freezeTime: 1
 --- !u!58 &1949177071
 CircleCollider2D:
   m_ObjectHideFlags: 0

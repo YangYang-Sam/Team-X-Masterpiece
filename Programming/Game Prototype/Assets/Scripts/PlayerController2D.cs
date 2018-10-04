@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
+    //Access playerController class
+    private PlaneNavigation planeNavigation;
+
     //set variables to store speed etc and alter fields in inspector 
     private float _speed;
     [SerializeField]
@@ -31,80 +34,48 @@ public class PlayerController2D : MonoBehaviour
     private int _canVeilJumpValue;
     [SerializeField]
     private float _veilJumpWidthScale;
-    private float _originalWidthScale;
+    private Vector3 _veilJumpScale;
+
+    private Vector3 _originalScale;
 
     private SpriteRenderer _spriteRenderer;
-    //private BoxCollider2D _BoxCollider2D;
-    //private CircleCollider2D _CircleCollider2D;
 
-    //Vector2 and float to store original Box Collider size and Circle collider radius respectively.
-    //private Vector2 _BoxColliderSize;
-    //private float _CircleColliderRadius;
 
-    //private Vector2 _spriteRendererSize;
-
-    //private Vector2 _BoxColliderOffset;
-    //private Vector2 _CircleColliderOffset;
 
 
     private void Start()
     {
+        planeNavigation = GetComponent<PlaneNavigation>();
+
         _speed = _speedValue;
         _canJump = _canJumpValue;
         _canVeilJump = _canVeilJumpValue;
-        _originalWidthScale = transform.localScale.x;
-        //Debug.Log(_originalWidthScale);
+        _originalScale = transform.localScale;
+        _veilJumpScale = new Vector3(_originalScale.x * _veilJumpWidthScale, _originalScale.y, _originalScale.z);
 
         //Fetch the Rigidbody component from the GameObject
         _playerRigidbody = GetComponent<Rigidbody2D>();
         //Fetch the SpriteRenderer component from the GameObject
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
-        //Debug.Log(whatIsGround);
-
+        //Play Main theme audio
         FindObjectOfType<AudioManager>().Play("MenuLoop");
-
-        ////gets box collider
-        //_BoxCollider2D = GetComponent<BoxCollider2D>();
-        ////stores boxcollider size and offset
-        //_BoxColliderSize = _BoxCollider2D.size;
-        //_BoxColliderOffset = _BoxCollider2D.offset;
-        //Debug.Log(_BoxCollider2D.size);
-        ////stores circlecollider radius and offset
-        //_CircleCollider2D = GetComponent<CircleCollider2D>();
-        //_CircleColliderRadius = _CircleCollider2D.radius;
-        //_CircleColliderOffset = _CircleCollider2D.offset;
-        //Debug.Log(_CircleCollider2D.radius);
-        ////stores _spriteRenderer size and offset
-        //_spriteRenderer = GetComponent<SpriteRenderer>();
-
-        ////_BoxCollider2D.size = new Vector2(0.05f, 0.3f);
-        //Debug.Log(_BoxColliderSize);
-        ////_CircleCollider2D.radius = 0.1f;
-        //Debug.Log(_CircleColliderRadius);
-
-        //UpdateColliderSize();
-
 
     }
 
     private void FixedUpdate()
     {
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-        _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
-
-        if (facingRight == false && horizontalMove > 0)
+        //Horizontal Movement
+        if (planeNavigation._playerFrozen == false)
         {
-            facingRight = !facingRight;
-            _spriteRenderer.flipX = false;
+            _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
         }
-        else if (facingRight == true && horizontalMove < 0)
+        else if (planeNavigation._playerFrozen == true)
         {
-            facingRight = !facingRight;
-            _spriteRenderer.flipX = true;
+            ResetVeilJump();
+            _playerRigidbody.velocity = new Vector2(0, 0);
+            _playerRigidbody.gravityScale = 0;
         }
-
+        Flip();
     }
 
     private void Update()
@@ -144,6 +115,20 @@ public class PlayerController2D : MonoBehaviour
 
     }
 
+    private void Flip()
+    {
+        if (facingRight == false && horizontalMove > 0)
+        {
+            facingRight = !facingRight;
+            _spriteRenderer.flipX = false;
+        }
+        else if (facingRight == true && horizontalMove < 0)
+        {
+            facingRight = !facingRight;
+            _spriteRenderer.flipX = true;
+        }
+    }
+
     private void Jump()
     {
         //set correct gravity and move player
@@ -169,19 +154,18 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
         FindObjectOfType<AudioManager>().Play("VeilJump");
         _speed = 0;
-        transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+        transform.localScale = _veilJumpScale;
+
         _canVeilJump--;
         _canJump --;
     }
 
     private void TempInvincibility()
     {
-        //_playerRigidbody.gravityScale = 25;
-        //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 0);
         FindObjectOfType<AudioManager>().Play("PortalEntry");
         _speed = 0;
-        transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
+        transform.localScale = _veilJumpScale;
     }
 
     //private void ResetInvincibility()
@@ -196,20 +180,16 @@ public class PlayerController2D : MonoBehaviour
     private void ResetVeilJump()
     {
         _playerRigidbody.gravityScale = 3;
-        transform.localScale = new Vector3(_originalWidthScale, transform.localScale.y, transform.localScale.z);
+        transform.localScale = _originalScale;
         _speed = _speedValue;
         _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
     }
 
 
-    private void UpdateColliderSize()
-    {
-
-        //_BoxCollider2D.size = _spriteRenderer.sprite.bounds.size;
-        //_BoxCollider2D.offset = new Vector2(0, 0);
-        //_CircleCollider2D.radius = _spriteRenderer.sprite.bounds.size.x * 0.3317394f;
-
-        //Debug.Log(_spriteRenderer.sprite.bounds.size.x + " = sprite x value");
-    }
-
+    //private IEnumerator FreezePlayer()
+    //{
+    //    _playerFrozen = true;
+    //    yield return new WaitForSeconds(1);
+    //    _playerFrozen = false;
+    //}
 }
