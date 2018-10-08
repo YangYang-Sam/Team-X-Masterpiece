@@ -108,7 +108,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane1Selector()
     {
-        StartCoroutine(FreezePlayer());
+        StartCoroutine(Plane1Delay());
         Plane3.GetComponent<Animator>().Play("Plane3_Out");
         Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
         Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
@@ -127,7 +127,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane2Selector()
     {
-        StartCoroutine(FreezePlayer());
+        StartCoroutine(Plane2Delay());
         Plane2.GetComponent<Animator>().Play("Plane2_In");
         Plane1.GetComponent<Animator>().Play("Plane1_Out");
         Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
@@ -144,7 +144,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     private void Plane3Selector()
     {
-        StartCoroutine(FreezePlayer());
+        StartCoroutine(Plane3Delay());
         Plane2.GetComponent<Animator>().Play("Plane2_Out");
         Plane3.GetComponent<Animator>().Play("Plane3_In");
         //plane1Ignore = true;
@@ -159,6 +159,63 @@ public class PlaneNavigation : MonoBehaviour {
     }
 
     public IEnumerator FreezePlayer()
+    {
+        float time = 0;
+
+        while (time < freezeTime)
+        {
+            time += Time.deltaTime;
+            _playerFrozen = true;
+            //plane1Ignore = true;
+            //plane2Ignore = true;
+            //plane3Ignore = true;
+            yield return null;
+        }
+        //Turn back to the starting position.
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            plane1Ignore = true;
+            plane2Ignore = false;
+            plane3Ignore = true;
+            playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+            sprite.sortingLayerName = Plane2SortingLayer;
+            _playerFrozen = false;
+            Debug.Log("Number of calls");
+            yield return null;
+        }
+        //_playerFrozen = false;
+    }
+
+    public IEnumerator Plane1Delay()
+    {
+        float time = 0;
+
+        while (time < freezeTime)
+        {
+            time += Time.deltaTime;
+            _playerFrozen = true;
+            plane1Ignore = true;
+            plane2Ignore = true;
+            plane3Ignore = true;
+            yield return null;
+        }
+        //Turn back to the starting position.
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            plane1Ignore = false;
+            plane2Ignore = true;
+            plane3Ignore = true;
+            playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
+            sprite.sortingLayerName = Plane1SortingLayer;
+            _playerFrozen = false;
+            Debug.Log("Number of calls");
+            yield return null;
+        }
+    }
+
+    public IEnumerator Plane2Delay()
     {
         float time = 0;
 
@@ -184,7 +241,34 @@ public class PlaneNavigation : MonoBehaviour {
             Debug.Log("Number of calls");
             yield return null;
         }
-        //_playerFrozen = false;
+    }
+
+    public IEnumerator Plane3Delay()
+    {
+        float time = 0;
+
+        while (time < freezeTime)
+        {
+            time += Time.deltaTime;
+            _playerFrozen = true;
+            plane1Ignore = true;
+            plane2Ignore = true;
+            plane3Ignore = true;
+            yield return null;
+        }
+        //Turn back to the starting position.
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            plane1Ignore = true;
+            plane2Ignore = true;
+            plane3Ignore = false;
+            playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
+            sprite.sortingLayerName = Plane3SortingLayer;
+            _playerFrozen = false;
+            Debug.Log("Number of calls");
+            yield return null;
+        }
     }
 
 }

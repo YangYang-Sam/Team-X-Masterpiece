@@ -3687,12 +3687,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fad414dc0055c9429b52284a51925aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane1Invisible: 0
-  plane2Invisible: 1
-  plane3Invisible: 1
+  plane1Ignore: 0
+  plane2Ignore: 1
+  plane3Ignore: 1
   sortingOrder: 0
   _playerFrozen: 0
-  freezeTime: 1
+  freezeTime: 0.5
 --- !u!58 &1949177071
 CircleCollider2D:
   m_ObjectHideFlags: 0
