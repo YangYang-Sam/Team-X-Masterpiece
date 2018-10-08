@@ -3667,11 +3667,13 @@ MonoBehaviour:
   _speedValue: 5
   jumpforce: 10
   _veilJumpForce: 40
+  _playerRigidbody: {fileID: 0}
   groundCheck: {fileID: 1299710434}
   checkRadius: 0.01
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  _defaultGravity: 3
   _canJumpValue: 2
   _canVeilJumpValue: 2
   _veilJumpWidthScale: 0.35
@@ -3750,7 +3752,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 5f6769f91b6c4234db7da3d6a9182558, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0

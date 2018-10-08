@@ -51,10 +51,6 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2 = GameObject.Find("Plane 2");
         Plane3 = GameObject.Find("Plane 3");
 
-        //Plane1.transform.localScale = new Vector2(1, 1);
-        //Plane2.transform.localScale = new Vector2(0, 0);
-        //Plane3.transform.localScale = new Vector2(0, 0);
-
         playerController2D = GetComponent<PlayerController2D>();
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
@@ -181,6 +177,7 @@ public class PlaneNavigation : MonoBehaviour {
             playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
             sprite.sortingLayerName = Plane2SortingLayer;
             _playerFrozen = false;
+            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
@@ -210,6 +207,7 @@ public class PlaneNavigation : MonoBehaviour {
             playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
             sprite.sortingLayerName = Plane1SortingLayer;
             _playerFrozen = false;
+            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
@@ -238,6 +236,7 @@ public class PlaneNavigation : MonoBehaviour {
             playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
             sprite.sortingLayerName = Plane2SortingLayer;
             _playerFrozen = false;
+            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
@@ -266,6 +265,7 @@ public class PlaneNavigation : MonoBehaviour {
             playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
             sprite.sortingLayerName = Plane3SortingLayer;
             _playerFrozen = false;
+            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }

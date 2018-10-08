@@ -17,7 +17,7 @@ public class PlayerController2D : MonoBehaviour
     private float _veilJumpForce;
     private float horizontalMove;
 
-    private Rigidbody2D _playerRigidbody;
+    public Rigidbody2D _playerRigidbody;
 
     private bool facingRight = true;
 
@@ -26,6 +26,7 @@ public class PlayerController2D : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    public int _defaultGravity = 3;
     private int _canJump;
     private int _canVeilJump;
     [SerializeField]
@@ -179,7 +180,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void ResetVeilJump()
     {
-        _playerRigidbody.gravityScale = 3;
+        _playerRigidbody.gravityScale = _defaultGravity;
         transform.localScale = _originalScale;
         _speed = _speedValue;
         _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
