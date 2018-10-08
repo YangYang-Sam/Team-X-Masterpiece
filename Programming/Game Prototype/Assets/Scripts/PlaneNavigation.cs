@@ -110,9 +110,9 @@ public class PlaneNavigation : MonoBehaviour {
         Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
 
         //turn on/off collisions for appropriate layer
-        plane1Ignore = false;
-        plane2Ignore = true;
-        plane3Ignore = true;
+        //plane1Ignore = false;
+        //plane2Ignore = true;
+        //plane3Ignore = true;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
