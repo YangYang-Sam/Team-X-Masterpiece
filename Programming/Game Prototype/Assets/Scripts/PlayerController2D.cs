@@ -7,6 +7,9 @@ public class PlayerController2D : MonoBehaviour
     //Access playerController class
     private PlaneNavigation planeNavigation;
 
+    [SerializeField]
+    private GameObject _playerPrefab;
+
     //set variables to store speed etc and alter fields in inspector 
     private float _speed;
     [SerializeField]
@@ -40,6 +43,7 @@ public class PlayerController2D : MonoBehaviour
     private Vector3 _originalScale;
 
     private SpriteRenderer _spriteRenderer;
+
 
 
 
@@ -193,4 +197,29 @@ public class PlayerController2D : MonoBehaviour
     //    yield return new WaitForSeconds(1);
     //    _playerFrozen = false;
     //}
+
+    public void Damage()
+    {
+        gameObject.SetActive(false);
+        SpawnPlayer();
+    }
+
+    public void SpawnPlayer()
+    {
+        //gameObject.transform.position = planeNavigation._plane1Spawn.transform.position;
+        if(planeNavigation._currentPlane == 1)
+        {
+            gameObject.transform.position = new Vector3(-3.5f, -4.6f, 0);
+        }
+        else if (planeNavigation._currentPlane == 2)
+        {
+            gameObject.transform.position = new Vector3(1.5f, 2.3f, 0);
+        }
+        else if (planeNavigation._currentPlane == 3)
+        {
+            gameObject.transform.position = new Vector3(2.3f, -4.6f, 0);
+        }
+        gameObject.SetActive(true);
+        Debug.Log("Player spawned");
+    }
 }

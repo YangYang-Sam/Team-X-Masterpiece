@@ -23,9 +23,9 @@ public class EnemyAI : MonoBehaviour {
         transform.Translate(new Vector3(moveSpeed, 0, 0) * Time.deltaTime);
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.name == "Patrol Marker")
+        if (other.gameObject.name == "Patrol Marker")
         {
             moveSpeed *= -1;
             Debug.Log("collisions working");
@@ -38,6 +38,48 @@ public class EnemyAI : MonoBehaviour {
                 _spriteRenderer.flipX = true;
             }
         }
-        
+
+        if (other.tag == "Player")
+        {
+            PlayerController2D player = other.GetComponent<PlayerController2D>();
+
+            if (player != null)
+            {
+                player.Damage();
+            }
+
+            //EnemyExplosion();
+        }
+
     }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    Debug.Log("Collided with: " + other.name);
+
+    //    if (other.tag == "Player")
+    //    {
+    //        Player player = other.GetComponent<Player>();
+
+    //        if (player != null)
+    //        {
+    //            player.Damage();
+    //        }
+
+    //        EnemyExplosion();
+    //    }
+
+    //    else if (other.tag == "Laser")
+    //    {
+    //        if (other.transform.parent != null)
+    //        {
+    //            Destroy(other.transform.parent.gameObject);
+    //        }
+    //        //destroy laser
+    //        Destroy(other.gameObject);
+    //        //destroy enemy
+    //        EnemyExplosion();
+    //    }
+
+    //}
 }

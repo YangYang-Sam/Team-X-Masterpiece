@@ -15,7 +15,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     // sets player collisions based on layer/plane
     [SerializeField]
-    private bool plane1Ignore = false;
+    private bool plane1Ignore = true;
     [SerializeField]
     private bool plane2Ignore = true;
     [SerializeField]
@@ -42,6 +42,16 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     public float freezeTime;
     //how long should we freeze for.
+
+    //variable to store the current plane the player is on
+    public int _currentPlane = 1;
+
+    [SerializeField]
+    public GameObject _plane1Spawn;
+    [SerializeField]
+    public GameObject _plane2Spawn;
+    [SerializeField]
+    public GameObject _plane3Spawn;
 
     // Use this for initialization
     void Start ()
@@ -119,6 +129,8 @@ public class PlaneNavigation : MonoBehaviour {
 
         //Make player sprite render on correct layer
         sprite.sortingLayerName = Plane1SortingLayer;
+
+        _currentPlane = 1;
     }
 
     private void Plane2Selector()
@@ -135,7 +147,9 @@ public class PlaneNavigation : MonoBehaviour {
         //playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
         //Make player sprite render on correct layer
-        //sprite.sortingLayerName = Plane2SortingLayer;
+        sprite.sortingLayerName = Plane2SortingLayer;
+
+        _currentPlane = 2;
     }
 
     private void Plane3Selector()
@@ -152,6 +166,7 @@ public class PlaneNavigation : MonoBehaviour {
 
         //Make player sprite render on correct layer
         sprite.sortingLayerName = Plane3SortingLayer;
+        _currentPlane = 3;
     }
 
     public IEnumerator FreezePlayer()
@@ -237,7 +252,6 @@ public class PlaneNavigation : MonoBehaviour {
             sprite.sortingLayerName = Plane2SortingLayer;
             _playerFrozen = false;
             playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
-            Debug.Log("Number of calls");
             yield return null;
         }
     }
