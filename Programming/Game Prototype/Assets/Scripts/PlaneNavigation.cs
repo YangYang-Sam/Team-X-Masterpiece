@@ -61,6 +61,8 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2 = GameObject.Find("Plane 2");
         Plane3 = GameObject.Find("Plane 3");
 
+        Plane3.gameObject.SetActive(false);
+
         _currentPlane = 1;
 
         playerController2D = GetComponent<PlayerController2D>();
@@ -117,6 +119,7 @@ public class PlaneNavigation : MonoBehaviour {
     private void Plane1Selector()
     {
         StartCoroutine(Plane1Delay());
+        Plane3.gameObject.SetActive(false);
         Plane3.GetComponent<Animator>().Play("Plane3_Out");
         Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
         Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
@@ -138,8 +141,9 @@ public class PlaneNavigation : MonoBehaviour {
     private void Plane2Selector()
     {
         StartCoroutine(Plane2Delay());
-        Plane2.GetComponent<Animator>().Play("Plane2_In");
+        Plane3.gameObject.SetActive(true);
         Plane1.GetComponent<Animator>().Play("Plane1_Out");
+        Plane2.GetComponent<Animator>().Play("Plane2_In");
         Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
         //plane1Ignore = true;
         //plane2Ignore = false;
