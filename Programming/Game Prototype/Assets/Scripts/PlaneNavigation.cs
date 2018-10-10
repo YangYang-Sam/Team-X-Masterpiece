@@ -61,6 +61,8 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2 = GameObject.Find("Plane 2");
         Plane3 = GameObject.Find("Plane 3");
 
+        _currentPlane = 1;
+
         playerController2D = GetComponent<PlayerController2D>();
         playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
@@ -177,9 +179,9 @@ public class PlaneNavigation : MonoBehaviour {
         {
             time += Time.deltaTime;
             _playerFrozen = true;
-            //plane1Ignore = true;
-            //plane2Ignore = true;
-            //plane3Ignore = true;
+            plane1Ignore = true;
+            plane2Ignore = true;
+            plane3Ignore = true;
             yield return null;
         }
         //Turn back to the starting position.

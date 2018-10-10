@@ -29,7 +29,7 @@ public class PlayerController2D : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    public int _defaultGravity = 3;
+    public int _defaultGravity;
     private int _canJump;
     private int _canVeilJump;
     [SerializeField]
@@ -86,7 +86,7 @@ public class PlayerController2D : MonoBehaviour
     private void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        horizontalMove = Input.GetAxis("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
 
         if (isGrounded == true)
         {
@@ -209,14 +209,17 @@ public class PlayerController2D : MonoBehaviour
         //gameObject.transform.position = planeNavigation._plane1Spawn.transform.position;
         if(planeNavigation._currentPlane == 1)
         {
+            Debug.Log("Plane1 spawn");
             gameObject.transform.position = new Vector3(-3.5f, -4.6f, 0);
         }
         else if (planeNavigation._currentPlane == 2)
         {
+            Debug.Log("Plane2 spawn");
             gameObject.transform.position = new Vector3(1.5f, 2.3f, 0);
         }
         else if (planeNavigation._currentPlane == 3)
         {
+            Debug.Log("Plane3 spawn");
             gameObject.transform.position = new Vector3(2.3f, -4.6f, 0);
         }
         gameObject.SetActive(true);
