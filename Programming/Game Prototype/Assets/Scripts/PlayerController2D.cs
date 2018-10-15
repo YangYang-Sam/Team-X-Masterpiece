@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     //Access playerController class
-    private PlaneNavigation planeNavigation;
+    [SerializeField]
+    private GameObject _planeController;
+    private PlaneNavigation _planeNavigation;
 
     [SerializeField]
     private GameObject _playerPrefab;
@@ -42,7 +44,7 @@ public class PlayerController2D : MonoBehaviour
 
     private Vector3 _originalScale;
 
-    private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer _spriteRenderer;
 
 
 
@@ -50,7 +52,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void Start()
     {
-        planeNavigation = GetComponent<PlaneNavigation>();
+        _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;
@@ -70,11 +72,11 @@ public class PlayerController2D : MonoBehaviour
     private void FixedUpdate()
     {
         //Horizontal Movement
-        if (planeNavigation._playerFrozen == false)
+        if (_planeNavigation._playerFrozen == false)
         {
             _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
         }
-        else if (planeNavigation._playerFrozen == true)
+        else if (_planeNavigation._playerFrozen == true)
         {
             ResetVeilJump();
             _playerRigidbody.velocity = new Vector2(0, 0);
@@ -206,23 +208,49 @@ public class PlayerController2D : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        //gameObject.transform.position = planeNavigation._plane1Spawn.transform.position;
-        if(planeNavigation._currentPlane == 1)
+        //gameObject.transform.position = _planeNavigation._plane1Spawn.transform.position;
+        if(_planeNavigation._currentPlane == 1)
         {
             Debug.Log("Plane1 spawn");
             gameObject.transform.position = new Vector3(-3.5f, -4.6f, 0);
         }
-        else if (planeNavigation._currentPlane == 2)
+        else if (_planeNavigation._currentPlane == 2)
         {
             Debug.Log("Plane2 spawn");
             gameObject.transform.position = new Vector3(1.5f, 2.3f, 0);
         }
-        else if (planeNavigation._currentPlane == 3)
+        else if (_planeNavigation._currentPlane == 3)
         {
             Debug.Log("Plane3 spawn");
             gameObject.transform.position = new Vector3(2.3f, -4.6f, 0);
         }
         gameObject.SetActive(true);
         Debug.Log("Player spawned");
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+
+    {
+        //switch to correct layer based on portal name
+        if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
+        {
+            _planeNavigation.Plane2Selector();
+        }
+
+        else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
+        {
+            _planeNavigation.Plane3Selector();
+        }
+
+        else if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
+        {
+            _planeNavigation.Plane1Selector();
+        }
+
+        if (other.name == "Lever" && Input.GetButtonDown("Interact"))
+        {
+            _planeNavigation.RotatePlane();
+        }
+
     }
 }

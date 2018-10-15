@@ -5,13 +5,21 @@ using UnityEngine;
 public class PlaneNavigation : MonoBehaviour {
 
     //Access playerController class
-    private PlayerController2D playerController2D;
+    [SerializeField]
+    private GameObject _playerPrefab;
+
+    private PlayerController2D _playerController2D;
 
     //public Animator animator;
-
+    [SerializeField]
     GameObject Plane1;
+    [SerializeField]
     GameObject Plane2;
+    [SerializeField]
     GameObject Plane3;
+
+    [SerializeField]
+    GameObject[] Planes;
 
     // sets player collisions based on layer/plane
     [SerializeField]
@@ -30,7 +38,7 @@ public class PlaneNavigation : MonoBehaviour {
     public int sortingOrder = 0;
 
     //creates SpriteRenderer component to manipulate layer order.
-    private SpriteRenderer sprite;
+    //private SpriteRenderer _playerController2D._spriteRenderer;
 
     private int PlayerCollisionLayer;
     private int Plane1CollisionLayer;
@@ -53,14 +61,12 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     public GameObject _plane3Spawn;
 
+    float smooth = 2.0f;
+    float tiltAngle = 90.0f;
+
     // Use this for initialization
     void Start ()
     {
-        //set gameobjects for plane scaling
-        Plane1 = GameObject.Find("Plane 1");
-        Plane2 = GameObject.Find("Plane 2");
-        Plane3 = GameObject.Find("Plane 3");
-
         Plane1.SetActive(true);
         Plane2.SetActive(false);
         Plane3.SetActive(false);
@@ -72,8 +78,8 @@ public class PlaneNavigation : MonoBehaviour {
 
         _currentPlane = 1;
 
-        playerController2D = GetComponent<PlayerController2D>();
-        playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
+        _playerController2D = _playerPrefab.GetComponent<PlayerController2D>(); 
+        _playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
         //sets collision layers as layer numbers
         PlayerCollisionLayer = LayerMask.NameToLayer("Player");
         Plane1CollisionLayer = LayerMask.NameToLayer("Plane 1");
@@ -81,13 +87,13 @@ public class PlaneNavigation : MonoBehaviour {
         Plane3CollisionLayer = LayerMask.NameToLayer("Plane 3");
 
         //sets sprite variable to SpriteRenderer component
-        sprite = GetComponent<SpriteRenderer>();
+        //_playerController2D._spriteRenderer = _playerController2D.GetComponent<SpriteRenderer>();
 
-        if (sprite)
+        if (_playerController2D._spriteRenderer)
         {
-            sprite.sortingOrder = sortingOrder;
-            sprite.sortingLayerName = Plane1SortingLayer;
-            sprite.sortingOrder = 1;
+            _playerController2D._spriteRenderer.sortingOrder = sortingOrder;
+            _playerController2D._spriteRenderer.sortingLayerName = Plane1SortingLayer;
+            _playerController2D._spriteRenderer.sortingOrder = 1;
         }
 
     }
@@ -99,31 +105,44 @@ public class PlaneNavigation : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane1CollisionLayer, plane1Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane2CollisionLayer, plane2Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Ignore);
+
+        float tiltAroundZ = Input.GetAxisRaw("Interact") * tiltAngle;
+        float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
+
+        Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
+
+        // Dampen towards the target rotation
+        Plane1.transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 
     //detect player colliding with portal
-    private void OnTriggerStay2D(Collider2D other)
+    //private void OnTriggerStay2D(Collider2D other)
 
-    {
-        //switch to correct layer based on portal name
-        if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
-        {
-            Plane2Selector();
-        }
+    //{
+    //    //switch to correct layer based on portal name
+    //    if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
+    //    {
+    //        Plane2Selector();
+    //    }
 
-        else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
-        {
-            Plane3Selector();
-        }
+    //    else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
+    //    {
+    //        Plane3Selector();
+    //    }
 
-        else if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
-        {
-            Plane1Selector();
-        }
+    //    else if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
+    //    {
+    //        Plane1Selector();
+    //    }
 
-    }
+    //    if (other.name == "Lever" && Input.GetButtonDown("Interact"))
+    //    {
+    //        RotatePlane();
+    //    }
 
-    private void Plane1Selector()
+    //}
+
+    public void Plane1Selector()
     {
         Plane1.SetActive(true);
         Plane2.SetActive(false);
@@ -134,9 +153,9 @@ public class PlaneNavigation : MonoBehaviour {
         //Plane3.transform.localScale = Vector3.zero;
 
         StartCoroutine(Plane1Delay());
-        Plane3.GetComponent<Animator>().Play("Plane3_Out");
-        Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
-        Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
+        //Plane3.GetComponent<Animator>().Play("Plane3_Out");
+        //Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
+        //Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
 
         //turn on/off collisions for appropriate layer
         //plane1Ignore = false;
@@ -144,15 +163,15 @@ public class PlaneNavigation : MonoBehaviour {
         //plane3Ignore = true;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
 
-        playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
+        _playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
         //Make player sprite render on correct layer
-        sprite.sortingLayerName = Plane1SortingLayer;
+        _playerController2D._spriteRenderer.sortingLayerName = Plane1SortingLayer;
 
         _currentPlane = 1;
     }
 
-    private void Plane2Selector()
+    public void Plane2Selector()
     {
         Plane1.SetActive(false);
         Plane2.SetActive(true);
@@ -162,23 +181,23 @@ public class PlaneNavigation : MonoBehaviour {
         //Plane3.transform.localScale = Vector3.zero;
 
         StartCoroutine(Plane2Delay());
-        Plane1.GetComponent<Animator>().Play("Plane1_Out");
-        Plane2.GetComponent<Animator>().Play("Plane2_In");
-        Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
+        //Plane1.GetComponent<Animator>().Play("Plane1_Out");
+        //Plane2.GetComponent<Animator>().Play("Plane2_In");
+        //Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
         //plane1Ignore = true;
         //plane2Ignore = false;
         //plane3Ignore = true;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
 
-        playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+        _playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
         //Make player sprite render on correct layer
-        sprite.sortingLayerName = Plane2SortingLayer;
+        _playerController2D._spriteRenderer.sortingLayerName = Plane2SortingLayer;
 
         _currentPlane = 2;
     }
 
-    private void Plane3Selector()
+    public void Plane3Selector()
     {
         Plane1.SetActive(false);
         Plane2.SetActive(false);
@@ -189,17 +208,17 @@ public class PlaneNavigation : MonoBehaviour {
         //Plane3.transform.localScale = Vector3.one;
 
         StartCoroutine(Plane3Delay());
-        Plane2.GetComponent<Animator>().Play("Plane2_Out");
-        Plane3.GetComponent<Animator>().Play("Plane3_In");
+        //Plane2.GetComponent<Animator>().Play("Plane2_Out");
+        //Plane3.GetComponent<Animator>().Play("Plane3_In");
         //plane1Ignore = true;
         //plane2Ignore = true;
         //plane3Ignore = false;
         FindObjectOfType<AudioManager>().Play("PortalEntry");
 
-        playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
+        _playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
 
         //Make player sprite render on correct layer
-        sprite.sortingLayerName = Plane3SortingLayer;
+        _playerController2D._spriteRenderer.sortingLayerName = Plane3SortingLayer;
         _currentPlane = 3;
     }
 
@@ -223,10 +242,10 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = false;
             plane3Ignore = true;
-            playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
-            sprite.sortingLayerName = Plane2SortingLayer;
+            _playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+            _playerController2D._spriteRenderer.sortingLayerName = Plane2SortingLayer;
             _playerFrozen = false;
-            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
+            _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
@@ -253,10 +272,10 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = false;
             plane2Ignore = true;
             plane3Ignore = true;
-            playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
-            sprite.sortingLayerName = Plane1SortingLayer;
+            _playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
+            _playerController2D._spriteRenderer.sortingLayerName = Plane1SortingLayer;
             _playerFrozen = false;
-            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
+            _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
@@ -282,10 +301,10 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = false;
             plane3Ignore = true;
-            playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
-            sprite.sortingLayerName = Plane2SortingLayer;
+            _playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
+            _playerController2D._spriteRenderer.sortingLayerName = Plane2SortingLayer;
             _playerFrozen = false;
-            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
+            _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             yield return null;
         }
     }
@@ -310,14 +329,18 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = false;
-            playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
-            sprite.sortingLayerName = Plane3SortingLayer;
+            _playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
+            _playerController2D._spriteRenderer.sortingLayerName = Plane3SortingLayer;
             _playerFrozen = false;
-            playerController2D._playerRigidbody.gravityScale = playerController2D._defaultGravity;
+            _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             Debug.Log("Number of calls");
             yield return null;
         }
     }
 
+    public void RotatePlane()
+    {
+        //Plane2.transform.rotation = 180;
+    }
 }
 
