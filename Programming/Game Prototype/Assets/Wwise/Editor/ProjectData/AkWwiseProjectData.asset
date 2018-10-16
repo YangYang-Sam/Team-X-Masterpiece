@@ -12,52 +12,52 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b1c44feb3f6aeb4385630aab6e1230c5
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189450195611
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189451289450
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e79f7aeb36160343a1b0a8fd6f171ca1
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189450820686
     List: []
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 87e558d008878a49bcde6707a78040be
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189452539425
     List: []
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e21d5e32d636ed4e8408a0a11645dd99
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189452539425
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189450507715
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3156979d799ef042806706a5f809f98f
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189450351879
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3ea537982458c049bcf586e24bc1cdc4
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619189450351879
     List: []
   ExpandedItems:
   - /Game Prototype_WwiseProject

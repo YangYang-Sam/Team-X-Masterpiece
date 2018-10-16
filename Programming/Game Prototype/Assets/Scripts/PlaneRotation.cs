@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class PlaneRotation : MonoBehaviour {
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
-    {
-        print(plane1.transform.rotation.eulerAngles.z);
-        StartCoroutine(RotateOverTime(initialRotation, targetRotation, 1f / speed));
-    }
-
-
-    public GameObject plane1;
+    [SerializeField]
+    private GameObject _planeToRotate;
     public float speed = 0.5f;
     public Quaternion initialRotation = Quaternion.Euler(0, 0, 0);
     public Quaternion targetRotation = Quaternion.Euler(0, 0, 90);
 
-    // Update is called once per frame
+    public bool leverPulled = false;
+
+    // Use this for initialization
+    void Start ()
+    {
+		
+	}
+	
+	void FixedUpdate ()
+    {
+        if(leverPulled == true)
+        {
+            //print(_planeToRotate1.transform.rotation.eulerAngles.z);
+            StartCoroutine(RotateOverTime(initialRotation, targetRotation, 1f / speed));
+        }
+    }
 
     IEnumerator RotateOverTime(Quaternion initialRotation, Quaternion targetRotation, float duration)
     {
@@ -31,16 +33,17 @@ public class PlaneRotation : MonoBehaviour {
         {
             float startTime = Time.time;
             float endTime = startTime + duration;
-            plane1.transform.rotation = initialRotation;
+            _planeToRotate.transform.rotation = initialRotation;
             yield return null;
             while (Time.time < endTime)
             {
                 float progress = (Time.time - startTime) / duration;
                 // progress will equal 0 at startTime, 1 at endTime.
-                plane1.transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, progress);
+                _planeToRotate.transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, progress);
                 yield return null;
             }
         }
-        plane1.transform.rotation = targetRotation;
+        leverPulled = false;
+        _planeToRotate.transform.rotation = targetRotation;
     }
 }

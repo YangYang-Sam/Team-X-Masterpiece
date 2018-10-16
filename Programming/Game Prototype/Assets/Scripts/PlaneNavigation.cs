@@ -23,7 +23,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     // sets player collisions based on layer/plane
     [SerializeField]
-    private bool plane1Ignore = true;
+    private bool plane1Ignore = false;
     [SerializeField]
     private bool plane2Ignore = true;
     [SerializeField]
@@ -61,9 +61,12 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     public GameObject _plane3Spawn;
 
-    private Quaternion _planeRotation;
-    float smooth = 0.5f;
-    float tiltAngle = 90.0f;
+    [SerializeField]
+    private Vector3 _plane1Pos;
+    [SerializeField]
+    private Vector3 _plane2Pos;
+    [SerializeField]
+    private Vector3 _plane3Pos;
 
     // Use this for initialization
     void Start ()
@@ -72,11 +75,9 @@ public class PlaneNavigation : MonoBehaviour {
         Plane2.SetActive(false);
         Plane3.SetActive(false);
 
-        _planeRotation = Plane1.transform.rotation;
-
-        Plane1.transform.position = Vector3.zero;
-        Plane2.transform.position = Vector3.zero;
-        Plane3.transform.position = Vector3.zero;
+        Plane1.transform.position = _plane1Pos;
+        Plane2.transform.position = _plane2Pos;
+        Plane3.transform.position = _plane3Pos;
         //Plane3.transform.localScale = Vector3.zero;
 
         _currentPlane = 1;
@@ -108,17 +109,6 @@ public class PlaneNavigation : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane1CollisionLayer, plane1Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane2CollisionLayer, plane2Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Ignore);
-    }
-
-    private void FixedUpdate()
-    {
-        float tiltAroundZ = /*Input.GetAxisRaw("Interact") * */tiltAngle;
-        float tiltAroundX = /*Input.GetAxis("Vertical") * */0;
-
-        Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
-
-        // Dampen towards the target rotation
-        Plane1.transform.rotation = Quaternion.Slerp(_planeRotation, target, smooth);
     }
 
     //detect player colliding with portal

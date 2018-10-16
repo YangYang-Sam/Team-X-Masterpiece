@@ -8,6 +8,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     private GameObject _planeController;
     private PlaneNavigation _planeNavigation;
+    private PlaneRotation _planeRotation;
 
     [SerializeField]
     private GameObject _playerPrefab;
@@ -53,6 +54,7 @@ public class PlayerController2D : MonoBehaviour
     private void Start()
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
+        _planeRotation = _planeController.GetComponent<PlaneRotation>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;
@@ -249,7 +251,7 @@ public class PlayerController2D : MonoBehaviour
 
         if (other.name == "Lever" && Input.GetButtonDown("Interact"))
         {
-            _planeNavigation.RotatePlane();
+            _planeRotation.leverPulled = true;
         }
 
     }
