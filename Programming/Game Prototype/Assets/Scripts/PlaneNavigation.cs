@@ -71,9 +71,9 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        Plane1.SetActive(true);
-        Plane2.SetActive(false);
-        Plane3.SetActive(false);
+        //Plane1.SetActive(true);
+        //Plane2.SetActive(false);
+        //Plane3.SetActive(false);
 
         Plane1.transform.position = _plane1Pos;
         Plane2.transform.position = _plane2Pos;
@@ -140,9 +140,9 @@ public class PlaneNavigation : MonoBehaviour {
 
     public void Plane1Selector()
     {
-        Plane1.SetActive(true);
-        Plane2.SetActive(false);
-        Plane3.SetActive(false);
+        //Plane1.SetActive(true);
+        //Plane2.SetActive(false);
+        //Plane3.SetActive(false);
 
         //Plane1.transform.localScale = Vector3.one;
         //Plane2.transform.localScale = Vector3.zero;
@@ -169,9 +169,9 @@ public class PlaneNavigation : MonoBehaviour {
 
     public void Plane2Selector()
     {
-        Plane1.SetActive(false);
-        Plane2.SetActive(true);
-        Plane3.SetActive(false);
+        //Plane1.SetActive(false);
+        //Plane2.SetActive(true);
+        //Plane3.SetActive(false);
         //Plane1.transform.localScale = Vector3.zero;
         //Plane2.transform.localScale = Vector3.one;
         //Plane3.transform.localScale = Vector3.zero;
@@ -195,9 +195,9 @@ public class PlaneNavigation : MonoBehaviour {
 
     public void Plane3Selector()
     {
-        Plane1.SetActive(false);
-        Plane2.SetActive(false);
-        Plane3.SetActive(true);
+        //Plane1.SetActive(false);
+        //Plane2.SetActive(false);
+        //Plane3.SetActive(true);
 
         //Plane1.transform.localScale = Vector3.zero;
         //Plane2.transform.localScale = Vector3.zero;
