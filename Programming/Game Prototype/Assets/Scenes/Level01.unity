@@ -11382,6 +11382,7 @@ GameObject:
   - component: {fileID: 1231923424}
   - component: {fileID: 1231923425}
   - component: {fileID: 1231923426}
+  - component: {fileID: 1231923427}
   m_Layer: 10
   m_Name: Plane 1
   m_TagString: Plane 1 Objects
@@ -11470,6 +11471,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &1231923427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231923423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb69413c81c9c9f4fa16f803c8350d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane1: {fileID: 1231923423}
+  speed: 0.1
+  initialRotation: {x: 0, y: 0, z: 0, w: 1}
+  targetRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
 --- !u!1001 &1280311169
 Prefab:
   m_ObjectHideFlags: 0
