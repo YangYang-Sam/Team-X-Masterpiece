@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" SchemaVersion="89">
+	<AudioObjects>
+		<WorkUnit Name="TVeil_Actor_Mixer" ID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" PersistMode="Standalone"/>
+	</AudioObjects>
+</WwiseDocument>

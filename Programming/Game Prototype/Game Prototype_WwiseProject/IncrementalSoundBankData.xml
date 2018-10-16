@@ -16,11 +16,12 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="3121226777" Timestamp="1539687795"/>
+				<File Name="TVeil_Lvl_SB" Hash="2514272197" Timestamp="1539705059"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1660465850" Timestamp="1539687795"/>
+				<File Name="" Hash="2058045127" Timestamp="1539705059"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

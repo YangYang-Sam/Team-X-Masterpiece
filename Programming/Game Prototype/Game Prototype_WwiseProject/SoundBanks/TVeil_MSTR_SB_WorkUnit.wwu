@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6CA57D70-A9DC-4E97-8C35-ECDC52713CB5}" SchemaVersion="89">
+	<SoundBanks>
+		<WorkUnit Name="TVeil_MSTR_SB_WorkUnit" ID="{6CA57D70-A9DC-4E97-8C35-ECDC52713CB5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="TVeil_Lvl_SB" ID="{982EEA1F-5EC9-4937-A645-1CC5399A7791}">
+					<ObjectInclusionList>
+						<ObjectRef Name="TVeil_Events" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TVeil_Interactive_Music" ID="{9B75546B-C4D8-47CD-A011-195B7388F364}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TVeil_Actor_Mixer" ID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="TVeil_Menu_SB" ID="{A7CD4540-246E-4441-A57E-18FC68346560}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="New_SoundBank" ID="{5F109ABB-7B0D-41CE-9E91-E8B814603127}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
