@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09609e439230145649934222d78aeb11, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b1c44feb3f6aeb4385630aab6e1230c5
+    m_lastTime: -8586619191404775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 9fed87a4c07f42459e8056144f74c709
+    m_lastTime: -8586619191404775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e79f7aeb36160343a1b0a8fd6f171ca1
+    m_lastTime: -8586619191404775808
+    List: []
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 87e558d008878a49bcde6707a78040be
+    m_lastTime: -8586619191404775808
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e21d5e32d636ed4e8408a0a11645dd99
+    m_lastTime: -8586619191404775808
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e816348cdfa4f5418aab6f645db174b8
+    m_lastTime: -8586619191404775808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3156979d799ef042806706a5f809f98f
+    m_lastTime: -8586619191404775808
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3ea537982458c049bcf586e24bc1cdc4
+    m_lastTime: -8586619191404775808
+    List: []
+  ExpandedItems:
+  - /Game Prototype_WwiseProject
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
