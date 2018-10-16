@@ -10,17 +10,6 @@ public class PlaneNavigation : MonoBehaviour {
 
     private PlayerController2D _playerController2D;
 
-    //public Animator animator;
-    [SerializeField]
-    GameObject Plane1;
-    [SerializeField]
-    GameObject Plane2;
-    [SerializeField]
-    GameObject Plane3;
-
-    [SerializeField]
-    GameObject[] Planes;
-
     // sets player collisions based on layer/plane
     [SerializeField]
     private bool plane1Ignore = false;
@@ -61,13 +50,6 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     public GameObject _plane3Spawn;
 
-    [SerializeField]
-    private Vector3 _plane1Pos;
-    [SerializeField]
-    private Vector3 _plane2Pos;
-    [SerializeField]
-    private Vector3 _plane3Pos;
-
     // Use this for initialization
     void Start ()
     {
@@ -75,9 +57,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Plane2.SetActive(false);
         //Plane3.SetActive(false);
 
-        Plane1.transform.position = _plane1Pos;
-        Plane2.transform.position = _plane2Pos;
-        Plane3.transform.position = _plane3Pos;
+
         //Plane3.transform.localScale = Vector3.zero;
 
         _currentPlane = 1;

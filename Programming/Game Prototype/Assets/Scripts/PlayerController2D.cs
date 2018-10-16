@@ -8,7 +8,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     private GameObject _planeController;
     private PlaneNavigation _planeNavigation;
-    private PlaneRotation _planeRotation;
+    private PlaneMovement _planeMovement;
 
     [SerializeField]
     private GameObject _playerPrefab;
@@ -54,7 +54,7 @@ public class PlayerController2D : MonoBehaviour
     private void Start()
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
-        _planeRotation = _planeController.GetComponent<PlaneRotation>();
+        _planeMovement = _planeController.GetComponent<PlaneMovement>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;
@@ -234,24 +234,28 @@ public class PlayerController2D : MonoBehaviour
 
     {
         //switch to correct layer based on portal name
-        if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
+        
+        if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
+        {
+            _planeNavigation.Plane1Selector();
+            _planeMovement.portal1Entered = true;
+        }
+
+        else if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
         {
             _planeNavigation.Plane2Selector();
+            _planeMovement.portal2Entered = true;
         }
 
         else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
         {
             _planeNavigation.Plane3Selector();
-        }
-
-        else if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
-        {
-            _planeNavigation.Plane1Selector();
+            _planeMovement.portal3Entered = true;
         }
 
         if (other.name == "Lever" && Input.GetButtonDown("Interact"))
         {
-            _planeRotation.leverPulled = true;
+            _planeMovement.leverPulled = true;
         }
 
     }
