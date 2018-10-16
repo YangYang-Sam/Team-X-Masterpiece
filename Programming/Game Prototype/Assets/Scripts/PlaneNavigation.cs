@@ -61,7 +61,8 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     public GameObject _plane3Spawn;
 
-    float smooth = 2.0f;
+    private Quaternion _planeRotation;
+    float smooth = 0.5f;
     float tiltAngle = 90.0f;
 
     // Use this for initialization
@@ -70,6 +71,8 @@ public class PlaneNavigation : MonoBehaviour {
         Plane1.SetActive(true);
         Plane2.SetActive(false);
         Plane3.SetActive(false);
+
+        _planeRotation = Plane1.transform.rotation;
 
         Plane1.transform.position = Vector3.zero;
         Plane2.transform.position = Vector3.zero;
@@ -105,14 +108,17 @@ public class PlaneNavigation : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane1CollisionLayer, plane1Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane2CollisionLayer, plane2Ignore);
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Ignore);
+    }
 
-        float tiltAroundZ = Input.GetAxisRaw("Interact") * tiltAngle;
-        float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
+    private void FixedUpdate()
+    {
+        float tiltAroundZ = /*Input.GetAxisRaw("Interact") * */tiltAngle;
+        float tiltAroundX = /*Input.GetAxis("Vertical") * */0;
 
         Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
 
         // Dampen towards the target rotation
-        Plane1.transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        Plane1.transform.rotation = Quaternion.Slerp(_planeRotation, target, smooth);
     }
 
     //detect player colliding with portal
@@ -340,6 +346,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     public void RotatePlane()
     {
+        Debug.Log("Lever Pulled");
         //Plane2.transform.rotation = 180;
     }
 }
