@@ -1,3 +1,24 @@
+17/10/18
+
+Strangely productive yet not-productive. Wwise middleware has now succesfully been implemented and is now the audio engine being used within Unity.
+Going forward I will be able to create more intricate sounds that react to player interaction and create a more dynamic audible landscape.
+
+However... in doing this it means our current build is temporarily without audio, while I prepare Wwise 'logic-structures' to re-integrate audio.
+I am confident however that this was a 'wise' decision and will help make audio and music in-game less repetitive and keep player engrossed. 
+
+In addition to these notes I have moved my audio asset list to excel, as it is easier to update and keep organised (rather than have multiple new files)
+Primarily this will be essential in keeping my programmer informed as to what audio is being implemented and when and in what context, now that
+I will be working directly with Unity.
+
+This implementation process was by far the most daunting prospect for this project and now that it is in place I can return to creating music and
+assets. 
+
+The next step for the game will be to re-integrate our original audio with the Wwise engine (instead of Unity) and complete SFX sounds for elements
+currently present. I can also apply some randomisation effects to the audio to prevent listener's fatigue. 
+
+I will begin composing the brunt the main musical tracks once I have a clearer sense of aesthetic and style, provided by design and 
+art assets. This is important as we plan on having each plane have their own unique flavour and I want the music to reflect this. 
+
 10/10/18
 
 All updates to audio will be contained here to keep track of work completed and what assets are available for implementation within game or still to be 
