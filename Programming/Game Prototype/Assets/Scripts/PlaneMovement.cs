@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaneMovement : MonoBehaviour {
+public class PlaneMovement : MonoBehaviour
+{
 
     [SerializeField]
     private GameObject[] _plane;
     public int currPlaneID;
-        
+    public int prevPlaneID;
+
     [SerializeField]
     private float _rotationDuration = 1.0f;
     [SerializeField]
@@ -15,8 +17,19 @@ public class PlaneMovement : MonoBehaviour {
     public Quaternion initialRotation = Quaternion.Euler(0, 0, 0);
     public Quaternion targetRotation = Quaternion.Euler(0, 0, 90);
 
+    [SerializeField]
+    private float _colorChangeDuration = 1.0f;
+
     public Vector3 initialPosition;
-    public Vector3 targetPosition;
+    public Vector3 targetPositionIn;
+
+    public Vector3 targetPositionOut;
+
+    public Color initialColorOut;
+    public Color targetColorOut;
+
+    public Color initialColorIn;
+    public Color targetColorIn;
 
     public bool leverPulled = false;
     public bool portal1Entered = false;
@@ -30,29 +43,48 @@ public class PlaneMovement : MonoBehaviour {
     [SerializeField]
     private Vector3 _plane3Pos;
 
-    public float alpha = 0.1f;
+    [Range(0f, 1f)]
+    public float[] alpha;
 
     [SerializeField]
-    Material material;
+    private Material[] _planeMat;
+    //[SerializeField]
+    //private Material _plane1Mat;
+    //[SerializeField]
+    //private Material _plane2Mat;
+    //[SerializeField]
+    //private Material _plane3Mat;
 
-    Color color;
+    [SerializeField]
+    private Color[] _planeColor;
+    //private Color _plane2Color;
+    //private Color _plane3Color;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         _plane[0].transform.position = _plane1Pos;
         _plane[1].transform.position = _plane2Pos;
         _plane[2].transform.position = _plane3Pos;
 
-        color = material.GetColor("_Color");
+        //initialColor = _planeMat[currPlaneID].GetColor("_Color");
+        //_planeColor[0] = initialColor;
+        //_planeColor[1] = initialColor;
+        //_planeColor[2] = initialColor;
 
         //setAlpha(alpha);
     }
-	
-	void FixedUpdate ()
+
+    void FixedUpdate()
     {
-        color.a = alpha;
-        material.SetColor("_Color", color);
+        //_planeColor[currPlaneID].a = alpha[currPlaneID];
+        //_planeColor[prevPlaneID].a = alpha[prevPlaneID];
+        _planeColor[0].a = alpha[0];
+        _planeColor[1].a = alpha[1];
+        _planeColor[2].a = alpha[2];
+        _planeMat[0].SetColor("_Color", _planeColor[0]);
+        _planeMat[1].SetColor("_Color", _planeColor[1]);
+        _planeMat[2].SetColor("_Color", _planeColor[2]);
 
         if (leverPulled == true)
         {
@@ -64,27 +96,48 @@ public class PlaneMovement : MonoBehaviour {
         {
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
-            StartCoroutine(MoveOverTime(initialPosition, targetPosition, _planeMoveDuration));
+            prevPlaneID = currPlaneID;
             currPlaneID = 0;
+            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
             initialPosition = _plane[currPlaneID].transform.position;
+            //targetPositionOut = _plane[prevPlaneID].transform.position;
+            StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
+            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
+            StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal1Entered = false;
-}
+        }
         if (portal2Entered == true)
         {
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
-            StartCoroutine(MoveOverTime(initialPosition, targetPosition, _planeMoveDuration));
+            prevPlaneID = currPlaneID;
             currPlaneID = 1;
+            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
             initialPosition = _plane[currPlaneID].transform.position;
+            //targetPositionOut = _plane[prevPlaneID].transform.position;
+            StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
+            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
+            StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal2Entered = false;
         }
         if (portal3Entered == true)
         {
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
-            StartCoroutine(MoveOverTime(initialPosition, targetPosition, _planeMoveDuration));
+            prevPlaneID = currPlaneID;
             currPlaneID = 2;
+            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
             initialPosition = _plane[currPlaneID].transform.position;
+            //targetPositionOut = _plane[prevPlaneID].transform.position;
+            StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
+            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
+            StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal3Entered = false;
         }
     }
@@ -129,32 +182,64 @@ public class PlaneMovement : MonoBehaviour {
         _plane[currPlaneID].transform.position = targetPosition;
     }
 
-    //private IEnumerator FadeIn()
-    //{
-    //    Color tmp = _spriteRenderer.GetComponent<SpriteRenderer>().color;
-    //    tmp.a = 0f;
-    //    _spriteRenderer.GetComponent<SpriteRenderer>().color = tmp;
-    //    float _progress = 0.0f;
+    private IEnumerator MoveOutOverTime(Vector3 initialPosition, Vector3 targetPosition, float _planeMoveDuration)
+    {
+        if (_planeMoveDuration > 0f)
+        {
+            float startTime = Time.time;
+            float endTime = startTime + _planeMoveDuration;
+            _plane[prevPlaneID].transform.position = initialPosition;
+            yield return null;
+            while (Time.time < endTime)
+            {
+                float progress = (Time.time - startTime) / _planeMoveDuration;
+                // progress will equal 0 at startTime, 1 at endTime.
+                _plane[prevPlaneID].transform.position = Vector3.Lerp(initialPosition, targetPosition, progress);
+                yield return null;
+            }
+        }
 
-    //    while (_progress < 1)
-    //    {
-    //        Color _tmpColor = _spriteRenderer.GetComponent<SpriteRenderer>().color;
-    //        GetComponent<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, Mathf.Lerp(tmp.a, 255, _progress)); //startAlpha = 0 <-- value is in tmp.a
-    //        _progress += Time.deltaTime * 1.5f;
-    //        yield return null;
-    //    }
-    //}
+        _plane[prevPlaneID].transform.position = targetPosition;
+    }
 
-    //public void setAlpha(float alpha)
-    //{
-    //    SpriteRenderer[] children = GetComponentsInChildren<SpriteRenderer>();
-    //    Color newColor;
+    private IEnumerator FadeIn(Color initialColor, Color targetColor, float _colorChangeDuration)
+    {
+        if (_colorChangeDuration > 0f)
+        {
+            float startTime = Time.time;
+            float endTime = startTime + _colorChangeDuration;
+            //_plane1Color.transform.position = initialPosition;
+            yield return null;
+            while (Time.time < endTime)
+            {
+                float progress = (Time.time - startTime) / _colorChangeDuration;
+                // progress will equal 0 at startTime, 1 at endTime.
+                alpha[currPlaneID] = Mathf.Lerp(0.3f, 1, progress);
+                yield return null;
+            }
 
-    //    foreach (SpriteRenderer child in children)
-    //    {
-    //        newColor = child.color;
-    //        newColor.a = alpha;
-    //        child.color = newColor;
-    //    }
-    //}
+        }
+
+    }
+
+    private IEnumerator FadeOut(Color initialColor, Color targetColor, float _colorChangeDuration)
+    {
+        if (_colorChangeDuration > 0f)
+        {
+            float startTime = Time.time;
+            float endTime = startTime + _colorChangeDuration;
+            //_plane1Color.transform.position = initialPosition;
+            yield return null;
+            while (Time.time < endTime)
+            {
+                float progress = (Time.time - startTime) / _colorChangeDuration;
+                // progress will equal 0 at startTime, 1 at endTime.
+                alpha[prevPlaneID] = Mathf.Lerp(1, 0.3f, progress);
+                yield return null;
+            }
+
+        }
+
+    }
+
 }
