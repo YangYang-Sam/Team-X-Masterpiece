@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlaneMovement : MonoBehaviour
 {
-
+    [SerializeField]
+    private GameObject _planesParent;
     [SerializeField]
     private GameObject[] _plane;
     public int currPlaneID;
@@ -94,6 +95,7 @@ public class PlaneMovement : MonoBehaviour
         }
         if (portal1Entered == true)
         {
+            targetPositionIn = new Vector3(0, 0, 0);
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
@@ -103,29 +105,31 @@ public class PlaneMovement : MonoBehaviour
             initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
-            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            //StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
             StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
             StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal1Entered = false;
         }
         if (portal2Entered == true)
         {
+            targetPositionIn = new Vector3(0, 0, -10);
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
             currPlaneID = 1;
             initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
             initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
-            initialPosition = _plane[currPlaneID].transform.position;
+            //initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
-            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            //StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
             StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
             StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal2Entered = false;
         }
         if (portal3Entered == true)
         {
+            targetPositionIn = new Vector3(0, 0, -20);
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
@@ -135,7 +139,7 @@ public class PlaneMovement : MonoBehaviour
             initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
-            StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
+            //StartCoroutine(MoveOutOverTime(initialPosition, targetPositionOut, _planeMoveDuration));
             StartCoroutine(FadeIn(initialColorIn, targetColorIn, _colorChangeDuration));
             StartCoroutine(FadeOut(initialColorOut, targetColorOut, _colorChangeDuration));
             portal3Entered = false;
@@ -168,18 +172,18 @@ public class PlaneMovement : MonoBehaviour
         {
             float startTime = Time.time;
             float endTime = startTime + _planeMoveDuration;
-            _plane[currPlaneID].transform.position = initialPosition;
+            initialPosition = _planesParent.transform.position;
             yield return null;
             while (Time.time < endTime)
             {
                 float progress = (Time.time - startTime) / _planeMoveDuration;
                 // progress will equal 0 at startTime, 1 at endTime.
-                _plane[currPlaneID].transform.position = Vector3.Lerp(initialPosition, targetPosition, progress);
+                _planesParent.transform.position = Vector3.Lerp(initialPosition, targetPosition, progress);
                 yield return null;
             }
         }
 
-        _plane[currPlaneID].transform.position = targetPosition;
+        _planesParent.transform.position = targetPosition;
     }
 
     private IEnumerator MoveOutOverTime(Vector3 initialPosition, Vector3 targetPosition, float _planeMoveDuration)
