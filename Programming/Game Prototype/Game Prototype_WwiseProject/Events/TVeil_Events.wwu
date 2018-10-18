@@ -3,7 +3,130 @@
 	<Events>
 		<WorkUnit Name="TVeil_Events" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Door" ID="{DE724EC3-37E7-4C90-9A4B-223FA6208752}"/>
+				<Folder Name="Raven" ID="{9FADEDF1-2BD2-42A6-A1C0-76E807794248}" ShortID="827579436">
+					<ChildrenList>
+						<Event Name="Jumping" ID="{7A6224B1-F23C-4266-B62F-0EA361D772D7}">
+							<ChildrenList>
+								<Action Name="" ID="{CB59C481-7C60-4BB9-9CE3-1D315AB92225}" ShortID="414235028">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jumping" ID="{65D503F1-D782-4F1D-8F12-0FC3A221F210}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VeilJump" ID="{66E38100-C79D-4620-8A80-3A85EA0B490A}">
+							<ChildrenList>
+								<Action Name="" ID="{999A2EF3-58F9-46C3-BAA2-CF18BD3CDAF6}" ShortID="1010538913">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Veil_Jump" ID="{76C1B09D-CE36-497F-8937-4EDF44DF746F}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Interaction" ID="{E69AFB71-7BB4-4B5A-B0B5-6A3C6E48C0DF}" ShortID="707880087">
+					<ChildrenList>
+						<Event Name="Portals" ID="{B1D217BC-9BE9-4143-86F3-75C434D78907}">
+							<ChildrenList>
+								<Action Name="" ID="{527A88EC-B532-4F4D-BE53-298E140A7F61}" ShortID="914890830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Portals" ID="{5D89ADB6-12C2-4A38-AB9B-B1CFE618FDE0}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Door" ID="{DE724EC3-37E7-4C90-9A4B-223FA6208752}">
+							<ChildrenList>
+								<Action Name="" ID="{2201452E-4886-420F-AB50-222958BA41B0}" ShortID="994397560">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Door" ID="{C9FBE394-73D7-4A67-8DB1-2A433F746C59}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rotate" ID="{D6FA6659-968D-4BC7-A752-7A273FEDCEEE}">
+							<ChildrenList>
+								<Action Name="" ID="{95068EC0-4DBC-4EBD-83DA-0D50D3735E66}" ShortID="444169982">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rotate" ID="{DDF63677-CA53-45F9-AC5F-F6FCC1FEBFA0}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{A3EBE4AC-801C-436E-B8F4-7C6D798F1ACB}" ShortID="586621932">
+					<ChildrenList>
+						<Event Name="Skeleton" ID="{D4497994-FDBC-4551-BDDC-FA4967FAE634}">
+							<ChildrenList>
+								<Action Name="" ID="{D8F1A5B2-89B0-4CE4-970F-B57F8DA84433}" ShortID="1001743207">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BoneBoomerang" ID="{32C3A0BB-4D39-46C7-A144-CD88DB9B7EEF}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ghost" ID="{091DE5BF-127C-47D6-A036-9126ABA9CC1C}">
+							<ChildrenList>
+								<Action Name="" ID="{B1B2BF40-F981-45BB-9423-FE56EAB23158}" ShortID="196640397">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ghost" ID="{DEFE064D-B2BF-4494-B8B1-324E43C5423D}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ghoul" ID="{764FEA78-A7FC-453D-8FCB-4D903A865FEB}">
+							<ChildrenList>
+								<Action Name="" ID="{A653A31D-15EB-4234-956D-FBABD010FCC9}" ShortID="238889502">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ghoul" ID="{583CF306-2D26-4119-8708-158E007F0614}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

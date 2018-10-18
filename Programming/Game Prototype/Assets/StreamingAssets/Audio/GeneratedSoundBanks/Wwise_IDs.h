@@ -14,6 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID DOOR = 1877847629U;
+        static const AkUniqueID GHOST = 4023194814U;
+        static const AkUniqueID GHOUL = 3922529076U;
+        static const AkUniqueID JUMPING = 68157183U;
+        static const AkUniqueID PORTALS = 2017263062U;
+        static const AkUniqueID ROTATE = 1302771492U;
+        static const AkUniqueID SKELETON = 3478279848U;
+        static const AkUniqueID VEILJUMP = 1671131289U;
     } // namespace EVENTS
 
     namespace SWITCHES

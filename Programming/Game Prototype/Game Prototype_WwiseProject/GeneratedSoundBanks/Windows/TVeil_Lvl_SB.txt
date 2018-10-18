@@ -1,5 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1877847629	Door			\TVeil_Events\Door	
+	68157183	Jumping			\TVeil_Events\Raven\Jumping	
+	1302771492	Rotate			\TVeil_Events\Interaction\Rotate	
+	1671131289	VeilJump			\TVeil_Events\Raven\VeilJump	
+	1877847629	Door			\TVeil_Events\Interaction\Door	
+	2017263062	Portals			\TVeil_Events\Interaction\Portals	
+	3478279848	Skeleton			\TVeil_Events\Enemies\Skeleton	
+	3922529076	Ghoul			\TVeil_Events\Enemies\Ghoul	
+	4023194814	Ghost			\TVeil_Events\Enemies\Ghost	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	197449355	Ghost3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghost3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghost\Ghost3		529264

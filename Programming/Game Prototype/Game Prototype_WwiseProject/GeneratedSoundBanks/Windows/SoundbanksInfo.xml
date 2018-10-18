@@ -21,7 +21,14 @@
 			<ShortName>TVeil_Lvl_SB</ShortName>
 			<Path>TVeil_Lvl_SB.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1877847629" Name="Door" ObjectPath="\Events\TVeil_Events\Door" MaxAttenuation="0.000000"/>
+				<Event Id="1877847629" Name="Door" ObjectPath="\Events\TVeil_Events\Interaction\Door"/>
+				<Event Id="4023194814" Name="Ghost" ObjectPath="\Events\TVeil_Events\Enemies\Ghost"/>
+				<Event Id="3922529076" Name="Ghoul" ObjectPath="\Events\TVeil_Events\Enemies\Ghoul"/>
+				<Event Id="68157183" Name="Jumping" ObjectPath="\Events\TVeil_Events\Raven\Jumping"/>
+				<Event Id="2017263062" Name="Portals" ObjectPath="\Events\TVeil_Events\Interaction\Portals"/>
+				<Event Id="1302771492" Name="Rotate" ObjectPath="\Events\TVeil_Events\Interaction\Rotate"/>
+				<Event Id="3478279848" Name="Skeleton" ObjectPath="\Events\TVeil_Events\Enemies\Skeleton"/>
+				<Event Id="1671131289" Name="VeilJump" ObjectPath="\Events\TVeil_Events\Raven\VeilJump"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="197449355" Language="SFX">
