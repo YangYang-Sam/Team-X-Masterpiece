@@ -20,13 +20,13 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="3121226777" Timestamp="1539687795"/>
 				<File Name="TVeil_Credits_SB" Hash="1224647242" Timestamp="1539869045"/>
-				<File Name="TVeil_Lvl_SB" Hash="2117183509" Timestamp="1539871150"/>
+				<File Name="TVeil_Lvl_SB" Hash="1670432391" Timestamp="1539875592"/>
 				<File Name="TVeil_Menu_SB" Hash="1183829831" Timestamp="1539869045"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2974132723" Timestamp="1539871150"/>
+				<File Name="" Hash="3932740736" Timestamp="1539875593"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
