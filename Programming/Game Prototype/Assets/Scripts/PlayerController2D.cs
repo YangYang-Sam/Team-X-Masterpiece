@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
+    [SerializeField]
+    private AkEvent jumpSound;
+    [SerializeField]
+    private AkEvent veilJumpSound;
+
     //Access playerController class
     [SerializeField]
     private GameObject _planeController;
@@ -142,6 +147,7 @@ public class PlayerController2D : MonoBehaviour
     {
         //set correct gravity and move player
         ResetVeilJump();
+        JumpSound();
         _playerRigidbody.velocity = Vector2.up * jumpforce;
         //play cirrect sound depending on single or double jump
         if(_canJump == 2)
@@ -158,6 +164,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void VeilJump()
     {
+        VeilJumpSound();
         _playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
@@ -258,5 +265,21 @@ public class PlayerController2D : MonoBehaviour
             _planeMovement.leverPulled = true;
         }
 
+    }
+
+    private void JumpSound()
+    {
+        if (jumpSound != null)
+        {
+            jumpSound.HandleEvent(gameObject);
+        }
+    }
+
+    private void VeilJumpSound()
+    {
+        if (veilJumpSound != null)
+        {
+            veilJumpSound.HandleEvent(gameObject);
+        }
     }
 }

@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b1c44feb3f6aeb4385630aab6e1230c5
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011870608698
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011872015031
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e79f7aeb36160343a1b0a8fd6f171ca1
-    m_lastTime: -8586619057474775808
+    m_lastTime: -8586619011871233786
     List: []
-  - PhysicalPath: SoundBanks/TVeil_MSTR_SB_WorkUnit.wwu
+  - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586617380144775808
+    m_lastTime: -8586617374727819754
     List:
     - name: TVeil_Credits_SB
       guid: bb9a105f0d7bce419e91e8b814603127
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: TVeil_Credits_SB
         ObjectType: 7
-      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Credits_SB
+      Path: TVeil_MSTR_SB_WorkUnit\TVeil_Credits_SB
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
       id: 928849380
@@ -51,7 +51,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: TVeil_Lvl_SB
         ObjectType: 7
-      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Lvl_SB
+      Path: TVeil_MSTR_SB_WorkUnit\TVeil_Lvl_SB
     - name: TVeil_Menu_SB
       guid: 4045cda76e244144a57e18fc68346560
       id: 901570921
@@ -60,17 +60,17 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: TVeil_Menu_SB
         ObjectType: 7
-      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Menu_SB
+      Path: TVeil_MSTR_SB_WorkUnit\TVeil_Menu_SB
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 87e558d008878a49bcde6707a78040be
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011873890089
     List: []
-  - PhysicalPath: Events/TVeil_Events.wwu
+  - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586617490614775808
+    m_lastTime: -8586617351564981158
     List:
     - name: Door
       guid: c34e72dee737904c9a4b223fa6208752
@@ -78,44 +78,146 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: TVeil_Events
         ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
       - ElementName: Door
         ObjectType: 3
-      Path: TVeil_Events/Door
+      Path: TVeil_Events\Interaction\Door
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Ghost
+      guid: bfe51d097c12d647a0369126aba9cc1c
+      id: 4023194814
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Ghost
+        ObjectType: 3
+      Path: TVeil_Events\Enemies\Ghost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Ghoul
+      guid: 78ea4f76fca73d458fcb4d903a865feb
+      id: 3922529076
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Ghoul
+        ObjectType: 3
+      Path: TVeil_Events\Enemies\Ghoul
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Jumping
+      guid: b124627a3cf26642b62f0ea361d772d7
+      id: 68157183
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Raven
+        ObjectType: 4
+      - ElementName: Jumping
+        ObjectType: 3
+      Path: TVeil_Events\Raven\Jumping
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Portals
+      guid: bc17d2b1e99b434186f375c434d78907
+      id: 2017263062
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: Portals
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\Portals
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rotate
+      guid: 5966fad68d96c74ba7527a273fedceee
+      id: 1302771492
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: Rotate
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\Rotate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Skeleton
+      guid: 947949d4bcfd5145bddcfa4967fae634
+      id: 3478279848
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Skeleton
+        ObjectType: 3
+      Path: TVeil_Events\Enemies\Skeleton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: VeilJump
+      guid: 0081e3669dc720468a803a85ea0b490a
+      id: 1671131289
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Raven
+        ObjectType: 4
+      - ElementName: VeilJump
+        ObjectType: 3
+      Path: TVeil_Events\Raven\VeilJump
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e21d5e32d636ed4e8408a0a11645dd99
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011873733740
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011870921293
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3156979d799ef042806706a5f809f98f
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011870921293
     List: []
-  - PhysicalPath: Switches/TVeil_Game_Syncs.wwu
+  - PhysicalPath: Switches\TVeil_Game_Syncs.wwu
     ParentPhysicalPath: 
     guid: dabb0a1ae0ce944882f69cc55b272a40
-    m_lastTime: -8586617495744775808
+    m_lastTime: -8586617374727663456
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3ea537982458c049bcf586e24bc1cdc4
-    m_lastTime: -8586619191404775808
+    m_lastTime: -8586619011870765000
     List: []
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/SoundBanks
-  - /Game Prototype_WwiseProject/SoundBanks/TVeil_MSTR_SB_WorkUnit
+  - /Game Prototype_WwiseProject/Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/Raven
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

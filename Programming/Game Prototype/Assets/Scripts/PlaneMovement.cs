@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlaneMovement : MonoBehaviour
 {
     [SerializeField]
+    private AkEvent rotationSound;
+    [SerializeField]
     private GameObject _planesParent;
     [SerializeField]
     private GameObject[] _plane;
@@ -91,6 +93,8 @@ public class PlaneMovement : MonoBehaviour
         {
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
+            leverPulled = false;
+            PlaneRotationSound();
             StartCoroutine(RotateOverTime(initialRotation, targetRotation, _rotationDuration));
         }
         if (portal1Entered == true)
@@ -244,6 +248,14 @@ public class PlaneMovement : MonoBehaviour
 
         }
 
+    }
+
+    private void PlaneRotationSound()
+    {
+        if (rotationSound != null)
+        {
+            rotationSound.HandleEvent(gameObject);
+        }
     }
 
 }
