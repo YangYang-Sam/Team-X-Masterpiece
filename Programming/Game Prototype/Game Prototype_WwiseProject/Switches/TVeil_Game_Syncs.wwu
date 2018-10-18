@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1A0ABBDA-CEE0-4894-82F6-9CC55B272A40}" SchemaVersion="89">
+	<Switches>
+		<WorkUnit Name="TVeil_Game_Syncs" ID="{1A0ABBDA-CEE0-4894-82F6-9CC55B272A40}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Door" ID="{0DEAA627-6A3F-40AE-839B-7C2E4DEAB80D}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

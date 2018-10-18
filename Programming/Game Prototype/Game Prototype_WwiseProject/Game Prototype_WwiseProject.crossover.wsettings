@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{0607016D-5E01-4A4E-BC98-8349D33E554E}">
 			<PropertyList>
+				<Property Name="Event Action List\{DE724EC3-37E7-4C90-9A4B-223FA6208752}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -50,9 +51,9 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="QaFAa+ABkkO8qTZVDH9qSBNPpwiQt8VJqoKj+oDyTlY="/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="/gNuhVKWg0SoTr5Vzu2+0w=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="MVaXnXme8EKAZwal+An5j9q7ChrgzpRIgvacxVsnKkA="/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="55966zYWA0OhsKj9bxccoXB9pWzcqZdOjDXs3FJxPLU="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
@@ -90,6 +91,11 @@
 					</ValueList>
 				</Property>
 			</PropertyList>
+			<PluginInnerObjectList>
+				<List Name="BatchRenameSettings">
+					<PluginInnerObject Name="" ID="{1435F9E5-4588-472A-82E0-911F0E47ACD0}" PluginName="BatchRenameSettings" CompanyID="0" PluginID="992"/>
+				</List>
+			</PluginInnerObjectList>
 		</UserProjectSettings>
 	</UserProjectSettingsInfo>
 </WwiseDocument>

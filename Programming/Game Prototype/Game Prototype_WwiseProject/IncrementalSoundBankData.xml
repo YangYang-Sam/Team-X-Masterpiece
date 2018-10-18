@@ -4,11 +4,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="872944895" Timestamp="1539687795"/>
+				<File Name="TVeil_Credits_SB" Hash="1224647242" Timestamp="1539869045"/>
+				<File Name="TVeil_Lvl_SB" Hash="2293289533" Timestamp="1539869045"/>
+				<File Name="TVeil_Menu_SB" Hash="1183829831" Timestamp="1539869045"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2161252392" Timestamp="1539687795"/>
+				<File Name="" Hash="2091787921" Timestamp="1539869045"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -16,12 +19,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="3121226777" Timestamp="1539687795"/>
-				<File Name="TVeil_Lvl_SB" Hash="2514272197" Timestamp="1539705059"/>
+				<File Name="TVeil_Credits_SB" Hash="1224647242" Timestamp="1539869045"/>
+				<File Name="TVeil_Lvl_SB" Hash="2293289533" Timestamp="1539868879"/>
+				<File Name="TVeil_Menu_SB" Hash="1183829831" Timestamp="1539869045"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2058045127" Timestamp="1539705059"/>
+				<File Name="" Hash="1642986011" Timestamp="1539869045"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

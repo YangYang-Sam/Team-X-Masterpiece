@@ -12,54 +12,110 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b1c44feb3f6aeb4385630aab6e1230c5
-    m_lastTime: -8586619189450195611
+    m_lastTime: -8586619191404775808
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586619189451289450
+    m_lastTime: -8586619191404775808
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e79f7aeb36160343a1b0a8fd6f171ca1
-    m_lastTime: -8586619189450820686
+    m_lastTime: -8586619057474775808
     List: []
+  - PhysicalPath: SoundBanks/TVeil_MSTR_SB_WorkUnit.wwu
+    ParentPhysicalPath: 
+    guid: 707da56cdca9974e8c35ecdc52713cb5
+    m_lastTime: -8586617380144775808
+    List:
+    - name: TVeil_Credits_SB
+      guid: bb9a105f0d7bce419e91e8b814603127
+      id: 4034624504
+      PathAndIcons:
+      - ElementName: TVeil_MSTR_SB_WorkUnit
+        ObjectType: 12
+      - ElementName: TVeil_Credits_SB
+        ObjectType: 7
+      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Credits_SB
+    - name: TVeil_Lvl_SB
+      guid: 1fea2e98c95e3749a6451cc5399a7791
+      id: 928849380
+      PathAndIcons:
+      - ElementName: TVeil_MSTR_SB_WorkUnit
+        ObjectType: 12
+      - ElementName: TVeil_Lvl_SB
+        ObjectType: 7
+      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Lvl_SB
+    - name: TVeil_Menu_SB
+      guid: 4045cda76e244144a57e18fc68346560
+      id: 901570921
+      PathAndIcons:
+      - ElementName: TVeil_MSTR_SB_WorkUnit
+        ObjectType: 12
+      - ElementName: TVeil_Menu_SB
+        ObjectType: 7
+      Path: TVeil_MSTR_SB_WorkUnit/TVeil_Menu_SB
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 87e558d008878a49bcde6707a78040be
-    m_lastTime: -8586619189452539425
+    m_lastTime: -8586619191404775808
     List: []
+  - PhysicalPath: Events/TVeil_Events.wwu
+    ParentPhysicalPath: 
+    guid: fe036e8552968344a84ebe55ceedbed3
+    m_lastTime: -8586617490614775808
+    List:
+    - name: Door
+      guid: c34e72dee737904c9a4b223fa6208752
+      id: 1877847629
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Door
+        ObjectType: 3
+      Path: TVeil_Events/Door
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e21d5e32d636ed4e8408a0a11645dd99
-    m_lastTime: -8586619189452539425
+    m_lastTime: -8586619191404775808
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586619189450507715
+    m_lastTime: -8586619191404775808
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3156979d799ef042806706a5f809f98f
-    m_lastTime: -8586619189450351879
+    m_lastTime: -8586619191404775808
+    List: []
+  - PhysicalPath: Switches/TVeil_Game_Syncs.wwu
+    ParentPhysicalPath: 
+    guid: dabb0a1ae0ce944882f69cc55b272a40
+    m_lastTime: -8586617495744775808
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3ea537982458c049bcf586e24bc1cdc4
-    m_lastTime: -8586619189450351879
+    m_lastTime: -8586619191404775808
     List: []
   ExpandedItems:
   - /Game Prototype_WwiseProject
+  - /Game Prototype_WwiseProject/SoundBanks
+  - /Game Prototype_WwiseProject/SoundBanks/TVeil_MSTR_SB_WorkUnit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

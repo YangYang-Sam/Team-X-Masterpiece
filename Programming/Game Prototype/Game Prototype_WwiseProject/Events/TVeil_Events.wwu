@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" SchemaVersion="89">
 	<Events>
-		<WorkUnit Name="TVeil_Events" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" PersistMode="Standalone"/>
+		<WorkUnit Name="TVeil_Events" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Door" ID="{DE724EC3-37E7-4C90-9A4B-223FA6208752}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

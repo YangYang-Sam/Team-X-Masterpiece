@@ -11,10 +11,28 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID DOOR = 1877847629U;
+    } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace DOOR
+        {
+            static const AkUniqueID GROUP = 1877847629U;
+
+            namespace SWITCH
+            {
+            } // namespace SWITCH
+        } // namespace DOOR
+
+    } // namespace SWITCHES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID NEW_SOUNDBANK = 4072029455U;
+        static const AkUniqueID TVEIL_CREDITS_SB = 4034624504U;
         static const AkUniqueID TVEIL_LVL_SB = 928849380U;
         static const AkUniqueID TVEIL_MENU_SB = 901570921U;
     } // namespace BANKS
