@@ -8770,7 +8770,7 @@ MonoBehaviour:
   - {fileID: 1868751854}
   currPlaneID: 0
   prevPlaneID: 0
-  _rotationDuration: 3
+  _rotationDuration: 3.3
   _planeMoveDuration: 0.5
   initialRotation: {x: 0, y: 0, z: 0, w: 1}
   targetRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
