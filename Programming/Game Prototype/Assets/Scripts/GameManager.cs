@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("R pressed");
-            SceneManager.LoadScene("Level01", LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 	}
 }
