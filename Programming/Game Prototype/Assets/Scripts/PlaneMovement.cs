@@ -50,7 +50,7 @@ public class PlaneMovement : MonoBehaviour
     public float[] alpha;
 
     [SerializeField]
-    private Material[] _planeMat;
+    private Material[] _planeMaterials;
     //[SerializeField]
     //private Material _plane1Mat;
     //[SerializeField]
@@ -70,7 +70,7 @@ public class PlaneMovement : MonoBehaviour
         _plane[1].transform.position = _plane2Pos;
         _plane[2].transform.position = _plane3Pos;
 
-        //initialColor = _planeMat[currPlaneID].GetColor("_Color");
+        //initialColor = _planeMaterial[currPlaneID].GetColor("_Color");
         //_planeColor[0] = initialColor;
         //_planeColor[1] = initialColor;
         //_planeColor[2] = initialColor;
@@ -85,9 +85,9 @@ public class PlaneMovement : MonoBehaviour
         _planeColor[0].a = alpha[0];
         _planeColor[1].a = alpha[1];
         _planeColor[2].a = alpha[2];
-        _planeMat[0].SetColor("_Color", _planeColor[0]);
-        _planeMat[1].SetColor("_Color", _planeColor[1]);
-        _planeMat[2].SetColor("_Color", _planeColor[2]);
+        _planeMaterials[0].SetColor("_Color", _planeColor[0]);
+        _planeMaterials[1].SetColor("_Color", _planeColor[1]);
+        _planeMaterials[2].SetColor("_Color", _planeColor[2]);
 
         if (leverPulled == true)
         {
@@ -95,7 +95,7 @@ public class PlaneMovement : MonoBehaviour
             //initialPosition = _plane[currPlaneID].transform.position;
             leverPulled = false;
             PlaneRotationSound();
-            StartCoroutine(RotateOverTime(initialRotation, targetRotation, _rotationDuration));
+            StartCoroutine(RotatePlane(initialRotation, targetRotation, _rotationDuration));
         }
         if (portal1Entered == true)
         {
@@ -104,8 +104,8 @@ public class PlaneMovement : MonoBehaviour
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
             currPlaneID = 0;
-            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
-            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
+            initialColorIn = _planeMaterials[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMaterials[prevPlaneID].GetColor("_Color");
             initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
@@ -121,8 +121,8 @@ public class PlaneMovement : MonoBehaviour
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
             currPlaneID = 1;
-            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
-            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
+            initialColorIn = _planeMaterials[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMaterials[prevPlaneID].GetColor("_Color");
             //initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
@@ -138,8 +138,8 @@ public class PlaneMovement : MonoBehaviour
             //initialPosition = _plane[currPlaneID].transform.position;
             prevPlaneID = currPlaneID;
             currPlaneID = 2;
-            initialColorIn = _planeMat[currPlaneID].GetColor("_Color");
-            initialColorOut = _planeMat[prevPlaneID].GetColor("_Color");
+            initialColorIn = _planeMaterials[currPlaneID].GetColor("_Color");
+            initialColorOut = _planeMaterials[prevPlaneID].GetColor("_Color");
             initialPosition = _plane[currPlaneID].transform.position;
             //targetPositionOut = _plane[prevPlaneID].transform.position;
             StartCoroutine(MoveOverTime(initialPosition, targetPositionIn, _planeMoveDuration));
@@ -150,24 +150,24 @@ public class PlaneMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator RotateOverTime(Quaternion initialRotation, Quaternion targetRotation, float _rotationDuration)
+    private IEnumerator RotatePlane(Quaternion initialRotation, Quaternion targetRotation, float _rotationDuration)
     {
         if (_rotationDuration > 0f)
         {
             float startTime = Time.time;
             float endTime = startTime + _rotationDuration;
-            _plane[1].transform.rotation = initialRotation;
+            _plane[2].transform.rotation = initialRotation;
             yield return null;
             while (Time.time < endTime)
             {
                 float progress = (Time.time - startTime) / _rotationDuration;
                 // progress will equal 0 at startTime, 1 at endTime.
-                _plane[1].transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, progress);
+                _plane[2].transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, progress);
                 yield return null;
             }
         }
         leverPulled = false;
-        _plane[1].transform.rotation = targetRotation;
+        _plane[2].transform.rotation = targetRotation;
     }
 
     private IEnumerator MoveOverTime(Vector3 initialPosition, Vector3 targetPosition, float _planeMoveDuration)

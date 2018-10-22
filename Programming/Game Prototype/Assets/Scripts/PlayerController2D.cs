@@ -72,7 +72,7 @@ public class PlayerController2D : MonoBehaviour
         //Fetch the SpriteRenderer component from the GameObject
         _spriteRenderer = GetComponent<SpriteRenderer>();
         //Play Main theme audio
-        FindObjectOfType<AudioManager>().Play("MenuLoop");
+        //FindObjectOfType<AudioManager>().Play("MenuLoop");
 
     }
 
@@ -152,11 +152,11 @@ public class PlayerController2D : MonoBehaviour
         //play cirrect sound depending on single or double jump
         if(_canJump == 2)
         {
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
+            //FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
         else if (_canJump == 1)
         {
-            FindObjectOfType<AudioManager>().Play("DoubleJump");
+            //FindObjectOfType<AudioManager>().Play("DoubleJump");
         }
         _canJump--;
         _canVeilJump--;
@@ -168,7 +168,7 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
-        FindObjectOfType<AudioManager>().Play("VeilJump");
+        //FindObjectOfType<AudioManager>().Play("VeilJump");
         _speed = 0;
         transform.localScale = _veilJumpScale;
 
@@ -179,7 +179,7 @@ public class PlayerController2D : MonoBehaviour
     private void TempInvincibility()
     {
         _playerRigidbody.velocity = new Vector2(0, 0);
-        FindObjectOfType<AudioManager>().Play("PortalEntry");
+        //FindObjectOfType<AudioManager>().Play("PortalEntry");
         _speed = 0;
         transform.localScale = _veilJumpScale;
     }
@@ -241,28 +241,64 @@ public class PlayerController2D : MonoBehaviour
 
     {
         //switch to correct layer based on portal name
-        
-        if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
+        if (Input.GetButtonDown("Interact"))
         {
-            _planeNavigation.Plane1Selector();
-            _planeMovement.portal1Entered = true;
-        }
+            if (other.tag == "Platform Portal")
+            {
+                _planeNavigation.Plane1Selector();
+                _planeMovement.portal1Entered = true;
+            }
 
-        else if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
-        {
-            _planeNavigation.Plane2Selector();
-            _planeMovement.portal2Entered = true;
-        }
+            else if (other.tag == "Platform Portal")
+            {
+                _planeNavigation.Plane2Selector();
+                _planeMovement.portal2Entered = true;
+            }
 
-        else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
-        {
-            _planeNavigation.Plane3Selector();
-            _planeMovement.portal3Entered = true;
-        }
+            else if (other.tag == "Platform Portal")
+            {
+                _planeNavigation.Plane3Selector();
+                _planeMovement.portal3Entered = true;
+            }
 
-        if (other.name == "Lever" && Input.GetButtonDown("Interact"))
+            if (other.tag == "Lever")
+            {
+                _planeMovement.leverPulled = true;
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+
+    {
+        //switch to correct layer based on portal name
+        if (Input.GetButtonDown("Interact"))
         {
-            _planeMovement.leverPulled = true;
+            if (other.gameObject.tag == "Platform Portal")
+            {
+                if (other.gameObject.name == "Platform 1 Portal")
+                {
+                    _planeNavigation.Plane1Selector();
+                    _planeMovement.portal1Entered = true;
+                }
+
+                if (other.gameObject.name == "Platform 2 Portal")
+                {
+                    _planeNavigation.Plane2Selector();
+                    _planeMovement.portal2Entered = true;
+                }
+
+                else if (other.gameObject.name == "Platform 3 Portal")
+                {
+                    _planeNavigation.Plane3Selector();
+                    _planeMovement.portal3Entered = true;
+                }
+            }
+
+            if (other.gameObject.tag == "Lever")
+            {
+                _planeMovement.leverPulled = true;
+            }
         }
 
     }

@@ -18,6 +18,23 @@ public class PlaneNavigation : MonoBehaviour {
     [SerializeField]
     private bool plane3Ignore = true;
 
+    public int platformOn;
+
+    [SerializeField]
+    private GameObject _planesParent;
+
+    [SerializeField]
+    private GameObject[] _plane1Platforms;
+
+    [SerializeField]
+    private GameObject[] _plane2Platforms;
+
+    [SerializeField]
+    private GameObject[] _plane3Platforms;
+
+    [SerializeField]
+    private Material[] _planeMaterials;
+
 
     public const string Plane1SortingLayer = "Foreground";
     public const string Plane2SortingLayer = "Middleground";
@@ -91,53 +108,11 @@ public class PlaneNavigation : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(PlayerCollisionLayer, Plane3CollisionLayer, plane3Ignore);
     }
 
-    //detect player colliding with portal
-    //private void OnTriggerStay2D(Collider2D other)
-
-    //{
-    //    //switch to correct layer based on portal name
-    //    if (other.name == "Plane 2 Portal" && Input.GetButtonDown("Interact"))
-    //    {
-    //        Plane2Selector();
-    //    }
-
-    //    else if (other.name == "Plane 3 Portal" && Input.GetButtonDown("Interact"))
-    //    {
-    //        Plane3Selector();
-    //    }
-
-    //    else if (other.name == "Plane 1 Portal" && Input.GetButtonDown("Interact"))
-    //    {
-    //        Plane1Selector();
-    //    }
-
-    //    if (other.name == "Lever" && Input.GetButtonDown("Interact"))
-    //    {
-    //        RotatePlane();
-    //    }
-
-    //}
 
     public void Plane1Selector()
     {
-        //Plane1.SetActive(true);
-        //Plane2.SetActive(false);
-        //Plane3.SetActive(false);
-
-        //Plane1.transform.localScale = Vector3.one;
-        //Plane2.transform.localScale = Vector3.zero;
-        //Plane3.transform.localScale = Vector3.zero;
 
         StartCoroutine(Plane1Delay());
-        //Plane3.GetComponent<Animator>().Play("Plane3_Out");
-        //Plane2.GetComponent<Animator>().Play("Plane2_Out_Middle");
-        //Plane1.GetComponent<Animator>().Play("Plane1_In_From3");
-
-        //turn on/off collisions for appropriate layer
-        //plane1Ignore = false;
-        //plane2Ignore = true;
-        //plane3Ignore = true;
-        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         _playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
 
@@ -145,25 +120,12 @@ public class PlaneNavigation : MonoBehaviour {
         _playerController2D._spriteRenderer.sortingLayerName = Plane1SortingLayer;
 
         _currentPlane = 1;
+
     }
 
     public void Plane2Selector()
     {
-        //Plane1.SetActive(false);
-        //Plane2.SetActive(true);
-        //Plane3.SetActive(false);
-        //Plane1.transform.localScale = Vector3.zero;
-        //Plane2.transform.localScale = Vector3.one;
-        //Plane3.transform.localScale = Vector3.zero;
-
         StartCoroutine(Plane2Delay());
-        //Plane1.GetComponent<Animator>().Play("Plane1_Out");
-        //Plane2.GetComponent<Animator>().Play("Plane2_In");
-        //Plane3.GetComponent<Animator>().Play("Plane3_In_BG");
-        //plane1Ignore = true;
-        //plane2Ignore = false;
-        //plane3Ignore = true;
-        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         _playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
 
@@ -175,21 +137,7 @@ public class PlaneNavigation : MonoBehaviour {
 
     public void Plane3Selector()
     {
-        //Plane1.SetActive(false);
-        //Plane2.SetActive(false);
-        //Plane3.SetActive(true);
-
-        //Plane1.transform.localScale = Vector3.zero;
-        //Plane2.transform.localScale = Vector3.zero;
-        //Plane3.transform.localScale = Vector3.one;
-
         StartCoroutine(Plane3Delay());
-        //Plane2.GetComponent<Animator>().Play("Plane2_Out");
-        //Plane3.GetComponent<Animator>().Play("Plane3_In");
-        //plane1Ignore = true;
-        //plane2Ignore = true;
-        //plane3Ignore = false;
-        FindObjectOfType<AudioManager>().Play("PortalEntry");
 
         _playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
 
@@ -314,10 +262,12 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public void RotatePlane()
+    public void PlatformMovement()
     {
-        Debug.Log("Lever Pulled");
-        //Plane2.transform.rotation = 180;
+        _plane1Platforms[0].transform.parent = null;
+        _plane1Platforms[0].layer = 11;
+        _plane1Platforms[0].GetComponent<SpriteRenderer>().material = _planeMaterials[1];
+        _plane1Platforms[0].transform.parent = _planesParent.transform;
     }
 }
 

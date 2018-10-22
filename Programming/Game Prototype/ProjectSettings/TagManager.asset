@@ -7,6 +7,7 @@ TagManager:
   - Plane 1 Objects
   - Plane 2 Objects
   - Plane 3 Objects
+  - Platform Portal
   layers:
   - Default
   - TransparentFX

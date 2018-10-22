@@ -2916,7 +2916,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321435162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1396804, y: 3.6661332, z: 0.10764808}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4522,6 +4522,10 @@ Prefab:
       propertyPath: sounds.Array.data[2].clip
       value: 
       objectReference: {fileID: 8300000, guid: 1697be318761854458725c152ccc1d4a, type: 3}
+    - target: {fileID: 1269191712926892, guid: 923d91f31fd7c7e4f8d3e8c34eb2d5f6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 923d91f31fd7c7e4f8d3e8c34eb2d5f6, type: 2}
   m_IsPrefabParent: 0

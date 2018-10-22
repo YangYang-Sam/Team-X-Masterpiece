@@ -215,9 +215,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/Raven
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
