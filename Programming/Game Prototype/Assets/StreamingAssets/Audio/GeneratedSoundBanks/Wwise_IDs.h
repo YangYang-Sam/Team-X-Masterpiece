@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID GHOST = 4023194814U;
         static const AkUniqueID GHOUL = 3922529076U;
         static const AkUniqueID JUMPING = 68157183U;
+        static const AkUniqueID MENULOOP = 3236081754U;
         static const AkUniqueID PORTALS = 2017263062U;
         static const AkUniqueID ROTATE = 1302771492U;
         static const AkUniqueID SKELETON = 3478279848U;

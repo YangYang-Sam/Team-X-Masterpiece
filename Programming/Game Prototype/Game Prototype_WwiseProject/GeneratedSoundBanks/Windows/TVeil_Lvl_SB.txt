@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1671131289	VeilJump			\TVeil_Events\Raven\VeilJump	
 	1877847629	Door			\TVeil_Events\Interaction\Door	
 	2017263062	Portals			\TVeil_Events\Interaction\Portals	
+	3236081754	MenuLoop			\TVeil_Events\MusicLoops\MenuLoop	
 	3478279848	Skeleton			\TVeil_Events\Enemies\Skeleton	
 	3922529076	Ghoul			\TVeil_Events\Enemies\Ghoul	
 	4023194814	Ghost			\TVeil_Events\Enemies\Ghost	

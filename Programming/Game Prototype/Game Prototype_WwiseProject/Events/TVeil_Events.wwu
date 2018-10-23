@@ -127,6 +127,24 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="MusicLoops" ID="{1E1CAD13-7EE1-4F0C-BFFD-07D27AB35328}" ShortID="98729171">
+					<ChildrenList>
+						<Event Name="MenuLoop" ID="{5B2DEF2C-CCD3-4BC2-91D8-4461585C8CB5}">
+							<ChildrenList>
+								<Action Name="" ID="{CAE556DC-69A2-49C6-B3D0-2F83EDAE1603}" ShortID="782457481">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LoopTracks" ID="{36E3D726-43D3-41DA-A30A-F6A7C9F005A1}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
