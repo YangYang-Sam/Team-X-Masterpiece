@@ -24,4 +24,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	820484119	RotatePlane	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\RotatePlane_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\RotatePlane		567064
 	887549436	Jump2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Jump2_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Jumping\Jump2		48328
 	998510839	Ghoul3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul3		91024
+	1062920163	MenuLoop	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\MenuLoop_8956FC97.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\LoopTracks\MenuLoop\MenuLoop		16868316
 

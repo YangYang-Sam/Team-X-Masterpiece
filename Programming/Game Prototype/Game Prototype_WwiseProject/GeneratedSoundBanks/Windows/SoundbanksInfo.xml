@@ -91,6 +91,10 @@
 					<ShortName>Ghoul3.wav</ShortName>
 					<Path>SFX/Ghoul3_56D34C19.wem</Path>
 				</File>
+				<File Id="1062920163" Language="SFX">
+					<ShortName>MenuLoop.wav</ShortName>
+					<Path>SFX/MenuLoop_8956FC97.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
