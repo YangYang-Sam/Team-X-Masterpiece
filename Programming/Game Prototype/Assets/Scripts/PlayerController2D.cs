@@ -71,8 +71,6 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody = GetComponent<Rigidbody2D>();
         //Fetch the SpriteRenderer component from the GameObject
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        //Play Main theme audio
-        //FindObjectOfType<AudioManager>().Play("MenuLoop");
 
     }
 
@@ -149,15 +147,6 @@ public class PlayerController2D : MonoBehaviour
         ResetVeilJump();
         JumpSound();
         _playerRigidbody.velocity = Vector2.up * jumpforce;
-        //play cirrect sound depending on single or double jump
-        if(_canJump == 2)
-        {
-            //FindObjectOfType<AudioManager>().Play("PlayerJump");
-        }
-        else if (_canJump == 1)
-        {
-            //FindObjectOfType<AudioManager>().Play("DoubleJump");
-        }
         _canJump--;
         _canVeilJump--;
     }
@@ -168,7 +157,6 @@ public class PlayerController2D : MonoBehaviour
         _playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
-        //FindObjectOfType<AudioManager>().Play("VeilJump");
         _speed = 0;
         transform.localScale = _veilJumpScale;
 
@@ -179,19 +167,9 @@ public class PlayerController2D : MonoBehaviour
     private void TempInvincibility()
     {
         _playerRigidbody.velocity = new Vector2(0, 0);
-        //FindObjectOfType<AudioManager>().Play("PortalEntry");
         _speed = 0;
         transform.localScale = _veilJumpScale;
     }
-
-    //private void ResetInvincibility()
-    //{
-
-    //    _playerRigidbody.velocity = new Vector2(0, 0);
-    //    //FindObjectOfType<AudioManager>().Play("VeilJump");
-    //    _speed = 0;
-    //    transform.localScale = new Vector3(transform.localScale.x * _veilJumpWidthScale, transform.localScale.y, transform.localScale.z);
-    //}
 
     private void ResetVeilJump()
     {
@@ -200,14 +178,6 @@ public class PlayerController2D : MonoBehaviour
         _speed = _speedValue;
         _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
     }
-
-
-    //private IEnumerator FreezePlayer()
-    //{
-    //    _playerFrozen = true;
-    //    yield return new WaitForSeconds(1);
-    //    _playerFrozen = false;
-    //}
 
     public void Damage()
     {
@@ -235,72 +205,6 @@ public class PlayerController2D : MonoBehaviour
         }
         gameObject.SetActive(true);
         Debug.Log("Player spawned");
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-
-    {
-        //switch to correct layer based on portal name
-        if (Input.GetButtonDown("Interact"))
-        {
-            if (other.tag == "Platform Portal")
-            {
-                _planeNavigation.Plane1Selector();
-                _planeMovement.portal1Entered = true;
-            }
-
-            else if (other.tag == "Platform Portal")
-            {
-                _planeNavigation.Plane2Selector();
-                _planeMovement.portal2Entered = true;
-            }
-
-            else if (other.tag == "Platform Portal")
-            {
-                _planeNavigation.Plane3Selector();
-                _planeMovement.portal3Entered = true;
-            }
-
-            if (other.tag == "Lever")
-            {
-                _planeMovement.leverPulled = true;
-            }
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-
-    {
-        //switch to correct layer based on portal name
-        if (Input.GetButtonDown("Interact"))
-        {
-            if (other.gameObject.tag == "Platform Portal")
-            {
-                if (other.gameObject.name == "Platform 1 Portal")
-                {
-                    _planeNavigation.Plane1Selector();
-                    _planeMovement.portal1Entered = true;
-                }
-
-                if (other.gameObject.name == "Platform 2 Portal")
-                {
-                    _planeNavigation.Plane2Selector();
-                    _planeMovement.portal2Entered = true;
-                }
-
-                else if (other.gameObject.name == "Platform 3 Portal")
-                {
-                    _planeNavigation.Plane3Selector();
-                    _planeMovement.portal3Entered = true;
-                }
-            }
-
-            if (other.gameObject.tag == "Lever")
-            {
-                _planeMovement.leverPulled = true;
-            }
-        }
-
     }
 
     private void JumpSound()

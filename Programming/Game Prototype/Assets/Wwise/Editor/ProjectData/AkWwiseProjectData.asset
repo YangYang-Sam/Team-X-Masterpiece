@@ -70,7 +70,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586617351564981158
+    m_lastTime: -8586613002033428955
     List:
     - name: Door
       guid: c34e72dee737904c9a4b223fa6208752
@@ -125,6 +125,20 @@ MonoBehaviour:
       - ElementName: Jumping
         ObjectType: 3
       Path: TVeil_Events\Raven\Jumping
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MenuLoop
+      guid: 2cef2d5bd3ccc24b91d84461585c8cb5
+      id: 3236081754
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: MusicLoops
+        ObjectType: 4
+      - ElementName: MenuLoop
+        ObjectType: 3
+      Path: TVeil_Events\MusicLoops\MenuLoop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -215,5 +229,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Game Prototype_WwiseProject
+  - /Game Prototype_WwiseProject/Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -886,7 +886,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 3 Portal
+      value: Platform 3 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 61579458777908728, guid: 7fed87175fc9e1847bd32f2e8fb3e68c,
         type: 2}
@@ -1126,7 +1126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -1316,7 +1316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 2 Portal
+      value: Platform 2 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 61579458777908728, guid: 7fed87175fc9e1847bd32f2e8fb3e68c,
         type: 2}
@@ -1957,7 +1957,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -5633,7 +5633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6059,7 +6059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6271,7 +6271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -7405,7 +7405,6 @@ MonoBehaviour:
   plane1Ignore: 0
   plane2Ignore: 1
   plane3Ignore: 1
-  platformOn: 0
   _planesParent: {fileID: 1354796673}
   _plane1Platforms:
   - {fileID: 701718645}
@@ -7426,7 +7425,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0dbe1f30e65e2234795068f8f49edc89, type: 2}
   - {fileID: 2100000, guid: 6a69cf42ff91eb641ac259105e9a0ddd, type: 2}
   - {fileID: 2100000, guid: 2038ee5ff00034747a53d2c8d0e1083a, type: 2}
-  sortingOrder: 0
   _playerFrozen: 0
   freezeTime: 1
   _currentPlane: 1
@@ -7457,33 +7455,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb69413c81c9c9f4fa16f803c8350d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSound: {fileID: 1423567574}
   _planesParent: {fileID: 1354796673}
   _plane:
   - {fileID: 1231923423}
   - {fileID: 1135860811}
   - {fileID: 1868751854}
-  currPlaneID: 0
-  prevPlaneID: 0
-  _rotationDuration: 3.3
+  _plane1Pos: {x: 0, y: 0, z: 0}
+  _plane2Pos: {x: 0, y: 0, z: 10}
+  _plane3Pos: {x: 0, y: 0, z: 20}
   _planeMoveDuration: 0.5
-  initialRotation: {x: 0, y: 0, z: 0, w: 1}
+  _rotationDuration: 3.3
+  rotationSound: {fileID: 1423567574}
   targetRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   _colorChangeDuration: 0.5
   initialPosition: {x: 0, y: 0, z: 0}
   targetPositionIn: {x: 0, y: 0, z: -10}
-  targetPositionOut: {x: 0, y: 0, z: 5}
-  initialColorOut: {r: 0, g: 0, b: 0, a: 0}
-  targetColorOut: {r: 0, g: 0, b: 0, a: 0}
-  initialColorIn: {r: 0, g: 0, b: 0, a: 0}
-  targetColorIn: {r: 0, g: 0, b: 0, a: 0}
   leverPulled: 0
   portal1Entered: 0
   portal2Entered: 0
   portal3Entered: 0
-  _plane1Pos: {x: 0, y: 0, z: 0}
-  _plane2Pos: {x: 0, y: 0, z: 10}
-  _plane3Pos: {x: 0, y: 0, z: 20}
   alpha:
   - 1
   - 0.5
@@ -7653,7 +7643,7 @@ GameObject:
   - component: {fileID: 887606517}
   - component: {fileID: 887606519}
   - component: {fileID: 887606518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7714,7 +7704,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0dbe1f30e65e2234795068f8f49edc89, type: 2}
+  - {fileID: 2100000, guid: 6a69cf42ff91eb641ac259105e9a0ddd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7731,8 +7721,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 765651725
-  m_SortingLayer: 3
+  m_SortingLayerID: -1059112293
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a534360c9d238df40a86757ede660ce7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8521,6 +8511,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1328049143909982, guid: 1fda81f8dbf2a4141b569f57e3707645,
     type: 2}
   m_PrefabInternal: {fileID: 1566641754}
+--- !u!114 &1030559918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030559913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a6b7589ad28594aac07917bc4f9487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _planeController: {fileID: 818024992}
 --- !u!1001 &1039634594
 Prefab:
   m_ObjectHideFlags: 0
@@ -8742,7 +8744,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 2 Portal
+      value: Platform 2 Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -9810,7 +9812,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10470,7 +10472,7 @@ GameObject:
   - component: {fileID: 1423567573}
   - component: {fileID: 1423567575}
   - component: {fileID: 1423567574}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Rotate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11730,7 +11732,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 2 Portal
+      value: Platform 2 Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14890,7 +14892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal
+      value: Platform 1 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -15054,7 +15056,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2065504168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15129,7 +15131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 3 Portal
+      value: Platform 3 Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 61579458777908728, guid: 7fed87175fc9e1847bd32f2e8fb3e68c,
         type: 2}
