@@ -721,7 +721,7 @@ MonoBehaviour:
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
+  unloadTriggerList: 
   valueGuid: 
 --- !u!4 &598598121
 Transform:

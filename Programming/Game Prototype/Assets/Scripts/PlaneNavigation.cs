@@ -112,7 +112,6 @@ public class PlaneNavigation : MonoBehaviour {
             _playerFrozen = false;
             _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             _currentPlane = 1;
-            Debug.Log("Number of calls");
             yield return null;
         }
     }
@@ -173,7 +172,6 @@ public class PlaneNavigation : MonoBehaviour {
             _playerFrozen = false;
             _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             _currentPlane = 3;
-            Debug.Log("Number of calls");
             yield return null;
         }
     }
