@@ -107,27 +107,7 @@ public class PlayerInteractions : MonoBehaviour {
                     ToPlane3(other);
                 }
 
-                else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
-                {
-                    ToPlane1(other);
-                }
-
-                else if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 3)
-                {
-                    ToPlane1(other);
-                }
-
                 else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
-                {
-                    ToPlane2(other);
-                }
-
-                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
-                {
-                    ToPlane1(other);
-                }
-
-                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 3)
                 {
                     ToPlane2(other);
                 }
@@ -137,9 +117,34 @@ public class PlayerInteractions : MonoBehaviour {
                     ToPlane3(other);
                 }
 
+                else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
+
                 else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 2)
                 {
                     ToPlane3(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane3(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane2(other);
                 }
 
                 else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 3)
@@ -147,6 +152,10 @@ public class PlayerInteractions : MonoBehaviour {
                     ToPlane1(other);
                 }
 
+                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane2(other);
+                }
             }
 
             if (other.gameObject.tag == "Lever")

@@ -102,7 +102,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting();
+            PlatformParenting(_planeMovement._plane[0]);
             time -= Time.deltaTime;
             plane1Ignore = false;
             plane2Ignore = true;
@@ -132,7 +132,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting();
+            PlatformParenting(_planeMovement._plane[1]);
             time -= Time.deltaTime;
             plane1Ignore = true;
             plane2Ignore = false;
@@ -162,7 +162,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting();
+            PlatformParenting(_planeMovement._plane[2]);
             time -= Time.deltaTime;
             plane1Ignore = true;
             plane2Ignore = true;
@@ -176,7 +176,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public void PlatformParenting()
+    public void PlatformParenting(GameObject plane)
     {
         foreach (GameObject platform in _plane1Platforms)
         {
