@@ -115,14 +115,18 @@ public class PlayerController2D : MonoBehaviour
             ResetVeilJump();
         }
 
-        if (Input.GetButtonDown("Jump") && _canJump > 0)
+        if (Input.GetButtonDown("Jump"))
         {
-            Jump();
-        }
+            if (_canJump > 0)
+            {
+                Jump();
+            }
 
-        else if (Input.GetButtonDown("Veil Jump") && _canVeilJump > 0)
-        {
-            VeilJump();
+            else if (_canJump == 0 && _canVeilJump > 0)
+            {
+                VeilJump();
+            }
+            
         }
 
     }
@@ -148,7 +152,6 @@ public class PlayerController2D : MonoBehaviour
         JumpSound();
         _playerRigidbody.velocity = Vector2.up * jumpforce;
         _canJump--;
-        _canVeilJump--;
     }
 
     private void VeilJump()
@@ -161,7 +164,6 @@ public class PlayerController2D : MonoBehaviour
         transform.localScale = _veilJumpScale;
 
         _canVeilJump--;
-        _canJump --;
     }
 
     private void TempInvincibility()

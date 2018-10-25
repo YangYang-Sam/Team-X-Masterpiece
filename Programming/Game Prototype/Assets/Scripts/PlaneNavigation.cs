@@ -194,6 +194,17 @@ public class PlaneNavigation : MonoBehaviour {
         //}
 
         other.gameObject.transform.parent = plane.transform;
+
+        other.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+
+        if (other.transform.childCount > 0)
+        {
+            other.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+        }
+        if (other.transform.childCount > 1)
+        {
+            other.transform.GetChild(1).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+        }
     }
 
     //public void PlatformMovement()

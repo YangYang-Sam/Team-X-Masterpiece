@@ -172,6 +172,7 @@ public class PlayerInteractions : MonoBehaviour {
         StartCoroutine(_planeNavigation.Plane1Delay(other));
         other.gameObject.layer = 10;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[0];
+
         if (other.transform.childCount > 0)
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[0];

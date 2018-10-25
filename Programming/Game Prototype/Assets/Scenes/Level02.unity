@@ -14177,6 +14177,21 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.5992137
       objectReference: {fileID: 0}
+    - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: _canJumpValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: _canVeilJumpValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: checkRadius
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61021162189331194, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
     - {fileID: 58215821784555672, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
