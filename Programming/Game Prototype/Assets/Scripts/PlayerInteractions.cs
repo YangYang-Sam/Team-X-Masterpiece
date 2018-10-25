@@ -176,6 +176,11 @@ public class PlayerInteractions : MonoBehaviour {
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[0];
         }
+
+        if (other.transform.childCount > 1)
+        {
+            other.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[0];
+        }
         _planeMovement.portal1Entered = true;
     }
 
@@ -190,6 +195,12 @@ public class PlayerInteractions : MonoBehaviour {
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[1];
         }
+
+        if (other.transform.childCount > 1)
+        {
+            other.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[1];
+        }
+
         _planeMovement.portal2Entered = true;
     }
 
@@ -203,6 +214,12 @@ public class PlayerInteractions : MonoBehaviour {
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[2];
         }
+
+        if (other.transform.childCount > 1)
+        {
+            other.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[2];
+        }
+
         _planeMovement.portal3Entered = true;
     }
 
