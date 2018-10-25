@@ -86,7 +86,7 @@ public class PlaneNavigation : MonoBehaviour {
     }
 
 
-    public IEnumerator Plane1Delay()
+    public IEnumerator Plane1Delay(Collision2D other)
     {
         float time = 0;
 
@@ -102,7 +102,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting(_planeMovement._plane[0]);
+            PlatformParenting(_planeMovement._plane[0], other);
             time -= Time.deltaTime;
             plane1Ignore = false;
             plane2Ignore = true;
@@ -116,7 +116,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public IEnumerator Plane2Delay()
+    public IEnumerator Plane2Delay(Collision2D other)
     {
         float time = 0;
 
@@ -132,7 +132,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting(_planeMovement._plane[1]);
+            PlatformParenting(_planeMovement._plane[1], other);
             time -= Time.deltaTime;
             plane1Ignore = true;
             plane2Ignore = false;
@@ -146,7 +146,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public IEnumerator Plane3Delay()
+    public IEnumerator Plane3Delay(Collision2D other)
     {
         float time = 0;
 
@@ -162,7 +162,7 @@ public class PlaneNavigation : MonoBehaviour {
         //Set new layers/values according to new plane
         if (time > 0)
         {
-            PlatformParenting(_planeMovement._plane[2]);
+            PlatformParenting(_planeMovement._plane[2], other);
             time -= Time.deltaTime;
             plane1Ignore = true;
             plane2Ignore = true;
@@ -176,22 +176,24 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public void PlatformParenting(GameObject plane)
+    public void PlatformParenting(GameObject plane, Collision2D other)
     {
-        foreach (GameObject platform in _plane1Platforms)
-        {
-            platform.gameObject.transform.parent = _planesParent.transform;
-        }
+        //foreach (GameObject platform in _plane1Platforms)
+        //{
+        //    platform.gameObject.transform.parent = _planesParent.transform;
+        //}
 
-        foreach (GameObject platform in _plane2Platforms)
-        {
-            platform.gameObject.transform.parent = _planesParent.transform;
-        }
+        //foreach (GameObject platform in _plane2Platforms)
+        //{
+        //    platform.gameObject.transform.parent = _planesParent.transform;
+        //}
 
-        foreach (GameObject platform in _plane3Platforms)
-        {
-            platform.gameObject.transform.parent = _planesParent.transform;
-        }
+        //foreach (GameObject platform in _plane3Platforms)
+        //{
+        //    platform.gameObject.transform.parent = _planesParent.transform;
+        //}
+
+        other.gameObject.transform.parent = plane.transform;
     }
 
     //public void PlatformMovement()

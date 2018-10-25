@@ -24,9 +24,10 @@ public class PlaneMovement : MonoBehaviour
     [SerializeField]
     private AkEvent rotationSound;
 
-    private Quaternion initialRotation = Quaternion.Euler(0, 0, 0);
     [SerializeField]
-    private Quaternion targetRotation = Quaternion.Euler(0, 0, 90);
+    private Transform initialRotation;
+    [SerializeField]
+    private Transform targetRotation;
 
     [SerializeField]
     private float _colorChangeDuration = 1.0f;
@@ -57,7 +58,6 @@ public class PlaneMovement : MonoBehaviour
         _plane[0].transform.position = _plane1Pos;
         _plane[1].transform.position = _plane2Pos;
         _plane[2].transform.position = _plane3Pos;
-
     }
 
     void FixedUpdate()
@@ -108,7 +108,7 @@ public class PlaneMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator RotatePlane(Quaternion initialRotation, Quaternion targetRotation, float _rotationDuration)
+    private IEnumerator RotatePlane(Transform initialRotation, Transform targetRotation, float _rotationDuration)
     {
         if (_rotationDuration > 0f)
         {
@@ -120,12 +120,12 @@ public class PlaneMovement : MonoBehaviour
             {
                 float progress = (Time.time - startTime) / _rotationDuration;
                 // progress will equal 0 at startTime, 1 at endTime.
-                _plane[2].transform.rotation = Quaternion.Slerp(initialRotation, initialRotation * targetRotation, progress);
+                _plane[2].transform.rotation = Quaternion.Slerp(initialRotation.rotation, targetRotation.rotation, progress);
                 yield return null;
             }
         }
-        initialRotation = initialRotation * targetRotation;
-        _plane[2].transform.rotation = initialRotation;
+        //initialRotation = initialRotation * targetRotation;
+        _plane[2].transform.rotation = targetRotation.rotation;
         leverPulled = false;
     }
 

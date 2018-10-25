@@ -169,7 +169,7 @@ public class PlayerInteractions : MonoBehaviour {
     private void ToPlane1(Collision2D other)
     {
         other.gameObject.transform.parent = null;
-        StartCoroutine(_planeNavigation.Plane1Delay());
+        StartCoroutine(_planeNavigation.Plane1Delay(other));
         other.gameObject.layer = 10;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[0];
         if (other.transform.childCount > 0)
@@ -188,7 +188,7 @@ public class PlayerInteractions : MonoBehaviour {
     {
         Debug.Log("Correct Function");
         other.gameObject.transform.parent = null;
-        StartCoroutine(_planeNavigation.Plane2Delay());
+        StartCoroutine(_planeNavigation.Plane2Delay(other));
         other.gameObject.layer = 11;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[1];
         if (other.transform.childCount > 0)
@@ -207,7 +207,7 @@ public class PlayerInteractions : MonoBehaviour {
     private void ToPlane3(Collision2D other)
     {
         other.gameObject.transform.parent = null;
-        StartCoroutine(_planeNavigation.Plane3Delay());
+        StartCoroutine(_planeNavigation.Plane3Delay(other));
         other.gameObject.layer = 12;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeNavigation._planeMaterials[2];
         if(other.transform.childCount > 0)
