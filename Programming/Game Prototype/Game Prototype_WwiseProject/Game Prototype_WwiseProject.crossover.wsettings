@@ -42,7 +42,10 @@
 				<Property Name="MonitoringManager\WatchMgr\WatchesVersion" Type="int32" Value="6"/>
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
+				<Property Name="Music Transition List\{36D4314F-2524-4A29-A304-4540679F2E9F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{36E3D726-43D3-41DA-A30A-F6A7C9F005A1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{602F8E1B-97F8-4624-BEFF-333868686AD9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{A5862DF0-6C33-43F3-972B-93BB28CE03C9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
@@ -53,7 +56,7 @@
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="ProjectExplorer\x64_Expanded_10_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_11_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="JtfjNtND2kGjCvanyfAFoWtUdZvYxM1HoBEZW3OI82RRHT/EPIviR6SnfiFHZhej"/>
+				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="JtfjNtND2kGjCvanyfAFoWtUdZvYxM1HoBEZW3OI82Q33qftf8caTJl9/dA/OFc8YC/Xff0S1U+hnYeMNptb2g=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_14_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_15_1" Type="string" Value=""/>
