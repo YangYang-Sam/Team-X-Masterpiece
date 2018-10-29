@@ -19,5 +19,11 @@ public class GameManager : MonoBehaviour {
             Debug.Log("R pressed");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-	}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Esc pressed");
+            SceneManager.LoadScene(0);
+        }
+    }
 }

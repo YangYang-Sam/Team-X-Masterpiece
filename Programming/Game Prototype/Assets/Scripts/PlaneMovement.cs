@@ -48,7 +48,7 @@ public class PlaneMovement : MonoBehaviour
     private float plane3Alpha;
 
     [SerializeField]
-    private Material[] _planeMaterials;
+    public Material[] _planeMaterials;
 
     [SerializeField]
     private Color[] _planeColor;
@@ -58,6 +58,14 @@ public class PlaneMovement : MonoBehaviour
         _plane[0].transform.position = _plane1Pos;
         _plane[1].transform.position = _plane2Pos;
         _plane[2].transform.position = _plane3Pos;
+
+        //_planeMaterials[0] = Instantiate(_planeMaterials[0]);
+        //_planeMaterials[1] = Instantiate(_planeMaterials[1]);
+        //_planeMaterials[2] = Instantiate(_planeMaterials[2]);
+
+        _planeMaterials[0].SetColor("_Color", _planeColor[0]);
+        _planeMaterials[1].SetColor("_Color", _planeColor[1]);
+        _planeMaterials[2].SetColor("_Color", _planeColor[2]);
     }
 
     void FixedUpdate()
