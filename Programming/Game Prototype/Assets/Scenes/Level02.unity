@@ -1639,7 +1639,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalScale.y
@@ -2060,7 +2060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalScale.y
@@ -14091,7 +14091,7 @@ Prefab:
     - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
         type: 2}
       propertyPath: _defaultGravity
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
         type: 2}
@@ -15978,7 +15978,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalScale.y
@@ -17659,10 +17659,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 34263839}
-  smoothSpeed: 0.1
-  offset: {x: 0, y: 1.5, z: -4.5}
-  minimumBoundary: {x: -6.12, y: -6, z: 0}
-  maximumBoundary: {x: 6.12, y: 6, z: 0}
+  smoothSpeed: 0.2
+  offset: {x: 0, y: 0.8, z: -4.85}
+  minimumBoundary: {x: -6.12, y: -8, z: 0}
+  maximumBoundary: {x: 6.12, y: 8, z: 0}
 --- !u!114 &1817062032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18526,7 +18526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalScale.y

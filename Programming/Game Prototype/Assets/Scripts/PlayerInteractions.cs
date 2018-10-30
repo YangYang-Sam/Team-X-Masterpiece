@@ -118,16 +118,19 @@ public class PlayerInteractions : MonoBehaviour {
         StartCoroutine(_planeNavigation.Plane1Delay(other));
         other.gameObject.layer = 10;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
+        other.gameObject.GetComponent<SpriteRenderer>().color = new Color (255,255,0,255);
 
         if (other.transform.childCount > 0)
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
+            other.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
 
         }
 
         if (other.transform.childCount > 1)
         {
             other.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
+            other.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
         }
         _planeMovement.portal1Entered = true;
     }
