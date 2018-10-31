@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlaneNavigation : MonoBehaviour {
 
+    [SerializeField]
+    private AkEvent aztecLoop;
+
     //Access playerController class
     [SerializeField]
     private GameObject _playerPrefab;
@@ -60,6 +63,11 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        if (aztecLoop != null)
+        {
+            aztecLoop.HandleEvent(gameObject);
+        }
+
         _currentPlane = 1;
 
         _playerController2D = _playerPrefab.GetComponent<PlayerController2D>();

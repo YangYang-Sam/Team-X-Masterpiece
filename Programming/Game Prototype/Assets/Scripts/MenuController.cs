@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour {
     {
         if (MenuLoop != null)
         {
-            MenuLoop.HandleEvent(gameObject);
+            //MenuLoop.HandleEvent(gameObject);
         }
 	}
 	

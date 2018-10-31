@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour {
@@ -26,9 +27,15 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
+        if (other.name == "End Game")
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if (Input.GetButtonDown("Interact") && other.name == "Lever")
         {
             _planeMovement.leverPulled = true;
+            _planeNavigation._playerFrozen = true;
         }
     }
 
@@ -109,6 +116,13 @@ public class PlayerInteractions : MonoBehaviour {
                     _planeMovement.leverPulled = true;
                 }
             }
+        }
+
+        if (other.gameObject.name == "Enemy")
+        {
+            PlayerController2D player = GetComponent<PlayerController2D>();
+
+            player.Damage();
         }
 
     }

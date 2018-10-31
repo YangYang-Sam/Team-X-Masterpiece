@@ -32,17 +32,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586617374727819754
+    m_lastTime: -8586606222344999754
     List:
-    - name: TVeil_Credits_SB
-      guid: bb9a105f0d7bce419e91e8b814603127
-      id: 4034624504
-      PathAndIcons:
-      - ElementName: TVeil_MSTR_SB_WorkUnit
-        ObjectType: 12
-      - ElementName: TVeil_Credits_SB
-        ObjectType: 7
-      Path: TVeil_MSTR_SB_WorkUnit\TVeil_Credits_SB
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
       id: 928849380
@@ -52,15 +43,6 @@ MonoBehaviour:
       - ElementName: TVeil_Lvl_SB
         ObjectType: 7
       Path: TVeil_MSTR_SB_WorkUnit\TVeil_Lvl_SB
-    - name: TVeil_Menu_SB
-      guid: 4045cda76e244144a57e18fc68346560
-      id: 901570921
-      PathAndIcons:
-      - ElementName: TVeil_MSTR_SB_WorkUnit
-        ObjectType: 12
-      - ElementName: TVeil_Menu_SB
-        ObjectType: 7
-      Path: TVeil_MSTR_SB_WorkUnit\TVeil_Menu_SB
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -70,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586613002033428955
+    m_lastTime: -8586606046948089431
     List:
     - name: Door
       guid: c34e72dee737904c9a4b223fa6208752
@@ -184,6 +166,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: TempAztecLoops
+      guid: 632332defaadc34e9b1668c712413679
+      id: 867498487
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: MusicLoops
+        ObjectType: 4
+      - ElementName: TempAztecLoops
+        ObjectType: 3
+      Path: TVeil_Events\MusicLoops\TempAztecLoops
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: VeilJump
       guid: 0081e3669dc720468a803a85ea0b490a
       id: 1671131289
@@ -231,5 +227,7 @@ MonoBehaviour:
   - /Game Prototype_WwiseProject
   - /Game Prototype_WwiseProject/Events
   - /Game Prototype_WwiseProject/Events/TVeil_Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/MusicLoops
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

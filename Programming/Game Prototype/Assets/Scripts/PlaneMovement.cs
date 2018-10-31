@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlaneMovement : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject _planeController;
+    private PlaneNavigation _planeNavigation;
+    private PlaneMovement _planeMovement;
+
     [SerializeField]
     private GameObject _planesParent;
     [SerializeField]
@@ -55,6 +61,8 @@ public class PlaneMovement : MonoBehaviour
 
     void Start()
     {
+        _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
+
         _plane[0].transform.position = _plane1Pos;
         _plane[1].transform.position = _plane2Pos;
         _plane[2].transform.position = _plane3Pos;
@@ -86,6 +94,7 @@ public class PlaneMovement : MonoBehaviour
             PlaneRotationSound();
             StartCoroutine(RotatePlane(initialRotation, targetRotation, _rotationDuration));
             leverPulled = false;
+
         }
         if (portal1Entered == true)
         {
@@ -135,6 +144,7 @@ public class PlaneMovement : MonoBehaviour
         //initialRotation = initialRotation * targetRotation;
         _plane[2].transform.rotation = targetRotation.rotation;
         leverPulled = false;
+        _planeNavigation._playerFrozen = false;
     }
 
     private IEnumerator MovePlane(Vector3 initialPosition, Vector3 targetPosition, float _planeMoveDuration)
