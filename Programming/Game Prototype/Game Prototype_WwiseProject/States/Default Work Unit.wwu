@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8C3416E8-A4DF-41F5-8AAB-6F645DB174B8}" SchemaVersion="89">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{8C3416E8-A4DF-41F5-8AAB-6F645DB174B8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8C3416E8-A4DF-41F5-8AAB-6F645DB174B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Menu_or_Level" ID="{28A9841F-6781-4D72-8014-558EDE669EFA}">
+					<ChildrenList>
+						<State Name="None" ID="{AE6E0609-0489-4337-9B50-FD7F2DD1C2B3}"/>
+						<State Name="Menu" ID="{1B6796F6-F362-448A-8B32-DDB1BE7C40B3}"/>
+						<State Name="Level" ID="{09983DC1-799D-4EF8-A86A-FF7FB1F77BFE}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{AE6E0609-0489-4337-9B50-FD7F2DD1C2B3}"/>
+							<EndState Name="Menu" ID="{1B6796F6-F362-448A-8B32-DDB1BE7C40B3}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Menu" ID="{1B6796F6-F362-448A-8B32-DDB1BE7C40B3}"/>
+							<EndState Name="Level" ID="{09983DC1-799D-4EF8-A86A-FF7FB1F77BFE}"/>
+							<Time>1.25</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Level" ID="{09983DC1-799D-4EF8-A86A-FF7FB1F77BFE}"/>
+							<EndState Name="Menu" ID="{1B6796F6-F362-448A-8B32-DDB1BE7C40B3}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
