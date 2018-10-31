@@ -48,14 +48,6 @@
 					<ShortName>Ghost2.wav</ShortName>
 					<Path>SFX/Ghost2_56D34C19.wem</Path>
 				</File>
-				<File Id="488768924" Language="SFX">
-					<ShortName>Aztec_Loop1_10B_84bpm.wav</ShortName>
-					<Path>SFX/Aztec_Loop1_10B_84bpm_8956FC97.wem</Path>
-				</File>
-				<File Id="518155220" Language="SFX">
-					<ShortName>Aztec_Loop2_12B_84bpm.wav</ShortName>
-					<Path>SFX/Aztec_Loop2_12B_84bpm_8956FC97.wem</Path>
-				</File>
 				<File Id="519496648" Language="SFX">
 					<ShortName>VeilJump.wav</ShortName>
 					<Path>SFX/VeilJump_56D34C19.wem</Path>
@@ -63,10 +55,6 @@
 				<File Id="558592505" Language="SFX">
 					<ShortName>Lever1.wav</ShortName>
 					<Path>SFX/Lever1_56D34C19.wem</Path>
-				</File>
-				<File Id="578143039" Language="SFX">
-					<ShortName>Aztec_Loop3_8B_84bpm.wav</ShortName>
-					<Path>SFX/Aztec_Loop3_8B_84bpm_8956FC97.wem</Path>
 				</File>
 				<File Id="637807892" Language="SFX">
 					<ShortName>Key.wav</ShortName>
@@ -76,13 +64,25 @@
 					<ShortName>RavenDeath.wav</ShortName>
 					<Path>SFX/RavenDeath_56D34C19.wem</Path>
 				</File>
+				<File Id="662228199" Language="SFX">
+					<ShortName>Aztec_Loop2_12B_84bpm_v2.wav</ShortName>
+					<Path>SFX/Aztec_Loop2_12B_84bpm_v2_8956FC97.wem</Path>
+				</File>
 				<File Id="679993410" Language="SFX">
 					<ShortName>BoneBoomerang.wav</ShortName>
 					<Path>SFX/BoneBoomerang_56D34C19.wem</Path>
 				</File>
+				<File Id="694119832" Language="SFX">
+					<ShortName>Aztec_Loop3_8B_84bpm_v2.wav</ShortName>
+					<Path>SFX/Aztec_Loop3_8B_84bpm_v2_8956FC97.wem</Path>
+				</File>
 				<File Id="723421713" Language="SFX">
 					<ShortName>Ghoul2.wav</ShortName>
 					<Path>SFX/Ghoul2_56D34C19.wem</Path>
+				</File>
+				<File Id="741041653" Language="SFX">
+					<ShortName>Aztec_Loop1_10B_84bpm_v2.wav</ShortName>
+					<Path>SFX/Aztec_Loop1_10B_84bpm_v2_8956FC97.wem</Path>
 				</File>
 				<File Id="802713548" Language="SFX">
 					<ShortName>Ghost1.wav</ShortName>

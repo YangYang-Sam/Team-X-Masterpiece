@@ -228,7 +228,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="Aztec_Loop1_10B_84bpm" ID="{24751358-8E9C-47C7-BD1E-E59EAC993A46}" ShortID="719354820">
+						<MusicSegment Name="Aztec_Loop1_10B_84bpm_v2" ID="{B0982ADD-BC93-42B8-BB42-B635DA676C67}" ShortID="684273533">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="34285.7142857143"/>
 							</PropertyList>
@@ -241,20 +241,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Aztec_Loop1_10B_84bpm" ID="{EDD9457B-ED6F-468C-8FF3-90DBD2B87519}" ShortID="872429612">
+								<MusicTrack Name="Aztec_Loop1_10B_84bpm_v2" ID="{271E4637-B2D9-4AF3-9DA1-36A7D9CF411F}" ShortID="81765423">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Aztec_Loop1_10B_84bpm" ID="{42632762-F564-4CB3-B301-346A48E1E210}" ShortID="488768924">
+										<AudioFileSource Name="Aztec_Loop1_10B_84bpm_v2" ID="{8D349B43-719D-4077-9A4A-B3C5EE4CBFC8}" ShortID="741041653">
 											<Language>SFX</Language>
-											<AudioFile>Aztec_Loop1_10B_84bpm.wav</AudioFile>
+											<AudioFile>Aztec_Loop1_10B_84bpm_v2.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{6B2AA696-6372-4073-B8F0-3E5305EEADF9}">
+										<MusicTransition Name="Root" ID="{B0C60D3B-588D-4175-B3AE-54AA70C76146}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -262,15 +262,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{54B715D7-E8C6-4778-99BA-A62C83F039F3}">
+										<MusicTrackSequence Name="" ID="{54707CF0-A463-4F52-BAD2-09277DBFA826}">
 											<ClipList>
-												<MusicClip Name="Aztec_Loop1_10B_84bpm" ID="{98E439D0-D5CF-43F9-A28D-CD3A9D1392AF}">
+												<MusicClip Name="Aztec_Loop1_10B_84bpm_v2" ID="{1080342A-4D7A-4910-BE03-72F2EF79DB81}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="34285.7142857143"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="Aztec_Loop1_10B_84bpm" ID="{42632762-F564-4CB3-B301-346A48E1E210}"/>
+													<AudioSourceRef Name="Aztec_Loop1_10B_84bpm_v2" ID="{8D349B43-719D-4077-9A4A-B3C5EE4CBFC8}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -278,8 +278,8 @@
 								</MusicTrack>
 							</ChildrenList>
 							<CueList>
-								<MusicCue Name="Entry Cue" ID="{36C81DB1-CE36-4A88-9E58-B370DCC831C3}"/>
-								<MusicCue Name="Exit Cue" ID="{4EDBB234-5ED1-4418-B0C4-0C88C8A58A70}">
+								<MusicCue Name="Entry Cue" ID="{D0818380-4F64-401C-A975-B485167E96BB}"/>
+								<MusicCue Name="Exit Cue" ID="{56CD40BC-5A1D-4E5A-BA04-7E636D0ADFEE}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
 										<Property Name="TimeMs" Type="Real64" Value="28571.4285714286"/>
@@ -287,7 +287,7 @@
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
-						<MusicSegment Name="Aztec_Loop2_12B_84bpm" ID="{6011CAE8-D9F0-4F5A-BB2A-D4FA3C052DB3}" ShortID="1069705538">
+						<MusicSegment Name="Aztec_Loop2_12B_84bpm_v2" ID="{DCCFFBD5-96BF-40EC-8980-FB23A8C65AD7}" ShortID="521640468">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="37142.8571428571"/>
 							</PropertyList>
@@ -300,20 +300,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Aztec_Loop2_12B_84bpm" ID="{65610785-707A-4587-9401-06A45F758AF5}" ShortID="1007378388">
+								<MusicTrack Name="Aztec_Loop2_12B_84bpm_v2" ID="{D174058A-3FDE-4407-8056-012011B57457}" ShortID="824419312">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Aztec_Loop2_12B_84bpm" ID="{AF36CA41-49F7-4DDD-A39D-8C6EEED06875}" ShortID="518155220">
+										<AudioFileSource Name="Aztec_Loop2_12B_84bpm_v2" ID="{08312C81-DD8C-471F-87DF-4D77E957AEF7}" ShortID="662228199">
 											<Language>SFX</Language>
-											<AudioFile>Aztec_Loop2_12B_84bpm.wav</AudioFile>
+											<AudioFile>Aztec_Loop2_12B_84bpm_v2.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{B2D827D9-907A-4E4E-AE57-8F22FD34FCF8}">
+										<MusicTransition Name="Root" ID="{BF3A3A36-D811-4C5F-918A-38549ED7ECF0}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -321,15 +321,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{C828AFCB-AD19-4096-8F5C-FF46F1193852}">
+										<MusicTrackSequence Name="" ID="{3ECFC9D2-8C0A-47D1-8130-E94C0CE1257B}">
 											<ClipList>
-												<MusicClip Name="Aztec_Loop2_12B_84bpm" ID="{0EF96C31-89B0-45C5-97D0-F531D2A263C0}">
+												<MusicClip Name="Aztec_Loop2_12B_84bpm_v2" ID="{321F6B36-BD2D-4064-B85E-0CEBFF10DE0B}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="37142.8571428571"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="Aztec_Loop2_12B_84bpm" ID="{AF36CA41-49F7-4DDD-A39D-8C6EEED06875}"/>
+													<AudioSourceRef Name="Aztec_Loop2_12B_84bpm_v2" ID="{08312C81-DD8C-471F-87DF-4D77E957AEF7}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -337,8 +337,8 @@
 								</MusicTrack>
 							</ChildrenList>
 							<CueList>
-								<MusicCue Name="Entry Cue" ID="{1FC8A170-1C22-40FC-AC66-7D680BF66DDF}"/>
-								<MusicCue Name="Exit Cue" ID="{E826DD7D-CE61-46C3-A01A-B34F351CC847}">
+								<MusicCue Name="Entry Cue" ID="{9121ABC2-185A-4CB9-9E1A-1E496D03D76E}"/>
+								<MusicCue Name="Exit Cue" ID="{1ED2D0DB-60C3-45E9-9E82-AE3A783F005E}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
 										<Property Name="TimeMs" Type="Real64" Value="34285.7142857143"/>
@@ -346,7 +346,7 @@
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
-						<MusicSegment Name="Aztec_Loop3_8B_84bpm" ID="{222771B4-F94A-4F34-90D6-58A2BA79F467}" ShortID="299349202">
+						<MusicSegment Name="Aztec_Loop3_8B_84bpm_v2" ID="{65289E93-C115-47FF-9A07-FD40C219C740}" ShortID="412610084">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="25714.2857142857"/>
 							</PropertyList>
@@ -359,20 +359,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Aztec_Loop3_8B_84bpm" ID="{EE702059-F768-4D73-9CDF-1211DCE80FEE}" ShortID="901211247">
+								<MusicTrack Name="Aztec_Loop3_8B_84bpm_v2" ID="{DF8207DB-4A06-4BD2-ADF8-7A95E0F9ADA3}" ShortID="486909878">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Aztec_Loop3_8B_84bpm" ID="{AE633CAD-A477-4B0D-AA74-A4067312521A}" ShortID="578143039">
+										<AudioFileSource Name="Aztec_Loop3_8B_84bpm_v2" ID="{16A8D8E4-9B09-4DA8-864C-2A21E7055F3E}" ShortID="694119832">
 											<Language>SFX</Language>
-											<AudioFile>Aztec_Loop3_8B_84bpm.wav</AudioFile>
+											<AudioFile>Aztec_Loop3_8B_84bpm_v2.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{5E3B87A8-8A86-46CB-B422-59332B157DAA}">
+										<MusicTransition Name="Root" ID="{675F236E-5B23-4B31-935E-AE378AFF76DA}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -380,15 +380,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{66867119-6700-4EE2-B29D-F64D152BE497}">
+										<MusicTrackSequence Name="" ID="{E54B438D-26C0-418C-809F-2287673750BC}">
 											<ClipList>
-												<MusicClip Name="Aztec_Loop3_8B_84bpm" ID="{0CC0C751-B232-4454-996A-23DD105046DF}">
+												<MusicClip Name="Aztec_Loop3_8B_84bpm_v2" ID="{D40C2977-8D1C-4AAE-82BA-31C66B9FC020}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="25714.2857142857"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="Aztec_Loop3_8B_84bpm" ID="{AE633CAD-A477-4B0D-AA74-A4067312521A}"/>
+													<AudioSourceRef Name="Aztec_Loop3_8B_84bpm_v2" ID="{16A8D8E4-9B09-4DA8-864C-2A21E7055F3E}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -396,8 +396,8 @@
 								</MusicTrack>
 							</ChildrenList>
 							<CueList>
-								<MusicCue Name="Entry Cue" ID="{225C86C1-6659-4470-8A58-BE2F8AD35412}"/>
-								<MusicCue Name="Exit Cue" ID="{B0BD4D51-862F-460D-81CA-871AA17BF083}">
+								<MusicCue Name="Entry Cue" ID="{267DF30E-8933-41B1-82CF-8FB7CE743EA5}"/>
+								<MusicCue Name="Exit Cue" ID="{5068F3C7-A058-481F-BED7-093778E680EB}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
 										<Property Name="TimeMs" Type="Real64" Value="22857.1428571429"/>
@@ -426,28 +426,33 @@
 								<Property Name="PlayMode" Type="int16" Value="2"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{D4C28935-BE53-4E9B-82E1-EC4CFE755494}" ShortID="132414521">
+								<MusicPlaylistItem Name="" ID="{58D7290D-FCB0-4098-967F-519765EEA405}" ShortID="14160090">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
-												<Value>65</Value>
+												<Value>60</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
-									<SegmentRef Name="Aztec_Loop1_10B_84bpm" ID="{24751358-8E9C-47C7-BD1E-E59EAC993A46}"/>
+									<SegmentRef Name="Aztec_Loop1_10B_84bpm_v2" ID="{B0982ADD-BC93-42B8-BB42-B635DA676C67}"/>
 								</MusicPlaylistItem>
-								<MusicPlaylistItem Name="" ID="{4C98F173-E6F2-456F-80BC-DE6E6A699287}" ShortID="635891656">
+								<MusicPlaylistItem Name="" ID="{6B36A9E8-A738-4EE4-8B9B-3B5E8F630F70}" ShortID="726637292">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<SegmentRef Name="Aztec_Loop2_12B_84bpm_v2" ID="{DCCFFBD5-96BF-40EC-8980-FB23A8C65AD7}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{CE94CD29-1C4C-47D5-9EC4-DC4883AA26A7}" ShortID="248812214">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
-									<SegmentRef Name="Aztec_Loop2_12B_84bpm" ID="{6011CAE8-D9F0-4F5A-BB2A-D4FA3C052DB3}"/>
-								</MusicPlaylistItem>
-								<MusicPlaylistItem Name="" ID="{CA9DE2EB-43AF-4F7D-A255-ECC3433D850F}" ShortID="719867848">
-									<PropertyList>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Aztec_Loop3_8B_84bpm" ID="{222771B4-F94A-4F34-90D6-58A2BA79F467}"/>
+									<SegmentRef Name="Aztec_Loop3_8B_84bpm_v2" ID="{65289E93-C115-47FF-9A07-FD40C219C740}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>
