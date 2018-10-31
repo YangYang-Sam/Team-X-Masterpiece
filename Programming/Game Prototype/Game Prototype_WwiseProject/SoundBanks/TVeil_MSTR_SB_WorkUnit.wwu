@@ -12,16 +12,6 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="TVeil_Menu_SB" ID="{A7CD4540-246E-4441-A57E-18FC68346560}">
-					<ObjectInclusionList/>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="TVeil_Credits_SB" ID="{5F109ABB-7B0D-41CE-9E91-E8B814603127}">
-					<ObjectInclusionList/>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
