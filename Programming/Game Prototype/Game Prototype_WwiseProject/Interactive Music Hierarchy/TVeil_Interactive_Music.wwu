@@ -364,6 +364,7 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" ShortID="19735022">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
