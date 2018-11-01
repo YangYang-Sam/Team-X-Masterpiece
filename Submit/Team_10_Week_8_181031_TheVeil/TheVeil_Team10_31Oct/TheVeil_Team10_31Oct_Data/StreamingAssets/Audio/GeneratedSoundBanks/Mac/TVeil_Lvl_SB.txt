@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1877847629	Door			\TVeil_Events\Door	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	197449355	Ghost3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghost3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghost\Ghost3		529264
+	231579025	Ghoul1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghoul1_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul1		82752
+	297235183	Jump	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Jump_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Jumping\Jump		48328
+	338061887	Ghost2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghost2_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghost\Ghost2		639516
+	519496648	Veil_Jump	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\VeilJump_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Veil_Jump\Veil_Jump		48328
+	558592505	Lever1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Lever1_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\Lever1		187240
+	679993410	BoneBoomerang	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\BoneBoomerang_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Skeleton\BoneBoomerang		419016
+	723421713	Ghoul2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghoul2_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul2		95156
+	802713548	Ghost1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghost1_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghost\Ghost1		860016
+	820484119	RotatePlane	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\RotatePlane_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\RotatePlane		567064
+	887549436	Jump2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Jump2_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Jumping\Jump2		48328
+	998510839	Ghoul3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Mac\SFX\Ghoul3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul3		91024
+

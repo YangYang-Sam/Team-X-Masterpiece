@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>/Users/Mungus/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Team-X-Masterpiece/Programming/Game Prototype/Game Prototype_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/Mungus/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Team-X-Masterpiece/Programming/Game Prototype/Game Prototype_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Mungus/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Team-X-Masterpiece/Programming/Game Prototype/Game Prototype_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/Mungus/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Team-X-Masterpiece/Programming/Game Prototype/Game Prototype_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="901570921" Language="SFX">
+			<ObjectPath>\SoundBanks\TVeil_MSTR_SB_WorkUnit\TVeil_Menu_SB</ObjectPath>
+			<ShortName>TVeil_Menu_SB</ShortName>
+			<Path>TVeil_Menu_SB.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="928849380" Language="SFX">
+			<ObjectPath>\SoundBanks\TVeil_MSTR_SB_WorkUnit\TVeil_Lvl_SB</ObjectPath>
+			<ShortName>TVeil_Lvl_SB</ShortName>
+			<Path>TVeil_Lvl_SB.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1877847629" Name="Door" ObjectPath="\Events\TVeil_Events\Door" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="197449355" Language="SFX">
+					<ShortName>Ghost3.wav</ShortName>
+					<Path>SFX/Ghost3_56D34C19.wem</Path>
+				</File>
+				<File Id="231579025" Language="SFX">
+					<ShortName>Ghoul1.wav</ShortName>
+					<Path>SFX/Ghoul1_56D34C19.wem</Path>
+				</File>
+				<File Id="297235183" Language="SFX">
+					<ShortName>Jump.wav</ShortName>
+					<Path>SFX/Jump_56D34C19.wem</Path>
+				</File>
+				<File Id="338061887" Language="SFX">
+					<ShortName>Ghost2.wav</ShortName>
+					<Path>SFX/Ghost2_56D34C19.wem</Path>
+				</File>
+				<File Id="519496648" Language="SFX">
+					<ShortName>VeilJump.wav</ShortName>
+					<Path>SFX/VeilJump_56D34C19.wem</Path>
+				</File>
+				<File Id="558592505" Language="SFX">
+					<ShortName>Lever1.wav</ShortName>
+					<Path>SFX/Lever1_56D34C19.wem</Path>
+				</File>
+				<File Id="679993410" Language="SFX">
+					<ShortName>BoneBoomerang.wav</ShortName>
+					<Path>SFX/BoneBoomerang_56D34C19.wem</Path>
+				</File>
+				<File Id="723421713" Language="SFX">
+					<ShortName>Ghoul2.wav</ShortName>
+					<Path>SFX/Ghoul2_56D34C19.wem</Path>
+				</File>
+				<File Id="802713548" Language="SFX">
+					<ShortName>Ghost1.wav</ShortName>
+					<Path>SFX/Ghost1_56D34C19.wem</Path>
+				</File>
+				<File Id="820484119" Language="SFX">
+					<ShortName>RotatePlane.wav</ShortName>
+					<Path>SFX/RotatePlane_56D34C19.wem</Path>
+				</File>
+				<File Id="887549436" Language="SFX">
+					<ShortName>Jump2.wav</ShortName>
+					<Path>SFX/Jump2_56D34C19.wem</Path>
+				</File>
+				<File Id="998510839" Language="SFX">
+					<ShortName>Ghoul3.wav</ShortName>
+					<Path>SFX/Ghoul3_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4034624504" Language="SFX">
+			<ObjectPath>\SoundBanks\TVeil_MSTR_SB_WorkUnit\TVeil_Credits_SB</ObjectPath>
+			<ShortName>TVeil_Credits_SB</ShortName>
+			<Path>TVeil_Credits_SB.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
