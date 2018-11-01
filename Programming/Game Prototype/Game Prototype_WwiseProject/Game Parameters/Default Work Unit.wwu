@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{325E1DE2-36D6-4EED-8408-A0A11645DD99}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="Menu_Music" ID="{4192B49C-9020-4136-A95D-5DD2D8A17E24}"/>
+				<GameParameter Name="Game_Pause" ID="{81765BB7-9E27-473A-B1BF-556784C7AEAA}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

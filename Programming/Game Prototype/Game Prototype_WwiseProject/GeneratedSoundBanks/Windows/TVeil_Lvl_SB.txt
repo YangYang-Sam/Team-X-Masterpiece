@@ -11,6 +11,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4023194814	Ghost			\TVeil_Events\Enemies\Ghost	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	2772308904	Game_Pause			\Default Work Unit\Game_Pause	
 	4055567060	Menu_Music			\Default Work Unit\Menu_Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

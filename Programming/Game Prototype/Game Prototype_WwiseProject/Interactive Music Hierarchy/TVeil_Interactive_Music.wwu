@@ -111,6 +111,13 @@
 				</MusicSwitchContainer>
 				<MusicPlaylistContainer Name="TempAztecLoops" ID="{175FBA2D-7682-45F9-86D5-D1DCC7C40F71}" ShortID="512637562">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="84"/>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
@@ -119,8 +126,34 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>2.5</Value>
+								<Value>2</Value>
 							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{AE71480A-0747-4BD4-B36C-00218633AF38}" ShortID="533430484">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Game_Pause" ID="{81765BB7-9E27-473A-B1BF-556784C7AEAA}" WorkUnitID="{325E1DE2-36D6-4EED-8408-A0A11645DD99}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{EC782780-2619-4F42-82CC-2888779F9668}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>

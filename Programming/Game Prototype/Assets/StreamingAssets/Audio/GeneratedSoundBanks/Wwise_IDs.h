@@ -55,6 +55,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID GAME_PAUSE = 2772308904U;
         static const AkUniqueID MENU_MUSIC = 4055567060U;
     } // namespace GAME_PARAMETERS
 
