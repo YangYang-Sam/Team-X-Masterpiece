@@ -364,7 +364,13 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" ShortID="19735022">
 					<PropertyList>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="Tempo" Type="Real64" Value="128"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
