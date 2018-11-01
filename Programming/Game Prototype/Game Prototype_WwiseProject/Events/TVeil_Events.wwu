@@ -137,7 +137,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MenuLoop" ID="{36E3D726-43D3-41DA-A30A-F6A7C9F005A1}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+											<ObjectRef Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -10,6 +10,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3922529076	Ghoul			\TVeil_Events\Enemies\Ghoul	
 	4023194814	Ghost			\TVeil_Events\Enemies\Ghost	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4055567060	Menu_Music			\Default Work Unit\Menu_Music	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	180619043	Green_Goo	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Green_Goo_8956FC97.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Environment\Green_Goo		1234864
 	197449355	Ghost3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghost3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghost\Ghost3		529264
@@ -29,5 +32,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	820484119	RotatePlane	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\RotatePlane_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\RotatePlane		567064
 	887549436	Jump2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Jump2_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Jumping\Jump2		48328
 	998510839	Ghoul3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul3_56D34C19.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul3		91024
-	1062920163	MenuLoop	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\MenuLoop_8956FC97.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\LoopTracks\MenuLoop\MenuLoop		16868316
+	1062920163	MenuLoop	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\MenuLoop_8956FC97.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\MenuLoop\MenuLoop\MenuLoop		16868316
 

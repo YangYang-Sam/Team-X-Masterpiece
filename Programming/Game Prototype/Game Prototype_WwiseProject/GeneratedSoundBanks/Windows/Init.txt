@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1222409307	Menu_or_Level			\Default Work Unit\Menu_or_Level	
+
+State	ID	Name	State Group			Notes
+	0	None	Menu_or_Level			
+	2607556080	Menu	Menu_or_Level			
+	2782712965	Level	Menu_or_Level			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

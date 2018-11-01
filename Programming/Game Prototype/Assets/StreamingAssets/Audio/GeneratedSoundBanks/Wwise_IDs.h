@@ -25,6 +25,21 @@ namespace AK
         static const AkUniqueID VEILJUMP = 1671131289U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace MENU_OR_LEVEL
+        {
+            static const AkUniqueID GROUP = 1222409307U;
+
+            namespace STATE
+            {
+                static const AkUniqueID LEVEL = 2782712965U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace STATE
+        } // namespace MENU_OR_LEVEL
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace DOOR
@@ -37,6 +52,11 @@ namespace AK
         } // namespace DOOR
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MENU_MUSIC = 4055567060U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
