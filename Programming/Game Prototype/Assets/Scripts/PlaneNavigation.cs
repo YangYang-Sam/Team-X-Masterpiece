@@ -66,6 +66,8 @@ public class PlaneNavigation : MonoBehaviour {
         if (aztecLoop != null)
         {
             aztecLoop.HandleEvent(gameObject);
+            AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 0);
+            AkSoundEngine.SetRTPCValue("Game_Pause", 100f, GameObject.Find("AztecLoop"), 2000);
         }
 
         _currentPlane = 1;

@@ -3,25 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class LevelTransition : MonoBehaviour {
 
     public Animator animator;
 
     private int levelToLoad;
-
-    public void PlayGame()
+	
+	// Update is called once per frame
+	void Update ()
     {
-        AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.Find("MenuLoop"), 2000);
-        FadeToLevel(1);
-    }
+		if (Input.GetMouseButtonDown(0))
+        {
+            FadeToLevel(1);
+        }
+	}
 
-    public void QuitGame()
-    {
-        Debug.Log("Quit");
-        Application.Quit();
-    }
-
-    public void FadeToLevel(int levelIndex)
+    public void FadeToLevel (int levelIndex)
     {
         levelToLoad = levelIndex;
         animator.SetTrigger("TransitionFadeOut");
@@ -31,5 +28,4 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(levelToLoad);
     }
-
 }

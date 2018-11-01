@@ -11,7 +11,9 @@ public class MenuController : MonoBehaviour {
     {
         if (MenuLoop != null)
         {
-            //MenuLoop.HandleEvent(gameObject);
+            MenuLoop.HandleEvent(gameObject);
+            AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.Find("MenuLoop"), 0);
+            AkSoundEngine.SetRTPCValue("Menu_Music", 60f, GameObject.Find("MenuLoop"), 3000);
         }
 	}
 	
