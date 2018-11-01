@@ -4,6 +4,13 @@
 		<WorkUnit Name="TVeil_Game_Syncs" ID="{1A0ABBDA-CEE0-4894-82F6-9CC55B272A40}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="Door" ID="{0DEAA627-6A3F-40AE-839B-7C2E4DEAB80D}"/>
+				<SwitchGroup Name="Plane_Selection" ID="{720B988A-FC95-4975-9FD0-28299F8A8856}">
+					<ChildrenList>
+						<Switch Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
+						<Switch Name="Eastern" ID="{667F0F45-CD44-4221-BA26-FD671E0C8A8D}"/>
+						<Switch Name="Egyptian" ID="{17840903-406F-4C97-95BF-381CF281AE4E}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

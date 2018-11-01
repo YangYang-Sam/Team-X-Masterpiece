@@ -51,6 +51,18 @@ namespace AK
             } // namespace SWITCH
         } // namespace DOOR
 
+        namespace PLANE_SELECTION
+        {
+            static const AkUniqueID GROUP = 1818010914U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID AZTEC = 3866797368U;
+                static const AkUniqueID EASTERN = 3476384675U;
+                static const AkUniqueID EGYPTIAN = 3835820942U;
+            } // namespace SWITCH
+        } // namespace PLANE_SELECTION
+
     } // namespace SWITCHES
 
     namespace GAME_PARAMETERS

@@ -108,11 +108,13 @@
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="Plane_Selection" ID="{720B988A-FC95-4975-9FD0-28299F8A8856}"/>
+					</ArgumentList>
 				</MusicSwitchContainer>
 				<MusicPlaylistContainer Name="TempAztecLoops" ID="{175FBA2D-7682-45F9-86D5-D1DCC7C40F71}" ShortID="512637562">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
@@ -398,7 +400,6 @@
 				<MusicPlaylistContainer Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" ShortID="19735022">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
