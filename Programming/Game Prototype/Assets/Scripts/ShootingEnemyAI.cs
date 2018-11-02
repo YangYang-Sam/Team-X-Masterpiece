@@ -24,7 +24,7 @@ public class ShootingEnemyAI : MonoBehaviour {
         while (_projectilePrefab != null)
         {
             Instantiate(_projectilePrefab, transform.position + new Vector3(-0.5f, 0, 0), Quaternion.identity, transform);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(5.0f);
         }
     }
 

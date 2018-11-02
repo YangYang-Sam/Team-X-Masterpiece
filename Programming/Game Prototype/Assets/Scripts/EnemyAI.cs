@@ -63,7 +63,7 @@ public class EnemyAI : MonoBehaviour {
 
             if (player != null)
             {
-                player.Damage();
+                //player.Damage();
             }
 
             //EnemyExplosion();

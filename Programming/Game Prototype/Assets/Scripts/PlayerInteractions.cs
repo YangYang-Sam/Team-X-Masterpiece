@@ -122,7 +122,7 @@ public class PlayerInteractions : MonoBehaviour {
         {
             PlayerController2D player = GetComponent<PlayerController2D>();
 
-            player.Damage();
+            //player.Damage();
         }
 
     }

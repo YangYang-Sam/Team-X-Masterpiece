@@ -11,9 +11,10 @@ public class PlayerController2D : MonoBehaviour
 
     //Access playerController class
     [SerializeField]
-    private GameObject _planeController;
+    public GameObject _planeController;
     private PlaneNavigation _planeNavigation;
     private PlaneMovement _planeMovement;
+    private SpawnManager _spawnManager;
 
     [SerializeField]
     private GameObject _playerPrefab;
@@ -60,6 +61,7 @@ public class PlayerController2D : MonoBehaviour
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
         _planeMovement = _planeController.GetComponent<PlaneMovement>();
+        _spawnManager = GetComponent<SpawnManager>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;
@@ -179,34 +181,6 @@ public class PlayerController2D : MonoBehaviour
         transform.localScale = _originalScale;
         _speed = _speedValue;
         _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
-    }
-
-    public void Damage()
-    {
-        gameObject.SetActive(false);
-        SpawnPlayer();
-    }
-
-    public void SpawnPlayer()
-    {
-        //gameObject.transform.position = _planeNavigation._plane1Spawn.transform.position;
-        if(_planeNavigation._currentPlane == 1)
-        {
-            Debug.Log("Plane1 spawn");
-            gameObject.transform.position = new Vector3(-5.5f, 4.5f, 0);
-        }
-        else if (_planeNavigation._currentPlane == 2)
-        {
-            Debug.Log("Plane2 spawn");
-            gameObject.transform.position = new Vector3(1.38f, -8.5f, 0);
-        }
-        else if (_planeNavigation._currentPlane == 3)
-        {
-            Debug.Log("Plane3 spawn");
-            gameObject.transform.position = new Vector3(5.2f, -8.8f, 0);
-        }
-        gameObject.SetActive(true);
-        Debug.Log("Player spawned");
     }
 
     private void JumpSound()
