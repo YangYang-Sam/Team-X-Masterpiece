@@ -118,13 +118,6 @@ public class PlayerInteractions : MonoBehaviour {
             }
         }
 
-        if (other.gameObject.name == "Enemy")
-        {
-            PlayerController2D player = GetComponent<PlayerController2D>();
-
-            //player.Damage();
-        }
-
     }
 
     private void ToPlane1(Collision2D other)

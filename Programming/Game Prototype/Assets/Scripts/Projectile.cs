@@ -5,16 +5,16 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     [SerializeField]
-    private float _speed = 10.0f;
+    private float _speed = 6.0f;
 
     //private PlayerController2D _playerController2D;
+
     private SpawnManager _spawnManager;
 
     // Use this for initialization
     void Start ()
     {
-        _spawnManager = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnManager>();
-
+        _spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -28,10 +28,20 @@ public class Projectile : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            _spawnManager.Damage(1);
+            _spawnManager.PlayerDamage(1);
+            Destroy(this.gameObject);
         }
 
-        Destroy(this.gameObject);
+        else if (other.gameObject.name == "ShootingEnemy")
+        {
+            Debug.Log("Hitting enemy");
+            return;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
 }

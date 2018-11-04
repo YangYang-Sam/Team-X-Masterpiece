@@ -13,8 +13,6 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     public GameObject _planeController;
     private PlaneNavigation _planeNavigation;
-    private PlaneMovement _planeMovement;
-    private SpawnManager _spawnManager;
 
     [SerializeField]
     private GameObject _playerPrefab;
@@ -60,8 +58,6 @@ public class PlayerController2D : MonoBehaviour
     private void Start()
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
-        _planeMovement = _planeController.GetComponent<PlaneMovement>();
-        _spawnManager = GetComponent<SpawnManager>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;

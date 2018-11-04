@@ -5,16 +5,16 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour {
 
     [SerializeField]
-    private GameObject _planeController;
+    private GameObject _player;
     [SerializeField]
     private GameObject[] _spawnPoint;
-
-    private PlaneNavigation _planeNavigation;
+    [SerializeField]
+    private float _spawnTime;
 
 	// Use this for initialization
 	void Start ()
     {
-        _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
+
 	}
 	
 	// Update is called once per frame
@@ -23,10 +23,32 @@ public class SpawnManager : MonoBehaviour {
 		
 	}
 
-    public void Damage(int SpawnPoint)
+    public void PlayerDamage(int SpawnPoint)
     {
-        gameObject.SetActive(false);
-        SpawnPlayer(SpawnPoint);
+        _player.gameObject.SetActive(false);
+
+        StartCoroutine(SpawnDelay(SpawnPoint));
+    }
+
+    public IEnumerator SpawnDelay(int SpawnPoint)
+    {
+
+        float time = 0;
+
+        while (time < _spawnTime)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        //spawn player
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            SpawnPlayer(SpawnPoint);
+            yield return null;
+        }
+
+
     }
 
     private void SpawnPlayer(int SpawnPoint)
@@ -34,19 +56,19 @@ public class SpawnManager : MonoBehaviour {
         if (SpawnPoint == 1)
         {
             Debug.Log("SpawnPoint 1");
-            gameObject.transform.position = _spawnPoint[0].transform.position;
+            _player.gameObject.transform.position = _spawnPoint[0].transform.position;
         }
         else if (SpawnPoint == 2)
         {
             Debug.Log("SpawnPoint 2");
-            gameObject.transform.position = _spawnPoint[1].transform.position;
+            _player.gameObject.transform.position = _spawnPoint[1].transform.position;
         }
         else if (SpawnPoint == 3)
         {
             Debug.Log("SpawnPoint 3");
-            gameObject.transform.position = _spawnPoint[2].transform.position;
+            _player.gameObject.transform.position = _spawnPoint[2].transform.position;
         }
-        gameObject.SetActive(true);
+        _player.gameObject.SetActive(true);
         Debug.Log("Player spawned");
     }
 }
