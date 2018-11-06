@@ -771,7 +771,6 @@
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="PlayTransitionPostExit" Type="bool" Value="False"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 									</PropertyList>
 									<TransitionInfo>
 										<TransitionObjectRef Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>

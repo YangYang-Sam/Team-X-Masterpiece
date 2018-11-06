@@ -192,16 +192,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{50F72E00-E94F-45EE-84C0-2EF4F476E10A}" ShortID="545281039">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}" WorkUnitID="{8C3416E8-A4DF-41F5-8AAB-6F645DB174B8}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
