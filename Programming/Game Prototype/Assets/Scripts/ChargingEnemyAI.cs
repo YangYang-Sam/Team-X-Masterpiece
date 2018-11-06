@@ -58,12 +58,12 @@ public class ChargingEnemyAI : MonoBehaviour {
 
         if (playerHit.collider == true)
         {
-            Debug.Log("Player distance: " + Vector2.Distance(transform.position, playerHit.collider.transform.position));
+            //Debug.Log("Player distance: " + Vector2.Distance(transform.position, playerHit.collider.transform.position));
         }
         if (wallInfo.collider == true)
         {
-            Debug.Log("Wall Hit " + wallInfo);
-            Debug.Log("Wall distance: " + Vector2.Distance(transform.position, wallInfo.collider.transform.position));
+            //Debug.Log("Wall Hit " + wallInfo);
+            //Debug.Log("Wall distance: " + Vector2.Distance(transform.position, wallInfo.collider.transform.position));
         }
 
         if (playerDetection.position.z == 0 && wallInfo.collider != null)
@@ -74,15 +74,15 @@ public class ChargingEnemyAI : MonoBehaviour {
                 {
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), chargeSpeed * Time.deltaTime);
                 }
-                Debug.Log("Player seen/charge");
+                //Debug.Log("Player seen/charge");
             }
             else
             {
                 if (transform.position.x != originalPosition.x)
                 {
-                    Debug.Log("retreat");
+                    //Debug.Log("retreat");
                     transform.position = Vector2.MoveTowards(transform.position, originalPosition, 3.0f * Time.deltaTime);
-                    Debug.Log(originalPosition);
+                    //Debug.Log(originalPosition);
                 }
                 else
                 {

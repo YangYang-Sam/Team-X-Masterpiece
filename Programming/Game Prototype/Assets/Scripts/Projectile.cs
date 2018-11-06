@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour {
 
         else if (other.gameObject.name == "ShootingEnemy")
         {
-            Debug.Log("Hitting enemy");
+            //Debug.Log("Hitting enemy");
             return;
         }
         else
