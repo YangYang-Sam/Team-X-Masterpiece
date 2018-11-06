@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Esc pressed");
-            AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 2000);
+            //AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 2000);
             SceneManager.LoadScene(0);
         }
     }

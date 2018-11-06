@@ -15,24 +15,24 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b1c44feb3f6aeb4385630aab6e1230c5
-    m_lastTime: -8586619011870608698
+    m_lastTime: -8586618968818564091
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586619011872015031
+    m_lastTime: -8586618968818704091
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e79f7aeb36160343a1b0a8fd6f171ca1
-    m_lastTime: -8586619011871233786
+    m_lastTime: -8586618968818634098
     List: []
   - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586606222344999754
+    m_lastTime: -8586602637237977388
     List:
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
@@ -47,13 +47,27 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 87e558d008878a49bcde6707a78040be
-    m_lastTime: -8586619011873890089
+    m_lastTime: -8586618968818944076
     List: []
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586605273290650111
+    m_lastTime: -8586600789740768916
     List:
+    - name: All_Plane_Music
+      guid: cb399f1b4eb0184180b825113c87a7bf
+      id: 1985200777
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: MusicLoops
+        ObjectType: 4
+      - ElementName: All_Plane_Music
+        ObjectType: 3
+      Path: TVeil_Events\MusicLoops\All_Plane_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Door
       guid: c34e72dee737904c9a4b223fa6208752
       id: 1877847629
@@ -124,6 +138,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Platform
+      guid: e9215c02a1ab124daad690380c0bf3b6
+      id: 4035573696
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: Platform
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\Platform
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Portals
       guid: bc17d2b1e99b434186f375c434d78907
       id: 2017263062
@@ -166,20 +194,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: TempAztecLoops
-      guid: 632332defaadc34e9b1668c712413679
-      id: 867498487
-      PathAndIcons:
-      - ElementName: TVeil_Events
-        ObjectType: 12
-      - ElementName: MusicLoops
-        ObjectType: 4
-      - ElementName: TempAztecLoops
-        ObjectType: 3
-      Path: TVeil_Events\MusicLoops\TempAztecLoops
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: VeilJump
       guid: 0081e3669dc720468a803a85ea0b490a
       id: 1671131289
@@ -198,8 +212,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e21d5e32d636ed4e8408a0a11645dd99
-    m_lastTime: -8586605273289557145
+    m_lastTime: -8586600789740758955
     List:
+    - name: Game_Pause
+      guid: b75b7681279e3a47b1bf556784c7aeaa
+      id: 2772308904
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Game_Pause
+        ObjectType: 13
+      Path: Default Work Unit\Game_Pause
     - name: Menu_Music
       guid: 9cb4924120903641a95d5dd2d8a17e24
       id: 4055567060
@@ -209,11 +232,20 @@ MonoBehaviour:
       - ElementName: Menu_Music
         ObjectType: 13
       Path: Default Work Unit\Menu_Music
+    - name: Music_SlowDown
+      guid: f99fba78e4d42c429a0ef7989cb32bf5
+      id: 2779281842
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_SlowDown
+        ObjectType: 13
+      Path: Default Work Unit\Music_SlowDown
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586605273270181435
+    m_lastTime: -8586600789733147001
     List:
     - name: Menu_or_Level
       guid: 1f84a9288167724d8014558ede669efa
@@ -243,28 +275,104 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: None
           ObjectType: 8
+    - name: Music_State
+      guid: c69619c6e731dd4aa067077caa29ed77
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_State
+        ObjectType: 9
+      Path: Default Work Unit\Music_State
+      values:
+      - name: Aztec
+        guid: dd97e2318dffcb41828b24ee7d4f219c
+        id: 3866797368
+        PathAndIcons:
+        - ElementName: Aztec
+          ObjectType: 8
+      - name: Eastern
+        guid: 9c374b51a18a9c4498759ea0f5618fec
+        id: 3476384675
+        PathAndIcons:
+        - ElementName: Eastern
+          ObjectType: 8
+      - name: Egyptian
+        guid: 28f70825f311734e9528fcb38138fba8
+        id: 3835820942
+        PathAndIcons:
+        - ElementName: Egyptian
+          ObjectType: 8
+      - name: MenuState
+        guid: fa02e0b9bfbf9448b22b39b0447815a5
+        id: 1548586727
+        PathAndIcons:
+        - ElementName: MenuState
+          ObjectType: 8
+      - name: None
+        guid: d43c2071e2606a4b8ad2d50c3097fd4f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3156979d799ef042806706a5f809f98f
-    m_lastTime: -8586619011870921293
+    m_lastTime: -8586618968818594102
     List: []
   - PhysicalPath: Switches\TVeil_Game_Syncs.wwu
     ParentPhysicalPath: 
     guid: dabb0a1ae0ce944882f69cc55b272a40
-    m_lastTime: -8586617374727663456
-    List: []
+    m_lastTime: -8586602637237957378
+    List:
+    - name: Plane_Selection
+      guid: 8a980b7295fc75499fd028299f8a8856
+      id: 1818010914
+      PathAndIcons:
+      - ElementName: TVeil_Game_Syncs
+        ObjectType: 12
+      - ElementName: Plane_Selection
+        ObjectType: 11
+      Path: TVeil_Game_Syncs\Plane_Selection
+      values:
+      - name: Aztec
+        guid: 795c453f4cfc41448f46747e8d94f4e6
+        id: 3866797368
+        PathAndIcons:
+        - ElementName: Aztec
+          ObjectType: 10
+      - name: Eastern
+        guid: 450f7f6644cd2142ba26fd671e0c8a8d
+        id: 3476384675
+        PathAndIcons:
+        - ElementName: Eastern
+          ObjectType: 10
+      - name: Egyptian
+        guid: 030984176f40974c95bf381cf281ae4e
+        id: 3835820942
+        PathAndIcons:
+        - ElementName: Egyptian
+          ObjectType: 10
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3ea537982458c049bcf586e24bc1cdc4
-    m_lastTime: -8586619011870765000
-    List: []
+    m_lastTime: -8586600789733127006
+    List:
+    - name: Platform
+      guid: e7fbd5781c1e454bb5db9e2bf58016ab
+      id: 4035573696
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Platform
+        ObjectType: 14
+      Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/MusicLoops
+  - /Game Prototype_WwiseProject/States
+  - /Game Prototype_WwiseProject/States/Default Work Unit
+  - /Game Prototype_WwiseProject/States/Default Work Unit/Music_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

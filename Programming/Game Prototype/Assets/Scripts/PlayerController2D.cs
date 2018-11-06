@@ -100,6 +100,7 @@ public class PlayerController2D : MonoBehaviour
 
             if (Input.GetButtonDown("Temp Invincibility"))
             {
+                AkSoundEngine.SetState("Music_State", "Aztec");
                 TempInvincibility();
             }
             if (Input.GetButtonUp("Temp Invincibility"))
@@ -115,6 +116,7 @@ public class PlayerController2D : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            AkSoundEngine.SetState("Music_State", "Egyptian");
             if (_canJump > 0)
             {
                 Jump();

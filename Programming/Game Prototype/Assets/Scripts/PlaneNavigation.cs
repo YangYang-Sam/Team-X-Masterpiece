@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlaneNavigation : MonoBehaviour {
 
-    [SerializeField]
-    private AkEvent aztecLoop;
+    //[SerializeField]
+    //private AkEvent aztecLoop;
 
     //Access playerController class
     [SerializeField]
@@ -63,12 +63,12 @@ public class PlaneNavigation : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        if (aztecLoop != null)
-        {
-            aztecLoop.HandleEvent(gameObject);
-            AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 0);
-            AkSoundEngine.SetRTPCValue("Game_Pause", 100f, GameObject.Find("AztecLoop"), 2000);
-        }
+        //if (aztecLoop != null)
+        //{
+        //    //aztecLoop.HandleEvent(gameObject);
+        //    //AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 0);
+        //    //AkSoundEngine.SetRTPCValue("Game_Pause", 100f, GameObject.Find("AztecLoop"), 2000);
+        //}
 
         _currentPlane = 1;
 
