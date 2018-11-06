@@ -16,11 +16,13 @@
 			<ShortName>TVeil_Lvl_SB</ShortName>
 			<Path>TVeil_Lvl_SB.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1985200777" Name="All_Plane_Music" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Music"/>
 				<Event Id="1877847629" Name="Door" ObjectPath="\Events\TVeil_Events\Interaction\Door"/>
 				<Event Id="4023194814" Name="Ghost" ObjectPath="\Events\TVeil_Events\Enemies\Ghost"/>
 				<Event Id="3922529076" Name="Ghoul" ObjectPath="\Events\TVeil_Events\Enemies\Ghoul"/>
 				<Event Id="68157183" Name="Jumping" ObjectPath="\Events\TVeil_Events\Raven\Jumping"/>
 				<Event Id="3236081754" Name="MenuLoop" ObjectPath="\Events\TVeil_Events\MusicLoops\MenuLoop"/>
+				<Event Id="4035573696" Name="Platform" ObjectPath="\Events\TVeil_Events\Interaction\Platform" MaxAttenuation="0.000000"/>
 				<Event Id="2017263062" Name="Portals" ObjectPath="\Events\TVeil_Events\Interaction\Portals"/>
 				<Event Id="1302771492" Name="Rotate" ObjectPath="\Events\TVeil_Events\Interaction\Rotate"/>
 				<Event Id="3478279848" Name="Skeleton" ObjectPath="\Events\TVeil_Events\Enemies\Skeleton"/>
@@ -47,6 +49,18 @@
 				<File Id="338061887" Language="SFX">
 					<ShortName>Ghost2.wav</ShortName>
 					<Path>SFX/Ghost2_56D34C19.wem</Path>
+				</File>
+				<File Id="361541902" Language="SFX">
+					<ShortName>Portal5.wav</ShortName>
+					<Path>SFX/Portal5_8956FC97.wem</Path>
+				</File>
+				<File Id="455752322" Language="SFX">
+					<ShortName>Egyptian_Loop2_16B_168bpm.wav</ShortName>
+					<Path>SFX/Egyptian_Loop2_16B_168bpm_8956FC97.wem</Path>
+				</File>
+				<File Id="457965639" Language="SFX">
+					<ShortName>Egyptian_Loop1_16B_168bpm.wav</ShortName>
+					<Path>SFX/Egyptian_Loop1_16B_168bpm_8956FC97.wem</Path>
 				</File>
 				<File Id="519496648" Language="SFX">
 					<ShortName>VeilJump.wav</ShortName>
@@ -99,6 +113,10 @@
 				<File Id="998510839" Language="SFX">
 					<ShortName>Ghoul3.wav</ShortName>
 					<Path>SFX/Ghoul3_56D34C19.wem</Path>
+				</File>
+				<File Id="1000839534" Language="SFX">
+					<ShortName>Egyptian_Loop3_16B_168bpm.wav</ShortName>
+					<Path>SFX/Egyptian_Loop3_16B_168bpm_8956FC97.wem</Path>
 				</File>
 				<File Id="1062920163" Language="SFX">
 					<ShortName>MenuLoop.wav</ShortName>
