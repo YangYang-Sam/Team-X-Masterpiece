@@ -103,22 +103,10 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{1A7A3115-F078-4A7D-8074-0690A585DC51}" ShortID="558144625">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="2.25"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{2F2A237B-56EE-4A4A-A293-235F14423465}" ShortID="266292929">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="Delay" Type="Real64" Value="3.75"/>
+										<Property Name="Delay" Type="Real64" Value="2.25"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
