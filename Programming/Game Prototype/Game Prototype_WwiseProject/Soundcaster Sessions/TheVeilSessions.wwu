@@ -29,7 +29,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}"/>
+						<CurrentStateRef Name="Egyptian" ID="{2508F728-11F3-4E73-9528-FCB38138FBA8}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
