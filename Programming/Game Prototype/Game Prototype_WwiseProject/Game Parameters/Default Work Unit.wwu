@@ -5,6 +5,12 @@
 			<ChildrenList>
 				<GameParameter Name="Menu_Music" ID="{4192B49C-9020-4136-A95D-5DD2D8A17E24}"/>
 				<GameParameter Name="Game_Pause" ID="{81765BB7-9E27-473A-B1BF-556784C7AEAA}"/>
+				<GameParameter Name="Music_SlowDown" ID="{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

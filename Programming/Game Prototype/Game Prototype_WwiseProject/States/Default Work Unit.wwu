@@ -30,6 +30,14 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="Music_State" ID="{C61996C6-31E7-4ADD-A067-077CAA29ED77}">
+					<ChildrenList>
+						<State Name="None" ID="{71203CD4-60E2-4B6A-8AD2-D50C3097FD4F}"/>
+						<State Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}"/>
+						<State Name="Egyptian" ID="{2508F728-11F3-4E73-9528-FCB38138FBA8}"/>
+						<State Name="Eastern" ID="{514B379C-8AA1-449C-9875-9EA0F5618FEC}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{57F604F3-F87D-4DFD-A0AF-08C5427D3274}" SchemaVersion="89">
+	<SoundcasterSessions>
+		<WorkUnit Name="TheVeilSessions" ID="{57F604F3-F87D-4DFD-A0AF-08C5427D3274}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Music" ID="{92909105-1A8C-4A50-AC83-1E8567F2D6F7}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Platform" ID="{025C21E9-ABA1-4D12-AAD6-90380C0BF3B6}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Menu_Music" ID="{4192B49C-9020-4136-A95D-5DD2D8A17E24}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_SlowDown" ID="{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Game_Pause" ID="{81765BB7-9E27-473A-B1BF-556784C7AEAA}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

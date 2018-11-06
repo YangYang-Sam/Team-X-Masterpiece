@@ -5,6 +5,40 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" ShortID="450854704">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PlaybackSpeed" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{040BBA51-C5D3-4651-BE55-82555DF44A4B}" ShortID="855519354">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Music_SlowDown" ID="{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}" WorkUnitID="{325E1DE2-36D6-4EED-8408-A0A11645DD99}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{C9D4457B-3C48-485F-B2DC-21C6B49AE1C5}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.25</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>1</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="84"/>
 					</PropertyList>
 					<ReferenceList>
@@ -17,6 +51,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicPlaylistContainer Name="Egyptian_Themes" ID="{36D4314F-2524-4A29-A304-4540679F2E9F}" ShortID="404597916">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="168"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
@@ -25,6 +63,185 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Egyptian_Loop1_16B_168bpm" ID="{840451C6-9493-4E1E-A458-807A88225E1F}" ShortID="389627903">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="28571.4285714286"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Egyptian_Loop1_16B_168bpm" ID="{2AF82B9D-5101-4351-A955-CDE1DBD4516D}" ShortID="288390182">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Egyptian_Loop1_16B_168bpm" ID="{AF4A2AF2-FE84-4D8C-9514-C3C532B6FD6F}" ShortID="457965639">
+													<Language>SFX</Language>
+													<AudioFile>Egyptian_Loop1_16B_168bpm.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C638A2D7-362A-41B0-827D-E68338DC2EFA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{17C208C9-BFC2-4CDE-A99B-904C925F611B}">
+													<ClipList>
+														<MusicClip Name="Egyptian_Loop1_16B_168bpm" ID="{764B0BB8-2297-4D99-8794-9447E063ACD8}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="28571.4285714286"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Egyptian_Loop1_16B_168bpm" ID="{AF4A2AF2-FE84-4D8C-9514-C3C532B6FD6F}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{23DCE8B6-4F63-40D3-BBEF-F6B64E47A67B}"/>
+										<MusicCue Name="Exit Cue" ID="{4D79EB0A-391C-4026-8A52-E64C5B0B8D7C}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="22857.1428571429"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Egyptian_Loop2_16B_168bpm" ID="{AAA55735-7D2F-4F03-9BE8-C4D19A86F07C}" ShortID="329497248">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="28571.4285714286"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Egyptian_Loop2_16B_168bpm" ID="{98ACCA9A-1A1E-44FE-A830-479B6C09D44C}" ShortID="626127441">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Egyptian_Loop2_16B_168bpm" ID="{EF51FBF9-A113-48A1-8866-3F9CA4B51E5A}" ShortID="455752322">
+													<Language>SFX</Language>
+													<AudioFile>Egyptian_Loop2_16B_168bpm.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{73E2920C-E10A-44B2-9F52-280652E8E7CF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{38611920-C29E-49BE-905F-0A70AEB22F70}">
+													<ClipList>
+														<MusicClip Name="Egyptian_Loop2_16B_168bpm" ID="{6FAC6B53-58A7-42C1-A763-5A462F61D274}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="28571.4285714286"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Egyptian_Loop2_16B_168bpm" ID="{EF51FBF9-A113-48A1-8866-3F9CA4B51E5A}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{1362CE3B-F6CB-4291-9E0A-BAFD7CC97EC2}"/>
+										<MusicCue Name="Exit Cue" ID="{E77D4FFA-04B2-4FC7-890A-43163234B420}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="22857.1428571429"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Egyptian_Loop3_16B_168bpm" ID="{A8903AE6-130A-4170-9390-45F3709A85BB}" ShortID="293395556">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="28571.4285714286"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Egyptian_Loop3_16B_168bpm" ID="{6B8BE2B3-0099-436F-99BC-CA1ABAA52082}" ShortID="353334805">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Egyptian_Loop3_16B_168bpm" ID="{FE029F31-1749-40CA-8E8E-3ABDCE607C65}" ShortID="1000839534">
+													<Language>SFX</Language>
+													<AudioFile>Egyptian_Loop3_16B_168bpm.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{BD8BC201-7F16-41B8-9690-5FC4597CF666}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{1B578E64-EE7A-48A0-A370-371D8B7AC42B}">
+													<ClipList>
+														<MusicClip Name="Egyptian_Loop3_16B_168bpm" ID="{BEBCD2D6-6771-4F6C-BB67-7A7428AB09E3}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="28571.4285714286"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Egyptian_Loop3_16B_168bpm" ID="{FE029F31-1749-40CA-8E8E-3ABDCE607C65}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{BBCC8AC7-9FA5-4BAF-9BFD-5F7A6DA7301E}"/>
+										<MusicCue Name="Exit Cue" ID="{BB1C0377-A7D7-473C-A43F-639C7A65E98C}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="22857.1428571429"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{EE4FC19D-9435-4154-B603-6D35396CE23F}">
 									<PropertyList>
@@ -39,7 +256,31 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{F8615512-B96C-43F8-B704-325457CC41D5}" ShortID="10997278"/>
+								<MusicPlaylistItem Name="" ID="{F8615512-B96C-43F8-B704-325457CC41D5}" ShortID="10997278">
+									<PropertyList>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{00C467F4-8FE6-45E9-AE46-A8DDCB11F945}" ShortID="829487753">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Egyptian_Loop1_16B_168bpm" ID="{840451C6-9493-4E1E-A458-807A88225E1F}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{6F49C24B-A914-4704-BA48-33A4136793FB}" ShortID="168590391">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Egyptian_Loop2_16B_168bpm" ID="{AAA55735-7D2F-4F03-9BE8-C4D19A86F07C}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{43EBFB7E-0B73-4109-92AC-80165A66586B}" ShortID="5692074">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Egyptian_Loop3_16B_168bpm" ID="{A8903AE6-130A-4170-9390-45F3709A85BB}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Eastern_Themes" ID="{501A7486-DFA8-49DF-B9FB-AFBC09BE7C84}" ShortID="189638870">
@@ -77,11 +318,6 @@
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="84"/>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>2</Value>
@@ -372,17 +608,63 @@
 								<MusicTransition Name="Transition" ID="{7B61CFBA-AC02-4CD7-868F-400B0EEF29DB}">
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{1B1ED3FE-1417-4372-BB0A-DA1C4F7C2F05}">
+									<PropertyList>
+										<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{0AAF23B5-616B-4DAD-B992-81DA5FD41139}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="6"/>
+													<Property Name="FadeOffset" Type="Real64" Value="1"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{8492AE94-654C-46EB-B1C8-762C62FD8A88}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="6"/>
+													<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{0C071E62-5CB6-4D40-B488-0AC0F07649E7}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Aztec_Themes" ID="{811A361A-BB4D-44AD-90B7-B84372D094C8}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo/>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
+					<StingerList>
+						<MusicStinger Name="" ID="{8A16B352-A699-44A0-AD9B-46D469E362D9}">
+							<TriggerRef Name="Platform" ID="{78D5FBE7-1E1C-4B45-B5DB-9E2BF58016AB}" WorkUnitID="{9837A53E-5824-49C0-BCF5-86E24BC1CDC4}"/>
+							<SegmentRef Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+						</MusicStinger>
+					</StingerList>
 					<ArgumentList>
-						<ArgumentRef Name="Plane_Selection" ID="{720B988A-FC95-4975-9FD0-28299F8A8856}"/>
+						<ArgumentRef Name="Music_State" ID="{C61996C6-31E7-4ADD-A067-077CAA29ED77}"/>
 					</ArgumentList>
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
+								<PathElementRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Aztec_Themes" ID="{811A361A-BB4D-44AD-90B7-B84372D094C8}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>
@@ -390,7 +672,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Eastern" ID="{667F0F45-CD44-4221-BA26-FD671E0C8A8D}"/>
+								<PathElementRef Name="Eastern" ID="{514B379C-8AA1-449C-9875-9EA0F5618FEC}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Eastern_Themes" ID="{501A7486-DFA8-49DF-B9FB-AFBC09BE7C84}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>
@@ -398,7 +680,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Egyptian" ID="{17840903-406F-4C97-95BF-381CF281AE4E}"/>
+								<PathElementRef Name="Egyptian" ID="{2508F728-11F3-4E73-9528-FCB38138FBA8}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Egyptian_Themes" ID="{36D4314F-2524-4A29-A304-4540679F2E9F}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>
@@ -842,6 +1124,65 @@
 						</MusicPlaylistItem>
 					</Playlist>
 				</MusicPlaylistContainer>
+				<MusicSegment Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" ShortID="696671726">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="7312.51700680272"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Portal5" ID="{C8B35630-1059-49F3-8FF9-4FC5C4C58497}" ShortID="800443559">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Portal5" ID="{4AA0A6E6-F37A-48F0-9C81-08954D9D715F}" ShortID="361541902">
+									<Language>SFX</Language>
+									<AudioFile>Portal5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{68B6A685-6328-4337-8BB8-2930236DAE08}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{33CF5A67-A758-4B00-8AC3-AEA2BADAF21A}">
+									<ClipList>
+										<MusicClip Name="Portal5" ID="{7DDC636F-74E8-4A02-A1E1-DD13A0F75897}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="1312.51700680272"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Portal5" ID="{4AA0A6E6-F37A-48F0-9C81-08954D9D715F}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{380F4132-9601-4FDE-8E4A-16874C134B59}"/>
+						<MusicCue Name="Exit Cue" ID="{C5C03D20-AE97-49DE-A69D-BF758CC2A316}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="6000"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>
