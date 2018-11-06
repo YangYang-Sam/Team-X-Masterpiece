@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{0607016D-5E01-4A4E-BC98-8349D33E554E}">
 			<PropertyList>
 				<Property Name="Event Action List\{091DE5BF-127C-47D6-A036-9126ABA9CC1C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1B9F39CB-B04E-4118-80B8-25113C87A7BF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5B2DEF2C-CCD3-4BC2-91D8-4461585C8CB5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{66E38100-C79D-4620-8A80-3A85EA0B490A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{764FEA78-A7FC-453D-8FCB-4D903A865FEB}\x64_Expand States" Type="string" Value=""/>
@@ -40,8 +41,11 @@
 				<Property Name="Interactive Music\x64_{6011CAE8-D9F0-4F5A-BB2A-D4FA3C052DB3} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP0Zu5EZuJDNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{61050599-1440-4590-A385-55862944995B} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP2KtXQmM4RZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{65289E93-C115-47FF-9A07-FD40C219C740} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP2ZmZmZmpjtAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{95547216-47E6-4D29-813D-3D07FA41902D} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP2pmZmZmpjtAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{9D82824C-D9FB-4030-B4C2-40573067FEE9} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP1/xFV/xFRtAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{A3476B44-EEFA-4D22-BC55-BA1E6A3769E5} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP8vMzMzMvDRAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{B0982ADD-BC93-42B8-BB42-B635DA676C67} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP83MzMzMvDRAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{BBF30255-F3DD-476C-A590-25EE75A237BC} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP01u5EZuJDNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{C43F1D51-8B3C-47E2-A4A7-7E21476617A3} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP2KtXQmM4RZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{DCCFFBD5-96BF-40EC-8980-FB23A8C65AD7} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP0Zu5EZuJDNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
@@ -60,6 +64,7 @@
 				<Property Name="Music Transition List\{602F8E1B-97F8-4624-BEFF-333868686AD9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{65610785-707A-4587-9401-06A45F758AF5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{811A361A-BB4D-44AD-90B7-B84372D094C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{964D5146-A0CB-4883-9211-D99238361934}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{A5862DF0-6C33-43F3-972B-93BB28CE03C9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{EDD9457B-ED6F-468C-8FF3-90DBD2B87519}\x64_Expand States" Type="string" Value=""/>

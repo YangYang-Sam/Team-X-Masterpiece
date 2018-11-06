@@ -157,6 +157,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Planes" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}">
+							<ChildrenList>
+								<Action Name="" ID="{E04F9987-2844-49F1-9596-22AC4B07CC8A}" ShortID="538573138">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
