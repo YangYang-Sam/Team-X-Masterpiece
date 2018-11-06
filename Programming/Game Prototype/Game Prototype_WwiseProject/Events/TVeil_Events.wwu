@@ -180,20 +180,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="TempAztecLoops" ID="{DE322363-ADFA-4EC3-9B16-68C712413679}">
-							<ChildrenList>
-								<Action Name="" ID="{57244C28-963C-4BB5-924E-0C60AF250011}" ShortID="385147963">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="TempAztecLoops" ID="{175FBA2D-7682-45F9-86D5-D1DCC7C40F71}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}">
 							<ChildrenList>
 								<Action Name="" ID="{E04F9987-2844-49F1-9596-22AC4B07CC8A}" ShortID="538573138">
