@@ -33,7 +33,14 @@ public class Flames : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            _spawnManager.PlayerDamage(3);
+            if (GameObject.Find("Platform 3 Portal 1").layer == 12)
+            {
+                _spawnManager.PlayerDamage(3);
+            }
+            else if (GameObject.Find("Platform 3 Portal 1").layer == 10)
+            {
+                _spawnManager.PlayerDamage(4);
+            }
         }
         else if(other.gameObject.CompareTag("Platform Portal") == true)
         {
