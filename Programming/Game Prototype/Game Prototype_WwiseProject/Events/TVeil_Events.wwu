@@ -79,6 +79,55 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Platform" ID="{025C21E9-ABA1-4D12-AAD6-90380C0BF3B6}">
+							<ChildrenList>
+								<Action Name="" ID="{15529A39-E9C2-4A28-8264-AF7640830FEB}" ShortID="242378524">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Platform" ID="{78D5FBE7-1E1C-4B45-B5DB-9E2BF58016AB}" WorkUnitID="{9837A53E-5824-49C0-BCF5-86E24BC1CDC4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF6926D5-7FBC-4C0D-AC93-8F59F87E88E1}" ShortID="494666613">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_SlowDown" ID="{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}" WorkUnitID="{325E1DE2-36D6-4EED-8408-A0A11645DD99}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1A7A3115-F078-4A7D-8074-0690A585DC51}" ShortID="558144625">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="2.25"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2F2A237B-56EE-4A4A-A293-235F14423465}" ShortID="266292929">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="Delay" Type="Real64" Value="3.75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_SlowDown" ID="{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}" WorkUnitID="{325E1DE2-36D6-4EED-8408-A0A11645DD99}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{A3EBE4AC-801C-436E-B8F4-7C6D798F1ACB}" ShortID="586621932">
@@ -157,7 +206,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Planes" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}">
+						<Event Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}">
 							<ChildrenList>
 								<Action Name="" ID="{E04F9987-2844-49F1-9596-22AC4B07CC8A}" ShortID="538573138">
 									<PropertyList>
@@ -166,6 +215,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{50F72E00-E94F-45EE-84C0-2EF4F476E10A}" ShortID="545281039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}" WorkUnitID="{8C3416E8-A4DF-41F5-8AAB-6F645DB174B8}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
