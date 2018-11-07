@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="89">
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Actor-Mixer Hierarchy\TVeil_Actor_Mixer.wwu" DateLow="1541069469" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Actor-Mixer Hierarchy\TVeil_Actor_Mixer.wwu" DateLow="1541584029" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1539700875" DateHigh="0"/>
@@ -11,12 +11,12 @@
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Effects\Factory Effects.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Events\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Events\TVeil_Events.wwu" DateLow="1541541090" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Events\TVeil_Events.wwu" DateLow="1541583768" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1541516961" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Game Prototype_WwiseProject.crossover.wsettings" DateLow="1541544396" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Game Prototype_WwiseProject.crossover.wsettings" DateLow="1541584633" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Game Prototype_WwiseProject.wproj" DateLow="1539701420" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1541004547" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Interactive Music Hierarchy\TVeil_Interactive_Music.wwu" DateLow="1541540991" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Interactive Music Hierarchy\TVeil_Interactive_Music.wwu" DateLow="1541584183" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
@@ -26,8 +26,8 @@
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1539701138" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu" DateLow="1540982762" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1541003680" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Soundcaster Sessions\TheVeilSessions.wwu" DateLow="1541544392" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\States\Default Work Unit.wwu" DateLow="1541523944" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Soundcaster Sessions\TheVeilSessions.wwu" DateLow="1541584183" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\States\Default Work Unit.wwu" DateLow="1541584134" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1539687745" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Switches\TVeil_Game_Syncs.wwu" DateLow="1541084734" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1541503688" DateHigh="0"/>

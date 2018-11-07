@@ -95,6 +95,16 @@
 						</Event>
 						<Event Name="Platform" ID="{025C21E9-ABA1-4D12-AAD6-90380C0BF3B6}">
 							<ChildrenList>
+								<Action Name="" ID="{C3A6AFBD-A82E-4CB9-BA9D-A1AB9030B7E9}" ShortID="7414158">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{15529A39-E9C2-4A28-8264-AF7640830FEB}" ShortID="242378524">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="35"/>
