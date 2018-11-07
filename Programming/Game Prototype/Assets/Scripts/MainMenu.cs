@@ -11,7 +11,6 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame()
     {
-        //AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.Find("MenuLoop"), 2000);
         FadeToLevel(1);
     }
 

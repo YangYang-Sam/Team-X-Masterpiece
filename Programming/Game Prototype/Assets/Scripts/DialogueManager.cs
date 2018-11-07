@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator animator;
 
+    public GameObject dialogueBox;
+
     private Queue<string> sentences;
 
 	// Use this for initialization
@@ -20,6 +22,13 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
+        dialogueBox.SetActive(true);
+
+        if(Time.timeScale == 1f)
+        {
+            Time.timeScale = 0f;
+        }
+
         animator.SetBool("IsOpen", true);
 
         Debug.Log("Starting tutorial conversation...");
@@ -46,9 +55,9 @@ public class DialogueManager : MonoBehaviour {
 
         string sentence = sentences.Dequeue();
         //stop chars animating if new dialog is triggered
-        StopAllCoroutines();
+        //StopAllCoroutines();
 
-        StartCoroutine(TypeSentence(sentence));
+        //StartCoroutine(TypeSentence(sentence));
 
         dialogueText.text = sentence;
         Debug.Log(sentence);
@@ -56,7 +65,7 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = "";
+        dialogueText.text = null;
         foreach(char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -67,6 +76,12 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+
         Debug.Log("End of Conversation");
     }
 }

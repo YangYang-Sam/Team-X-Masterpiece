@@ -53,13 +53,6 @@ public class PlaneNavigation : MonoBehaviour {
     //variable to store the current plane the player is on
     public int _currentPlane = 1;
 
-    [SerializeField]
-    public GameObject _plane1Spawn;
-    [SerializeField]
-    public GameObject _plane2Spawn;
-    [SerializeField]
-    public GameObject _plane3Spawn;
-
     // Use this for initialization
     void Start ()
     {

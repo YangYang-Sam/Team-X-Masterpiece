@@ -10,9 +10,11 @@ public class SpawnManager : MonoBehaviour {
     private GameObject[] _spawnPoint;
     [SerializeField]
     private float _spawnTime;
+    [SerializeField]
+    private AkEvent deathSound;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 
 	}
@@ -26,6 +28,11 @@ public class SpawnManager : MonoBehaviour {
     public void PlayerDamage(int SpawnPoint)
     {
         _player.gameObject.SetActive(false);
+
+        if (deathSound != null)
+        {
+            deathSound.HandleEvent(gameObject);
+        }
 
         StartCoroutine(SpawnDelay(SpawnPoint));
     }

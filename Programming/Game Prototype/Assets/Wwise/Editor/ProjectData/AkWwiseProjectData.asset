@@ -52,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586600789740768916
+    m_lastTime: -8586600215183458371
     List:
     - name: All_Plane_Music
       guid: cb399f1b4eb0184180b825113c87a7bf
@@ -65,6 +65,20 @@ MonoBehaviour:
       - ElementName: All_Plane_Music
         ObjectType: 3
       Path: TVeil_Events\MusicLoops\All_Plane_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Dead
+      guid: 32f2a98fbfcdf4489e757ffe8f11e2ff
+      id: 2044049779
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Raven
+        ObjectType: 4
+      - ElementName: Dead
+        ObjectType: 3
+      Path: TVeil_Events\Raven\Dead
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -121,20 +135,6 @@ MonoBehaviour:
       - ElementName: Jumping
         ObjectType: 3
       Path: TVeil_Events\Raven\Jumping
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: MenuLoop
-      guid: 2cef2d5bd3ccc24b91d84461585c8cb5
-      id: 3236081754
-      PathAndIcons:
-      - ElementName: TVeil_Events
-        ObjectType: 12
-      - ElementName: MusicLoops
-        ObjectType: 4
-      - ElementName: MenuLoop
-        ObjectType: 3
-      Path: TVeil_Events\MusicLoops\MenuLoop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586600789733147001
+    m_lastTime: -8586600215147677008
     List:
     - name: Menu_or_Level
       guid: 1f84a9288167724d8014558ede669efa
@@ -302,6 +302,12 @@ MonoBehaviour:
         id: 3835820942
         PathAndIcons:
         - ElementName: Egyptian
+          ObjectType: 8
+      - name: EndLevel
+        guid: 6f0784f466305a428c0cd3345694ff68
+        id: 1054659462
+        PathAndIcons:
+        - ElementName: EndLevel
           ObjectType: 8
       - name: MenuState
         guid: fa02e0b9bfbf9448b22b39b0447815a5
@@ -371,8 +377,8 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/States
-  - /Game Prototype_WwiseProject/States/Default Work Unit
-  - /Game Prototype_WwiseProject/States/Default Work Unit/Music_State
+  - /Game Prototype_WwiseProject/Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

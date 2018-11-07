@@ -10,6 +10,9 @@ public class PlayerInteractions : MonoBehaviour {
     private PlaneNavigation _planeNavigation;
     private PlaneMovement _planeMovement;
 
+    [SerializeField]
+    private AkEvent platformSound;
+
     // Use this for initialization
     void Start ()
     {
@@ -123,6 +126,16 @@ public class PlayerInteractions : MonoBehaviour {
     private void ToPlane1(Collision2D other)
     {
         StartCoroutine(_planeNavigation.Plane1Delay(other));
+
+        //Play platform sound
+        if (platformSound != null)
+        {
+            platformSound.HandleEvent(gameObject);
+            Debug.Log("Triggering Platform sound");
+        }
+        //Change audio to correct plane
+        AkSoundEngine.SetState("Music_State", "Aztec");
+
         other.gameObject.layer = 10;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
         other.gameObject.GetComponent<SpriteRenderer>().color = new Color (255,255,0,255);
@@ -145,6 +158,17 @@ public class PlayerInteractions : MonoBehaviour {
     private void ToPlane2(Collision2D other)
     {
         StartCoroutine(_planeNavigation.Plane2Delay(other));
+
+        //Play platform sound
+        if (platformSound != null)
+        {
+            platformSound.HandleEvent(gameObject);
+            Debug.Log("Triggering Platform sound");
+        }
+
+        //Change audio to correct plane
+        AkSoundEngine.SetState("Music_State", "Egyptian");
+
         other.gameObject.layer = 11;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[1];
 
@@ -164,6 +188,17 @@ public class PlayerInteractions : MonoBehaviour {
     private void ToPlane3(Collision2D other)
     {
         StartCoroutine(_planeNavigation.Plane3Delay(other));
+
+        //Play platform sound
+        if (platformSound != null)
+        {
+            platformSound.HandleEvent(gameObject);
+            Debug.Log("Triggering Platform sound");
+        }
+
+        //Change audio to correct plane
+        AkSoundEngine.SetState("Music_State", "Chinese");
+
         other.gameObject.layer = 12;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[2];
 
