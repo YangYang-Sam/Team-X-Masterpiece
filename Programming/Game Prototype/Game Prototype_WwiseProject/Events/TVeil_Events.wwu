@@ -33,6 +33,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Dead" ID="{8FA9F232-CDBF-48F4-9E75-7FFE8F11E2FF}">
+							<ChildrenList>
+								<Action Name="" ID="{54E8E222-BA36-4426-92C6-943311BD2B6F}" ShortID="783270282">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RavenDead" ID="{0CA974AC-39DD-4E52-BC43-B01421D80D43}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Interaction" ID="{E69AFB71-7BB4-4B5A-B0B5-6A3C6E48C0DF}" ShortID="707880087">
@@ -166,20 +180,6 @@
 				</Folder>
 				<Folder Name="MusicLoops" ID="{1E1CAD13-7EE1-4F0C-BFFD-07D27AB35328}" ShortID="98729171">
 					<ChildrenList>
-						<Event Name="MenuLoop" ID="{5B2DEF2C-CCD3-4BC2-91D8-4461585C8CB5}">
-							<ChildrenList>
-								<Action Name="" ID="{CAE556DC-69A2-49C6-B3D0-2F83EDAE1603}" ShortID="782457481">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}">
 							<ChildrenList>
 								<Action Name="" ID="{E04F9987-2844-49F1-9596-22AC4B07CC8A}" ShortID="538573138">

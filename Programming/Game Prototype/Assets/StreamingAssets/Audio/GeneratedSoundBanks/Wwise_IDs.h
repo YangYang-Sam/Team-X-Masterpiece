@@ -14,11 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID ALL_PLANE_MUSIC = 1985200777U;
+        static const AkUniqueID DEAD = 2044049779U;
         static const AkUniqueID DOOR = 1877847629U;
         static const AkUniqueID GHOST = 4023194814U;
         static const AkUniqueID GHOUL = 3922529076U;
         static const AkUniqueID JUMPING = 68157183U;
-        static const AkUniqueID MENULOOP = 3236081754U;
         static const AkUniqueID PLATFORM = 4035573696U;
         static const AkUniqueID PORTALS = 2017263062U;
         static const AkUniqueID ROTATE = 1302771492U;
@@ -48,6 +48,7 @@ namespace AK
                 static const AkUniqueID AZTEC = 3866797368U;
                 static const AkUniqueID EASTERN = 3476384675U;
                 static const AkUniqueID EGYPTIAN = 3835820942U;
+                static const AkUniqueID ENDLEVEL = 1054659462U;
                 static const AkUniqueID MENUSTATE = 1548586727U;
             } // namespace STATE
         } // namespace MUSIC_STATE

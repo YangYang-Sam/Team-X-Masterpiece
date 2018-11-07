@@ -17,11 +17,11 @@
 			<Path>TVeil_Lvl_SB.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1985200777" Name="All_Plane_Music" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Music"/>
+				<Event Id="2044049779" Name="Dead" ObjectPath="\Events\TVeil_Events\Raven\Dead"/>
 				<Event Id="1877847629" Name="Door" ObjectPath="\Events\TVeil_Events\Interaction\Door"/>
 				<Event Id="4023194814" Name="Ghost" ObjectPath="\Events\TVeil_Events\Enemies\Ghost"/>
 				<Event Id="3922529076" Name="Ghoul" ObjectPath="\Events\TVeil_Events\Enemies\Ghoul"/>
 				<Event Id="68157183" Name="Jumping" ObjectPath="\Events\TVeil_Events\Raven\Jumping"/>
-				<Event Id="3236081754" Name="MenuLoop" ObjectPath="\Events\TVeil_Events\MusicLoops\MenuLoop"/>
 				<Event Id="4035573696" Name="Platform" ObjectPath="\Events\TVeil_Events\Interaction\Platform" MaxAttenuation="0.000000"/>
 				<Event Id="2017263062" Name="Portals" ObjectPath="\Events\TVeil_Events\Interaction\Portals"/>
 				<Event Id="1302771492" Name="Rotate" ObjectPath="\Events\TVeil_Events\Interaction\Rotate"/>
@@ -108,6 +108,10 @@
 				<File Id="887549436" Language="SFX">
 					<ShortName>Jump2.wav</ShortName>
 					<Path>SFX/Jump2_56D34C19.wem</Path>
+				</File>
+				<File Id="924017632" Language="SFX">
+					<ShortName>TVeilEndCreditSequence.wav</ShortName>
+					<Path>SFX/TVeilEndCreditSequence_8956FC97.wem</Path>
 				</File>
 				<File Id="998510839" Language="SFX">
 					<ShortName>Ghoul3.wav</ShortName>

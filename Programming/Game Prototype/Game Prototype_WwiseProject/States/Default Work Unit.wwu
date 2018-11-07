@@ -37,6 +37,7 @@
 						<State Name="Egyptian" ID="{2508F728-11F3-4E73-9528-FCB38138FBA8}"/>
 						<State Name="Eastern" ID="{514B379C-8AA1-449C-9875-9EA0F5618FEC}"/>
 						<State Name="MenuState" ID="{B9E002FA-BFBF-4894-B22B-39B0447815A5}"/>
+						<State Name="EndLevel" ID="{F484076F-3066-425A-8C0C-D3345694FF68}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

@@ -7,6 +7,8 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	Menu_or_Level			
 	2782712965	Level	Menu_or_Level			
 	0	None	Music_State			
+	1054659462	EndLevel	Music_State			
+	1548586727	MenuState	Music_State			
 	3476384675	Eastern	Music_State			
 	3835820942	Egyptian	Music_State			
 	3866797368	Aztec	Music_State			

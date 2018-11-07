@@ -754,6 +754,65 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicSegment Name="End_Level" ID="{88F55A89-B406-4743-B1AE-A0677748241E}" ShortID="699225287">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="148571.428571429"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="TVeilEndCreditSequence" ID="{F0F4DB0A-2765-4014-BFF8-6BE1ADB3E972}" ShortID="389379637">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TVeilEndCreditSequence" ID="{3505D9EA-6A69-465D-9309-A2BD506C01C1}" ShortID="924017632">
+											<Language>SFX</Language>
+											<AudioFile>TVeilEndCreditSequence.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{68B9118F-E793-4A48-92EC-6F4FC480C6C9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{7874560B-1619-47BE-BE6F-9A6938F0AA13}">
+											<ClipList>
+												<MusicClip Name="TVeilEndCreditSequence" ID="{F2C0EF50-21C6-4F22-86C5-85BADE0C523B}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="148571.428571429"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="TVeilEndCreditSequence" ID="{3505D9EA-6A69-465D-9309-A2BD506C01C1}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{37987201-05B0-472A-B000-4000FFEF79C6}"/>
+								<MusicCue Name="Exit Cue" ID="{F828AF5C-062C-4DB8-B008-E3DC7FB4CE30}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="148571.428571429"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{672E2526-038E-4B10-BF8A-6E04B006D6D4}">
@@ -930,6 +989,14 @@
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="MenuLoop" ID="{35E0D026-7885-4964-99D7-081E2690D137}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="EndLevel" ID="{F484076F-3066-425A-8C0C-D3345694FF68}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="End_Level" ID="{88F55A89-B406-4743-B1AE-A0677748241E}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>
