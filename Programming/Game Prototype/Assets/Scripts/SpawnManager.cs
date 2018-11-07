@@ -80,6 +80,11 @@ public class SpawnManager : MonoBehaviour {
             Debug.Log("SpawnPoint 4");
             _player.gameObject.transform.position = _spawnPoint[3].transform.position;
         }
+        else if (SpawnPoint == 5)
+        {
+            Debug.Log("SpawnPoint 5");
+            _player.gameObject.transform.position = _spawnPoint[4].transform.position;
+        }
         _player.gameObject.SetActive(true);
         Debug.Log("Player spawned");
     }

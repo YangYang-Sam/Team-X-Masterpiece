@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 8
-  _player: {fileID: 1328049143909982, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
 --- !u!212 &212663842244866372
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: -1059112293
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d582a031531e2374ca122f19e0cc2a35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac1f88d4bbdc1714b884201919e79123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

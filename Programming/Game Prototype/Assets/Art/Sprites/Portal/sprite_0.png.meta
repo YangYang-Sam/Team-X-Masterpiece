@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 4cbbacc890e443745b826a21dbe25b60
+guid: 9089e0c596f72364a875b5d1ba852497
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tileset_redbrick2_0
-    21300002: tileset_redbrick2_1
-    21300004: tileset_redbrick2_2
-    21300006: tileset_redbrick2_3
-    21300008: tileset_redbrick2_4
-    21300010: tileset_redbrick2_5
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -44,12 +38,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,111 +113,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: tileset_redbrick2_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 68
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2de57c10b64d7734f807967fb6335ebf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset_redbrick2_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 68
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab60f85255242e1438b244b41a6e302d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset_redbrick2_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 34
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c38024c8696d48429404334c7214c8c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset_redbrick2_3
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 34
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f85a821649b91e947a996da073b5fced
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset_redbrick2_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 076dd586679ef43439732e24d007a553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f563685b181b0144aac5fa5e2b718754
+    spriteID: 116e14a548cbe3b44b0be20411363a55
     vertices: []
     indices: 
     edges: []

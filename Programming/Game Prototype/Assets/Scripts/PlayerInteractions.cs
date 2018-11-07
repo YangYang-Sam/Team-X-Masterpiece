@@ -9,6 +9,13 @@ public class PlayerInteractions : MonoBehaviour {
     private GameObject _planeController;
     private PlaneNavigation _planeNavigation;
     private PlaneMovement _planeMovement;
+    [SerializeField]
+    private GameObject _gameManager;
+    private GameManager _gameManagerScript;
+
+    [SerializeField]
+    private GameObject _spawnManager;
+    private SpawnManager _spawnManagerScript;
 
     [SerializeField]
     private AkEvent platformSound;
@@ -18,6 +25,8 @@ public class PlayerInteractions : MonoBehaviour {
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
         _planeMovement = _planeController.GetComponent<PlaneMovement>();
+        _gameManagerScript = _gameManager.GetComponent<GameManager>();
+        _spawnManagerScript = _spawnManager.GetComponent<SpawnManager>();
     }
 	
 	// Update is called once per frame
@@ -30,9 +39,19 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        if (other.name == "End Game")
+        if (other.name == "Portal")
         {
-            SceneManager.LoadScene(0);
+            _gameManagerScript.Victory();
+        }
+
+        if (other.name == "GreenGooParent")
+        {
+            _spawnManagerScript.PlayerDamage(5);
+        }
+
+        if (other.name == "YellowGooParent")
+        {
+            _spawnManagerScript.PlayerDamage(2);
         }
 
         if (Input.GetButtonDown("Interact") && other.name == "Lever")

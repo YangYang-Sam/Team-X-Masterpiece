@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour {
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject victoryScreenUI;
 
     private bool timeAlreadyPaused = false;
+
+    private bool victorious = false;
 
     // Use this for initialization
     void Start ()
@@ -22,13 +25,20 @@ public class GameManager : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (victorious == false)
             {
-                Resume();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
-            else
+            if (victorious == true)
             {
-                Pause();
+                return;
             }
         }
 
@@ -37,7 +47,6 @@ public class GameManager : MonoBehaviour {
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
         GameIsPaused = false;
 
         if (timeAlreadyPaused == true)
@@ -82,6 +91,13 @@ public class GameManager : MonoBehaviour {
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void Victory()
+    {
+        victorious = true;
+        victoryScreenUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void QuitGame()

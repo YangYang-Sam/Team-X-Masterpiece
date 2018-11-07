@@ -52,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586600215183458371
+    m_lastTime: -8586600060291297268
     List:
     - name: All_Plane_Music
       guid: cb399f1b4eb0184180b825113c87a7bf
@@ -377,8 +377,5 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
