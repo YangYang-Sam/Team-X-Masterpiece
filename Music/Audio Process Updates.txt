@@ -1,3 +1,23 @@
+07/10/18
+
+FEATURE COMPLETE:
+
+I have ensured that all Wwise Logic-Structures, Functionality and cruicially the Unity Implementation are complete. This was a large job which
+required much troubleshooting between myself and Jonny. This process has shown me how much my lack of experience using middleware has affected the 
+project. More time has been spent ensuring the sounds and music playback correctly than spent creating sounds themselves, but now that all the systems
+are in-place there is nothing left to do but populate and update assets. 
+
+There should be very little programming required from this point, and with Wwise functioning as it should I am now free to focus on generating
+higher quality assets, mixing and creating a more coherant audio-environment. Music now transitions between differently themed loops as Raven 
+interacts with the platforms, and all main interactions have sound, where there is silence proven functionality is there to be populated with assets.
+
+Most importantly this push for feature complete has forced me to overcome my largest obstacle in this project: Middleware and Integration. This 
+process has given me an insight into the industry which I lacked before, and although I felt confident producing sounds at a comfortable rate within
+the deadline, I had not originally considered or allowed for the time needed to learn and implement technical, gamedevelopment-centric technical skills.
+It gives me great confidence that from this point I am freed up to focus on developing the soundtrack and ambience assets for the game.  
+ 
+
+
 17/10/18
 
 Strangely productive yet not-productive. Wwise middleware has now succesfully been implemented and is now the audio engine being used within Unity.
