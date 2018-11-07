@@ -1004,6 +1004,11 @@
 				<MusicSegment Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" ShortID="696671726">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="7312.51700680272"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
