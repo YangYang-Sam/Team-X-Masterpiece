@@ -9,7 +9,16 @@
 						<ObjectRef Name="TVeil_Interactive_Music" ID="{9B75546B-C4D8-47CD-A011-195B7388F364}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TVeil_Actor_Mixer" ID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
-					<ObjectExclusionList/>
+					<ObjectExclusionList>
+						<ObjectRef Name="Portals" ID="{B1D217BC-9BE9-4143-86F3-75C434D78907}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+						<ObjectRef Name="Ghost" ID="{DEFE064D-B2BF-4494-B8B1-324E43C5423D}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+						<ObjectRef Name="Skeleton" ID="{D4497994-FDBC-4551-BDDC-FA4967FAE634}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+						<ObjectRef Name="BoneBoomerang" ID="{32C3A0BB-4D39-46C7-A144-CD88DB9B7EEF}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+						<ObjectRef Name="Skeleton" ID="{64B96410-A6CA-46E8-A40D-3025C2850E28}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+						<ObjectRef Name="Ghost" ID="{091DE5BF-127C-47D6-A036-9126ABA9CC1C}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+						<ObjectRef Name="Door" ID="{C9FBE394-73D7-4A67-8DB1-2A433F746C59}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+						<ObjectRef Name="Door" ID="{DE724EC3-37E7-4C90-9A4B-223FA6208752}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+					</ObjectExclusionList>
 					<GameSyncExclusionList/>
 				</SoundBank>
 			</ChildrenList>
