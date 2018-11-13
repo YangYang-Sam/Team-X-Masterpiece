@@ -112,6 +112,7 @@ public class PlayerController2D : MonoBehaviour
         {
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
+            animator.SetBool("IsJumping", false);
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -124,6 +125,7 @@ public class PlayerController2D : MonoBehaviour
             if (_canJump > 0 && _planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
             {
                 Jump();
+                animator.SetBool("IsJumping", true);
             }
 
             else if (_canJump == 0 && _canVeilJump > 0)
