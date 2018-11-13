@@ -304,6 +304,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -546,6 +551,19 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Jumping" ID="{65D503F1-D782-4F1D-8F12-0FC3A221F210}" ShortID="644774196">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{792E6D04-86AB-413B-9D0A-CD7157073C76}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
@@ -568,6 +586,21 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Jump" ID="{EADD06A2-A4BD-47B4-A10E-FEF97A331869}" ShortID="292689470">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{734D6AA5-585A-4771-82E9-3ED7160CA2F7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="90"/>
+															<Property Name="Min" Type="Real64" Value="-90"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
@@ -588,6 +621,18 @@
 								</Sound>
 								<Sound Name="Jump2" ID="{8F5EBE56-9586-4238-843A-56ECA744B30E}" ShortID="275194688">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{31BEE749-C4D8-430F-B547-DD985E9EDB92}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-90"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-3</Value>
@@ -670,7 +715,7 @@
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>35</Value>
+										<Value>100</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

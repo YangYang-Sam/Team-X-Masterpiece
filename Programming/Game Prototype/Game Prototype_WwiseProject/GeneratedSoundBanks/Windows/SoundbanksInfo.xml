@@ -33,6 +33,10 @@
 					<ShortName>Ghoul1.wav</ShortName>
 					<Path>SFX/Ghoul1_A1793BE9.wem</Path>
 				</File>
+				<File Id="295389949" Language="SFX">
+					<ShortName>Eastern_Loop3_168bpm_10B.wav</ShortName>
+					<Path>SFX/Eastern_Loop3_168bpm_10B_CB1F3167.wem</Path>
+				</File>
 				<File Id="297235183" Language="SFX">
 					<ShortName>Jump.wav</ShortName>
 					<Path>SFX/Jump_A1793BE9.wem</Path>
@@ -81,6 +85,14 @@
 					<ShortName>Aztec_Loop1_10B_84bpm_v2.wav</ShortName>
 					<Path>SFX/Aztec_Loop1_10B_84bpm_v2_CB1F3167.wem</Path>
 				</File>
+				<File Id="767050816" Language="SFX">
+					<ShortName>Eastern_Loop1_168bpm_12B.wav</ShortName>
+					<Path>SFX/Eastern_Loop1_168bpm_12B_CB1F3167.wem</Path>
+				</File>
+				<File Id="805355077" Language="SFX">
+					<ShortName>Eastern_Loop2_168bpm_10B.wav</ShortName>
+					<Path>SFX/Eastern_Loop2_168bpm_10B_CB1F3167.wem</Path>
+				</File>
 				<File Id="820484119" Language="SFX">
 					<ShortName>RotatePlane.wav</ShortName>
 					<Path>SFX/RotatePlane_A1793BE9.wem</Path>
@@ -88,6 +100,10 @@
 				<File Id="887549436" Language="SFX">
 					<ShortName>Jump2.wav</ShortName>
 					<Path>SFX/Jump2_A1793BE9.wem</Path>
+				</File>
+				<File Id="921492444" Language="SFX">
+					<ShortName>Eastern_Loop4_168bpm_16ishB.wav</ShortName>
+					<Path>SFX/Eastern_Loop4_168bpm_16ishB_CB1F3167.wem</Path>
 				</File>
 				<File Id="924017632" Language="SFX">
 					<ShortName>TVeilEndCreditSequence.wav</ShortName>
