@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
 
+    public bool dialogFreezePlayer = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -22,12 +24,9 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueBox.SetActive(true);
+        dialogFreezePlayer = true;
 
-        if(Time.timeScale == 1f)
-        {
-            Time.timeScale = 0f;
-        }
+        dialogueBox.SetActive(true);
 
         animator.SetBool("IsOpen", true);
 
@@ -75,12 +74,9 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        dialogFreezePlayer = false;
 
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-        }
+        animator.SetBool("IsOpen", false);
 
         Debug.Log("End of Conversation");
     }

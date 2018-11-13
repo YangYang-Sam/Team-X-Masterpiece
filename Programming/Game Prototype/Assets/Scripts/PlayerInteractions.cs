@@ -18,6 +18,10 @@ public class PlayerInteractions : MonoBehaviour {
     private SpawnManager _spawnManagerScript;
 
     [SerializeField]
+    private GameObject _dialogueManager;
+    private DialogueManager _dialogueManagerScript;
+
+    [SerializeField]
     private AkEvent platformSound;
 
     // Use this for initialization
@@ -27,6 +31,7 @@ public class PlayerInteractions : MonoBehaviour {
         _planeMovement = _planeController.GetComponent<PlaneMovement>();
         _gameManagerScript = _gameManager.GetComponent<GameManager>();
         _spawnManagerScript = _spawnManager.GetComponent<SpawnManager>();
+        _dialogueManagerScript = _dialogueManager.GetComponent<DialogueManager>();
     }
 	
 	// Update is called once per frame
@@ -64,7 +69,7 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnCollisionStay2D(Collision2D other)
 
     {
-        if (_planeNavigation._playerFrozen == false)
+        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
             //switch to correct layer based on portal name
             if (Input.GetButtonDown("Interact"))
@@ -216,7 +221,7 @@ public class PlayerInteractions : MonoBehaviour {
         }
 
         //Change audio to correct plane
-        AkSoundEngine.SetState("Music_State", "Chinese");
+        AkSoundEngine.SetState("Music_State", "Eastern");
 
         other.gameObject.layer = 12;
         other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[2];

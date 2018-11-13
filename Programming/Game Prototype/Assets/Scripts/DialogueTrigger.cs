@@ -14,6 +14,14 @@ public class DialogueTrigger : MonoBehaviour {
         }
     }
 
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

@@ -14,8 +14,13 @@ public class PlayerController2D : MonoBehaviour
     public GameObject _planeController;
     private PlaneNavigation _planeNavigation;
 
+    //Access playerController class
     [SerializeField]
-    private GameObject _playerPrefab;
+    public GameObject _dialogueManager;
+    private DialogueManager _dialogueManagerScript;
+
+    //[SerializeField]
+    //private GameObject _playerPrefab;
 
     //set variables to store speed etc and alter fields in inspector 
     private float _speed;
@@ -58,6 +63,7 @@ public class PlayerController2D : MonoBehaviour
     private void Start()
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
+        _dialogueManagerScript = _dialogueManager.GetComponent<DialogueManager>();
 
         _speed = _speedValue;
         _canJump = _canJumpValue;
@@ -75,7 +81,7 @@ public class PlayerController2D : MonoBehaviour
     private void FixedUpdate()
     {
         //Horizontal Movement
-        if (_planeNavigation._playerFrozen == false)
+        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
             _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
         }
@@ -84,6 +90,10 @@ public class PlayerController2D : MonoBehaviour
             ResetVeilJump();
             _playerRigidbody.velocity = new Vector2(0, 0);
             _playerRigidbody.gravityScale = 0;
+        }
+        else if (_dialogueManagerScript.dialogFreezePlayer == true)
+        {
+            _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
         }
         Flip();
     }
@@ -97,15 +107,6 @@ public class PlayerController2D : MonoBehaviour
         {
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
-
-            if (Input.GetButtonDown("Temp Invincibility"))
-            {
-                TempInvincibility();
-            }
-            if (Input.GetButtonUp("Temp Invincibility"))
-            {
-                ResetVeilJump();
-            }
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -115,7 +116,7 @@ public class PlayerController2D : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (_canJump > 0)
+            if (_canJump > 0 && _planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
             {
                 Jump();
             }
@@ -162,13 +163,6 @@ public class PlayerController2D : MonoBehaviour
         transform.localScale = _veilJumpScale;
 
         _canVeilJump--;
-    }
-
-    private void TempInvincibility()
-    {
-        _playerRigidbody.velocity = new Vector2(0, 0);
-        _speed = 0;
-        transform.localScale = _veilJumpScale;
     }
 
     private void ResetVeilJump()

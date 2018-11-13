@@ -32,7 +32,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586602637237977388
+    m_lastTime: -8586595031134642569
     List:
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
@@ -52,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586600060291297268
+    m_lastTime: -8586595031142298821
     List:
     - name: All_Plane_Music
       guid: cb399f1b4eb0184180b825113c87a7bf
@@ -377,5 +377,8 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
+  - /Game Prototype_WwiseProject/States
+  - /Game Prototype_WwiseProject/States/Default Work Unit
+  - /Game Prototype_WwiseProject/States/Default Work Unit/Music_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
