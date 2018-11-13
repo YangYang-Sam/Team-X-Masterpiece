@@ -289,6 +289,10 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Eastern_Themes" ID="{501A7486-DFA8-49DF-B9FB-AFBC09BE7C84}" ShortID="189638870">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="168"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
@@ -297,6 +301,244 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Eastern_Loop1_168bpm_12B" ID="{ADA63583-9EFC-460C-BFBA-988B420FB601}" ShortID="328049911">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="25714.2857142857"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Eastern_Loop1_168bpm_12B" ID="{BD02F81D-DB35-49BF-9259-5BDAB1406164}" ShortID="35458833">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Eastern_Loop1_168bpm_12B" ID="{B9EC2ABB-81A5-4BD2-B33D-15EBB26CE399}" ShortID="767050816">
+													<Language>SFX</Language>
+													<AudioFile>Eastern_Loop1_168bpm_12B.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{4C9E7BC2-C1B2-405D-842A-A3D46BF4FCCD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{67ED36B1-F476-4DE9-B2CD-ECB82382FFA0}">
+													<ClipList>
+														<MusicClip Name="Eastern_Loop1_168bpm_12B" ID="{2432015F-F52A-4002-9395-AC04AA12B420}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="25714.2857142857"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Eastern_Loop1_168bpm_12B" ID="{B9EC2ABB-81A5-4BD2-B33D-15EBB26CE399}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{335D4B95-6809-4B95-ACB9-F93B18B2F692}"/>
+										<MusicCue Name="Exit Cue" ID="{AF0D2A82-33E9-4F56-BF8D-BC51343E95F8}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="17142.8571428571"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Eastern_Loop2_168bpm_10B" ID="{0D0771A8-603B-48A0-A1C2-E3C15DA2E9B2}" ShortID="590007274">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="17142.8571428571"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Eastern_Loop2_168bpm_10B" ID="{AA7893B5-1FE1-4388-98C7-613AEB27563A}" ShortID="65230020">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Eastern_Loop2_168bpm_10B" ID="{4195B913-1FD4-41B1-9C94-FDFE823227FE}" ShortID="805355077">
+													<Language>SFX</Language>
+													<AudioFile>Eastern_Loop2_168bpm_10B.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{6D974215-BBC0-4423-9930-041E77FB0F72}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{3D9ED29C-87F7-4467-BABE-BA4601DA9289}">
+													<ClipList>
+														<MusicClip Name="Eastern_Loop2_168bpm_10B" ID="{0D3949EC-E122-422D-AED5-9F351ABD63D4}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17142.8571428571"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Eastern_Loop2_168bpm_10B" ID="{4195B913-1FD4-41B1-9C94-FDFE823227FE}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{838E9AF1-A1CD-4661-914B-9CEDB4CCCF9D}"/>
+										<MusicCue Name="Exit Cue" ID="{3C6787B9-3788-4F41-B655-989F82A3CE63}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="14285.7142857143"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Eastern_Loop3_168bpm_10B" ID="{BEEC712F-3C43-4647-BD73-D49AE854CCA0}" ShortID="713279136">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="17142.8571428571"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Eastern_Loop3_168bpm_10B" ID="{8490D1FD-CE9F-43E9-8790-51E9F6D05C38}" ShortID="755192798">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Eastern_Loop3_168bpm_10B" ID="{ABE2530B-EBCF-4F3F-8CD5-D945755AC6D4}" ShortID="295389949">
+													<Language>SFX</Language>
+													<AudioFile>Eastern_Loop3_168bpm_10B.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{44804470-443D-4349-96D4-02BA6854387F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8AE695EC-A348-4CED-9DFB-209A1F4EBF12}">
+													<ClipList>
+														<MusicClip Name="Eastern_Loop3_168bpm_10B" ID="{8C73A74B-883A-4210-84C3-14F11B5CFF08}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17142.8571428571"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Eastern_Loop3_168bpm_10B" ID="{ABE2530B-EBCF-4F3F-8CD5-D945755AC6D4}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{C901D638-D51D-45E5-A6D4-93E21C2401F5}"/>
+										<MusicCue Name="Exit Cue" ID="{91F4603A-564E-47B2-BE37-FA89DA006ADD}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="14285.7142857143"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Eastern_Loop4_168bpm_16ishB" ID="{5854F61A-BB4B-45B6-BC72-4B2736FC8BA7}" ShortID="198017967">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="24285.7142857143"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Eastern_Loop4_168bpm_16ishB" ID="{14720A9F-AE39-4438-91BC-B6B53F6F9EEA}" ShortID="721374571">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Eastern_Loop4_168bpm_16ishB" ID="{B1FCE195-2E6A-4996-BCD9-CB5B78F72F19}" ShortID="921492444">
+													<Language>SFX</Language>
+													<AudioFile>Eastern_Loop4_168bpm_16ishB.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{5C348866-19C1-468B-81F4-34E568F447BF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8151738A-AE31-4238-B2EC-106E08E7CFCB}">
+													<ClipList>
+														<MusicClip Name="Eastern_Loop4_168bpm_16ishB" ID="{41CF50A2-05C0-46BC-A2BD-9199DE66736A}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="24285.7142857143"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Eastern_Loop4_168bpm_16ishB" ID="{B1FCE195-2E6A-4996-BCD9-CB5B78F72F19}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{C77655FB-B860-42D8-AD93-0AF3B989DE7D}"/>
+										<MusicCue Name="Exit Cue" ID="{777E6DE7-6DE3-4EAE-972C-A85E7BF17D75}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="22500"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{102EB3F6-CE9A-45A7-9719-1865867C4D01}">
 									<PropertyList>
@@ -311,7 +553,47 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{DB0ADD3E-59B1-454F-9381-F079F68CE0CB}" ShortID="418874095"/>
+								<MusicPlaylistItem Name="" ID="{DB0ADD3E-59B1-454F-9381-F079F68CE0CB}" ShortID="418874095">
+									<PropertyList>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{5501BDB9-E1E1-4FB7-9B16-D10CC00B7274}" ShortID="644029062">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>45</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<SegmentRef Name="Eastern_Loop1_168bpm_12B" ID="{ADA63583-9EFC-460C-BFBA-988B420FB601}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{146BC22E-855A-4AC7-B816-3BE017D33159}" ShortID="910918808">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Eastern_Loop2_168bpm_10B" ID="{0D0771A8-603B-48A0-A1C2-E3C15DA2E9B2}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{913E55D7-4ED2-46C9-94B0-D5DEDB98ACAE}" ShortID="309668952">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Eastern_Loop3_168bpm_10B" ID="{BEEC712F-3C43-4647-BD73-D49AE854CCA0}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{715BE47F-44C7-4517-AD78-FC573A8C44AB}" ShortID="875748983">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>65</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<SegmentRef Name="Eastern_Loop4_168bpm_16ishB" ID="{5854F61A-BB4B-45B6-BC72-4B2736FC8BA7}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Aztec_Themes" ID="{811A361A-BB4D-44AD-90B7-B84372D094C8}" ShortID="542049879">
