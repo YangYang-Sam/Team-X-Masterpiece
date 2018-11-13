@@ -9,6 +9,9 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     private AkEvent veilJumpSound;
 
+    [SerializeField]
+    private Animator animator;
+
     //Access playerController class
     [SerializeField]
     public GameObject _planeController;
@@ -83,7 +86,7 @@ public class PlayerController2D : MonoBehaviour
         //Horizontal Movement
         if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
-            _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
+            _playerRigidbody.velocity = new Vector2(horizontalMove, _playerRigidbody.velocity.y);
         }
         else if (_planeNavigation._playerFrozen == true)
         {
@@ -101,7 +104,9 @@ public class PlayerController2D : MonoBehaviour
     private void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        horizontalMove = Input.GetAxisRaw("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal") * _speed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (isGrounded == true)
         {
