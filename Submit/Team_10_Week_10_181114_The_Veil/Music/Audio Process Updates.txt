@@ -1,3 +1,21 @@
+14/10/18
+
+Post Feature Complete:
+
+After a team meeting post-feature complete we have discussed what can and cannot be changed, added or improved and much will be discussed in each of our 
+reflections. This week I finished de-bugging in Wwise, as there was a problem with audio cutting in and out when traversing planes. As I had not included
+transition stingers in feature complete I instead opted to add Wwise functionality and programmed it in such a way that as you interact with each platform 
+it will slow down playback of the current audio track and speedback up (giving a warping affect) before switching to the new soundtrack. I finished updating 
+Eastern soundtracks and I feel like each of the 3 themes are apt, whilst remaining similar in tone to one another, so as not to be totally jarring to the
+player. I plan to work into each soundtrack, adding a thin layer of ambience to each, such as bird/jungle calls in the Aztec area, to add more to the 
+environment. By keeping these within the same audio files as the soundtracks within Wwise it will mean they will also have the same logic and functionality
+and therfor will require no further programming or work for myself or Jonny (besides me finishing them.)
+Within this week's build submission I have requested permission to add sound affects to accompany assets such as fire, the ogre and other environmental aspects,
+which were not included in the game until very late, and there was no opportunity to implement them. As the implementation process is the same as other
+interactions in game, these are low-risk additions, which will make a large impact on gameplay.
+Additionally, much of my time has been spent now replacing placeholders for teams 11 & 12, who will be able to soon start implementing them within their 
+respective games. I may begin including progress with these teams in this notepad.
+
 07/10/18
 
 FEATURE COMPLETE:
