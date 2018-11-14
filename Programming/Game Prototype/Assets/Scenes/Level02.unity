@@ -718,11 +718,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: And now, a haiku.'
+    - 'Raven: I see a lever.
+
+      I will pull this lever now.
+
+      I beat the level!'
 --- !u!1 &13212349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,11 +6077,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: Yes! I made it! Now I can get to the exit
+
+      aaaaaaand I can''t make the jump. Great.'
+    - 'Raven: I''ve got to get the other platform in place before I can reach the
+      end.'
 --- !u!1 &418111248
 GameObject:
   m_ObjectHideFlags: 0
@@ -14766,11 +14771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: Ha! Not so HOT now, are ya?'
+    - 'Raven: ... that was the worst thing I''ve ever said.'
 --- !u!1001 &522385803
 Prefab:
   m_ObjectHideFlags: 0
@@ -16847,11 +16851,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Wizard: HELLO AGAIN, CHILD'
+    - 'Raven: OH JEEZ. You''re just gonna keep doing that, huh?'
+    - 'Wizard: Listen well, child. Below us are conduits between which the miasma
+      guarding dimensions can'
+    - 'Wizard: be pierced, allowing interdimensional transmogrification.'
+    - 'Raven: ...'
+    - 'Wizard: You can use the cape to move platforms around.'
+    - 'Raven: Ohhh. I get it!'
+    - 'Wizard: Just press the F button when you''re standing on them.'
+    - 'Raven: What''s an F button...?'
 --- !u!1 &741470997
 GameObject:
   m_ObjectHideFlags: 0
@@ -24192,11 +24203,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: WHAT JUST HAPPENED?! WHERE AM I?! WHY IS THIS CAPE STUCK TO ME?!?'
+    - 'Wizard: Foolish child, you have meddled--'
+    - 'Raven: WHO IS THAT?! WHAT IS GOING ON?! WHY-'
+    - 'Wizard: Would you be silent for one second!'
+    - 'Raven: ... Sorry'
+    - 'Wizard: Anyway, as I was saying, you have meddled with powers far beyond your
+      control.'
+    - 'Raven: You mean this cool cape that I picked up from that abandoned temple?'
+    - 'Wizard: That is no mere cape. That is the Infinite Veil, a powerful artifact
+      that allows its user to traverse the barriers between dimension.'
+    - 'Raven: So when I touched it I was taken... here?'
+    - 'Wizard: Yes, you are now in...
+
+      THE INFINITE TEMPLE'
+    - 'Raven: Okaaaay. Can I use this Veil to go back home?'
+    - 'Raven: Of course. The barrier between this world and yours is right above us.'
+    - 'Raven: That''s all well and good, but how am I supposed to get from HERE to
+      THERE?'
+    - 'Wizard: Hm, that''s a good question. Maybe it has something to do with those
+      ephemeral platforms indicating where you can build a bridgel.'
+    - 'Raven: Wait, but how-'
+    - 'Raven: Also, the Veil lets you double jump.'
+    - "Raven: ... \nwhat."
 --- !u!4 &1032577156
 Transform:
   m_ObjectHideFlags: 0
@@ -35006,11 +35037,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: Nailed it.'
 --- !u!1001 &1589478970
 Prefab:
   m_ObjectHideFlags: 0
@@ -35331,11 +35360,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Tutorial
+    name: 
     sentences:
-    - Hello! I am the keeper of The Veil!
-    - '...'
-    - '...'
+    - 'Raven: *wheezing* So many... platforms... So much... jumping... So tired...'
+    - 'Wizard: Be wary child. There exists a great and terrible threat down this path.'
+    - 'Raven: Oh. Perfect. Just what this interdimensional prison needed - interdimensional
+      monsters.'
+    - 'Wizard: Fear not, for all will be well if you heed my advice carefully. First,
+      you must-'
+    - 'Wizard: Oh, actually I just remembered I left the stove on. I''ll be right
+      back!'
+    - 'Raven: ...'
+    - 'Raven: ... ...'
+    - 'Raven: ... ... hello?'
 --- !u!4 &1623763547 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c,
