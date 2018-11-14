@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour {
 
+    ////////TEMP DIALOGUE FIX////////////
+    [SerializeField]
+    private GameObject _dialogueBox;
+
     [SerializeField]
     private GameObject _planeController;
     private PlaneNavigation _planeNavigation;
@@ -100,6 +104,8 @@ public class PlayerInteractions : MonoBehaviour {
                     else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
                     {
                         ToPlane1(other);
+                        ///////Temp Dialog Fix///////
+                        _dialogueBox.SetActive(true);
                     }
 
                     else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
