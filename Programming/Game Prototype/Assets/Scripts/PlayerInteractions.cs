@@ -48,31 +48,6 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        if (other.name == "Portal")
-        {
-            _gameManagerScript.Victory();
-        }
-
-        if (other.name == "GreenGooParent")
-        {
-            _spawnManagerScript.PlayerDamage(5);
-        }
-
-        if (other.name == "YellowGooParent")
-        {
-            _spawnManagerScript.PlayerDamage(2);
-        }
-
-        if (Input.GetButtonDown("Interact") && other.name == "Lever")
-        {
-            _planeMovement.leverPulled = true;
-            _planeNavigation._playerFrozen = true;
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-
-    {
         if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
             //switch to correct layer based on portal name
@@ -143,17 +118,110 @@ public class PlayerInteractions : MonoBehaviour {
                         ToPlane2(other);
                     }
                 }
-
-                if (other.gameObject.tag == "Lever")
-                {
-                    _planeMovement.leverPulled = true;
-                }
             }
         }
 
+        if (other.name == "Portal")
+        {
+            _gameManagerScript.Victory();
+        }
+
+        if (other.name == "GreenGooParent")
+        {
+            _spawnManagerScript.PlayerDamage(5);
+        }
+
+        if (other.name == "YellowGooParent")
+        {
+            _spawnManagerScript.PlayerDamage(2);
+        }
+
+        if (Input.GetButtonDown("Interact") && other.name == "Lever")
+        {
+            _planeMovement.leverPulled = true;
+            _planeNavigation._playerFrozen = true;
+        }
     }
 
-    private void ToPlane1(Collision2D other)
+    //private void OnCollisionStay2D(Collision2D other)
+
+    //{
+    //    if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+    //    {
+    //        //switch to correct layer based on portal name
+    //        if (Input.GetButtonDown("Interact"))
+    //        {
+    //            Debug.Log("Interact pressed");
+    //            if (other.gameObject.tag == "Platform Portal")
+    //            {
+    //                if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 1)
+    //                {
+    //                    ToPlane2(other);
+    //                }
+
+    //                if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 1)
+    //                {
+    //                    ToPlane3(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
+    //                {
+    //                    ToPlane2(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 1)
+    //                {
+    //                    ToPlane3(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
+    //                {
+    //                    ToPlane1(other);
+    //                    ///////Temp Dialog Fix///////
+    //                    _dialogueBox.SetActive(true);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
+    //                {
+    //                    ToPlane1(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 2)
+    //                {
+    //                    ToPlane3(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 2)
+    //                {
+    //                    ToPlane3(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 3)
+    //                {
+    //                    ToPlane1(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 3)
+    //                {
+    //                    ToPlane2(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 3)
+    //                {
+    //                    ToPlane1(other);
+    //                }
+
+    //                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 3)
+    //                {
+    //                    ToPlane2(other);
+    //                }
+    //            }
+    //        }
+    //    }
+
+    //}
+
+    private void ToPlane1(Collider2D other)
     {
         StartCoroutine(_planeNavigation.Plane1Delay(other));
 
@@ -185,7 +253,7 @@ public class PlayerInteractions : MonoBehaviour {
         _planeMovement.portal1Entered = true;
     }
 
-    private void ToPlane2(Collision2D other)
+    private void ToPlane2(Collider2D other)
     {
         StartCoroutine(_planeNavigation.Plane2Delay(other));
 
@@ -215,7 +283,7 @@ public class PlayerInteractions : MonoBehaviour {
         _planeMovement.portal2Entered = true;
     }
 
-    private void ToPlane3(Collision2D other)
+    private void ToPlane3(Collider2D other)
     {
         StartCoroutine(_planeNavigation.Plane3Delay(other));
 

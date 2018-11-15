@@ -86,7 +86,7 @@ public class PlaneNavigation : MonoBehaviour {
     }
 
 
-    public IEnumerator Plane1Delay(Collision2D other)
+    public IEnumerator Plane1Delay(Collider2D other)
     {
         float time = 0;
 
@@ -118,7 +118,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public IEnumerator Plane2Delay(Collision2D other)
+    public IEnumerator Plane2Delay(Collider2D other)
     {
         float time = 0;
 
@@ -150,7 +150,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public IEnumerator Plane3Delay(Collision2D other)
+    public IEnumerator Plane3Delay(Collider2D other)
     {
         float time = 0;
 
@@ -181,7 +181,7 @@ public class PlaneNavigation : MonoBehaviour {
         }
     }
 
-    public void PlatformParenting(GameObject plane, Collision2D other)
+    public void PlatformParenting(GameObject plane, Collider2D other)
     {
 
         other.gameObject.transform.parent = plane.transform;
