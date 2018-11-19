@@ -33,6 +33,7 @@ public class Flames : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            //spawn player at correct point depending on platforms visited
             if (GameObject.Find("Platform 3 Portal 1").layer == 12)
             {
                 _spawnManager.PlayerDamage(3);
@@ -42,18 +43,23 @@ public class Flames : MonoBehaviour {
                 _spawnManager.PlayerDamage(4);
             }
         }
-        else if(other.gameObject.CompareTag("Platform Portal") == true)
+        //block flames with platform and only detect non trigger collider on platform
+        else if(other.isTrigger == false && other.CompareTag("Platform Portal"))
         {
             Debug.Log("Platform collided with flames");
             StartCoroutine(FlamesScale(_flamesParent.transform, initialScale, _flamesShrinkScale, _flamesScaleDuration));
+        }
+        else
+        {
+            return;
         }
 
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-
-        if(other.gameObject.CompareTag("Platform Portal") == true)
+        //unblock flames with platform and only detect non trigger collider on platform
+        if (other.isTrigger == false && other.CompareTag("Platform Portal"))
         {
             Debug.Log("Platform exited flames");
             StartCoroutine(FlamesScale(_flamesParent.transform, _flamesShrinkScale, initialScale, _flamesScaleDuration));

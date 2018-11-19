@@ -39,7 +39,7 @@ public class PlayerController2D : MonoBehaviour
 
     private bool facingRight = true;
 
-    private bool isGrounded;
+    public bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;

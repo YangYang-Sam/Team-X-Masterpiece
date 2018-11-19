@@ -2621,8 +2621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.44, y: 0}
-  m_SizeDelta: {x: 459.2, y: 74.3}
+  m_AnchoredPosition: {x: -33.63, y: 0}
+  m_SizeDelta: {x: 394.82, y: 74.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173051380
 MonoBehaviour:
@@ -15045,7 +15045,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1001 &535925246
 Prefab:
@@ -23078,7 +23078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188, y: -52.3}
+  m_AnchoredPosition: {x: 203.8, y: -57.6}
   m_SizeDelta: {x: 80.32, y: 21.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872415196
@@ -34878,6 +34878,11 @@ Prefab:
       propertyPath: _dialogueBox
       value: 
       objectReference: {fileID: 408125881}
+    - target: {fileID: 114760931674426376, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: checkRadius
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
   m_IsPrefabParent: 0

@@ -100,4 +100,12 @@ public class ChargingEnemyAI : MonoBehaviour {
             _spawnManager.PlayerDamage(2);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "YellowGooParent")
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

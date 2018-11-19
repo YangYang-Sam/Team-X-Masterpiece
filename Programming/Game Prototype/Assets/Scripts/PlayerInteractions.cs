@@ -11,6 +11,7 @@ public class PlayerInteractions : MonoBehaviour {
 
     [SerializeField]
     private GameObject _planeController;
+    private PlayerController2D _playerController2D;
     private PlaneNavigation _planeNavigation;
     private PlaneMovement _planeMovement;
     [SerializeField]
@@ -31,6 +32,7 @@ public class PlayerInteractions : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        _playerController2D = GetComponent<PlayerController2D>();
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
         _planeMovement = _planeController.GetComponent<PlaneMovement>();
         _gameManagerScript = _gameManager.GetComponent<GameManager>();
@@ -48,7 +50,7 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
         {
             //switch to correct layer based on portal name
             if (Input.GetButtonDown("Interact"))
@@ -138,88 +140,12 @@ public class PlayerInteractions : MonoBehaviour {
 
         if (Input.GetButtonDown("Interact") && other.name == "Lever")
         {
+            //Disable collider so lever can only be pulled once
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
             _planeMovement.leverPulled = true;
             _planeNavigation._playerFrozen = true;
         }
     }
-
-    //private void OnCollisionStay2D(Collision2D other)
-
-    //{
-    //    if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
-    //    {
-    //        //switch to correct layer based on portal name
-    //        if (Input.GetButtonDown("Interact"))
-    //        {
-    //            Debug.Log("Interact pressed");
-    //            if (other.gameObject.tag == "Platform Portal")
-    //            {
-    //                if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 1)
-    //                {
-    //                    ToPlane2(other);
-    //                }
-
-    //                if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 1)
-    //                {
-    //                    ToPlane3(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
-    //                {
-    //                    ToPlane2(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 1)
-    //                {
-    //                    ToPlane3(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
-    //                {
-    //                    ToPlane1(other);
-    //                    ///////Temp Dialog Fix///////
-    //                    _dialogueBox.SetActive(true);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
-    //                {
-    //                    ToPlane1(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 2)
-    //                {
-    //                    ToPlane3(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 2)
-    //                {
-    //                    ToPlane3(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 3)
-    //                {
-    //                    ToPlane1(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 3)
-    //                {
-    //                    ToPlane2(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 3)
-    //                {
-    //                    ToPlane1(other);
-    //                }
-
-    //                else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 3)
-    //                {
-    //                    ToPlane2(other);
-    //                }
-    //            }
-    //        }
-    //    }
-
-    //}
 
     private void ToPlane1(Collider2D other)
     {
