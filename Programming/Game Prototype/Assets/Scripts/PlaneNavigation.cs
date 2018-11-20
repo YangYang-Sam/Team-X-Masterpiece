@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlaneNavigation : MonoBehaviour {
 
-    //[SerializeField]
-    //private AkEvent aztecLoop;
-
     //Access playerController class
     [SerializeField]
     private GameObject _playerPrefab;
@@ -44,25 +41,12 @@ public class PlaneNavigation : MonoBehaviour {
     private int Plane2CollisionLayer;
     private int Plane3CollisionLayer;
 
-    [SerializeField]
-    public bool _playerFrozen;
-    [SerializeField]
-    public float freezeTime;
-    //how long should we freeze for.
-
     //variable to store the current plane the player is on
     public int _currentPlane = 1;
 
     // Use this for initialization
     void Start ()
     {
-        //if (aztecLoop != null)
-        //{
-        //    //aztecLoop.HandleEvent(gameObject);
-        //    //AkSoundEngine.SetRTPCValue("Game_Pause", 0f, GameObject.Find("AztecLoop"), 0);
-        //    //AkSoundEngine.SetRTPCValue("Game_Pause", 100f, GameObject.Find("AztecLoop"), 2000);
-        //}
-
         _currentPlane = 1;
 
         _playerController2D = _playerPrefab.GetComponent<PlayerController2D>();
@@ -90,11 +74,11 @@ public class PlaneNavigation : MonoBehaviour {
     {
         float time = 0;
 
-        while (time < freezeTime)
+        while (time < _playerController2D.freezeTime)
         {
             time += Time.deltaTime;
             other.gameObject.transform.parent = null;
-            _playerFrozen = true;
+            _playerController2D._playerFrozen = true;
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
@@ -110,7 +94,7 @@ public class PlaneNavigation : MonoBehaviour {
             plane3Ignore = true;
             _playerController2D.whatIsGround = LayerMask.GetMask("Plane 1");
             _playerController2D._spriteRenderer.sortingLayerName = Plane1SortingLayer;
-            _playerFrozen = false;
+            _playerController2D._playerFrozen = false;
             _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             _currentPlane = 1;
 
@@ -122,11 +106,11 @@ public class PlaneNavigation : MonoBehaviour {
     {
         float time = 0;
 
-        while (time < freezeTime)
+        while (time < _playerController2D.freezeTime)
         {
             time += Time.deltaTime;
             other.gameObject.transform.parent = null;
-            _playerFrozen = true;
+            _playerController2D._playerFrozen = true;
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
@@ -142,7 +126,7 @@ public class PlaneNavigation : MonoBehaviour {
             plane3Ignore = true;
             _playerController2D.whatIsGround = LayerMask.GetMask("Plane 2");
             _playerController2D._spriteRenderer.sortingLayerName = Plane2SortingLayer;
-            _playerFrozen = false;
+            _playerController2D._playerFrozen = false;
             _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             _currentPlane = 2;
 
@@ -154,11 +138,11 @@ public class PlaneNavigation : MonoBehaviour {
     {
         float time = 0;
 
-        while (time < freezeTime)
+        while (time < _playerController2D.freezeTime)
         {
             time += Time.deltaTime;
             other.gameObject.transform.parent = null;
-            _playerFrozen = true;
+            _playerController2D._playerFrozen = true;
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
@@ -174,7 +158,7 @@ public class PlaneNavigation : MonoBehaviour {
             plane3Ignore = false;
             _playerController2D.whatIsGround = LayerMask.GetMask("Plane 3");
             _playerController2D._spriteRenderer.sortingLayerName = Plane3SortingLayer;
-            _playerFrozen = false;
+            _playerController2D._playerFrozen = false;
             _playerController2D._playerRigidbody.gravityScale = _playerController2D._defaultGravity;
             _currentPlane = 3;
             yield return null;
@@ -201,15 +185,6 @@ public class PlaneNavigation : MonoBehaviour {
 
         other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, 0.0f);
     }
-
-    //public void PlatformMovement()
-    //{
-    //    //_plane1Platforms[0].transform.parent = null;
-    //    _plane1Platforms[0].layer = 11;
-    //    _plane1Platforms[0].GetComponent<SpriteRenderer>().material = _planeMaterials[1];
-    //    _plane1Platforms[0].transform.parent = _planesParent.transform;
-    //}
-
 
 }
 

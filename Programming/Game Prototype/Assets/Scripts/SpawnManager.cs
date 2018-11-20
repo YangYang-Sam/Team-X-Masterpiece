@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour {
 
     [SerializeField]
+    private Animator animator;
+    [SerializeField]
     private GameObject _player;
     [SerializeField]
     private GameObject[] _spawnPoint;
@@ -27,35 +29,22 @@ public class SpawnManager : MonoBehaviour {
 
     public void PlayerDamage(int SpawnPoint)
     {
-        _player.gameObject.SetActive(false);
 
-        if (deathSound != null)
+        if (deathSound != null && animator.GetBool("IsDying") == false)
         {
             deathSound.HandleEvent(gameObject);
         }
+
+        animator.SetBool("IsDying", true);
 
         StartCoroutine(SpawnDelay(SpawnPoint));
     }
 
     public IEnumerator SpawnDelay(int SpawnPoint)
     {
-
-        float time = 0;
-
-        while (time < _spawnTime)
-        {
-            time += Time.deltaTime;
-            yield return null;
-        }
-        //spawn player
-        if (time > 0)
-        {
-            time -= Time.deltaTime;
-            SpawnPlayer(SpawnPoint);
-            yield return null;
-        }
-
-
+        yield return new WaitForSeconds(_spawnTime);
+        animator.SetBool("IsDying", false);
+        SpawnPlayer(SpawnPoint);
     }
 
     private void SpawnPlayer(int SpawnPoint)
@@ -85,7 +74,8 @@ public class SpawnManager : MonoBehaviour {
             Debug.Log("SpawnPoint 5");
             _player.gameObject.transform.position = _spawnPoint[4].transform.position;
         }
-        _player.gameObject.SetActive(true);
         Debug.Log("Player spawned");
+        _player.gameObject.SetActive(true);
+        animator.SetBool("IsDying", false);
     }
 }

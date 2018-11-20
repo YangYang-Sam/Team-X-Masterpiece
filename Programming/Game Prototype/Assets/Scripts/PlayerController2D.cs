@@ -33,6 +33,11 @@ public class PlayerController2D : MonoBehaviour
     private float jumpforce;
     [SerializeField]
     private float _veilJumpForce;
+    [SerializeField]
+    public bool _playerFrozen;
+    [SerializeField]
+    public float freezeTime;
+
     private float horizontalMove;
 
     public Rigidbody2D _playerRigidbody;
@@ -84,15 +89,15 @@ public class PlayerController2D : MonoBehaviour
     private void FixedUpdate()
     {
         //Horizontal Movement
-        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+        if (_playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
             _playerRigidbody.velocity = new Vector2(horizontalMove, _playerRigidbody.velocity.y);
         }
-        else if (_planeNavigation._playerFrozen == true)
+        else if (_playerFrozen == true)
         {
-            ResetVeilJump();
-            _playerRigidbody.velocity = new Vector2(0, 0);
+            //ResetVeilJump();
             _playerRigidbody.gravityScale = 0;
+            _playerRigidbody.velocity = new Vector2(0, 0);
         }
         else if (_dialogueManagerScript.dialogFreezePlayer == true)
         {
@@ -113,6 +118,7 @@ public class PlayerController2D : MonoBehaviour
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
             animator.SetBool("IsJumping", false);
+            animator.SetBool("IsVeilJumping", false);
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -122,14 +128,16 @@ public class PlayerController2D : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (_canJump > 0 && _planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+            if (_canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
             {
                 Jump();
                 animator.SetBool("IsJumping", true);
             }
 
-            else if (_canJump == 0 && _canVeilJump > 0)
+            else if (_canJump < 1 && _canVeilJump > 0)
             {
+                animator.SetBool("IsJumping", false);
+                animator.SetBool("IsVeilJumping", true);
                 VeilJump();
             }
             

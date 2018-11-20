@@ -50,11 +50,9 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        if (_planeNavigation._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
+        if (Input.GetButtonDown("Interact") && _playerController2D._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
         {
             //switch to correct layer based on portal name
-            if (Input.GetButtonDown("Interact"))
-            {
                 Debug.Log("Interact pressed");
                 if (other.gameObject.tag == "Platform Portal")
                 {
@@ -81,8 +79,6 @@ public class PlayerInteractions : MonoBehaviour {
                     else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
                     {
                         ToPlane1(other);
-                        ///////Temp Dialog Fix///////
-                        _dialogueBox.SetActive(true);
                     }
 
                     else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
@@ -119,10 +115,21 @@ public class PlayerInteractions : MonoBehaviour {
                     {
                         ToPlane2(other);
                     }
-                }
             }
         }
 
+        if (Input.GetButtonDown("Interact") && other.name == "Lever")
+        {
+            //Disable collider so lever can only be pulled once
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
+            _planeMovement.leverPulled = true;
+            _playerController2D._playerFrozen = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+
+    {
         if (other.name == "Portal")
         {
             _gameManagerScript.Victory();
@@ -138,13 +145,6 @@ public class PlayerInteractions : MonoBehaviour {
             _spawnManagerScript.PlayerDamage(2);
         }
 
-        if (Input.GetButtonDown("Interact") && other.name == "Lever")
-        {
-            //Disable collider so lever can only be pulled once
-            other.gameObject.GetComponent<Collider2D>().enabled = false;
-            _planeMovement.leverPulled = true;
-            _planeNavigation._playerFrozen = true;
-        }
     }
 
     private void ToPlane1(Collider2D other)

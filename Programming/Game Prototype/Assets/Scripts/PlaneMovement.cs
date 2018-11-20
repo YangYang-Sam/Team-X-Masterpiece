@@ -11,6 +11,10 @@ public class PlaneMovement : MonoBehaviour
     private PlaneMovement _planeMovement;
 
     [SerializeField]
+    private GameObject _player;
+    private PlayerController2D _playerController2D;
+
+    [SerializeField]
     private GameObject _planesParent;
     [SerializeField]
     public GameObject[] _plane;
@@ -62,6 +66,8 @@ public class PlaneMovement : MonoBehaviour
     void Start()
     {
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
+
+        _playerController2D = _player.GetComponent<PlayerController2D>();
 
         _plane[0].transform.position = _plane1Pos;
         _plane[1].transform.position = _plane2Pos;
@@ -144,7 +150,7 @@ public class PlaneMovement : MonoBehaviour
         //initialRotation = initialRotation * targetRotation;
         _plane[2].transform.rotation = targetRotation.rotation;
         leverPulled = false;
-        _planeNavigation._playerFrozen = false;
+        _playerController2D._playerFrozen = false;
     }
 
     private IEnumerator MovePlane(Vector3 initialPosition, Vector3 targetPosition, float _planeMoveDuration)
