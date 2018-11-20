@@ -38,6 +38,8 @@ public class PlayerInteractions : MonoBehaviour {
         _gameManagerScript = _gameManager.GetComponent<GameManager>();
         _spawnManagerScript = _spawnManager.GetComponent<SpawnManager>();
         _dialogueManagerScript = _dialogueManager.GetComponent<DialogueManager>();
+
+        AkSoundEngine.SetState("Music_State", "Aztec");
     }
 	
 	// Update is called once per frame
