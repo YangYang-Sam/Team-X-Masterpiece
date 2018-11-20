@@ -274,6 +274,7 @@
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{F8615512-B96C-43F8-B704-325457CC41D5}" ShortID="10997278">
 									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlayMode" Type="int16" Value="2"/>
 									</PropertyList>
 									<ChildrenList>
@@ -577,6 +578,7 @@
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{DB0ADD3E-59B1-454F-9381-F079F68CE0CB}" ShortID="418874095">
 									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlayMode" Type="int16" Value="2"/>
 									</PropertyList>
 									<ChildrenList>

@@ -119,7 +119,6 @@
 								<Action Name="" ID="{EF6926D5-7FBC-4C0D-AC93-8F59F87E88E1}" ShortID="494666613">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1.75"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
@@ -132,7 +131,7 @@
 								<Action Name="" ID="{2F2A237B-56EE-4A4A-A293-235F14423465}" ShortID="266292929">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="Delay" Type="Real64" Value="2.25"/>
+										<Property Name="Delay" Type="Real64" Value="1.75"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>

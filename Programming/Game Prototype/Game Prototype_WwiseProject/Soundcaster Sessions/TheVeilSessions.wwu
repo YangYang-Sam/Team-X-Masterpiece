@@ -33,7 +33,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Eastern" ID="{514B379C-8AA1-449C-9875-9EA0F5618FEC}"/>
+						<CurrentStateRef Name="Aztec" ID="{31E297DD-FF8D-41CB-828B-24EE7D4F219C}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
