@@ -43,7 +43,6 @@ public class SpawnManager : MonoBehaviour {
     public IEnumerator SpawnDelay(int SpawnPoint)
     {
         yield return new WaitForSeconds(_spawnTime);
-        animator.SetBool("IsDying", false);
         SpawnPlayer(SpawnPoint);
     }
 
@@ -75,7 +74,7 @@ public class SpawnManager : MonoBehaviour {
             _player.gameObject.transform.position = _spawnPoint[4].transform.position;
         }
         Debug.Log("Player spawned");
-        _player.gameObject.SetActive(true);
         animator.SetBool("IsDying", false);
+        animator.SetBool("IsSpawning", true);
     }
 }
