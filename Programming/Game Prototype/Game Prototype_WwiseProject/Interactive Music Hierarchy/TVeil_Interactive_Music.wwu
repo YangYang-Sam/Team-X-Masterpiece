@@ -1260,12 +1260,6 @@
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
-					<StingerList>
-						<MusicStinger Name="" ID="{8A16B352-A699-44A0-AD9B-46D469E362D9}">
-							<TriggerRef Name="Platform" ID="{78D5FBE7-1E1C-4B45-B5DB-9E2BF58016AB}" WorkUnitID="{9837A53E-5824-49C0-BCF5-86E24BC1CDC4}"/>
-							<SegmentRef Name="Platform_Stingers" ID="{8CCD2698-E2A4-4F11-AA55-EE94172E3BD6}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
-						</MusicStinger>
-					</StingerList>
 					<ArgumentList>
 						<ArgumentRef Name="Music_State" ID="{C61996C6-31E7-4ADD-A067-077CAA29ED77}"/>
 					</ArgumentList>

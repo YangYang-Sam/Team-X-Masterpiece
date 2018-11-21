@@ -12,9 +12,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2779281842	Music_SlowDown			\Default Work Unit\Music_SlowDown	
 	4055567060	Menu_Music			\Default Work Unit\Menu_Music	
 
-Trigger	ID	Name			Wwise Object Path	Notes
-	4035573696	Platform			\Default Work Unit\Platform	
-
 Effect plug-ins	ID	Name	Type				Notes
 	484890516	Church_Small_Wood	Wwise RoomVerb			
 
