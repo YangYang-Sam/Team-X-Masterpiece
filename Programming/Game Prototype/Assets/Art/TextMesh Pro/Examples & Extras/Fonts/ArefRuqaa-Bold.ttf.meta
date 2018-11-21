@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1a01f86fc3b705748b170343214bbb5c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aref Ruqaa
+  fontNames:
+  - Aref Ruqaa
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 048e11546a6ca3545adcacc529e0c7ff, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
