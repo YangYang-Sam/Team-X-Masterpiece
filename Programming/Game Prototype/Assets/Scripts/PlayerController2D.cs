@@ -171,12 +171,12 @@ public class PlayerController2D : MonoBehaviour
     private void VeilJump()
     {
         VeilJumpSound();
-        _playerRigidbody.gravityScale = 25;
+        //_playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
-        _playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
-        _speed = 0;
-        transform.localScale = _veilJumpScale;
-
+        //_playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
+        //_speed = 0;
+        //transform.localScale = _veilJumpScale;
+        _playerRigidbody.velocity = Vector2.up * jumpforce;
         _canVeilJump--;
     }
 

@@ -10,6 +10,9 @@ public class ChargingEnemyAI : MonoBehaviour {
     private float chargeSpeed;
 
     [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
     private float groundRayLength;
     [SerializeField]
     private float wallRayLength;
@@ -73,6 +76,7 @@ public class ChargingEnemyAI : MonoBehaviour {
                 if (Vector2.Distance(transform.position, wallInfo.collider.transform.position) >= 0.5f)
                 {
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), chargeSpeed * Time.deltaTime);
+                    animator.SetBool("IsCharging", true);
                 }
                 //Debug.Log("Player seen/charge");
             }
@@ -80,12 +84,18 @@ public class ChargingEnemyAI : MonoBehaviour {
             {
                 if (transform.position.x != originalPosition.x)
                 {
-                    //Debug.Log("retreat");
                     transform.position = Vector2.MoveTowards(transform.position, originalPosition, 3.0f * Time.deltaTime);
-                    //Debug.Log(originalPosition);
+                    animator.SetBool("IsCharging", true);
+
+                    //stop charge animation if enemy has almost reached original position.
+                    if (transform.position.x < originalPosition.x + 0.5f)
+                    {
+                        animator.SetBool("IsCharging", false);
+                    }
                 }
                 else
                 {
+                    animator.SetBool("IsCharging", false);
                     return;
                 }
             }
@@ -105,7 +115,7 @@ public class ChargingEnemyAI : MonoBehaviour {
     {
         if (other.gameObject.name == "YellowGooParent")
         {
-            gameObject.SetActive(false);
+            animator.SetBool("IsDead", true);
         }
     }
 }
