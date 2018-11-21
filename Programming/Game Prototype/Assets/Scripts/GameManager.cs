@@ -90,7 +90,6 @@ public class GameManager : MonoBehaviour {
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        AkSoundEngine.SetState("", "");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
