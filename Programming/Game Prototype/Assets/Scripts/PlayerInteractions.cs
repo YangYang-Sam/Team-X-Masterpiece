@@ -58,17 +58,8 @@ public class PlayerInteractions : MonoBehaviour {
                 Debug.Log("Interact pressed");
                 if (other.gameObject.tag == "Platform Portal")
                 {
-                    if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 1)
-                    {
-                        ToPlane2(other);
-                    }
 
-                    if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 1)
-                    {
-                        ToPlane3(other);
-                    }
-
-                    else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
+                    if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
                     {
                         ToPlane2(other);
                     }
@@ -89,11 +80,6 @@ public class PlayerInteractions : MonoBehaviour {
                     }
 
                     else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 2)
-                    {
-                        ToPlane3(other);
-                    }
-
-                    else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 2)
                     {
                         ToPlane3(other);
                     }
@@ -123,7 +109,7 @@ public class PlayerInteractions : MonoBehaviour {
         if (Input.GetButtonDown("Interact") && other.name == "Lever")
         {
             //Disable collider so lever can only be pulled once
-            other.gameObject.GetComponent<Collider2D>().enabled = false;
+            //other.gameObject.GetComponent<Collider2D>().enabled = false;
             _planeMovement.leverPulled = true;
             _playerController2D._playerFrozen = true;
         }

@@ -147,8 +147,12 @@ public class PlaneMovement : MonoBehaviour
                 yield return null;
             }
         }
-        //initialRotation = initialRotation * targetRotation;
+        //consolidate position
         _plane[2].transform.rotation = targetRotation.rotation;
+        //reset new target rotation based on current rotation
+        targetRotation.rotation = initialRotation.rotation;
+        initialRotation.rotation = _plane[2].transform.rotation;
+
         leverPulled = false;
         _playerController2D._playerFrozen = false;
     }

@@ -91,6 +91,7 @@ public class PlayerController2D : MonoBehaviour
         //Horizontal Movement
         if (_playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
+            _playerRigidbody.gravityScale = 5;
             _playerRigidbody.velocity = new Vector2(horizontalMove, _playerRigidbody.velocity.y);
         }
         else if (_playerFrozen == true)
