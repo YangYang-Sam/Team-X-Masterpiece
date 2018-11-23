@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour {
     private Animator animator;
     [SerializeField]
     private GameObject _player;
+    private PlayerController2D _playerController2D;
     [SerializeField]
     private GameObject[] _spawnPoint;
     [SerializeField]
@@ -18,8 +19,9 @@ public class SpawnManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        _playerController2D = _player.GetComponent<PlayerController2D>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -36,6 +38,8 @@ public class SpawnManager : MonoBehaviour {
         }
 
         animator.SetBool("IsDying", true);
+
+        _playerController2D._playerFrozen = true;
 
         StartCoroutine(SpawnDelay(SpawnPoint));
     }
@@ -76,5 +80,6 @@ public class SpawnManager : MonoBehaviour {
         Debug.Log("Player spawned");
         animator.SetBool("IsDying", false);
         animator.SetBool("IsSpawning", true);
+        _playerController2D._playerFrozen = false;
     }
 }
