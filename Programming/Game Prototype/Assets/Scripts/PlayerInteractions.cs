@@ -55,54 +55,114 @@ public class PlayerInteractions : MonoBehaviour {
         if (Input.GetButtonDown("Interact") && _playerController2D._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
         {
             //switch to correct layer based on portal name
-                Debug.Log("Interact pressed");
-                if (other.gameObject.tag == "Platform Portal")
+            Debug.Log("Interact pressed");
+            if (other.gameObject.tag == "Platform Portal")
+            {
+
+                if (other.gameObject.name == "Platform 1->2A" && _planeNavigation._currentPlane == 1)
                 {
+                    ToPlane2(other);
+                }
 
-                    if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 1)
-                    {
-                        ToPlane2(other);
-                    }
+                else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane2(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 1)
-                    {
-                        ToPlane3(other);
-                    }
+                else if (other.gameObject.name == "Platform 1->3A" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane3(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 1 Portal 1" && _planeNavigation._currentPlane == 2)
-                    {
-                        ToPlane1(other);
-                    }
+                else if (other.gameObject.name == "Platform 1->3B" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane3(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 2 Portal 1" && _planeNavigation._currentPlane == 2)
-                    {
-                        ToPlane1(other);
-                    }
+                else if (other.gameObject.name == "Platform 1->3C" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane3(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 2)
-                    {
-                        ToPlane3(other);
-                    }
+                else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane2(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 1 Portal 2" && _planeNavigation._currentPlane == 3)
-                    {
-                        ToPlane1(other);
-                    }
+                else if (other.gameObject.name == "Platform 3->1B" && _planeNavigation._currentPlane == 1)
+                {
+                    ToPlane3(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 2 Portal 2" && _planeNavigation._currentPlane == 3)
-                    {
-                        ToPlane2(other);
-                    }
+                else if (other.gameObject.name == "Platform 2->1A" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 3 Portal 1" && _planeNavigation._currentPlane == 3)
-                    {
-                        ToPlane1(other);
-                    }
+                else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
 
-                    else if (other.gameObject.name == "Platform 3 Portal 2" && _planeNavigation._currentPlane == 3)
-                    {
-                        ToPlane2(other);
-                    }
+                else if (other.gameObject.name == "Platform 2->3" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane3(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1->2A" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->2B" && _planeNavigation._currentPlane == 2)
+                {
+                    ToPlane3(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->1A" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->1B" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->1C" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->2A" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane2(other);
+                }
+
+                else if (other.gameObject.name == "Platform 3->2B" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane2(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1->3A" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1->3B" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
+
+                else if (other.gameObject.name == "Platform 1->3C" && _planeNavigation._currentPlane == 3)
+                {
+                    ToPlane1(other);
+                }
             }
         }
 
