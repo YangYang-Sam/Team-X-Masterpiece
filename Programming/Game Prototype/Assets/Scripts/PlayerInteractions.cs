@@ -185,7 +185,7 @@ public class PlayerInteractions : MonoBehaviour {
 
         if (other.name == "GreenGooParent")
         {
-            _spawnManagerScript.PlayerDamage(5);
+            _spawnManagerScript.PlayerDamage(4);
         }
 
         if (other.name == "YellowGooParent")

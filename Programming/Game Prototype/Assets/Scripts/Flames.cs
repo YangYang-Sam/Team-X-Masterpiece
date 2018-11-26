@@ -33,15 +33,8 @@ public class Flames : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            //spawn player at correct point depending on platforms visited
-            if (GameObject.Find("Platform 3 Portal 1").layer == 12)
-            {
-                _spawnManager.PlayerDamage(3);
-            }
-            else if (GameObject.Find("Platform 3 Portal 1").layer == 10)
-            {
-                _spawnManager.PlayerDamage(4);
-            }
+            _spawnManager.PlayerDamage(3);
+
         }
         //block flames with platform and only detect non trigger collider on platform
         else if(other.isTrigger == false && other.CompareTag("Platform Portal"))
