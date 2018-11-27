@@ -99,16 +99,15 @@ public class PlayerController2D : MonoBehaviour
             animator.SetBool("IsVeilJumping", false);
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
-
-            if (Input.GetButtonDown("Jump") && _canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
-            {
-                Jump();
-                animator.SetBool("IsJumping", true);
-                _canVeilJump = 1;
-            }
         }
 
-        else if (Input.GetButtonDown("Jump") && isGrounded == false && _canVeilJump > 0)
+        if (Input.GetButtonDown("Jump") && _canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+        {
+            Jump();
+            animator.SetBool("IsJumping", true);
+        }
+
+        else if (Input.GetButtonDown("Jump") && isGrounded == false && _canVeilJump > 0 && _canJump < 1)
         {
             animator.SetBool("IsJumping", false);
             animator.SetBool("IsVeilJumping", true);

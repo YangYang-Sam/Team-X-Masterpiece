@@ -114,11 +114,6 @@ public class PlayerInteractions : MonoBehaviour {
                     ToPlane3(other);
                 }
 
-                else if (other.gameObject.name == "Platform 1->2A" && _planeNavigation._currentPlane == 2)
-                {
-                    ToPlane1(other);
-                }
-
                 else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 2)
                 {
                     ToPlane1(other);
@@ -160,11 +155,6 @@ public class PlayerInteractions : MonoBehaviour {
                 }
 
                 else if (other.gameObject.name == "Platform 1->3B" && _planeNavigation._currentPlane == 3)
-                {
-                    ToPlane1(other);
-                }
-
-                else if (other.gameObject.name == "Platform 1->3C" && _planeNavigation._currentPlane == 3)
                 {
                     ToPlane1(other);
                 }
