@@ -66901,17 +66901,15 @@ MonoBehaviour:
     sentences:
     - 'Raven: WOAH! WHAT JUST HAPPENED?!'
     - 'Wizard: Foolish child, you have meddled with powers far beyond your control.'
-    - 'Raven: You mean this cool cape that I picked up from that abandoned temple?'
+    - 'Raven: You mean this cool cape?'
     - 'Wizard: That is no mere cape. That is the Infinite Veil, a powerful artifact
       that allows its user to traverse the barriers between dimensions.'
-    - 'Raven: Can I use this Veil to go back home?'
+    - 'Raven: Ok... Can I use this Veil to go back home?'
     - 'Wizard: Of course. The barrier between this world and yours is right above
       us.'
     - 'Raven: That''s all well and good, but how am I supposed to get from HERE to
       THERE?'
-    - 'Wizard: Do you see those glowing, ephemeral markers?'
-    - 'Raven: Yes?'
-    - 'Wizard: Something goes there.'
+    - 'Wizard: Do you see those glowing, ephemeral markers? Something goes there.'
 --- !u!4 &1032577156
 Transform:
   m_ObjectHideFlags: 0
@@ -102941,17 +102939,9 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - 'Raven: *wheezing* So many... platforms... So much... jumping... So tired...'
     - 'Wizard: Be wary child. There exists a great and terrible threat down this path.'
     - 'Raven: Oh. Perfect. Just what this interdimensional prison needed - interdimensional
       monsters.'
-    - 'Wizard: Fear not, for all will be well if you heed my advice carefully. First,
-      you must-'
-    - 'Wizard: Oh, actually I just remembered I left the stove on. I''ll be right
-      back!'
-    - 'Raven: ...'
-    - 'Raven: ... ...'
-    - 'Raven: ... ... hello?'
 --- !u!4 &1623763547 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c,
