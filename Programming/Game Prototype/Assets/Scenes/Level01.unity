@@ -1553,7 +1553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &71637372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15069,8 +15069,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.056168593, y: 0.29626736}
-  m_Size: {x: 0.77283275, y: 1.0761582}
+  m_Offset: {x: -0.07773697, y: 0.29989836}
+  m_Size: {x: 1.5348737, y: 1.0834198}
   m_Direction: 0
 --- !u!50 &524746863
 Rigidbody2D:
@@ -35155,6 +35155,14 @@ Prefab:
         type: 2}
       propertyPath: _veilJumpForce
       value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824647236453528, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.0708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824647236453528, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3281
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}

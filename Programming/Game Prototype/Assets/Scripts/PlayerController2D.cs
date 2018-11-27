@@ -93,6 +93,28 @@ public class PlayerController2D : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+        if (isGrounded == true)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsVeilJumping", false);
+            _canJump = _canJumpValue;
+            _canVeilJump = _canVeilJumpValue;
+
+            if (Input.GetButtonDown("Jump") && _canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
+            {
+                Jump();
+                animator.SetBool("IsJumping", true);
+                _canVeilJump = 1;
+            }
+        }
+
+        else if (Input.GetButtonDown("Jump") && isGrounded == false && _canVeilJump > 0)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsVeilJumping", true);
+            VeilJump();
+        }
+
         //Horizontal Movement
         if (_playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
@@ -115,36 +137,6 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
-
-        if (isGrounded == true)
-        {
-            animator.SetBool("IsJumping", false);
-            animator.SetBool("IsVeilJumping", false);
-            _canJump = _canJumpValue;
-            _canVeilJump = _canVeilJumpValue;
-        }
-
-        if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
-        {
-            ResetVeilJump();
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (_canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
-            {
-                Jump();
-                animator.SetBool("IsJumping", true);
-            }
-
-            else if (_canJump < 1 && _canVeilJump > 0)
-            {
-                animator.SetBool("IsJumping", false);
-                animator.SetBool("IsVeilJumping", true);
-                VeilJump();
-            }
-            
-        }
 
     }
 
