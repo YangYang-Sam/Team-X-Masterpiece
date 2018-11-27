@@ -88,6 +88,11 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        horizontalMove = Input.GetAxisRaw("Horizontal") * _speed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         //Horizontal Movement
         if (_playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
         {
@@ -104,22 +109,19 @@ public class PlayerController2D : MonoBehaviour
         {
             _playerRigidbody.velocity = new Vector2(0, _playerRigidbody.velocity.y);
         }
+
         Flip();
     }
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        horizontalMove = Input.GetAxisRaw("Horizontal") * _speed;
-
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (isGrounded == true)
         {
-            _canJump = _canJumpValue;
-            _canVeilJump = _canVeilJumpValue;
             animator.SetBool("IsJumping", false);
             animator.SetBool("IsVeilJumping", false);
+            _canJump = _canJumpValue;
+            _canVeilJump = _canVeilJumpValue;
         }
 
         if (isGrounded == false && _playerRigidbody.velocity.y <= 0)
@@ -203,5 +205,10 @@ public class PlayerController2D : MonoBehaviour
         {
             veilJumpSound.HandleEvent(gameObject);
         }
+    }
+
+    private void PlayerSpawned()
+    {
+        animator.SetBool("IsSpawning", false);
     }
 }

@@ -38,6 +38,7 @@ public class SpawnManager : MonoBehaviour {
         }
 
         animator.SetBool("IsDying", true);
+        animator.SetBool("IsJumping", false);
 
         _playerController2D._playerFrozen = true;
 
@@ -48,6 +49,9 @@ public class SpawnManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(_spawnTime);
         SpawnPlayer(SpawnPoint);
+        animator.SetBool("IsDying", false);
+        animator.SetBool("IsSpawning", true);
+
     }
 
     private void SpawnPlayer(int SpawnPoint)
@@ -74,8 +78,6 @@ public class SpawnManager : MonoBehaviour {
         }
 
         Debug.Log("Player spawned");
-        animator.SetBool("IsDying", false);
-        animator.SetBool("IsSpawning", true);
         _playerController2D._playerFrozen = false;
     }
 }
