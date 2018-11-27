@@ -7,7 +7,9 @@ public class PlayerInteractions : MonoBehaviour {
 
     ////////TEMP DIALOGUE FIX////////////
     [SerializeField]
-    private GameObject _dialogueBox;
+    private GameObject _dialogueBox1Control;
+    [SerializeField]
+    private GameObject _dialogueBox2Control;
 
     [SerializeField]
     private GameObject _planeController;
@@ -81,7 +83,9 @@ public class PlayerInteractions : MonoBehaviour {
 
                 else if (other.gameObject.name == "Platform 1->3C" && _planeNavigation._currentPlane == 1)
                 {
+                    _dialogueBox2Control.SetActive(true);
                     ToPlane3(other);
+
                 }
 
                 else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 1)
@@ -96,6 +100,7 @@ public class PlayerInteractions : MonoBehaviour {
 
                 else if (other.gameObject.name == "Platform 2->1A" && _planeNavigation._currentPlane == 2)
                 {
+                    _dialogueBox1Control.SetActive(true);
                     ToPlane1(other);
                 }
 

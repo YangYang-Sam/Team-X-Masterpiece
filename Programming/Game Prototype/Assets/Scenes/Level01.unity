@@ -6009,7 +6009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &408125882
 Transform:
   m_ObjectHideFlags: 0
@@ -14815,7 +14815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &514303364
 Transform:
   m_ObjectHideFlags: 0
@@ -35164,6 +35164,16 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.3281
       objectReference: {fileID: 0}
+    - target: {fileID: 114412696975508566, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: _dialogueBox1Control
+      value: 
+      objectReference: {fileID: 408125881}
+    - target: {fileID: 114412696975508566, guid: 1fda81f8dbf2a4141b569f57e3707645,
+        type: 2}
+      propertyPath: _dialogueBox2Control
+      value: 
+      objectReference: {fileID: 514303363}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fda81f8dbf2a4141b569f57e3707645, type: 2}
   m_IsPrefabParent: 0
@@ -36153,7 +36163,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal 2 Outline
+      value: Platform 3->1A Outline
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_TagString
@@ -51695,7 +51705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1929890350338132, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_Name
-      value: Platform 1 Portal 1 Outline
+      value: Platform 2->1A Outline
       objectReference: {fileID: 0}
     - target: {fileID: 4420175175611676, guid: 7fed87175fc9e1847bd32f2e8fb3e68c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
