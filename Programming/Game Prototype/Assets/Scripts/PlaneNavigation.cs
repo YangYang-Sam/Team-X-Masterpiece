@@ -172,13 +172,17 @@ public class PlaneNavigation : MonoBehaviour {
 
         other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, 0);
 
-        other.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+        if (other.transform.childCount == 0)
+        {
+            other.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+        }
 
-        if (other.transform.childCount > 0)
+        if (other.transform.childCount == 1)
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
         }
-        if (other.transform.childCount > 1)
+
+        if (other.transform.childCount == 2)
         {
             other.transform.GetChild(1).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
         }

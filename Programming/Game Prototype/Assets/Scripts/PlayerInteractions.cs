@@ -204,21 +204,23 @@ public class PlayerInteractions : MonoBehaviour {
         AkSoundEngine.SetState("Music_State", "Aztec");
 
         other.gameObject.layer = 10;
-        other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
-        other.gameObject.GetComponent<SpriteRenderer>().color = new Color (255,255,0,255);
+
+        if (other.transform.childCount == 0)
+        {
+            other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
+        }
 
         if (other.transform.childCount > 0)
         {
             other.transform.GetChild(0).GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
-            other.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
 
         }
 
         if (other.transform.childCount > 1)
         {
             other.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[0];
-            other.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
         }
+
         _planeMovement.portal1Entered = true;
     }
 
@@ -237,7 +239,11 @@ public class PlayerInteractions : MonoBehaviour {
         AkSoundEngine.SetState("Music_State", "Egyptian");
 
         other.gameObject.layer = 11;
-        other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[1];
+
+        if (other.transform.childCount == 0)
+        {
+            other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[1];
+        }
 
         if (other.transform.childCount > 0)
         {
@@ -267,7 +273,11 @@ public class PlayerInteractions : MonoBehaviour {
         AkSoundEngine.SetState("Music_State", "Eastern");
 
         other.gameObject.layer = 12;
-        other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[2];
+
+        if (other.transform.childCount == 0)
+        {
+            other.gameObject.GetComponent<SpriteRenderer>().material = _planeMovement._planeMaterials[2];
+        }
 
         if (other.transform.childCount > 0)
         {
