@@ -323,6 +323,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RotatePlane" ID="{0DA21B5C-F24C-4CC5-8D7E-880FCF7AE78B}" ShortID="820484119">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.27646965865992"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RotatePlane.wav</AudioFile>
 										</AudioFileSource>
@@ -696,6 +700,11 @@
 							<ChildrenList>
 								<Sound Name="Veil_Jump" ID="{76C1B09D-CE36-497F-8937-4EDF44DF746F}" ShortID="211150610">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -711,7 +720,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3.5</Value>
+												<Value>-20</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
