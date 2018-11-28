@@ -56,19 +56,19 @@ public class DialogueManager : MonoBehaviour {
         //stop chars animating if new dialog is triggered
         //StopAllCoroutines();
 
-        //StartCoroutine(TypeSentence(sentence));
 
-        dialogueText.text = sentence;
+        StartCoroutine(TypeSentence(sentence));
+
         Debug.Log(sentence);
     }
 
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = null;
-        foreach(char letter in sentence.ToCharArray())
+        //dialogueText.text = null;
+        for(int i = 0; i < sentence.Length+1; i++)
         {
-            dialogueText.text += letter;
-            yield return null;
+            dialogueText.text = sentence.Substring(0,i);
+            yield return new WaitForSeconds(.03f);
         }
     }
 
