@@ -31,6 +31,9 @@ public class PlayerInteractions : MonoBehaviour {
     [SerializeField]
     private AkEvent platformSound;
 
+    [SerializeField]
+    private GameObject[] outlines;
+
     // Use this for initialization
     void Start ()
     {
@@ -54,7 +57,7 @@ public class PlayerInteractions : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
 
     {
-        if (Input.GetButtonDown("Interact") && _playerController2D._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
+        if (_playerController2D._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
         {
             //switch to correct layer based on portal name
             Debug.Log("Interact pressed");
@@ -63,100 +66,169 @@ public class PlayerInteractions : MonoBehaviour {
 
                 if (other.gameObject.name == "Platform 1->2A" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane2(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane2(other);
+                    }
+                    //Flash outline on correct plane
+                    outlines[0].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane2(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane2(other);
+                    }
+
+                    outlines[1].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 1->3A" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
+
+                    outlines[2].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 1->3B" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
+
+                    outlines[3].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 1->3C" && _planeNavigation._currentPlane == 1)
                 {
                     _dialogueBox2Control.SetActive(true);
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
+
+                    outlines[4].SetActive(true);
 
                 }
 
                 else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane2(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane2(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->1B" && _planeNavigation._currentPlane == 1)
                 {
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 2->1A" && _planeNavigation._currentPlane == 2)
                 {
                     _dialogueBox1Control.SetActive(true);
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 2)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 2->3" && _planeNavigation._currentPlane == 2)
                 {
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
+
+                    outlines[5].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 2)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->2B" && _planeNavigation._currentPlane == 2)
                 {
-                    ToPlane3(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane3(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->1A" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->1B" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->1C" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->2A" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane2(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane2(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 3->2B" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane2(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane2(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 1->3A" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
 
                 else if (other.gameObject.name == "Platform 1->3B" && _planeNavigation._currentPlane == 3)
                 {
-                    ToPlane1(other);
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        ToPlane1(other);
+                    }
                 }
             }
         }
@@ -170,6 +242,13 @@ public class PlayerInteractions : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        foreach(GameObject gameobject in outlines)
+        {
+            gameobject.SetActive(false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
 
     {
