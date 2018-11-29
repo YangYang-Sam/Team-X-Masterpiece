@@ -1390,7 +1390,7 @@ GameObject:
   - component: {fileID: 979897449}
   - component: {fileID: 979897448}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,7 +1446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THE VEIL
+  m_Text: T H E  V E IL
 --- !u!222 &979897449
 CanvasRenderer:
   m_ObjectHideFlags: 0

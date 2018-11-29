@@ -72,6 +72,7 @@ public class PlayerInteractions : MonoBehaviour {
                     }
                     //Flash outline on correct plane
                     outlines[0].SetActive(true);
+
                 }
 
                 else if (other.gameObject.name == "Platform 1->2B" && _planeNavigation._currentPlane == 1)
@@ -122,6 +123,8 @@ public class PlayerInteractions : MonoBehaviour {
                     {
                         ToPlane2(other);
                     }
+
+                    outlines[6].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 3->1B" && _planeNavigation._currentPlane == 1)
@@ -130,6 +133,8 @@ public class PlayerInteractions : MonoBehaviour {
                     {
                         ToPlane3(other);
                     }
+
+                    outlines[8].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 2->1A" && _planeNavigation._currentPlane == 2)
@@ -173,6 +178,8 @@ public class PlayerInteractions : MonoBehaviour {
                     {
                         ToPlane3(other);
                     }
+
+                    outlines[7].SetActive(true);
                 }
 
                 else if (other.gameObject.name == "Platform 3->1A" && _planeNavigation._currentPlane == 3)

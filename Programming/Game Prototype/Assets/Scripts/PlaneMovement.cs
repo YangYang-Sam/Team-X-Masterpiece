@@ -137,7 +137,6 @@ public class PlaneMovement : MonoBehaviour
         {
             float startTime = Time.time;
             float endTime = startTime + _rotationDuration;
-            //_plane[2].transform.rotation = initialRotation;
             yield return null;
             while (Time.time < endTime)
             {
