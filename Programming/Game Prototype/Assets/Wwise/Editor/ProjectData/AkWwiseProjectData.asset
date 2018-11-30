@@ -329,7 +329,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586580087064949443
+    m_lastTime: -8586580064172101941
     List:
     - name: Ambience_State
       guid: be01362a535a894ca4e89a5574ea627e
@@ -353,11 +353,11 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: AmbiEastern
           ObjectType: 8
-      - name: AmbieEgypt
+      - name: AmbiEgypt
         guid: 5a476294e9c4a84286c5b1b221fb965a
-        id: 2878416482
+        id: 1648913497
         PathAndIcons:
-        - ElementName: AmbieEgypt
+        - ElementName: AmbiEgypt
           ObjectType: 8
       - name: None
         guid: 53984083e3be794db5a5aaeee690f232
@@ -497,5 +497,6 @@ MonoBehaviour:
   - /Game Prototype_WwiseProject
   - /Game Prototype_WwiseProject/Events
   - /Game Prototype_WwiseProject/Events/TVeil_Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/MusicLoops
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
