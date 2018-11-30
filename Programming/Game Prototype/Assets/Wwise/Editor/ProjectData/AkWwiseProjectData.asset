@@ -15,24 +15,24 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b1c44feb3f6aeb4385630aab6e1230c5
-    m_lastTime: -8586618968818564091
+    m_lastTime: -8586580087064011939
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586618968818704091
+    m_lastTime: -8586580087065887011
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e79f7aeb36160343a1b0a8fd6f171ca1
-    m_lastTime: -8586618968818634098
+    m_lastTime: -8586580087065418259
     List: []
   - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586595031134642569
+    m_lastTime: -8586580177752045313
     List:
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
@@ -47,13 +47,27 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 87e558d008878a49bcde6707a78040be
-    m_lastTime: -8586618968818944076
+    m_lastTime: -8586580087066824463
     List: []
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586588782356086280
+    m_lastTime: -8586580177825170922
     List:
+    - name: All_Plane_Ambience
+      guid: 1dcacf46894dbb4083264368ff43c17a
+      id: 124093304
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: MusicLoops
+        ObjectType: 4
+      - ElementName: All_Plane_Ambience
+        ObjectType: 3
+      Path: TVeil_Events\MusicLoops\All_Plane_Ambience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: All_Plane_Music
       guid: cb399f1b4eb0184180b825113c87a7bf
       id: 1985200777
@@ -138,6 +152,48 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Landing
+      guid: 640b90fbd1065f449e60b9f269beda47
+      id: 2548270042
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Raven
+        ObjectType: 4
+      - ElementName: Landing
+        ObjectType: 3
+      Path: TVeil_Events\Raven\Landing
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Ogre_Charge
+      guid: a2a47c4955b3ce46b364946510cde91e
+      id: 2456307347
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Ogre_Charge
+        ObjectType: 3
+      Path: TVeil_Events\Enemies\Ogre_Charge
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Ogre_Dead
+      guid: ae61f14259cd9c4f82230512e756faae
+      id: 626833781
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Ogre_Dead
+        ObjectType: 3
+      Path: TVeil_Events\Enemies\Ogre_Dead
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Platform
       guid: e9215c02a1ab124daad690380c0bf3b6
       id: 4035573696
@@ -163,6 +219,20 @@ MonoBehaviour:
       - ElementName: Portals
         ObjectType: 3
       Path: TVeil_Events\Interaction\Portals
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Progress
+      guid: 2db4cef27b262f418376abe03e61f6a9
+      id: 308635872
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: Progress
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\Progress
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -194,6 +264,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Text
+      guid: a33b4772932eb7458e0a75b752cb41fa
+      id: 2972449336
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: Text
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\Text
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: VeilJump
       guid: 0081e3669dc720468a803a85ea0b490a
       id: 1671131289
@@ -212,7 +296,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e21d5e32d636ed4e8408a0a11645dd99
-    m_lastTime: -8586600789740758955
+    m_lastTime: -8586580087066199495
     List:
     - name: Game_Pause
       guid: b75b7681279e3a47b1bf556784c7aeaa
@@ -245,8 +329,42 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586600215147677008
+    m_lastTime: -8586580087064949443
     List:
+    - name: Ambience_State
+      guid: be01362a535a894ca4e89a5574ea627e
+      id: 3875263435
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience_State
+        ObjectType: 9
+      Path: Default Work Unit\Ambience_State
+      values:
+      - name: AmbiAztec
+        guid: 24311c0ebdeca242ae8aaa13543a9ad6
+        id: 3051088207
+        PathAndIcons:
+        - ElementName: AmbiAztec
+          ObjectType: 8
+      - name: AmbiEastern
+        guid: 5e85212bf5868e4486d4230a3ba7cd06
+        id: 1513158036
+        PathAndIcons:
+        - ElementName: AmbiEastern
+          ObjectType: 8
+      - name: AmbieEgypt
+        guid: 5a476294e9c4a84286c5b1b221fb965a
+        id: 2878416482
+        PathAndIcons:
+        - ElementName: AmbieEgypt
+          ObjectType: 8
+      - name: None
+        guid: 53984083e3be794db5a5aaeee690f232
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
     - name: Menu_or_Level
       guid: 1f84a9288167724d8014558ede669efa
       id: 1222409307
@@ -325,12 +443,12 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3156979d799ef042806706a5f809f98f
-    m_lastTime: -8586618968818594102
+    m_lastTime: -8586580087064949443
     List: []
   - PhysicalPath: Switches\TVeil_Game_Syncs.wwu
     ParentPhysicalPath: 
     guid: dabb0a1ae0ce944882f69cc55b272a40
-    m_lastTime: -8586602637237957378
+    m_lastTime: -8586580177751420200
     List:
     - name: Plane_Selection
       guid: 8a980b7295fc75499fd028299f8a8856
@@ -364,7 +482,7 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3ea537982458c049bcf586e24bc1cdc4
-    m_lastTime: -8586600789733127006
+    m_lastTime: -8586580087064168203
     List:
     - name: Platform
       guid: e7fbd5781c1e454bb5db9e2bf58016ab
@@ -377,7 +495,7 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/States
-  - /Game Prototype_WwiseProject/States/Default Work Unit
+  - /Game Prototype_WwiseProject/Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

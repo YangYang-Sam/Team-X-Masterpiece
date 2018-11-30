@@ -34,6 +34,11 @@ public class PlayerInteractions : MonoBehaviour {
     [SerializeField]
     private GameObject[] outlines;
 
+    [SerializeField]
+    private GameObject leverObject;
+    [SerializeField]
+    private Sprite[] leverSprite;
+
     // Use this for initialization
     void Start ()
     {
@@ -44,7 +49,10 @@ public class PlayerInteractions : MonoBehaviour {
         _spawnManagerScript = _spawnManager.GetComponent<SpawnManager>();
         _dialogueManagerScript = _dialogueManager.GetComponent<DialogueManager>();
 
+        leverObject.GetComponent<SpriteRenderer>().sprite = leverSprite[0];
+
         AkSoundEngine.SetState("Music_State", "Aztec");
+        AkSoundEngine.SetState("Level_Ambience", "AmbiAztec");
     }
 	
 	// Update is called once per frame
@@ -240,12 +248,21 @@ public class PlayerInteractions : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("Interact") && other.name == "Lever")
+        if (Input.GetButtonDown("Interact") && other.name == "Lever" && _playerController2D._playerFrozen == false)
         {
             //Disable collider so lever can only be pulled once
             //other.gameObject.GetComponent<Collider2D>().enabled = false;
             _planeMovement.leverPulled = true;
             _playerController2D._playerFrozen = true;
+
+            if (leverObject.GetComponent<SpriteRenderer>().sprite == leverSprite[0])
+            {
+                leverObject.GetComponent<SpriteRenderer>().sprite = leverSprite[1];
+            }
+            else if(leverObject.GetComponent<SpriteRenderer>().sprite == leverSprite[1])
+            {
+                leverObject.GetComponent<SpriteRenderer>().sprite = leverSprite[0];
+            }
         }
     }
 
