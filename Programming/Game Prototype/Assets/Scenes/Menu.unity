@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 175914217}
   - component: {fileID: 175914216}
   - component: {fileID: 175914215}
+  - component: {fileID: 175914219}
   - component: {fileID: 175914214}
   m_Layer: 0
   m_Name: MusicPlayer
@@ -182,8 +183,7 @@ MonoBehaviour:
   data:
     valueGuid: 
     groupGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 79a9cd97ec840db4fa5ea3ef2a0c01df,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   valueGuid: 
   groupGuid: 
 --- !u!114 &175914215
@@ -270,6 +270,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &175914219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175914213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af5ea0f6c90143d6967cca2fc05b926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9d3cbd2026afc2a4a8d04b6605f1e0d0,
+      type: 2}
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 
+  multiPositionArray: []
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
 --- !u!1 &254781375
 GameObject:
   m_ObjectHideFlags: 0
