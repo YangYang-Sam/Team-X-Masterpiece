@@ -16,15 +16,29 @@
 			<ShortName>TVeil_Lvl_SB</ShortName>
 			<Path>TVeil_Lvl_SB.bnk</Path>
 			<IncludedEvents>
+				<Event Id="124093304" Name="All_Plane_Ambience" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Ambience"/>
 				<Event Id="1985200777" Name="All_Plane_Music" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Music"/>
 				<Event Id="2044049779" Name="Dead" ObjectPath="\Events\TVeil_Events\Raven\Dead"/>
 				<Event Id="3922529076" Name="Ghoul" ObjectPath="\Events\TVeil_Events\Enemies\Ghoul"/>
 				<Event Id="68157183" Name="Jumping" ObjectPath="\Events\TVeil_Events\Raven\Jumping"/>
+				<Event Id="2548270042" Name="Landing" ObjectPath="\Events\TVeil_Events\Raven\Landing"/>
+				<Event Id="2456307347" Name="Ogre_Charge" ObjectPath="\Events\TVeil_Events\Enemies\Ogre_Charge"/>
+				<Event Id="626833781" Name="Ogre_Dead" ObjectPath="\Events\TVeil_Events\Enemies\Ogre_Dead"/>
 				<Event Id="4035573696" Name="Platform" ObjectPath="\Events\TVeil_Events\Interaction\Platform"/>
+				<Event Id="308635872" Name="Progress" ObjectPath="\Events\TVeil_Events\Interaction\Progress"/>
 				<Event Id="1302771492" Name="Rotate" ObjectPath="\Events\TVeil_Events\Interaction\Rotate"/>
+				<Event Id="2972449336" Name="Text" ObjectPath="\Events\TVeil_Events\Interaction\Text"/>
 				<Event Id="1671131289" Name="VeilJump" ObjectPath="\Events\TVeil_Events\Raven\VeilJump"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="7039824" Language="SFX">
+					<ShortName>T10_SFX_Platform_Progress.wav</ShortName>
+					<Path>SFX/T10_SFX_Platform_Progress_A1793BE9.wem</Path>
+				</File>
+				<File Id="69236835" Language="SFX">
+					<ShortName>T10_SFX_Raven_Lands.wav</ShortName>
+					<Path>SFX/T10_SFX_Raven_Lands_A1793BE9.wem</Path>
+				</File>
 				<File Id="180619043" Language="SFX">
 					<ShortName>Green_Goo.wav</ShortName>
 					<Path>SFX/Green_Goo_CB1F3167.wem</Path>
@@ -33,6 +47,10 @@
 					<ShortName>Ghoul1.wav</ShortName>
 					<Path>SFX/Ghoul1_A1793BE9.wem</Path>
 				</File>
+				<File Id="275753756" Language="SFX">
+					<ShortName>T10_SFX_TextBubble_Arrive.wav</ShortName>
+					<Path>SFX/T10_SFX_TextBubble_Arrive_A1793BE9.wem</Path>
+				</File>
 				<File Id="295389949" Language="SFX">
 					<ShortName>Eastern_Loop3_168bpm_10B.wav</ShortName>
 					<Path>SFX/Eastern_Loop3_168bpm_10B_CB1F3167.wem</Path>
@@ -40,6 +58,10 @@
 				<File Id="297235183" Language="SFX">
 					<ShortName>Jump.wav</ShortName>
 					<Path>SFX/Jump_A1793BE9.wem</Path>
+				</File>
+				<File Id="353594527" Language="SFX">
+					<ShortName>T10_Eastern_Ambience.wav</ShortName>
+					<Path>SFX/T10_Eastern_Ambience_CB1F3167.wem</Path>
 				</File>
 				<File Id="361541902" Language="SFX">
 					<ShortName>Portal5.wav</ShortName>
@@ -53,6 +75,10 @@
 					<ShortName>Egyptian_Loop1_16B_168bpm.wav</ShortName>
 					<Path>SFX/Egyptian_Loop1_16B_168bpm_CB1F3167.wem</Path>
 				</File>
+				<File Id="490689885" Language="SFX">
+					<ShortName>T10_SFX_Ogre_Dead.wav</ShortName>
+					<Path>SFX/T10_SFX_Ogre_Dead_A1793BE9.wem</Path>
+				</File>
 				<File Id="519496648" Language="SFX">
 					<ShortName>VeilJump.wav</ShortName>
 					<Path>SFX/VeilJump_A1793BE9.wem</Path>
@@ -65,6 +91,10 @@
 					<ShortName>Key.wav</ShortName>
 					<Path>SFX/Key_A1793BE9.wem</Path>
 				</File>
+				<File Id="647951380" Language="SFX">
+					<ShortName>T10_Aztec_Ambience_Loop.wav</ShortName>
+					<Path>SFX/T10_Aztec_Ambience_Loop_CB1F3167.wem</Path>
+				</File>
 				<File Id="659618103" Language="SFX">
 					<ShortName>RavenDeath.wav</ShortName>
 					<Path>SFX/RavenDeath_A1793BE9.wem</Path>
@@ -72,6 +102,10 @@
 				<File Id="662228199" Language="SFX">
 					<ShortName>Aztec_Loop2_12B_84bpm_v2.wav</ShortName>
 					<Path>SFX/Aztec_Loop2_12B_84bpm_v2_CB1F3167.wem</Path>
+				</File>
+				<File Id="688384924" Language="SFX">
+					<ShortName>T10_Egyptian_Ambience_Loop.wav</ShortName>
+					<Path>SFX/T10_Egyptian_Ambience_Loop_CB1F3167.wem</Path>
 				</File>
 				<File Id="694119832" Language="SFX">
 					<ShortName>Aztec_Loop3_8B_84bpm_v2.wav</ShortName>
@@ -100,6 +134,10 @@
 				<File Id="887549436" Language="SFX">
 					<ShortName>Jump2.wav</ShortName>
 					<Path>SFX/Jump2_A1793BE9.wem</Path>
+				</File>
+				<File Id="912180561" Language="SFX">
+					<ShortName>T10_SFX_OgreCharge.wav</ShortName>
+					<Path>SFX/T10_SFX_OgreCharge_A1793BE9.wem</Path>
 				</File>
 				<File Id="921492444" Language="SFX">
 					<ShortName>Eastern_Loop4_168bpm_16ishB.wav</ShortName>

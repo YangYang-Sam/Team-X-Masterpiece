@@ -47,6 +47,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Landing" ID="{FB900B64-06D1-445F-9E60-B9F269BEDA47}">
+							<ChildrenList>
+								<Action Name="" ID="{37F6B665-3D07-4D73-BDBD-E24DD4A8C9A8}" ShortID="746500909">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_Raven_Lands" ID="{78D88DEA-CE1D-470F-B192-34D7C9B252B7}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Interaction" ID="{E69AFB71-7BB4-4B5A-B0B5-6A3C6E48C0DF}" ShortID="707880087">
@@ -119,7 +133,7 @@
 								<Action Name="" ID="{EF6926D5-7FBC-4C0D-AC93-8F59F87E88E1}" ShortID="494666613">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.75"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.25"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -131,7 +145,7 @@
 								<Action Name="" ID="{2F2A237B-56EE-4A4A-A293-235F14423465}" ShortID="266292929">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="Delay" Type="Real64" Value="1.75"/>
+										<Property Name="Delay" Type="Real64" Value="1.25"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -156,16 +170,15 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Text" ID="{72473BA3-2E93-45B7-8E0A-75B752CB41FA}"/>
-						<Event Name="Landing" ID="{FB900B64-06D1-445F-9E60-B9F269BEDA47}">
+						<Event Name="Text" ID="{72473BA3-2E93-45B7-8E0A-75B752CB41FA}">
 							<ChildrenList>
-								<Action Name="" ID="{37F6B665-3D07-4D73-BDBD-E24DD4A8C9A8}" ShortID="746500909">
+								<Action Name="" ID="{E6270F8A-72C5-4073-B2F5-5C64776BD729}" ShortID="16750723">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="T10_SFX_Raven_Lands" ID="{78D88DEA-CE1D-470F-B192-34D7C9B252B7}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+											<ObjectRef Name="T10_SFX_TextBubble_Arrive" ID="{20C027D1-373D-427F-A2E3-3122EF8442F2}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -258,6 +271,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Level_Music" ID="{7DD72F60-12FD-4FD5-A19D-878C369B5BDA}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="All_Plane_Ambience" ID="{46CFCA1D-4D89-40BB-8326-4368FF43C17A}">
+							<ChildrenList>
+								<Action Name="" ID="{932CB100-C0F6-4B71-8A25-B62D7E3C0BDA}" ShortID="1002074413">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Ambience" ID="{8C628D09-424E-424D-BC62-AA605BB0DCAB}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

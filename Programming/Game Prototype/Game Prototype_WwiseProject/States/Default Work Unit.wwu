@@ -40,6 +40,14 @@
 						<State Name="EndLevel" ID="{F484076F-3066-425A-8C0C-D3345694FF68}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Ambience_State" ID="{2A3601BE-5A53-4C89-A4E8-9A5574EA627E}">
+					<ChildrenList>
+						<State Name="None" ID="{83409853-BEE3-4D79-B5A5-AAEEE690F232}"/>
+						<State Name="AmbiAztec" ID="{0E1C3124-ECBD-42A2-AE8A-AA13543A9AD6}"/>
+						<State Name="AmbieEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
+						<State Name="AmbiEastern" ID="{2B21855E-86F5-448E-86D4-230A3BA7CD06}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -13,17 +13,35 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ALL_PLANE_AMBIENCE = 124093304U;
         static const AkUniqueID ALL_PLANE_MUSIC = 1985200777U;
         static const AkUniqueID DEAD = 2044049779U;
         static const AkUniqueID GHOUL = 3922529076U;
         static const AkUniqueID JUMPING = 68157183U;
+        static const AkUniqueID LANDING = 2548270042U;
+        static const AkUniqueID OGRE_CHARGE = 2456307347U;
+        static const AkUniqueID OGRE_DEAD = 626833781U;
         static const AkUniqueID PLATFORM = 4035573696U;
+        static const AkUniqueID PROGRESS = 308635872U;
         static const AkUniqueID ROTATE = 1302771492U;
+        static const AkUniqueID TEXT = 2972449336U;
         static const AkUniqueID VEILJUMP = 1671131289U;
     } // namespace EVENTS
 
     namespace STATES
     {
+        namespace AMBIENCE_STATE
+        {
+            static const AkUniqueID GROUP = 3875263435U;
+
+            namespace STATE
+            {
+                static const AkUniqueID AMBIAZTEC = 3051088207U;
+                static const AkUniqueID AMBIEASTERN = 1513158036U;
+                static const AkUniqueID AMBIEEGYPT = 2878416482U;
+            } // namespace STATE
+        } // namespace AMBIENCE_STATE
+
         namespace MENU_OR_LEVEL
         {
             static const AkUniqueID GROUP = 1222409307U;

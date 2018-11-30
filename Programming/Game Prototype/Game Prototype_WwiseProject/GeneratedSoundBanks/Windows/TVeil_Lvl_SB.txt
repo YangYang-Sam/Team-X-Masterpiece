@@ -1,9 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
 	68157183	Jumping			\TVeil_Events\Raven\Jumping	
+	124093304	All_Plane_Ambience			\TVeil_Events\MusicLoops\All_Plane_Ambience	
+	308635872	Progress			\TVeil_Events\Interaction\Progress	
+	626833781	Ogre_Dead			\TVeil_Events\Enemies\Ogre_Dead	
 	1302771492	Rotate			\TVeil_Events\Interaction\Rotate	
 	1671131289	VeilJump			\TVeil_Events\Raven\VeilJump	
 	1985200777	All_Plane_Music			\TVeil_Events\MusicLoops\All_Plane_Music	
 	2044049779	Dead			\TVeil_Events\Raven\Dead	
+	2456307347	Ogre_Charge			\TVeil_Events\Enemies\Ogre_Charge	
+	2548270042	Landing			\TVeil_Events\Raven\Landing	
+	2972449336	Text			\TVeil_Events\Interaction\Text	
 	3922529076	Ghoul			\TVeil_Events\Enemies\Ghoul	
 	4035573696	Platform			\TVeil_Events\Interaction\Platform	
 
@@ -13,21 +19,29 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4055567060	Menu_Music			\Default Work Unit\Menu_Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7039824	T10_SFX_Platform_Progress	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Platform_Progress_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\T10_SFX_Platform_Progress		31025
+	69236835	T10_SFX_Raven_Lands	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Raven_Lands_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\T10_SFX_Raven_Lands		5405
 	180619043	Green_Goo	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Green_Goo_CB1F3167.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Environment\Green_Goo		162766
 	231579025	Ghoul1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul1_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul1		7557
+	275753756	T10_SFX_TextBubble_Arrive	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_TextBubble_Arrive_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Text\T10_SFX_TextBubble_Arrive		30138
 	295389949	Eastern_Loop3_168bpm_10B	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Eastern_Loop3_168bpm_10B_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Eastern_Themes\Eastern_Loop3_168bpm_10B\Eastern_Loop3_168bpm_10B		271873
 	297235183	Jump	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Jump_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Jumping\Jump		3800
+	353594527	T10_Eastern_Ambience	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_Eastern_Ambience_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Ambience\AmbiEastern\AmbiEastern\T10_Eastern_Ambience		1009047
 	361541902	Portal5	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Portal5_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Platform_Stingers\Portal5		13959
 	455752322	Egyptian_Loop2_16B_168bpm	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Egyptian_Loop2_16B_168bpm_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Egyptian_Themes\Egyptian_Loop2_16B_168bpm\Egyptian_Loop2_16B_168bpm		470950
 	457965639	Egyptian_Loop1_16B_168bpm	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Egyptian_Loop1_16B_168bpm_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Egyptian_Themes\Egyptian_Loop1_16B_168bpm\Egyptian_Loop1_16B_168bpm		484258
+	490689885	T10_SFX_Ogre_Dead	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Ogre_Dead_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ogre\T10_SFX_Ogre_Dead		15450
 	519496648	Veil_Jump	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\VeilJump_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Veil_Jump\Veil_Jump		4083
 	558592505	Lever1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Lever1_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\Lever1		22238
 	637807892	Key	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Key_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Key		6894
+	647951380	T10_Aztec_Ambience_Loop	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_Aztec_Ambience_Loop_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Ambience\AmbiAztec\AmbiAztec\T10_Aztec_Ambience_Loop		1333469
 	659618103	RavenDead	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\RavenDeath_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\RavenDead		36250
 	662228199	Aztec_Loop2_12B_84bpm_v2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Aztec_Loop2_12B_84bpm_v2_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Aztec_Themes\Aztec_Loop2_12B_84bpm_v2\Aztec_Loop2_12B_84bpm_v2		569776
+	688384924	T10_Egyptian_Ambience_Loop	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_Egyptian_Ambience_Loop_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Ambience\AmbiEgyptian\T10_Egyptian_Ambience_Loop\T10_Egyptian_Ambience_Loop		784470
 	694119832	Aztec_Loop3_8B_84bpm_v2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Aztec_Loop3_8B_84bpm_v2_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Aztec_Themes\Aztec_Loop3_8B_84bpm_v2\Aztec_Loop3_8B_84bpm_v2		398869
 	723421713	Ghoul2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul2_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul2		8438
 	741041653	Aztec_Loop1_10B_84bpm_v2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Aztec_Loop1_10B_84bpm_v2_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Aztec_Themes\Aztec_Loop1_10B_84bpm_v2\Aztec_Loop1_10B_84bpm_v2		461633
@@ -35,6 +49,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	805355077	Eastern_Loop2_168bpm_10B	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Eastern_Loop2_168bpm_10B_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Eastern_Themes\Eastern_Loop2_168bpm_10B\Eastern_Loop2_168bpm_10B		266144
 	820484119	RotatePlane	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\RotatePlane_5926DF68.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\RotatePlane		36815
 	887549436	Jump2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Jump2_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Jumping\Jump2		4039
+	912180561	T10_SFX_OgreCharge	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_OgreCharge_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ogre\T10_SFX_OgreCharge		14954
 	921492444	Eastern_Loop4_168bpm_16ishB	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Eastern_Loop4_168bpm_16ishB_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Eastern_Themes\Eastern_Loop4_168bpm_16ishB\Eastern_Loop4_168bpm_16ishB		391025
 	924017632	TVeilEndCreditSequence	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\TVeilEndCreditSequence_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\End_Level\TVeilEndCreditSequence		2694964
 	998510839	Ghoul3	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul3_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul3		8613
