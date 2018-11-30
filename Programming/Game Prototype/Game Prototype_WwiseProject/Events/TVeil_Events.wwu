@@ -142,6 +142,35 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Progress" ID="{F2CEB42D-267B-412F-8376-ABE03E61F6A9}">
+							<ChildrenList>
+								<Action Name="" ID="{BDEF0774-5BA1-412A-A9A0-A21AFB2D2530}" ShortID="223584713">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_Platform_Progress" ID="{DB09916E-447C-438A-9975-78D4BF49CF78}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Text" ID="{72473BA3-2E93-45B7-8E0A-75B752CB41FA}"/>
+						<Event Name="Landing" ID="{FB900B64-06D1-445F-9E60-B9F269BEDA47}">
+							<ChildrenList>
+								<Action Name="" ID="{37F6B665-3D07-4D73-BDBD-E24DD4A8C9A8}" ShortID="746500909">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_Raven_Lands" ID="{78D88DEA-CE1D-470F-B192-34D7C9B252B7}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{A3EBE4AC-801C-436E-B8F4-7C6D798F1ACB}" ShortID="586621932">
@@ -183,6 +212,34 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Ghoul" ID="{583CF306-2D26-4119-8708-158E007F0614}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ogre_Dead" ID="{42F161AE-CD59-4F9C-8223-0512E756FAAE}">
+							<ChildrenList>
+								<Action Name="" ID="{E26D019D-8C06-4929-9198-4F41B239A09F}" ShortID="471659281">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_Ogre_Dead" ID="{D1B71FCE-D691-4F80-A2C4-8D8169FF570B}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ogre_Charge" ID="{497CA4A2-B355-46CE-B364-946510CDE91E}">
+							<ChildrenList>
+								<Action Name="" ID="{84D43387-3F50-4EDF-842B-5B6F0D82063B}" ShortID="178848434">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_OgreCharge" ID="{D59B25CC-B035-4BF3-BD9C-21C22C1080C4}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
