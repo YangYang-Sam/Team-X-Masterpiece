@@ -52,7 +52,7 @@ public class PlayerInteractions : MonoBehaviour {
         leverObject.GetComponent<SpriteRenderer>().sprite = leverSprite[0];
 
         AkSoundEngine.SetState("Music_State", "Aztec");
-        AkSoundEngine.SetState("Level_Ambience", "AmbiAztec");
+        AkSoundEngine.SetState("Ambience_State", "AmbiAztec");
     }
 	
 	// Update is called once per frame
@@ -305,6 +305,7 @@ public class PlayerInteractions : MonoBehaviour {
         }
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Aztec");
+        AkSoundEngine.SetState("Ambience_State", "AmbiAztec");
 
         other.gameObject.layer = 10;
 
@@ -340,6 +341,7 @@ public class PlayerInteractions : MonoBehaviour {
 
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Egyptian");
+        AkSoundEngine.SetState("Ambience_State", "AmbiEgypt");
 
         other.gameObject.layer = 11;
 
@@ -374,6 +376,7 @@ public class PlayerInteractions : MonoBehaviour {
 
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Eastern");
+        AkSoundEngine.SetState("Ambience_State", "AmbiEastern");
 
         other.gameObject.layer = 12;
 
