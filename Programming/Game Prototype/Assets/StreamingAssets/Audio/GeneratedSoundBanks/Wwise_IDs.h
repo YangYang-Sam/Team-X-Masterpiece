@@ -38,7 +38,7 @@ namespace AK
             {
                 static const AkUniqueID AMBIAZTEC = 3051088207U;
                 static const AkUniqueID AMBIEASTERN = 1513158036U;
-                static const AkUniqueID AMBIEEGYPT = 2878416482U;
+                static const AkUniqueID AMBIEGYPT = 1648913497U;
             } // namespace STATE
         } // namespace AMBIENCE_STATE
 

@@ -1895,7 +1895,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="AmbieEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
+								<PathElementRef Name="AmbiEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="AmbiEgyptian" ID="{622A7CD8-6BFB-476A-8820-41D6DDBC11AF}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Platform="Linked"/>

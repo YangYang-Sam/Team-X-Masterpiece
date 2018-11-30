@@ -34,7 +34,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="EndLevel" ID="{F484076F-3066-425A-8C0C-D3345694FF68}"/>
-						<CurrentStateRef Name="AmbieEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
+						<CurrentStateRef Name="AmbiEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
