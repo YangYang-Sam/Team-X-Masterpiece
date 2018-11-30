@@ -6,15 +6,11 @@
 				<SoundcasterSession Name="Music" ID="{92909105-1A8C-4A50-AC83-1E8567F2D6F7}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+							<ObjectRef Name="All_Plane_Ambience" ID="{46CFCA1D-4D89-40BB-8326-4368FF43C17A}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Platform" ID="{025C21E9-ABA1-4D12-AAD6-90380C0BF3B6}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Platform" ID="{025C21E9-ABA1-4D12-AAD6-90380C0BF3B6}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
+							<ObjectRef Name="All_Plane_Music" ID="{1B9F39CB-B04E-4118-80B8-25113C87A7BF}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -33,8 +29,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="EndLevel" ID="{F484076F-3066-425A-8C0C-D3345694FF68}"/>
-						<CurrentStateRef Name="AmbiEgypt" ID="{9462475A-C4E9-42A8-86C5-B1B221FB965A}"/>
+						<CurrentStateRef Name="None" ID="{71203CD4-60E2-4B6A-8AD2-D50C3097FD4F}"/>
+						<CurrentStateRef Name="AmbiAztec" ID="{0E1C3124-ECBD-42A2-AE8A-AA13543A9AD6}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
