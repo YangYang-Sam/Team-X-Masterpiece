@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator TypeSentence (string sentence)
     {
-        //dialogueText.text = null;
+        dialogueText.text = null;
         for(int i = 0; i < sentence.Length+1; i++)
         {
             dialogueText.text = sentence.Substring(0,i);
