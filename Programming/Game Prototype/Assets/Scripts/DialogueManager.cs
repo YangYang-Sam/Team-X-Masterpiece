@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour {
 
         string sentence = sentences.Dequeue();
         //stop chars animating if new dialog is triggered
-        //StopAllCoroutines();
+        StopAllCoroutines();
 
 
         StartCoroutine(TypeSentence(sentence));
