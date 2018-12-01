@@ -52,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586580177825170922
+    m_lastTime: -8586579377852958396
     List:
     - name: All_Plane_Ambience
       guid: 1dcacf46894dbb4083264368ff43c17a
@@ -329,7 +329,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586580064172101941
+    m_lastTime: -8586579377847728524
     List:
     - name: Ambience_State
       guid: be01362a535a894ca4e89a5574ea627e
@@ -495,8 +495,8 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
-  - /Game Prototype_WwiseProject/Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events
-  - /Game Prototype_WwiseProject/Events/TVeil_Events/MusicLoops
+  - /Game Prototype_WwiseProject/States
+  - /Game Prototype_WwiseProject/States/Default Work Unit
+  - /Game Prototype_WwiseProject/States/Default Work Unit/Ambience_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

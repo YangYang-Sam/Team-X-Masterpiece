@@ -5,9 +5,15 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     [SerializeField]
-    private AkEvent jumpSound;
+    private GameObject audioManager;
+    private WwiseAudioManager wwiseAudioManager;
+
+    private bool isFalling = false;
+
     [SerializeField]
-    private AkEvent veilJumpSound;
+    private Animation jumpAnim;
+    [SerializeField]
+    private Animator playerAnim;
 
     [SerializeField]
     private Animator animator;
@@ -70,6 +76,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void Start()
     {
+        wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
         _dialogueManagerScript = _dialogueManager.GetComponent<DialogueManager>();
 
@@ -88,6 +95,11 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //if (playerAnim.IsInTransition(0) && playerAnim.GetNextAnimatorStateInfo(0).fullPathHash == playerAnim.)
+        //{
+        //    //Do reaction
+        //}
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         horizontalMove = Input.GetAxisRaw("Horizontal") * _speed;
 
@@ -99,6 +111,17 @@ public class PlayerController2D : MonoBehaviour
             animator.SetBool("IsVeilJumping", false);
             _canJump = _canJumpValue;
             _canVeilJump = _canVeilJumpValue;
+
+            if (isFalling == true)
+            {
+                wwiseAudioManager.PlayerLandSound();
+                isFalling = false;
+            }
+        }
+
+        if (isGrounded == false && _playerRigidbody.velocity.y < 0)
+        {
+            isFalling = true;
         }
 
         if (Input.GetButtonDown("Jump") && _canJump > 0 && _playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false)
@@ -157,14 +180,14 @@ public class PlayerController2D : MonoBehaviour
     {
         //set correct gravity and move player
         ResetVeilJump();
-        JumpSound();
+        wwiseAudioManager.JumpSound();
         _playerRigidbody.velocity = Vector2.up * jumpforce;
         _canJump--;
     }
 
     private void VeilJump()
     {
-        VeilJumpSound();
+        wwiseAudioManager.JumpSound();
         //_playerRigidbody.gravityScale = 25;
         //set x velocity to 0 and jump with veiljump property.
         //_playerRigidbody.velocity = new Vector2(0, 1 * _veilJumpForce);
@@ -180,22 +203,6 @@ public class PlayerController2D : MonoBehaviour
         transform.localScale = _originalScale;
         _speed = _speedValue;
         _playerRigidbody.velocity = new Vector2(horizontalMove * _speed, _playerRigidbody.velocity.y);
-    }
-
-    private void JumpSound()
-    {
-        if (jumpSound != null)
-        {
-            jumpSound.HandleEvent(gameObject);
-        }
-    }
-
-    private void VeilJumpSound()
-    {
-        if (veilJumpSound != null)
-        {
-            veilJumpSound.HandleEvent(gameObject);
-        }
     }
 
     private void PlayerSpawned()

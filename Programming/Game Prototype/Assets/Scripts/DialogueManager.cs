@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject audioManager;
+    private WwiseAudioManager wwiseAudioManager;
+
     public Text nameText;
     public Text dialogueText;
 
@@ -19,12 +23,16 @@ public class DialogueManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
+
         sentences = new Queue<string>();
 	}
 
     public void StartDialogue(Dialogue dialogue)
     {
         dialogFreezePlayer = true;
+
+        wwiseAudioManager.DialogueInSound();
 
         dialogueBox.SetActive(true);
 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlaneMovement : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject audioManager;
+    private WwiseAudioManager wwiseAudioManager;
 
     [SerializeField]
     private GameObject _planeController;
@@ -31,8 +34,6 @@ public class PlaneMovement : MonoBehaviour
 
     [SerializeField]
     private float _rotationDuration = 1.0f;
-    [SerializeField]
-    private AkEvent rotationSound;
 
     [SerializeField]
     private Transform initialRotation;
@@ -65,6 +66,8 @@ public class PlaneMovement : MonoBehaviour
 
     void Start()
     {
+        wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
+
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
 
         _playerController2D = _player.GetComponent<PlayerController2D>();
@@ -97,7 +100,6 @@ public class PlaneMovement : MonoBehaviour
         {
             //print(_planeToRotate1.transform.rotation.eulerAngles.z);
             //initialPosition = _plane[currPlaneID].transform.position;
-            PlaneRotationSound();
             StartCoroutine(RotatePlane(initialRotation, targetRotation, _rotationDuration));
             leverPulled = false;
 
@@ -194,14 +196,6 @@ public class PlaneMovement : MonoBehaviour
 
         }
 
-    }
-
-    private void PlaneRotationSound()
-    {
-        if (rotationSound != null)
-        {
-            rotationSound.HandleEvent(gameObject);
-        }
     }
 
 }

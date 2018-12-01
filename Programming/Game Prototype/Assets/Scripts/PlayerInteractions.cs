@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour {
 
+
+    [SerializeField]
+    private GameObject audioManager;
+    private WwiseAudioManager wwiseAudioManager;
+
     ////////TEMP DIALOGUE FIX////////////
     [SerializeField]
     private GameObject _dialogueBox1Control;
@@ -29,9 +34,6 @@ public class PlayerInteractions : MonoBehaviour {
     private DialogueManager _dialogueManagerScript;
 
     [SerializeField]
-    private AkEvent platformSound;
-
-    [SerializeField]
     private GameObject[] outlines;
 
     [SerializeField]
@@ -39,9 +41,14 @@ public class PlayerInteractions : MonoBehaviour {
     [SerializeField]
     private Sprite[] leverSprite;
 
+    private bool Platform1Complete = false;
+    private bool Platform2Complete = false;
+
     // Use this for initialization
     void Start ()
     {
+        wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
+
         _playerController2D = GetComponent<PlayerController2D>();
         _planeNavigation = _planeController.GetComponent<PlaneNavigation>();
         _planeMovement = _planeController.GetComponent<PlaneMovement>();
@@ -68,7 +75,6 @@ public class PlayerInteractions : MonoBehaviour {
         if (_playerController2D._playerFrozen == false && _dialogueManagerScript.dialogFreezePlayer == false && _playerController2D.isGrounded)
         {
             //switch to correct layer based on portal name
-            Debug.Log("Interact pressed");
             if (other.gameObject.tag == "Platform Portal")
             {
 
@@ -150,8 +156,15 @@ public class PlayerInteractions : MonoBehaviour {
                     _dialogueBox1Control.SetActive(true);
                     if (Input.GetButtonDown("Interact"))
                     {
+                        Platform1Complete = true;
                         ToPlane1(other);
+                        if (Platform1Complete == true)
+                        {
+                            wwiseAudioManager.PlatformProgressSound();
+                        }
+                        Platform1Complete = false;
                     }
+
                 }
 
                 else if (other.gameObject.name == "Platform 2->1B" && _planeNavigation._currentPlane == 2)
@@ -194,7 +207,13 @@ public class PlayerInteractions : MonoBehaviour {
                 {
                     if (Input.GetButtonDown("Interact"))
                     {
+                        Platform2Complete = true;
                         ToPlane1(other);
+                        if (Platform2Complete == true)
+                        {
+                            wwiseAudioManager.PlatformProgressSound();
+                        }
+                        Platform2Complete = false;
                     }
                 }
 
@@ -254,6 +273,7 @@ public class PlayerInteractions : MonoBehaviour {
             //other.gameObject.GetComponent<Collider2D>().enabled = false;
             _planeMovement.leverPulled = true;
             _playerController2D._playerFrozen = true;
+            wwiseAudioManager.PlaneRotateSound();
 
             if (leverObject.GetComponent<SpriteRenderer>().sprite == leverSprite[0])
             {
@@ -279,6 +299,8 @@ public class PlayerInteractions : MonoBehaviour {
         if (other.name == "Portal")
         {
             _gameManagerScript.Victory();
+            AkSoundEngine.SetState("Music_State", "EndLevel");
+            AkSoundEngine.SetState("Ambience_State", "None");
         }
 
         if (other.name == "GreenGooParent")
@@ -297,12 +319,8 @@ public class PlayerInteractions : MonoBehaviour {
     {
         StartCoroutine(_planeNavigation.Plane1Delay(other));
 
-        //Play platform sound
-        if (platformSound != null)
-        {
-            platformSound.HandleEvent(gameObject);
-            Debug.Log("Triggering Platform sound");
-        }
+        wwiseAudioManager.PlatformSound();
+
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Aztec");
         AkSoundEngine.SetState("Ambience_State", "AmbiAztec");
@@ -332,12 +350,7 @@ public class PlayerInteractions : MonoBehaviour {
     {
         StartCoroutine(_planeNavigation.Plane2Delay(other));
 
-        //Play platform sound
-        if (platformSound != null)
-        {
-            platformSound.HandleEvent(gameObject);
-            Debug.Log("Triggering Platform sound");
-        }
+        wwiseAudioManager.PlatformSound();
 
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Egyptian");
@@ -367,12 +380,7 @@ public class PlayerInteractions : MonoBehaviour {
     {
         StartCoroutine(_planeNavigation.Plane3Delay(other));
 
-        //Play platform sound
-        if (platformSound != null)
-        {
-            platformSound.HandleEvent(gameObject);
-            Debug.Log("Triggering Platform sound");
-        }
+        wwiseAudioManager.PlatformSound();
 
         //Change audio to correct plane
         AkSoundEngine.SetState("Music_State", "Eastern");

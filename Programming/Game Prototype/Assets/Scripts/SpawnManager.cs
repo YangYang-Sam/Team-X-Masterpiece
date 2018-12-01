@@ -5,6 +5,10 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour {
 
     [SerializeField]
+    private GameObject audioManager;
+    private WwiseAudioManager wwiseAudioManager;
+
+    [SerializeField]
     private Animator animator;
     [SerializeField]
     private GameObject _player;
@@ -13,13 +17,13 @@ public class SpawnManager : MonoBehaviour {
     private GameObject[] _spawnPoint;
     [SerializeField]
     private float _spawnTime;
-    [SerializeField]
-    private AkEvent deathSound;
 
     // Use this for initialization
     void Start ()
     {
         _playerController2D = _player.GetComponent<PlayerController2D>();
+
+        wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
 
     }
 	
@@ -32,9 +36,9 @@ public class SpawnManager : MonoBehaviour {
     public void PlayerDamage(int SpawnPoint)
     {
 
-        if (deathSound != null && animator.GetBool("IsDying") == false)
+        if (animator.GetBool("IsDying") == false)
         {
-            deathSound.HandleEvent(gameObject);
+            wwiseAudioManager.PlayerDeathSound();
         }
 
         animator.SetBool("IsDying", true);
