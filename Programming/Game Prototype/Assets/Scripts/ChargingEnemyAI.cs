@@ -60,40 +60,43 @@ public class ChargingEnemyAI : MonoBehaviour {
         wallInfo = Physics2D.Raycast(wallDetection.position, Vector2.right, wallRayLength, planeMask);
         playerHit = Physics2D.Raycast(playerDetection.position, Vector2.right, playerRayLength, playerRayMask);
 
-        if (playerDetection.position.z == 0 && wallInfo.collider != null)
+        if(transform.position.y >= originalPosition.y - 0.3f)
         {
-            if (playerHit.collider == true && Vector2.Distance(transform.position, wallInfo.collider.transform.position) > Vector2.Distance(transform.position, playerHit.collider.transform.position))
+            if (playerDetection.position.z == 0 && wallInfo.collider != null)
             {
-                if (Vector2.Distance(transform.position, wallInfo.collider.transform.position) >= 0.5f)
+                if (playerHit.collider == true && Vector2.Distance(transform.position, wallInfo.collider.transform.position) > Vector2.Distance(transform.position, playerHit.collider.transform.position))
+                {
+                    if (Vector2.Distance(transform.position, wallInfo.collider.transform.position) >= 0.5f)
+                    {
+                        animator.SetBool("IsCharging", true);
+                        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), chargeSpeed * Time.deltaTime);
+
+                        if (chargingNoiseRunning == false)
+                        {
+                            chargingNoiseRunning = true;
+                            wwiseAudioManager.EnemyChargeSound();
+                        }
+                    }
+                }
+                else if (transform.position.x != originalPosition.x)
                 {
                     animator.SetBool("IsCharging", true);
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), chargeSpeed * Time.deltaTime);
-
-                    if (chargingNoiseRunning == false)
+                    transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
+                    chargingNoiseRunning = false;
+                    //stop charge animation if enemy has almost reached original position.
+                    if (transform.position.x < originalPosition.x + 0.2f)
                     {
-                        chargingNoiseRunning = true;
-                        wwiseAudioManager.EnemyChargeSound();
+                        animator.SetBool("IsCharging", false);
                     }
                 }
             }
-            else if (transform.position.x != originalPosition.x)
-            {
-                animator.SetBool("IsCharging", true);
-                transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
-                chargingNoiseRunning = false;
-                //stop charge animation if enemy has almost reached original position.
-                if (transform.position.x < originalPosition.x + 0.2f)
-                {
-                    animator.SetBool("IsCharging", false);
-                }
-            }
-        }
 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && animator.GetBool("IsDead") == false)
         {
             _spawnManager.PlayerDamage(2);
         }
