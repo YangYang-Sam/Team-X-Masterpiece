@@ -60,21 +60,6 @@ public class ChargingEnemyAI : MonoBehaviour {
         wallInfo = Physics2D.Raycast(wallDetection.position, Vector2.right, wallRayLength, planeMask);
         playerHit = Physics2D.Raycast(playerDetection.position, Vector2.right, playerRayLength, playerRayMask);
 
-        if(transform.position.y < originalPosition.y - 1)
-        {
-            return;
-        }
-
-        if (playerHit.collider == true)
-        {
-            //Debug.Log("Player distance: " + Vector2.Distance(transform.position, playerHit.collider.transform.position));
-        }
-        if (wallInfo.collider == true)
-        {
-            //Debug.Log("Wall Hit " + wallInfo);
-            //Debug.Log("Wall distance: " + Vector2.Distance(transform.position, wallInfo.collider.transform.position));
-        }
-
         if (playerDetection.position.z == 0 && wallInfo.collider != null)
         {
             if (playerHit.collider == true && Vector2.Distance(transform.position, wallInfo.collider.transform.position) > Vector2.Distance(transform.position, playerHit.collider.transform.position))
@@ -91,32 +76,15 @@ public class ChargingEnemyAI : MonoBehaviour {
                     }
                 }
             }
-            else
+            else if (transform.position.x != originalPosition.x)
             {
-                if (transform.position.x != originalPosition.x)
+                animator.SetBool("IsCharging", true);
+                transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
+                chargingNoiseRunning = false;
+                //stop charge animation if enemy has almost reached original position.
+                if (transform.position.x < originalPosition.x + 0.2f)
                 {
-                    animator.SetBool("IsCharging", true);
-                    transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
-
-                    if (chargingNoiseRunning == false)
-                    {
-                        chargingNoiseRunning = true;
-                        wwiseAudioManager.EnemyChargeSound();
-                    }
-
-                    //stop charge animation if enemy has almost reached original position.
-                    if (transform.position.x < originalPosition.x + 0.3f)
-                    {
-                        animator.SetBool("IsCharging", false);
-                        chargingNoiseRunning = false;
-
-                    }
-                }
-                else
-                {
-                    chargingNoiseRunning = false;
                     animator.SetBool("IsCharging", false);
-                    return;
                 }
             }
         }

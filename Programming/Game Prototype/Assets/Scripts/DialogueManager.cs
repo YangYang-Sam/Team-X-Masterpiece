@@ -9,6 +9,10 @@ public class DialogueManager : MonoBehaviour {
     private GameObject audioManager;
     private WwiseAudioManager wwiseAudioManager;
 
+    [SerializeField]
+    private GameObject mainCamera;
+    private CameraController cameraController;
+
     public Text nameText;
     public Text dialogueText;
 
@@ -24,6 +28,7 @@ public class DialogueManager : MonoBehaviour {
 	void Start ()
     {
         wwiseAudioManager = audioManager.GetComponent<WwiseAudioManager>();
+        cameraController = mainCamera.GetComponent<CameraController>();
 
         sentences = new Queue<string>();
 	}
@@ -59,18 +64,23 @@ public class DialogueManager : MonoBehaviour {
             EndDialogue();
             return;
         }
-
         string sentence = sentences.Dequeue();
         //stop chars animating if new dialog is triggered
         StopAllCoroutines();
-
-
         StartCoroutine(TypeSentence(sentence));
 
-        Debug.Log(sentence);
+        //pan camera to portal when certain dialogue is triggered
+        if (sentence.Contains("HERE to THERE?"))
+        {
+            cameraController.target = cameraController.portal;
+        }
+        else
+        {
+            cameraController.target = cameraController.player;
+        }
     }
 
-    IEnumerator TypeSentence (string sentence)
+    private IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = null;
         for(int i = 0; i < sentence.Length+1; i++)

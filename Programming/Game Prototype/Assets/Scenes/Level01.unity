@@ -9192,6 +9192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 665219442}
+  mainCamera: {fileID: 1817062025}
   nameText: {fileID: 1017577630}
   dialogueText: {fileID: 173051380}
   animator: {fileID: 71637375}
@@ -12415,7 +12416,7 @@ MonoBehaviour:
       us.'
     - 'Raven: That''s all well and good, but how am I supposed to get from HERE to
       THERE?'
-    - 'Wizard: Do you see those glowing, ephemeral markers? Something goes there...'
+    - 'Wizard: Do you see those evanescent markers above you? Something belongs there...'
 --- !u!4 &1032577156
 Transform:
   m_ObjectHideFlags: 0
@@ -19902,6 +19903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 34263839}
+  player: {fileID: 34263839}
+  portal: {fileID: 1575962739}
   smoothSpeed: 0.4
   offset: {x: 0, y: 0, z: -9}
   minimumBoundary: {x: -1.6, y: -5.7, z: 0}

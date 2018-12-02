@@ -3,6 +3,8 @@
 public class CameraController : MonoBehaviour {
 
     public Transform target;
+    public Transform player;
+    public Transform portal;
 
     //higher value due to being multiplied by time.deltaTime
     public float smoothSpeed;
