@@ -994,7 +994,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>15</Value>
+										<Value>30</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
