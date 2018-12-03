@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<SoundBank Name="TVeil_Lvl_SB" ID="{982EEA1F-5EC9-4937-A645-1CC5399A7791}">
 					<ObjectInclusionList>
+						<ObjectRef Name="SFX_Volume_Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Volume_Bus" ID="{34DFCDF4-527B-42EE-B21E-798F67D1B5D7}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TVeil_Events" ID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" WorkUnitID="{856E03FE-9652-4483-A84E-BE55CEEDBED3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TVeil_Interactive_Music" ID="{9B75546B-C4D8-47CD-A011-195B7388F364}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TVeil_Actor_Mixer" ID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}" Filter="7" Origin="Manual"/>

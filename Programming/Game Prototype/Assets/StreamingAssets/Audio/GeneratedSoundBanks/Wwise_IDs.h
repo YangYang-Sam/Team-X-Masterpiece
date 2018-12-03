@@ -97,8 +97,11 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID GAME_PAUSE = 2772308904U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MENU_MUSIC = 4055567060U;
         static const AkUniqueID MUSIC_SLOWDOWN = 2779281842U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS
@@ -114,7 +117,8 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC_VOLUME_BUS = 149712868U;
+        static const AkUniqueID SFX_VOLUME_BUS = 2769831052U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
