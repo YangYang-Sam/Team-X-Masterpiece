@@ -304,12 +304,12 @@
 										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>250</Value>
+												<Value>300</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -342,7 +342,7 @@
 										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-150</Value>
+												<Value>150</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -994,7 +994,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>15</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
