@@ -82,13 +82,13 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
+            PlatformParenting(_planeMovement._plane[0], other);
             yield return null;
         }
         //Set new layers/values according to new plane
         if (time > 0)
         {
             time -= Time.deltaTime;
-            PlatformParenting(_planeMovement._plane[0], other);
             plane1Ignore = false;
             plane2Ignore = true;
             plane3Ignore = true;
@@ -114,13 +114,13 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
+            PlatformParenting(_planeMovement._plane[1], other);
             yield return null;
         }
         //Set new layers/values according to new plane
         if (time > 0)
         {
             time -= Time.deltaTime;
-            PlatformParenting(_planeMovement._plane[1], other);
             plane1Ignore = true;
             plane2Ignore = false;
             plane3Ignore = true;
@@ -146,13 +146,13 @@ public class PlaneNavigation : MonoBehaviour {
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = true;
+            PlatformParenting(_planeMovement._plane[2], other);
             yield return null;
         }
         //Set new layers/values according to new plane
         if (time > 0)
         {
             time -= Time.deltaTime;
-            PlatformParenting(_planeMovement._plane[2], other);
             plane1Ignore = true;
             plane2Ignore = true;
             plane3Ignore = false;
