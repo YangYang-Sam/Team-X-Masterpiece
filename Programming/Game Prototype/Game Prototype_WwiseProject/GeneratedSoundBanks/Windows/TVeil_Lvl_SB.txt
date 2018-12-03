@@ -30,7 +30,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7039824	T10_SFX_Platform_Progress	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Platform_Progress_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\T10_SFX_Platform_Progress		31025
-	69236835	T10_SFX_Raven_Lands	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Raven_Lands_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\T10_SFX_Raven_Lands		5405
+	69236835	T10_SFX_Raven_Lands	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Raven_Lands_7E2DB766.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\T10_SFX_Raven_Lands		1155
 	180619043	Green_Goo	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Green_Goo_CB1F3167.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Environment\Green_Goo		162766
 	231579025	Ghoul1	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Ghoul1_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ghoul\Ghoul1		7557
 	275753756	T10_SFX_TextBubble_Arrive	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_TextBubble_Arrive_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Text\T10_SFX_TextBubble_Arrive		30138
