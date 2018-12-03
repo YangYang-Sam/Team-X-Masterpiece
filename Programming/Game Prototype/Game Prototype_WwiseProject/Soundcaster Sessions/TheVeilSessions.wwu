@@ -24,10 +24,6 @@
 							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="MasterVolume" ID="{861D2341-2670-42D8-A91C-636DF13F24FF}"/>
-							<Value>75</Value>
-						</RTPCValue>
-						<RTPCValue>
 							<GameParameterRef Name="Game_Pause" ID="{81765BB7-9E27-473A-B1BF-556784C7AEAA}"/>
 							<Value>50</Value>
 						</RTPCValue>

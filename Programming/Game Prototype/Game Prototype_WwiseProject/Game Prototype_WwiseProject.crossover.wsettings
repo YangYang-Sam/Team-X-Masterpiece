@@ -121,16 +121,18 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="n+2HpMB/QkWegFYUT3THCQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="E0+nCJC3xUmqgqP6gPJOVg=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="E0+nCJC3xUmqgqP6gPJOVlsuY0A429tMnd2BLrarnwA="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="8e2tn9IrpkKhwHboB3lCSKzk66McgG5DuPR8bXmPGsv+A26FUpaDRKhOvlXO7b7Tcfua5rR7WkuwtWo8bkjA3xOtHB7hfgxPv/0H0nqzUyg="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="MVaXnXme8EKAZwal+An5jw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="6BY0jN+k9UGKq29kXbF0uMaWGcbnMd1KoGcHfKop7Xe+ATYqU1qJTKTomlV06mJ+"/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="55966zYWA0OhsKj9bxccoXB9pWzcqZdOjDXs3FJxPLU="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="XuhE3cj1uEanY57kgbNGFw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
+				<Property Name="RTPC\GameParameterSimValue\{3A609717-784B-4A60-8F58-D65B43C191E9}" Type="Real64" Value="75"/>
 				<Property Name="RTPC\GameParameterSimValue\{4192B49C-9020-4136-A95D-5DD2D8A17E24}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{78BA9FF9-D4E4-422C-9A0E-F7989CB32BF5}" Type="Real64" Value="100"/>
 				<Property Name="RTPC\GameParameterSimValue\{81765BB7-9E27-473A-B1BF-556784C7AEAA}" Type="Real64" Value="50"/>
+				<Property Name="RTPC\GameParameterSimValue\{BD803EDC-4F21-4A2C-B0B4-73D10BF1BD72}" Type="Real64" Value="75"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="cH2lbNypl06MNezcUnE8tQ=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">

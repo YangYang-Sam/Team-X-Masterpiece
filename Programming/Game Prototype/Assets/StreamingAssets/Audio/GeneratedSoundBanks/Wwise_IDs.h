@@ -97,7 +97,6 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID GAME_PAUSE = 2772308904U;
-        static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MENU_MUSIC = 4055567060U;
         static const AkUniqueID MUSIC_SLOWDOWN = 2779281842U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
