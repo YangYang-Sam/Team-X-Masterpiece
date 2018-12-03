@@ -29,11 +29,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SFXVolume" ID="{BD803EDC-4F21-4A2C-B0B4-73D10BF1BD72}"/>
-							<Value>75</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MusicVolume" ID="{3A609717-784B-4A60-8F58-D65B43C191E9}"/>
-							<Value>75</Value>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
