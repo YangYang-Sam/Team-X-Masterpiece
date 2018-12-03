@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
 
-        timerText.text = minutes + ":" + seconds + "!";
+        timerText.text = minutes + "  minutes and  " + seconds + "  seconds!";
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
