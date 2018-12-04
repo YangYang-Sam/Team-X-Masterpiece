@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
 
     [SerializeField]
+    private GameObject wizard;
+
+    [SerializeField]
     private GameObject audioManager;
     private WwiseAudioManager wwiseAudioManager;
 
@@ -97,5 +100,11 @@ public class DialogueManager : MonoBehaviour {
         animator.SetBool("IsOpen", false);
 
         Debug.Log("End of Conversation");
+
+        if (wizard)
+        {
+            wizard.GetComponent<Animator>().SetBool("IsFadingOut", true);
+            wizard.GetComponent<Animator>().SetBool("IsFadingIn", false);
+        }
     }
 }

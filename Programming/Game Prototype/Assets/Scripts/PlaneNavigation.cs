@@ -170,24 +170,23 @@ public class PlaneNavigation : MonoBehaviour {
 
         other.gameObject.transform.parent = plane.transform;
 
-        other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, 0);
+        other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, 0.0f);
 
-        if (other.transform.childCount == 0)
+        if (other.gameObject.transform.GetComponent<SpriteRenderer>())
         {
             other.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
         }
 
-        if (other.transform.childCount == 1)
+        if (other.transform.childCount > 0)
         {
-            other.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+            foreach (Transform child in other.transform)
+            {
+                if (child.gameObject.transform.GetComponent<SpriteRenderer>())
+                {
+                    child.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
+                }
+            }
         }
-
-        if (other.transform.childCount == 2)
-        {
-            other.transform.GetChild(1).GetComponent<SpriteRenderer>().sortingLayerName = plane.gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName;
-        }
-
-        other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, 0.0f);
     }
 
 }

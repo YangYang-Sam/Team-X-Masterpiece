@@ -10,6 +10,9 @@ public class PlayerInteractions : MonoBehaviour {
     private GameObject audioManager;
     private WwiseAudioManager wwiseAudioManager;
 
+    [SerializeField]
+    private GameObject[] oneWayPlatforms;
+
     ////////TEMP DIALOGUE FIX////////////
     [SerializeField]
     private GameObject _dialogueBox1Control;
@@ -83,9 +86,12 @@ public class PlayerInteractions : MonoBehaviour {
                     if (Input.GetButtonDown("Interact"))
                     {
                         ToPlane2(other);
+                        oneWayPlatforms[0].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
                     //Flash outline on correct plane
                     outlines[0].SetActive(true);
+
+                    Debug.Log("Touching 1->2A");
 
                 }
 
@@ -125,6 +131,7 @@ public class PlayerInteractions : MonoBehaviour {
                     if (Input.GetButtonDown("Interact"))
                     {
                         ToPlane3(other);
+                        oneWayPlatforms[1].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
 
                     outlines[4].SetActive(true);
@@ -158,6 +165,7 @@ public class PlayerInteractions : MonoBehaviour {
                     {
                         Platform1Complete = true;
                         ToPlane1(other);
+                        oneWayPlatforms[6].GetComponent<Animator>().SetBool("FadeToGrey", true);
                         if (Platform1Complete == true)
                         {
                             wwiseAudioManager.PlatformProgressSound();
@@ -180,6 +188,7 @@ public class PlayerInteractions : MonoBehaviour {
                     if (Input.GetButtonDown("Interact"))
                     {
                         ToPlane3(other);
+                        oneWayPlatforms[2].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
 
                     outlines[5].SetActive(true);
@@ -214,6 +223,7 @@ public class PlayerInteractions : MonoBehaviour {
                             wwiseAudioManager.PlatformProgressSound();
                         }
                         Platform2Complete = false;
+                        oneWayPlatforms[3].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
                 }
 
@@ -230,6 +240,7 @@ public class PlayerInteractions : MonoBehaviour {
                     if (Input.GetButtonDown("Interact"))
                     {
                         ToPlane1(other);
+                        oneWayPlatforms[4].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
                 }
 
@@ -238,6 +249,7 @@ public class PlayerInteractions : MonoBehaviour {
                     if (Input.GetButtonDown("Interact"))
                     {
                         ToPlane2(other);
+                        oneWayPlatforms[5].GetComponent<Animator>().SetBool("FadeToGrey", true);
                     }
                 }
 
