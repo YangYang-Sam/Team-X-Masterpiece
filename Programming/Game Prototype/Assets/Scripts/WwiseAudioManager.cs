@@ -23,7 +23,7 @@ public class WwiseAudioManager : MonoBehaviour {
     [SerializeField]
     private AkEvent platformMove;
     [SerializeField]
-    private AkEvent dialogueBleep;
+    public AkEvent dialogueBleep;
     [SerializeField]
     private AkEvent enemyBoulder;
 

@@ -384,7 +384,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\TVeil_Game_Parameter_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 5ee844ddc8f5b846a7639ee481b34617
-    m_lastTime: -8586577498428213445
+    m_lastTime: -8586575943464667672
     List:
     - name: MusicVolume
       guid: 1797603a4b78604a8f58d65b43c191e9
@@ -404,6 +404,15 @@ MonoBehaviour:
       - ElementName: SFXVolume
         ObjectType: 13
       Path: TVeil_Game_Parameter_WorkUnit\SFXVolume
+    - name: TextSkip
+      guid: 23fe1fa0be61ee49b26b976d1ed4f4ac
+      id: 2396826149
+      PathAndIcons:
+      - ElementName: TVeil_Game_Parameter_WorkUnit
+        ObjectType: 12
+      - ElementName: TextSkip
+        ObjectType: 13
+      Path: TVeil_Game_Parameter_WorkUnit\TextSkip
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -632,7 +641,6 @@ MonoBehaviour:
   - /Game Prototype_WwiseProject
   - /Game Prototype_WwiseProject/Events
   - /Game Prototype_WwiseProject/Events/TVeil_Events
-  - /Game Prototype_WwiseProject/States
-  - /Game Prototype_WwiseProject/States/Default Work Unit
+  - /Game Prototype_WwiseProject/Events/TVeil_Events/Interaction
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
