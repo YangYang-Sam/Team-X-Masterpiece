@@ -1923,7 +1923,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>8</Value>
+								<Value>13</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2051,8 +2051,7 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{E9CA03A5-EEDD-441A-8282-7721D4D2099D}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
-													<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -2089,7 +2088,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>15</Value>
+								<Value>18</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2224,8 +2223,7 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{E15B608B-2162-46A3-958D-80BD3EA98111}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
-													<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
