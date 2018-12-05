@@ -729,6 +729,25 @@
 								<ItemRef Name="T10_SFX_TextBubble_Arrive" ID="{20C027D1-373D-427F-A2E3-3122EF8442F2}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<Sound Name="T10_SFX_TextBlip" ID="{B1C77FDA-7D9C-4418-9D71-2F34B9D0BC34}" ShortID="379939787">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Volume_Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="T10_SFX_TextBlip" ID="{B5787768-B94A-4962-B9C4-D151B560ADEE}" ShortID="735339249">
+									<Language>SFX</Language>
+									<AudioFile>T10_SFX_TextBlip.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="T10_SFX_TextBlip" ID="{B5787768-B94A-4962-B9C4-D151B560ADEE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Raven" ID="{40632E5B-DB38-4CDB-9DDD-812EB6AB9F00}" ShortID="26281792">
@@ -1059,7 +1078,7 @@
 				</Folder>
 				<Folder Name="Environment" ID="{96A33E85-3160-4BBA-941F-56E0D0EA04FD}" ShortID="669042754">
 					<ChildrenList>
-						<Sound Name="Green_Goo" ID="{94A5111A-8E5C-4937-966E-E10E398CFD58}" ShortID="485364941">
+						<Sound Name="Green_Goo(old)" ID="{94A5111A-8E5C-4937-966E-E10E398CFD58}" ShortID="485364941">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
@@ -1089,6 +1108,32 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Green_Goo" ID="{3E1C3672-D456-455F-96FB-30F1C71CED69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="T10_SFX_Boulder" ID="{DBEC8D86-1640-4402-98AC-48FE28422758}" ShortID="918071693">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0AB609D0-C818-42B8-95C5-5BB7B7D59BEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX_Volume_Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A487ED9F-7FC0-4542-9E80-56144F74C709}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="T10_SFX_Boulder" ID="{325790B9-D874-431C-8358-E2FBA23A4906}" ShortID="864695000">
+									<Language>SFX</Language>
+									<AudioFile>T10_SFX_Boulder.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="T10_SFX_Boulder" ID="{325790B9-D874-431C-8358-E2FBA23A4906}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

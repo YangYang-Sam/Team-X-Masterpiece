@@ -184,6 +184,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="TextBleep" ID="{52F96DA0-6851-44E8-89FB-B637F1B8412D}">
+							<ChildrenList>
+								<Action Name="" ID="{F7B72CC8-6311-4B7F-A89D-C80FF4D6A780}" ShortID="745398710">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_TextBlip" ID="{B1C77FDA-7D9C-4418-9D71-2F34B9D0BC34}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{A3EBE4AC-801C-436E-B8F4-7C6D798F1ACB}" ShortID="586621932">
@@ -285,6 +299,52 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Level_Ambience" ID="{8C628D09-424E-424D-BC62-AA605BB0DCAB}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Environment" ID="{F40161B1-4EC0-4142-94BB-1EF53BF1A33E}" ShortID="19867123">
+					<ChildrenList>
+						<Event Name="Fire" ID="{75ABD1AE-A0DC-4B2E-BD45-F547D555A44D}">
+							<ChildrenList>
+								<Action Name="" ID="{E84ABB99-C912-4104-A5E6-31593A68BAFE}" ShortID="921467934">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fire Y or N" ID="{1A8A4CCB-5D2A-4A88-B754-D1977D7A5924}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Goo" ID="{41F66E06-B4B5-4C94-A7F7-A85AC3757815}">
+							<ChildrenList>
+								<Action Name="" ID="{A44975A6-BF97-475B-9B64-E44A91B07122}" ShortID="356073396">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Goo Y or N" ID="{924AEEC8-9A56-474C-8086-7BAF6B9C28F7}" WorkUnitID="{9B75546B-C4D8-47CD-A011-195B7388F364}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Boulder" ID="{F45184E3-CD08-45EF-AC50-DCA8CE20E532}">
+							<ChildrenList>
+								<Action Name="" ID="{E1F8E4AE-C9A9-4D85-8BDF-A192C0385FCB}" ShortID="247490638">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="T10_SFX_Boulder" ID="{DBEC8D86-1640-4402-98AC-48FE28422758}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

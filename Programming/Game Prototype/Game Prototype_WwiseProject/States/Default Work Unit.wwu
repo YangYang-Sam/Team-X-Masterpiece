@@ -48,6 +48,20 @@
 						<State Name="AmbiEastern" ID="{2B21855E-86F5-448E-86D4-230A3BA7CD06}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Goo_Yes_No" ID="{D623B268-560A-4E1C-97F0-45EEEEC189E1}">
+					<ChildrenList>
+						<State Name="None" ID="{8D95DF02-8967-45E1-A7FF-7BDC8CC7F6F7}"/>
+						<State Name="Near_Goo" ID="{1BC49EFB-F46A-4AD3-BCBD-B4D7443F971B}"/>
+						<State Name="No_Goo" ID="{483F6123-A794-4EDF-82FA-6A7B114B7874}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Fire_Yes_No" ID="{8D1D3128-532D-48A6-8ED9-8DD1FDEEB3FF}">
+					<ChildrenList>
+						<State Name="None" ID="{18D3E5AA-D8CC-46D2-8F20-BE71EA69A136}"/>
+						<State Name="Near_Fire" ID="{E7D2E8F0-C1AA-44A8-BEDD-139C91B6D7B0}"/>
+						<State Name="No_Fire" ID="{0396EE48-E689-4BF0-B127-255FF29BE007}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
