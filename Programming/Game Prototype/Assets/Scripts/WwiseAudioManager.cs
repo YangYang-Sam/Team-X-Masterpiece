@@ -5,23 +5,27 @@ using UnityEngine;
 public class WwiseAudioManager : MonoBehaviour {
 
     [SerializeField]
-    public AkEvent playerJump;
+    private AkEvent playerJump;
     [SerializeField]
-    public AkEvent playerLand;
+    private AkEvent playerLand;
     [SerializeField]
-    public AkEvent playerDeath;
+    private AkEvent playerDeath;
     [SerializeField]
-    public AkEvent enemyCharge;
+    private AkEvent enemyCharge;
     [SerializeField]
-    public AkEvent enemyDeath;
+    private AkEvent enemyDeath;
     [SerializeField]
-    public AkEvent platformProgress;
+    private AkEvent platformProgress;
     [SerializeField]
-    public AkEvent dialogueIn;
+    private AkEvent dialogueIn;
     [SerializeField]
-    public AkEvent planeRotate;
+    private AkEvent planeRotate;
     [SerializeField]
-    public AkEvent platformMove;
+    private AkEvent platformMove;
+    [SerializeField]
+    private AkEvent dialogueBleep;
+    [SerializeField]
+    private AkEvent enemyBoulder;
 
     // Use this for initialization
     void Start ()
@@ -103,6 +107,22 @@ public class WwiseAudioManager : MonoBehaviour {
         if (planeRotate != null)
         {
             planeRotate.HandleEvent(gameObject);
+        }
+    }
+
+    public void DialogueBleepSound()
+    {
+        if (dialogueBleep != null)
+        {
+            dialogueBleep.HandleEvent(gameObject);
+        }
+    }
+
+    public void EnemyBoulderSound()
+    {
+        if (enemyBoulder != null)
+        {
+            enemyBoulder.HandleEvent(gameObject);
         }
     }
 

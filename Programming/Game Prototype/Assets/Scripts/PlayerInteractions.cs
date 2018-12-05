@@ -296,6 +296,17 @@ public class PlayerInteractions : MonoBehaviour {
                 leverObject.GetComponent<SpriteRenderer>().sprite = leverSprite[0];
             }
         }
+
+        if (other.name == "GooAudioTrigger")
+        {
+            AkSoundEngine.SetState("Goo_Yes_No", "Near_Goo");
+            AkSoundEngine.SetState("Music_State", "Egyptian");
+        }
+
+        if (other.name == "FlamesAudioTrigger")
+        {
+            AkSoundEngine.SetState("Fire_Yes_No", "Near_Fire");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -303,6 +314,17 @@ public class PlayerInteractions : MonoBehaviour {
         foreach(GameObject gameobject in outlines)
         {
             gameobject.SetActive(false);
+        }
+
+        if (other.name == "GooAudioTrigger")
+        {
+            AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
+            AkSoundEngine.SetState("Music_State", "None");
+        }
+
+        if (other.name == "FlamesAudioTrigger")
+        {
+            AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

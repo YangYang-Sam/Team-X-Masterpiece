@@ -8,12 +8,13 @@ public class Projectile : MonoBehaviour {
     private float _speed = 6.0f;
 
     //private PlayerController2D _playerController2D;
-
+    private WwiseAudioManager wwiseAudioManager;
     private SpawnManager _spawnManager;
 
     // Use this for initialization
     void Start ()
     {
+        wwiseAudioManager = GameObject.Find("AudioManager").GetComponent<WwiseAudioManager>();
         _spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
@@ -39,6 +40,7 @@ public class Projectile : MonoBehaviour {
         }
         else
         {
+            wwiseAudioManager.EnemyBoulderSound();
             Destroy(this.gameObject);
         }
 

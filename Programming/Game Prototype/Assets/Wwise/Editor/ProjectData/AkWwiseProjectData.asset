@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fed87a4c07f42459e8056144f74c709
-    m_lastTime: -8586580087065887011
+    m_lastTime: -8586577515284606229
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -32,7 +32,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TVeil_MSTR_SB_WorkUnit.wwu
     ParentPhysicalPath: 
     guid: 707da56cdca9974e8c35ecdc52713cb5
-    m_lastTime: -8586580177752045313
+    m_lastTime: -8586577515284293741
     List:
     - name: TVeil_Lvl_SB
       guid: 1fea2e98c95e3749a6451cc5399a7791
@@ -52,7 +52,7 @@ MonoBehaviour:
   - PhysicalPath: Events\TVeil_Events.wwu
     ParentPhysicalPath: 
     guid: fe036e8552968344a84ebe55ceedbed3
-    m_lastTime: -8586579377852958396
+    m_lastTime: -8586576034093862317
     List:
     - name: All_Plane_Ambience
       guid: 1dcacf46894dbb4083264368ff43c17a
@@ -79,6 +79,20 @@ MonoBehaviour:
       - ElementName: All_Plane_Music
         ObjectType: 3
       Path: TVeil_Events\MusicLoops\All_Plane_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Boulder
+      guid: e38451f408cdef45ac50dca8ce20e532
+      id: 3054124956
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Environment
+        ObjectType: 4
+      - ElementName: Boulder
+        ObjectType: 3
+      Path: TVeil_Events\Environment\Boulder
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -110,6 +124,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Fire
+      guid: aed1ab75dca02e4bbd45f547d555a44d
+      id: 2678880713
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Environment
+        ObjectType: 4
+      - ElementName: Fire
+        ObjectType: 3
+      Path: TVeil_Events\Environment\Fire
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Ghost
       guid: bfe51d097c12d647a0369126aba9cc1c
       id: 4023194814
@@ -135,6 +163,20 @@ MonoBehaviour:
       - ElementName: Ghoul
         ObjectType: 3
       Path: TVeil_Events\Enemies\Ghoul
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Goo
+      guid: 066ef641b5b4944ca7f7a85ac3757815
+      id: 546106858
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Environment
+        ObjectType: 4
+      - ElementName: Goo
+        ObjectType: 3
+      Path: TVeil_Events\Environment\Goo
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -278,6 +320,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: TextBleep
+      guid: a06df9525168e84489fbb637f1b8412d
+      id: 2124608308
+      PathAndIcons:
+      - ElementName: TVeil_Events
+        ObjectType: 12
+      - ElementName: Interaction
+        ObjectType: 4
+      - ElementName: TextBleep
+        ObjectType: 3
+      Path: TVeil_Events\Interaction\TextBleep
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: VeilJump
       guid: 0081e3669dc720468a803a85ea0b490a
       id: 1671131289
@@ -325,11 +381,34 @@ MonoBehaviour:
       - ElementName: Music_SlowDown
         ObjectType: 13
       Path: Default Work Unit\Music_SlowDown
+  - PhysicalPath: Game Parameters\TVeil_Game_Parameter_WorkUnit.wwu
+    ParentPhysicalPath: 
+    guid: 5ee844ddc8f5b846a7639ee481b34617
+    m_lastTime: -8586577498428213445
+    List:
+    - name: MusicVolume
+      guid: 1797603a4b78604a8f58d65b43c191e9
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: TVeil_Game_Parameter_WorkUnit
+        ObjectType: 12
+      - ElementName: MusicVolume
+        ObjectType: 13
+      Path: TVeil_Game_Parameter_WorkUnit\MusicVolume
+    - name: SFXVolume
+      guid: dc3e80bd214f2c4ab0b473d10bf1bd72
+      id: 988953028
+      PathAndIcons:
+      - ElementName: TVeil_Game_Parameter_WorkUnit
+        ObjectType: 12
+      - ElementName: SFXVolume
+        ObjectType: 13
+      Path: TVeil_Game_Parameter_WorkUnit\SFXVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e816348cdfa4f5418aab6f645db174b8
-    m_lastTime: -8586579377847728524
+    m_lastTime: -8586576034086674759
     List:
     - name: Ambience_State
       guid: be01362a535a894ca4e89a5574ea627e
@@ -361,6 +440,62 @@ MonoBehaviour:
           ObjectType: 8
       - name: None
         guid: 53984083e3be794db5a5aaeee690f232
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+    - name: Fire_Yes_No
+      guid: 28311d8d2d53a6488ed98dd1fdeeb3ff
+      id: 2378512989
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fire_Yes_No
+        ObjectType: 9
+      Path: Default Work Unit\Fire_Yes_No
+      values:
+      - name: Near_Fire
+        guid: f0e8d2e7aac1a844bedd139c91b6d7b0
+        id: 278232202
+        PathAndIcons:
+        - ElementName: Near_Fire
+          ObjectType: 8
+      - name: No_Fire
+        guid: 48ee960389e6f04bb127255ff29be007
+        id: 3752417319
+        PathAndIcons:
+        - ElementName: No_Fire
+          ObjectType: 8
+      - name: None
+        guid: aae5d318ccd8d2468f20be71ea69a136
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+    - name: Goo_Yes_No
+      guid: 68b223d60a561c4e97f045eeeec189e1
+      id: 3120631408
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Goo_Yes_No
+        ObjectType: 9
+      Path: Default Work Unit\Goo_Yes_No
+      values:
+      - name: Near_Goo
+        guid: fb9ec41b6af4d34abcbdb4d7443f971b
+        id: 978856375
+        PathAndIcons:
+        - ElementName: Near_Goo
+          ObjectType: 8
+      - name: No_Goo
+        guid: 23613f4894a7df4e82fa6a7b114b7874
+        id: 4147008840
+        PathAndIcons:
+        - ElementName: No_Goo
+          ObjectType: 8
+      - name: None
+        guid: 02df958d6789e145a7ff7bdc8cc7f6f7
         id: 748895195
         PathAndIcons:
         - ElementName: None
@@ -495,8 +630,9 @@ MonoBehaviour:
       Path: Default Work Unit\Platform
   ExpandedItems:
   - /Game Prototype_WwiseProject
+  - /Game Prototype_WwiseProject/Events
+  - /Game Prototype_WwiseProject/Events/TVeil_Events
   - /Game Prototype_WwiseProject/States
   - /Game Prototype_WwiseProject/States/Default Work Unit
-  - /Game Prototype_WwiseProject/States/Default Work Unit/Ambience_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

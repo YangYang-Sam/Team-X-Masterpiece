@@ -89,6 +89,7 @@ public class DialogueManager : MonoBehaviour {
         for(int i = 0; i < sentence.Length+1; i++)
         {
             dialogueText.text = sentence.Substring(0,i);
+            wwiseAudioManager.DialogueBleepSound();
             yield return new WaitForSeconds(.03f);
         }
     }
