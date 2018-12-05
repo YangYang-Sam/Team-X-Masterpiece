@@ -37,10 +37,10 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="No_Fire" ID="{0396EE48-E689-4BF0-B127-255FF29BE007}"/>
+						<CurrentStateRef Name="Near_Fire" ID="{E7D2E8F0-C1AA-44A8-BEDD-139C91B6D7B0}"/>
 						<CurrentStateRef Name="None" ID="{71203CD4-60E2-4B6A-8AD2-D50C3097FD4F}"/>
 						<CurrentStateRef Name="AmbiAztec" ID="{0E1C3124-ECBD-42A2-AE8A-AA13543A9AD6}"/>
-						<CurrentStateRef Name="None" ID="{8D95DF02-8967-45E1-A7FF-7BDC8CC7F6F7}"/>
+						<CurrentStateRef Name="Near_Goo" ID="{1BC49EFB-F46A-4AD3-BCBD-B4D7443F971B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Aztec" ID="{3F455C79-FC4C-4441-8F46-747E8D94F4E6}"/>
