@@ -38,6 +38,8 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
+        AkSoundEngine.SetRTPCValue("TextSkip", 100);
+
         dialogFreezePlayer = true;
 
         wwiseAudioManager.DialogueInSound();
@@ -62,7 +64,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -96,6 +98,8 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue()
     {
+        AkSoundEngine.SetRTPCValue("TextSkip", 0);
+
         dialogFreezePlayer = false;
 
         animator.SetBool("IsOpen", false);

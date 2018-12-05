@@ -300,7 +300,6 @@ public class PlayerInteractions : MonoBehaviour {
         if (other.name == "GooAudioTrigger")
         {
             AkSoundEngine.SetState("Goo_Yes_No", "Near_Goo");
-            AkSoundEngine.SetState("Music_State", "Egyptian");
         }
 
         if (other.name == "FlamesAudioTrigger")
@@ -318,12 +317,13 @@ public class PlayerInteractions : MonoBehaviour {
 
         if (other.name == "GooAudioTrigger")
         {
+            Debug.Log("Left goo area");
             AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
-            AkSoundEngine.SetState("Music_State", "None");
         }
 
         if (other.name == "FlamesAudioTrigger")
         {
+            Debug.Log("Left flame area");
             AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         }
     }
