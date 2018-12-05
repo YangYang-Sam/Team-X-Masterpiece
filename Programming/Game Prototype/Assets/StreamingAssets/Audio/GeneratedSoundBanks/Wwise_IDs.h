@@ -15,8 +15,11 @@ namespace AK
     {
         static const AkUniqueID ALL_PLANE_AMBIENCE = 124093304U;
         static const AkUniqueID ALL_PLANE_MUSIC = 1985200777U;
+        static const AkUniqueID BOULDER = 3054124956U;
         static const AkUniqueID DEAD = 2044049779U;
+        static const AkUniqueID FIRE = 2678880713U;
         static const AkUniqueID GHOUL = 3922529076U;
+        static const AkUniqueID GOO = 546106858U;
         static const AkUniqueID JUMPING = 68157183U;
         static const AkUniqueID LANDING = 2548270042U;
         static const AkUniqueID OGRE_CHARGE = 2456307347U;
@@ -25,6 +28,7 @@ namespace AK
         static const AkUniqueID PROGRESS = 308635872U;
         static const AkUniqueID ROTATE = 1302771492U;
         static const AkUniqueID TEXT = 2972449336U;
+        static const AkUniqueID TEXTBLEEP = 2124608308U;
         static const AkUniqueID VEILJUMP = 1671131289U;
     } // namespace EVENTS
 
@@ -41,6 +45,28 @@ namespace AK
                 static const AkUniqueID AMBIEGYPT = 1648913497U;
             } // namespace STATE
         } // namespace AMBIENCE_STATE
+
+        namespace FIRE_YES_NO
+        {
+            static const AkUniqueID GROUP = 2378512989U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NEAR_FIRE = 278232202U;
+                static const AkUniqueID NO_FIRE = 3752417319U;
+            } // namespace STATE
+        } // namespace FIRE_YES_NO
+
+        namespace GOO_YES_NO
+        {
+            static const AkUniqueID GROUP = 3120631408U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NEAR_GOO = 978856375U;
+                static const AkUniqueID NO_GOO = 4147008840U;
+            } // namespace STATE
+        } // namespace GOO_YES_NO
 
         namespace MENU_OR_LEVEL
         {
