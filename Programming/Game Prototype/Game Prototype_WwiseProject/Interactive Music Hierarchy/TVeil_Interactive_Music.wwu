@@ -2062,7 +2062,7 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{B23178A0-AFCB-413B-BD1F-7340B13022E8}">
 												<PropertyList>
-													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 												</PropertyList>
 											</MusicFade>
 										</DestinationFadeIn>
@@ -2090,7 +2090,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>18</Value>
+								<Value>20</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2236,7 +2236,7 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{F8576AB5-3599-4F76-807E-AC37DDC70650}">
 												<PropertyList>
-													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 												</PropertyList>
 											</MusicFade>
 										</DestinationFadeIn>
