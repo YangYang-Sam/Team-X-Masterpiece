@@ -20,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	988953028	SFXVolume			\TVeil_Game_Parameter_WorkUnit\SFXVolume	
 	2346531308	MusicVolume			\TVeil_Game_Parameter_WorkUnit\MusicVolume	
+	2396826149	TextSkip			\TVeil_Game_Parameter_WorkUnit\TextSkip	
 	2772308904	Game_Pause			\Default Work Unit\Game_Pause	
 	2779281842	Music_SlowDown			\Default Work Unit\Music_SlowDown	
 	4055567060	Menu_Music			\Default Work Unit\Menu_Music	

@@ -28,6 +28,10 @@
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="TextSkip" ID="{A01FFE23-61BE-49EE-B26B-976D1ED4F4AC}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SFXVolume" ID="{BD803EDC-4F21-4A2C-B0B4-73D10BF1BD72}"/>
 							<Value>100</Value>
 						</RTPCValue>
@@ -37,7 +41,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Near_Fire" ID="{E7D2E8F0-C1AA-44A8-BEDD-139C91B6D7B0}"/>
+						<CurrentStateRef Name="No_Fire" ID="{0396EE48-E689-4BF0-B127-255FF29BE007}"/>
 						<CurrentStateRef Name="None" ID="{71203CD4-60E2-4B6A-8AD2-D50C3097FD4F}"/>
 						<CurrentStateRef Name="AmbiAztec" ID="{0E1C3124-ECBD-42A2-AE8A-AA13543A9AD6}"/>
 						<CurrentStateRef Name="Near_Goo" ID="{1BC49EFB-F46A-4AD3-BCBD-B4D7443F971B}"/>

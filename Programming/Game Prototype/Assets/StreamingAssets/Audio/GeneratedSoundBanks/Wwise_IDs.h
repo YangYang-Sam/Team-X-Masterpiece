@@ -127,6 +127,7 @@ namespace AK
         static const AkUniqueID MUSIC_SLOWDOWN = 2779281842U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID TEXTSKIP = 2396826149U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS

@@ -13,6 +13,11 @@
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="TextSkip" ID="{A01FFE23-61BE-49EE-B26B-976D1ED4F4AC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
