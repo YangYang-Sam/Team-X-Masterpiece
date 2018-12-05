@@ -297,12 +297,17 @@ public class PlayerInteractions : MonoBehaviour {
             }
         }
 
-        if (other.name == "GooAudioTrigger")
+        if (other.name == "GreenGooAudioTrigger" && _planeNavigation._currentPlane == 1)
         {
             AkSoundEngine.SetState("Goo_Yes_No", "Near_Goo");
         }
 
-        if (other.name == "FlamesAudioTrigger")
+        if (other.name == "YellowGooAudioTrigger" && _planeNavigation._currentPlane == 2)
+        {
+            AkSoundEngine.SetState("Goo_Yes_No", "Near_Goo");
+        }
+
+        if (other.name == "FlamesAudioTrigger" && _planeNavigation._currentPlane == 3)
         {
             AkSoundEngine.SetState("Fire_Yes_No", "Near_Fire");
         }
@@ -315,7 +320,7 @@ public class PlayerInteractions : MonoBehaviour {
             gameobject.SetActive(false);
         }
 
-        if (other.name == "GooAudioTrigger")
+        if (other.name == "GreenGooAudioTrigger" || other.name == "YellowGooAudioTrigger")
         {
             Debug.Log("Left goo area");
             AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");

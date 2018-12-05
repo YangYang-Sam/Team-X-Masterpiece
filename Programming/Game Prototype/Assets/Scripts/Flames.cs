@@ -10,6 +10,8 @@ public class Flames : MonoBehaviour {
     [SerializeField]
     private GameObject _flamesParent;
     [SerializeField]
+    private GameObject _flamesAudioTrigger;
+    [SerializeField]
     private Vector3 _flamesShrinkScale;
     [SerializeField]
     private float _flamesScaleDuration;
@@ -41,6 +43,8 @@ public class Flames : MonoBehaviour {
         {
             Debug.Log("Platform collided with flames");
             StartCoroutine(FlamesScale(_flamesParent.transform, initialScale, _flamesShrinkScale, _flamesScaleDuration));
+            //turn off audio
+            _flamesAudioTrigger.GetComponent<Collider2D>().enabled = false;
         }
         else
         {

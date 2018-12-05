@@ -10,12 +10,14 @@ public class Projectile : MonoBehaviour {
     //private PlayerController2D _playerController2D;
     private WwiseAudioManager wwiseAudioManager;
     private SpawnManager _spawnManager;
+    private PlaneNavigation _planeNavigation;
 
     // Use this for initialization
     void Start ()
     {
         wwiseAudioManager = GameObject.Find("AudioManager").GetComponent<WwiseAudioManager>();
         _spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        _planeNavigation = GameObject.Find("PlaneController").GetComponent<PlaneNavigation>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,10 @@ public class Projectile : MonoBehaviour {
         }
         else
         {
-            wwiseAudioManager.EnemyBoulderSound();
+            if (_planeNavigation._currentPlane == 2)
+            {
+                wwiseAudioManager.EnemyBoulderSound();
+            }
             Destroy(this.gameObject);
         }
 

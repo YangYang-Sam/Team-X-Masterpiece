@@ -83,6 +83,15 @@ public class DialogueManager : MonoBehaviour {
         {
             cameraController.target = cameraController.player;
         }
+
+        if (sentence.Contains("..."))
+        {
+            nameText.text = "Wizard";
+        }
+        else
+        {
+            nameText.text = "Raven";
+        }
     }
 
     private IEnumerator TypeSentence (string sentence)
