@@ -18,8 +18,11 @@
 			<IncludedEvents>
 				<Event Id="124093304" Name="All_Plane_Ambience" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Ambience"/>
 				<Event Id="1985200777" Name="All_Plane_Music" ObjectPath="\Events\TVeil_Events\MusicLoops\All_Plane_Music"/>
+				<Event Id="3054124956" Name="Boulder" ObjectPath="\Events\TVeil_Events\Environment\Boulder"/>
 				<Event Id="2044049779" Name="Dead" ObjectPath="\Events\TVeil_Events\Raven\Dead"/>
+				<Event Id="2678880713" Name="Fire" ObjectPath="\Events\TVeil_Events\Environment\Fire"/>
 				<Event Id="3922529076" Name="Ghoul" ObjectPath="\Events\TVeil_Events\Enemies\Ghoul"/>
+				<Event Id="546106858" Name="Goo" ObjectPath="\Events\TVeil_Events\Environment\Goo"/>
 				<Event Id="68157183" Name="Jumping" ObjectPath="\Events\TVeil_Events\Raven\Jumping"/>
 				<Event Id="2548270042" Name="Landing" ObjectPath="\Events\TVeil_Events\Raven\Landing"/>
 				<Event Id="2456307347" Name="Ogre_Charge" ObjectPath="\Events\TVeil_Events\Enemies\Ogre_Charge"/>
@@ -28,6 +31,7 @@
 				<Event Id="308635872" Name="Progress" ObjectPath="\Events\TVeil_Events\Interaction\Progress"/>
 				<Event Id="1302771492" Name="Rotate" ObjectPath="\Events\TVeil_Events\Interaction\Rotate"/>
 				<Event Id="2972449336" Name="Text" ObjectPath="\Events\TVeil_Events\Interaction\Text"/>
+				<Event Id="2124608308" Name="TextBleep" ObjectPath="\Events\TVeil_Events\Interaction\TextBleep"/>
 				<Event Id="1671131289" Name="VeilJump" ObjectPath="\Events\TVeil_Events\Raven\VeilJump"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -37,7 +41,11 @@
 				</File>
 				<File Id="69236835" Language="SFX">
 					<ShortName>T10_SFX_Raven_Lands.wav</ShortName>
-					<Path>SFX/T10_SFX_Raven_Lands_7E2DB766.wem</Path>
+					<Path>SFX/T10_SFX_Raven_Lands_102C2068.wem</Path>
+				</File>
+				<File Id="179080712" Language="SFX">
+					<ShortName>T10_SFX_Goo.wav</ShortName>
+					<Path>SFX/T10_SFX_Goo_CB1F3167.wem</Path>
 				</File>
 				<File Id="180619043" Language="SFX">
 					<ShortName>Green_Goo.wav</ShortName>
@@ -66,6 +74,10 @@
 				<File Id="361541902" Language="SFX">
 					<ShortName>Portal5.wav</ShortName>
 					<Path>SFX/Portal5_CB1F3167.wem</Path>
+				</File>
+				<File Id="427497391" Language="SFX">
+					<ShortName>T10_SFX_Fire.wav</ShortName>
+					<Path>SFX/T10_SFX_Fire_CB1F3167.wem</Path>
 				</File>
 				<File Id="455752322" Language="SFX">
 					<ShortName>Egyptian_Loop2_16B_168bpm.wav</ShortName>
@@ -115,6 +127,10 @@
 					<ShortName>Ghoul2.wav</ShortName>
 					<Path>SFX/Ghoul2_A1793BE9.wem</Path>
 				</File>
+				<File Id="735339249" Language="SFX">
+					<ShortName>T10_SFX_TextBlip.wav</ShortName>
+					<Path>SFX/T10_SFX_TextBlip_A1793BE9.wem</Path>
+				</File>
 				<File Id="741041653" Language="SFX">
 					<ShortName>Aztec_Loop1_10B_84bpm_v2.wav</ShortName>
 					<Path>SFX/Aztec_Loop1_10B_84bpm_v2_CB1F3167.wem</Path>
@@ -130,6 +146,10 @@
 				<File Id="820484119" Language="SFX">
 					<ShortName>RotatePlane.wav</ShortName>
 					<Path>SFX/RotatePlane_5926DF68.wem</Path>
+				</File>
+				<File Id="864695000" Language="SFX">
+					<ShortName>T10_SFX_Boulder.wav</ShortName>
+					<Path>SFX/T10_SFX_Boulder_A1793BE9.wem</Path>
 				</File>
 				<File Id="887549436" Language="SFX">
 					<ShortName>Jump2.wav</ShortName>

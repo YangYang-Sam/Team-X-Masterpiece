@@ -1,5 +1,7 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	1222409307	Menu_or_Level			\Default Work Unit\Menu_or_Level	
+	2378512989	Fire_Yes_No			\Default Work Unit\Fire_Yes_No	
+	3120631408	Goo_Yes_No			\Default Work Unit\Goo_Yes_No	
 	3826569560	Music_State			\Default Work Unit\Music_State	
 	3875263435	Ambience_State			\Default Work Unit\Ambience_State	
 
@@ -7,6 +9,12 @@ State	ID	Name	State Group			Notes
 	0	None	Menu_or_Level			
 	2607556080	Menu	Menu_or_Level			
 	2782712965	Level	Menu_or_Level			
+	0	None	Fire_Yes_No			
+	278232202	Near_Fire	Fire_Yes_No			
+	3752417319	No_Fire	Fire_Yes_No			
+	0	None	Goo_Yes_No			
+	978856375	Near_Goo	Goo_Yes_No			
+	4147008840	No_Goo	Goo_Yes_No			
 	0	None	Music_State			
 	1054659462	EndLevel	Music_State			
 	1548586727	MenuState	Music_State			

@@ -18,15 +18,15 @@
 	<Platform GUID="{5938D501-20E4-4B01-B317-E2C2A0937F50}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="801574987" Timestamp="1543856823"/>
+				<File Name="Init" Hash="2873230683" Timestamp="1544008891"/>
 				<File Name="TVeil_Credits_SB" Hash="1224647242" Timestamp="1539869045"/>
-				<File Name="TVeil_Lvl_SB" Hash="246739205" Timestamp="1543856982"/>
+				<File Name="TVeil_Lvl_SB" Hash="2459055082" Timestamp="1544008891"/>
 				<File Name="TVeil_Menu_SB" Hash="1183829831" Timestamp="1539869045"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="473998507" Timestamp="1543856982"/>
+				<File Name="" Hash="2108958483" Timestamp="1544008891"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
