@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour {
             wizard.SetActive(true);
             wizard.GetComponent<Animator>().SetBool("IsFadingIn", true);
             wizard.GetComponent<Animator>().SetBool("IsFadingOut", false);
-            wizard.transform.position = new Vector3(-1.5f, 3.0f, 0.0f);
+            wizard.transform.position = new Vector3(-1.57f, 2.44f, 0.0f);
         }
 
         if (gameObject.name == "DialogueEvent2")
