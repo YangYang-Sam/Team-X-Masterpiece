@@ -49,13 +49,13 @@
 						</Event>
 						<Event Name="Landing" ID="{FB900B64-06D1-445F-9E60-B9F269BEDA47}">
 							<ChildrenList>
-								<Action Name="" ID="{37F6B665-3D07-4D73-BDBD-E24DD4A8C9A8}" ShortID="746500909">
+								<Action Name="" ID="{B620BD74-F6AC-452C-95B6-CE6B7BD5EA54}" ShortID="189340940">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="T10_SFX_Raven_Lands" ID="{78D88DEA-CE1D-470F-B192-34D7C9B252B7}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
+											<ObjectRef Name="T10_SFX_Raven_Landing_V2" ID="{FEECF79C-533B-4D59-867C-0AFBAFF143F2}" WorkUnitID="{08A74F13-B790-49C5-AA82-A3FA80F24E56}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

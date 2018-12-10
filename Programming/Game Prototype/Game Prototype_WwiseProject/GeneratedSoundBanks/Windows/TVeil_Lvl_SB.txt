@@ -32,6 +32,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
+	588452854	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7039824	T10_SFX_Platform_Progress	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Platform_Progress_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\T10_SFX_Platform_Progress		31025
@@ -62,6 +63,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	767050816	Eastern_Loop1_168bpm_12B	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Eastern_Loop1_168bpm_12B_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Eastern_Themes\Eastern_Loop1_168bpm_12B\Eastern_Loop1_168bpm_12B		391431
 	805355077	Eastern_Loop2_168bpm_10B	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Eastern_Loop2_168bpm_10B_CB1F3167.wem		\Interactive Music Hierarchy\TVeil_Interactive_Music\Level_Music\Eastern_Themes\Eastern_Loop2_168bpm_10B\Eastern_Loop2_168bpm_10B		266144
 	820484119	RotatePlane	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\RotatePlane_5926DF68.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Interactions\Rotate\RotatePlane		36815
+	825520407	T10_SFX_Raven_Landing_V2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Raven_Landing_V2_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\T10_SFX_Raven_Landing_V2		6162
 	864695000	T10_SFX_Boulder	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_Boulder_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Environment\T10_SFX_Boulder		17294
 	887549436	Jump2	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\Jump2_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Raven\Jumping\Jump2		4039
 	912180561	T10_SFX_OgreCharge	Y:\Desktop\Team-X-Masterpiece\Programming\Game Prototype\Game Prototype_WwiseProject\.cache\Windows\SFX\T10_SFX_OgreCharge_A1793BE9.wem		\Actor-Mixer Hierarchy\TVeil_Actor_Mixer\Enemies\Ogre\T10_SFX_OgreCharge		14954

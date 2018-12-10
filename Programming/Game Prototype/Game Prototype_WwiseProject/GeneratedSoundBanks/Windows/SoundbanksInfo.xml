@@ -147,6 +147,10 @@
 					<ShortName>RotatePlane.wav</ShortName>
 					<Path>SFX/RotatePlane_5926DF68.wem</Path>
 				</File>
+				<File Id="825520407" Language="SFX">
+					<ShortName>T10_SFX_Raven_Landing_V2.wav</ShortName>
+					<Path>SFX/T10_SFX_Raven_Landing_V2_A1793BE9.wem</Path>
+				</File>
 				<File Id="864695000" Language="SFX">
 					<ShortName>T10_SFX_Boulder.wav</ShortName>
 					<Path>SFX/T10_SFX_Boulder_A1793BE9.wem</Path>
