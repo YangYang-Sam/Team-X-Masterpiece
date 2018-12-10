@@ -111,11 +111,12 @@
 				<Property Name="Music Transition List\{EDD9457B-ED6F-468C-8FF3-90DBD2B87519}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{EE702059-F768-4D73-9CDF-1211DCE80FEE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{F0F4DB0A-2765-4014-BFF8-6BE1ADB3E972}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="PluginUserAcknowledge\ConvolutionReverb" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{DEFE064D-B2BF-4494-B8B1-324E43C5423D}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{FEC1C60A-BB4A-4A5D-8459-2C6849FBBF6C}"/>
 				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{091DE5BF-127C-47D6-A036-9126ABA9CC1C}"/>
-				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{59A9E7B9-61C9-461A-A96F-4997B541A59C}"/>
+				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="ProjectExplorer\x64_Expanded_10_1" Type="string" Value="8wT2V334/U2grwjFQn0ydA=="/>
