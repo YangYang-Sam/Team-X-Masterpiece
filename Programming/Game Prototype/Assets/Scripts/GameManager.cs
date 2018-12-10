@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour {
 
     public void Restart()
     {
+        AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
+        AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -102,12 +104,16 @@ public class GameManager : MonoBehaviour {
 
     public void LoadMenu()
     {
+        AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
+        AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 
     public void Victory()
     {
+        AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
+        AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         victorious = true;
         victoryScreenUI.SetActive(true);
         Time.timeScale = 0f;
@@ -115,6 +121,8 @@ public class GameManager : MonoBehaviour {
 
     public void QuitGame()
     {
+        AkSoundEngine.SetState("Goo_Yes_No", "No_Goo");
+        AkSoundEngine.SetState("Fire_Yes_No", "No_Fire");
         Debug.Log("Qutting game");
         Application.Quit();
     }
